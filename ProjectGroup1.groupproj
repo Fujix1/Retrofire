@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{033F3654-A1BF-41C3-9DE7-C12E43106E9A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Retrofire.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Retrofire">
+        <MSBuild Projects="Retrofire.dproj"/>
+    </Target>
+    <Target Name="Retrofire:Clean">
+        <MSBuild Projects="Retrofire.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Retrofire:Make">
+        <MSBuild Projects="Retrofire.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Retrofire"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Retrofire:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Retrofire:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
