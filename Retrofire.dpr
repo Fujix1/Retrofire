@@ -16,7 +16,8 @@ uses
   unitCommandViewer in 'unitCommandViewer.pas' {frmCommand},
   Vcl.Themes,
   Vcl.Styles,
-  unitFavorites in 'unitFavorites.pas' {frmFavorites};
+  unitFavorites in 'unitFavorites.pas' {frmFavorites},
+  unitHttp in 'unitHttp.pas' {frmHttp};
 
 {$R *.res}
 
@@ -59,6 +60,7 @@ begin
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TfrmFavorites, frmFavorites);
+  Application.CreateForm(TfrmHttp, frmHttp);
   //  Application.CreateForm(TfrmUpdater, frmUpdater);
   Application.CreateForm(TfrmCommand, frmCommand);
   Application.Run;

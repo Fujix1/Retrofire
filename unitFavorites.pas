@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
   System.Actions, Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.Menus,
-  Vcl.PlatformDefaultStyleActnCtrls, Vcl.ActnPopup;
+   Vcl.ActnPopup, Vcl.PlatformDefaultStyleActnCtrls;
 
 type
   TfrmFavorites = class(TForm)

@@ -10,7 +10,7 @@ uses
   GR32_Image, ToolWin, PngImage, AppEvnts,untUpdateChecker,
   ActnPopup, PlatformDefaultStyleActnCtrls, CategoryButtons, ButtonGroup, Tabs,
   DockTabSet, Unit3, unitScreenShotCleaner, unitCommandViewer,  System.Actions, comobj,
-  Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,System.IOUtils;
+  Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,System.IOUtils, unitHttp;
 
 const
   WM_SHOWED = WM_USER + 1;
@@ -219,7 +219,7 @@ type
     actVHideMechanical: TAction;
     Action3: TAction;
     actFCleanupSnaps: TAction;
-    actFUpdater: TAction;
+    actFHttp: TAction;
     actHistory2: TAction;
     actVHideGambling: TAction;
     Button2: TButton;
@@ -245,6 +245,7 @@ type
     actFEmma: TAction;
     EMMA1: TMenuItem;
     EMMA2: TMenuItem;
+    sbtHTTP: TSpeedButton;
 
 
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
@@ -408,7 +409,6 @@ type
     procedure actVHideMechanicalUpdate(Sender: TObject);
     procedure Action3Execute(Sender: TObject);
     procedure actFCleanupSnapsExecute(Sender: TObject);
-    procedure actFUpdaterExecute(Sender: TObject);
     procedure actHistory2Execute(Sender: TObject);
     procedure edtKanaKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -437,6 +437,7 @@ type
     procedure actFEmmaUpdate(Sender: TObject);
     procedure actFEmmaExecute(Sender: TObject);
     procedure ListView2Data(Sender: TObject; Item: TListItem);
+    procedure actFHttpExecute(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -2283,9 +2284,10 @@ begin
   ListView1.SetFocus;
 
   //
-  sbtMAME.Caption:='';
-  sbtEng.Caption:='';
-  sbtFilter.Caption:='';
+  sbtMAME.Caption   := '';
+  sbtEng.Caption    := '';
+  sbtFilter.Caption := '';
+  sbtHTTP.Caption   := '';
 
 
   // コマンドビューア表示
@@ -3691,10 +3693,19 @@ begin
 
 end;
 
-procedure TForm1.actFUpdaterExecute(Sender: TObject);
+procedure TForm1.actFHttpExecute(Sender: TObject);
+var response: integer;
 begin
 
-  frmUpdater.ShowModal;
+  response := frmHttp.ShowModal;
+
+  // 更新結果が mrOK なら
+  if response=mrOK then
+  begin
+    ReadMame32jlst;
+    SetVersionINI;
+    UpdateListView;
+  end;
 
 end;
 
@@ -4737,7 +4748,7 @@ begin
       end;
     end;
   end;
-//  SetLength(ROMTemp,0);
+
   Finalize( ROMTemp );
 
   // Sampleステータス復旧

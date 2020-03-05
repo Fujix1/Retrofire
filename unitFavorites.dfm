@@ -146,7 +146,7 @@ object frmFavorites: TfrmFavorites
     Left = 36
     Top = 102
     Bitmap = {
-      494C01010B00A000840010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B00A000040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000ACB6E500ACB6
       E500ACB6E500ACB6E500ACB6E500ACB6E500ACB6E500ACB6E500ACB6E500ACB6
@@ -550,7 +550,7 @@ object frmFavorites: TfrmFavorites
       000000000000}
   end
   object ActionList1: TActionList
-    Left = 100
+    Left = 108
     Top = 100
     object actDeleteTreeNode: TAction
       Caption = #21066#38500'...'
@@ -572,6 +572,7 @@ object frmFavorites: TfrmFavorites
   object PopupActionBar1: TPopupActionBar
     Left = 104
     Top = 176
+    StyleName = 'Platform Default'
     object N3: TMenuItem
       Action = actNewFolder
     end

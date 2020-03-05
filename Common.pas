@@ -11,7 +11,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '258';
+  BUILDNO = '259';
   LATESTRESVER = 238;
 
   MAXFAVORITES2 = 128;
@@ -232,6 +232,10 @@ var
   HideGambling  : boolean; // ギャンブルを隠す
 
   UseAltExe     : boolean; // ShellExec
+
+  // HTTPダウンロードデータ用
+  ETag_mame32j  : string;  // mame32j.lst ファイル用の Etag
+  ETag_version  : string;  // version.ini ファイル用の Etag
 
   // コマンドビューア用
   ComViewerVisible    : boolean; // ウインドウの表示非表示
@@ -1315,7 +1319,6 @@ begin
   Form1.Left  := 20;
   Form1.Top   := 20;
   Edited      := False;
-//  SrcDir      := 'drivers';
   samplePath  := 'samples';
   cfgDir      := 'cfg';
   nvramDir    := 'nvram';
@@ -1381,6 +1384,10 @@ begin
   ComViewerZentoHan   := false; //: boolean; // 全角英数を半角に変換するか
   ComViewerIndex      := -1;    //: integer; // 選択中のインデックス　未選択は-1
   ComViewerAlwaysOnTop:= true;  //: boolean; // 常に手前に表示
+
+  // HTTPダウンロードデータ用
+  ETag_mame32j := '';
+  ETag_version := '';
 
 end;
 
@@ -1693,20 +1700,12 @@ begin
   end;
   sltIni.Add('sl_column_order '+St);
 
-  // お気に入り
-{  if favorites.Count > 0 then
-  begin
-    st:=favorites[0];
+  // HTTPダウンロードデータ用
+  sltIni.Add('ETag_mame32j '+ ETag_mame32j );
+  sltIni.Add('ETag_version '+ ETag_version );
 
-    for i:=1 to favorites.Count-1 do
-    begin
-      St:=St+','+favorites[i];
-    end;
 
-    sltIni.Add('favorites '+St);
 
-  end;
- }
   // 起動関数
   sltIni.Add( 'user_alt_exe ' + BooltoStr(UseAltExe) );
 
@@ -1735,6 +1734,7 @@ begin
   sltIni.Add('cv_zentohan '+ BooltoStr( frmCommand.chkZentoHan.Checked ));
   sltIni.Add('cv_alwaysontop '+ BooltoStr( frmCommand.chkAlwaysOnTop.Checked ));
   sltIni.Add('cv_index '+ InttoStr( frmCommand.cmbCommandType.ItemIndex ));
+
 
 
   //// --------------------------------------------
@@ -2384,6 +2384,17 @@ begin
                                    Form1.ListView2.Columns.Count,
                                    piOrderArray);
       StrList.Free;
+    end
+    // HTTPダウンロードデータ
+    else
+    if AnsiStartsStr( 'ETag_mame32j ', St ) then
+    begin
+      ETag_mame32j := Copy(St,pos(' ',St)+1,Length(St));
+    end
+    else
+    if AnsiStartsStr( 'ETag_version ', St ) then
+    begin
+      ETag_version := Copy(St,pos(' ',St)+1,Length(St));
     end
     else
     // 起動関数

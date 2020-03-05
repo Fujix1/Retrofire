@@ -74,8 +74,8 @@
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=Chimmi-do;FileVersion=1.0.0.258;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
-        <VerInfo_Build>258</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Chimmi-do;FileVersion=1.0.0.259;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Build>259</VerInfo_Build>
         <Icon_MainIcon>Retrofire_Icon.ico</Icon_MainIcon>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <BT_BuildType>Debug</BT_BuildType>
@@ -115,6 +115,10 @@
         </DCCReference>
         <DCCReference Include="unitFavorites.pas">
             <Form>frmFavorites</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitHttp.pas">
+            <Form>frmHttp</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <RcItem Include="icons-min.png">
@@ -185,8 +189,19 @@
                 <Platform value="Win32">True</Platform>
             </Platforms>
             <Deployment Version="3">
+                <DeployFile LocalName="Retrofire.exe" Configuration="リリース" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Retrofire.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Launcher.exe" Configuration="リリース" Class="ProjectOutput"/>
-                <DeployFile LocalName="Launcher.rsm" Configuration="リリース" Class="DebugSymbols"/>
+                <DeployFile LocalName="icons-min.png" Configuration="リリース" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="OSX32">
                         <Operation>1</Operation>
