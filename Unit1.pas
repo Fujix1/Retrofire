@@ -3693,6 +3693,7 @@ begin
 
 end;
 
+// クラウド更新
 procedure TForm1.actFHttpExecute(Sender: TObject);
 var response: integer;
 begin
@@ -3704,7 +3705,10 @@ begin
   begin
     ReadMame32jlst;
     SetVersionINI;
+    ReadMameInfoDat;
     UpdateListView;
+    ReadHistoryDat;
+    FindDat(CurrentIndex);
   end;
 
 end;

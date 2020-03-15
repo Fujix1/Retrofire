@@ -113,8 +113,8 @@ object frmHttp: TfrmHttp
     HandleRedirects = True
     AllowCookies = True
     UserAgent = 'Embarcadero URI Client/1.0'
-    Left = 168
-    Top = 8
+    Left = 56
+    Top = 104
   end
   object NetHTTPRequest1: TNetHTTPRequest
     Asynchronous = False
@@ -123,8 +123,8 @@ object frmHttp: TfrmHttp
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest1RequestCompleted
     OnRequestError = NetHTTPRequest1RequestError
-    Left = 256
-    Top = 8
+    Left = 144
+    Top = 16
   end
   object NetHTTPRequest2: TNetHTTPRequest
     Asynchronous = False
@@ -133,8 +133,8 @@ object frmHttp: TfrmHttp
     Client = NetHTTPClient1
     OnRequestError = NetHTTPRequest2RequestError
     OnReceiveData = NetHTTPRequest2ReceiveData
-    Left = 320
-    Top = 12
+    Left = 253
+    Top = 16
   end
   object NetHTTPRequest3: TNetHTTPRequest
     Asynchronous = False
@@ -143,7 +143,27 @@ object frmHttp: TfrmHttp
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest3RequestCompleted
     OnRequestError = NetHTTPRequest3RequestError
-    Left = 408
-    Top = 8
+    Left = 240
+    Top = 104
+  end
+  object NetHTTPRequest4: TNetHTTPRequest
+    Asynchronous = False
+    ConnectionTimeout = 100000
+    ResponseTimeout = 10000
+    Client = NetHTTPClient1
+    OnRequestCompleted = NetHTTPRequest4RequestCompleted
+    OnRequestError = NetHTTPRequest4RequestError
+    Left = 368
+    Top = 104
+  end
+  object NetHTTPRequest5: TNetHTTPRequest
+    Asynchronous = False
+    ConnectionTimeout = 100000
+    ResponseTimeout = 10000
+    Client = NetHTTPClient1
+    OnRequestCompleted = NetHTTPRequest5RequestCompleted
+    OnRequestError = NetHTTPRequest5RequestError
+    Left = 480
+    Top = 104
   end
 end

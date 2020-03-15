@@ -11,7 +11,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '259';
+  BUILDNO = '260';
   LATESTRESVER = 238;
 
   MAXFAVORITES2 = 128;
@@ -236,6 +236,9 @@ var
   // HTTPダウンロードデータ用
   ETag_mame32j  : string;  // mame32j.lst ファイル用の Etag
   ETag_version  : string;  // version.ini ファイル用の Etag
+  ETag_mameinfo : string;  // mameinfo ファイル用の Etag
+  ETag_history  : string;  // mameinfo ファイル用の Etag
+
 
   // コマンドビューア用
   ComViewerVisible    : boolean; // ウインドウの表示非表示
@@ -686,7 +689,7 @@ var
   i,j,n,m: integer;
   HistoryDir : String;
 
-  // 新型処理
+  // 新処理
   hisList: TStringList;
   hisFlag: boolean;
 
@@ -1386,8 +1389,10 @@ begin
   ComViewerAlwaysOnTop:= true;  //: boolean; // 常に手前に表示
 
   // HTTPダウンロードデータ用
-  ETag_mame32j := '';
-  ETag_version := '';
+  ETag_mame32j  := '';
+  ETag_version  := '';
+  Etag_mameinfo := '';
+  Etag_history  := '';
 
 end;
 
@@ -1703,7 +1708,8 @@ begin
   // HTTPダウンロードデータ用
   sltIni.Add('ETag_mame32j '+ ETag_mame32j );
   sltIni.Add('ETag_version '+ ETag_version );
-
+  sltIni.Add('ETag_mameinfo '+ ETag_mameinfo );
+  sltIni.Add('ETag_history '+ ETag_history );
 
 
   // 起動関数
@@ -2395,6 +2401,16 @@ begin
     if AnsiStartsStr( 'ETag_version ', St ) then
     begin
       ETag_version := Copy(St,pos(' ',St)+1,Length(St));
+    end
+    else
+    if AnsiStartsStr( 'ETag_mameinfo ', St ) then
+    begin
+      ETag_mameinfo := Copy(St,pos(' ',St)+1,Length(St));
+    end
+    else
+    if AnsiStartsStr( 'ETag_history ', St ) then
+    begin
+      ETag_history := Copy(St,pos(' ',St)+1,Length(St));
     end
     else
     // 起動関数
