@@ -246,6 +246,8 @@ type
     EMMA1: TMenuItem;
     EMMA2: TMenuItem;
     sbtHTTP: TSpeedButton;
+    actFArcadeDB: TAction;
+    ArcadeDB1: TMenuItem;
 
 
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
@@ -438,6 +440,8 @@ type
     procedure actFEmmaExecute(Sender: TObject);
     procedure ListView2Data(Sender: TObject; Item: TListItem);
     procedure actFHttpExecute(Sender: TObject);
+    procedure actFArcadeDBUpdate(Sender: TObject);
+    procedure actFArcadeDBExecute(Sender: TObject);
 
   private
     { Private êÈåæ }
@@ -2013,7 +2017,6 @@ begin
   begin
     try
       WshShell := CreateOleObject('WScript.Shell');
-      //oExec := WshShell.run('%comspec% /k "'+ExePath+'" '+ZipName+' '+Option);
       Exe := ExePath;
       Work:= WorkDir;
       
@@ -4578,6 +4581,34 @@ begin
 
 end;
  }
+procedure TForm1.actFArcadeDBExecute(Sender: TObject);
+begin
+  if (SelZip<>'') // ëIëçÄñ⁄
+  then
+    ShellExecute( Form1.Handle,
+                  'open',
+                  PChar('http://adb.arcadeitalia.net/dettaglio_mame.php?game_name='+SelZip),
+                  nil,
+                  nil,
+                  SW_SHOW);
+end;
+
+procedure TForm1.actFArcadeDBUpdate(Sender: TObject);
+begin
+  // ëŒè€Ç»Çµ
+  if SelZip='' then
+  begin
+    actFArcadeDB.Caption :='&ArcadeDBÇ≈åüçı...';
+    actFArcadeDB.Enabled := False;
+  end
+  else
+  // Ç†ÇË
+  begin
+    actFArcadeDB.Caption := 'Åu'+SelZip+'ÅvÇ&ArcadeDBÇ≈åüçı...';
+    actFArcadeDB.Enabled := True;
+  end;
+end;
+
 procedure TForm1.actFAVAddUpdate(Sender: TObject);
 begin
 

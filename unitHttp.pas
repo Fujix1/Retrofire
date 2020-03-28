@@ -197,6 +197,10 @@ begin
     Memo1.Lines.Add('mame32j.lst: 更新あり ('+inttostr(target_size_mame32j)+' Bytes)');
     isDownloadable := true;
   end
+  else if( target_size_mame32j = 0 ) then
+  begin
+    Memo1.Lines.Add('mame32j.lst: ファイル情報取得失敗');
+  end
   else
   begin
     Memo1.Lines.Add('mame32j.lst: たぶん最新版です');
@@ -235,6 +239,10 @@ begin
     Memo1.Lines.Add('version.ini: 更新あり ('+inttostr(target_size_version)+' Bytes)');
     isDownloadable := true;
   end
+  else if( target_size_version = 0 ) then
+  begin
+    Memo1.Lines.Add('version.ini: ファイル情報取得失敗');
+  end
   else
   begin
     Memo1.Lines.Add('version.ini: たぶん最新版です');
@@ -272,6 +280,10 @@ begin
     Memo1.Lines.Add('mameinfo.dat: 更新あり ('+inttostr(target_size_mameinfo)+' Bytes)');
     isDownloadable := true;
   end
+  else if( target_size_mameinfo = 0 ) then
+  begin
+    Memo1.Lines.Add('mameinfo.dat: ファイル情報取得失敗');
+  end
   else
   begin
     Memo1.Lines.Add('mameinfo.dat: たぶん最新版です');
@@ -307,6 +319,10 @@ begin
   begin
     Memo1.Lines.Add('history.dat: 更新あり ('+inttostr(target_size_history)+' Bytes)');
     isDownloadable := true;
+  end
+  else if( target_size_history = 0 ) then
+  begin
+    Memo1.Lines.Add('history.dat: ファイル情報取得失敗');
   end
   else
   begin
