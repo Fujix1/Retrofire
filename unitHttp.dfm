@@ -166,4 +166,13 @@ object frmHttp: TfrmHttp
     Left = 480
     Top = 104
   end
+  object NetHTTPRequest6: TNetHTTPRequest
+    Asynchronous = False
+    ConnectionTimeout = 100000
+    ResponseTimeout = 10000
+    Client = NetHTTPClient1
+    OnRequestError = NetHTTPRequest6RequestError
+    Left = 32
+    Top = 288
+  end
 end

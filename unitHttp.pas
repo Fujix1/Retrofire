@@ -6,13 +6,16 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, common, Vcl.StdCtrls, Vcl.ExtCtrls,
   System.Net.URLClient, System.Net.HttpClient, System.Net.HttpClientComponent,
-  Vcl.ComCtrls, System.Zip, System.IOUtils;
+  Vcl.ComCtrls, System.Zip, System.IOUtils, ShellAPI;
 
 const
   URL_MAME32J = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/mame32j.lst'; // mame32j.lst の取得元
   URL_VERSION = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/folders/Version.ini'; // version.ini の取得元
   URL_MAMEINFO = 'http://www.e2j.net/files/mameinfo_utf8.zip'; // mameinfo.dat の取得元
   URL_HISTORY = 'http://e2j.net/files/history+u.zip'; // history.dat の取得元
+
+  URL_RETROFIRE = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/version.txt'; // retrofireのバージョン番号の取得元
+
 
 const
   WM_STARTUP = WM_USER;
@@ -34,6 +37,7 @@ type
     Panel1: TPanel;
     ProgressBar1: TProgressBar;
     NetHTTPRequest5: TNetHTTPRequest;
+    NetHTTPRequest6: TNetHTTPRequest;
 
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -59,10 +63,16 @@ type
       const AError: string);
     procedure NetHTTPRequest5RequestCompleted(const Sender: TObject;
       const AResponse: IHTTPResponse);
+    procedure NetHTTPRequest6RequestError(const Sender: TObject;
+      const AError: string);
+
   private
     { Private 宣言 }
     procedure WMStartup(var Msg: TMessage); message WM_STARTUP;
     procedure checkIfDownloadable;
+    function MessageDlg(const AOwner: TForm; const Msg: string; DlgType: TMsgDlgType;
+      Buttons: TMsgDlgButtons; HelpCtx: Integer = 0): Integer;
+
   public
     { Public 宣言 }
   end;
@@ -93,6 +103,18 @@ implementation
 {$R *.dfm}
 
 
+function TfrmHttp.MessageDlg(const AOwner: TForm; const Msg: string; DlgType: TMsgDlgType;
+  Buttons: TMsgDlgButtons; HelpCtx: Integer = 0): Integer;
+begin
+  with CreateMessageDialog(Msg, DlgType, Buttons) do
+    try
+      Left := AOwner.Left + (AOwner.Width - Width) div 2;
+      Top := AOwner.Top + (AOwner.Height - Height) div 2;
+      Result := ShowModal;
+    finally
+      Free;
+    end
+end;
 
 procedure TfrmHttp.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -138,11 +160,21 @@ end;
 
 // Form.show 後に処理する内容
 procedure TfrmHttp.WMStartup(var Msg: TMessage);
+var
+  ResponseContent: TMemoryStream;
+  Reader: TStreamReader;
+  St: String;
+  flag: boolean;
 begin
   inherited;
 
   lblStatus.Caption:='情報取得中...';
   Application.ProcessMessages;
+
+  // 更新があるか確認
+  if HttpError=false then
+    NetHTTPRequest6.Head(URL_RETROFIRE);
+
 
   // 更新ファイルがあるか確認
   NetHTTPRequest1.Head(URL_MAME32J);
@@ -164,6 +196,57 @@ begin
   // 更新ファイルがあるか確認
   if HttpError=false then
     NetHTTPRequest5.Head(URL_HISTORY);
+
+  Application.ProcessMessages;
+
+
+  // 本体バージョン
+  Memo1.Lines.Add('本体更新確認中...');
+  Application.ProcessMessages;
+
+  //取得したデータを格納するStream
+  ResponseContent := TMemoryStream.Create;
+
+  flag := false;
+
+  try
+    NetHTTPRequest2.Get(URL_RETROFIRE, ResponseContent);
+
+    if ResponseContent.Size > 0 then // ダウンロードサイズ確認
+    begin
+      Reader := TStreamReader.Create(ResponseContent);
+      St := trim(Reader.ReadLine);
+      if ( strtoint(BUILDNO) = strtoint(St)) then
+      begin
+        Memo1.Lines.Add('本体は最新版です (ビルドNo.'+BUILDNO+')');
+      end
+      else if ( strtoint(BUILDNO) < strtoint(St)) then
+
+        if (MessageDlg(Self, '新しい本体が出ているようです。'+#10#13+'ダウンロードページに移動しますか？', mtConfirmation, mbOKCancel, 0) = mrOk) then
+        begin
+          flag := true;
+        end;
+
+      begin
+
+      end;
+    end
+    else
+    begin
+      Memo1.Lines.Add('本体更新情報の取得に失敗しました。');
+      lblStatus.Caption := '本体更新情報の取得に失敗しました。';
+    end;
+
+  finally
+    ResponseContent.Free;
+    Reader.Free;
+  end;
+
+  if flag then // サイトに移動
+  begin
+    ShellExecute(HInstance, 'open', PChar('https://www.e2j.net/downloads/?ret=1'), nil, nil, SW_NORMAL);
+    Application.Terminate;
+  end;
 
 end;
 
@@ -293,7 +376,6 @@ begin
 end;
 
 
-
 procedure TfrmHttp.NetHTTPRequest5RequestCompleted(const Sender: TObject;
   const AResponse: IHTTPResponse);
   var i: integer;
@@ -333,7 +415,6 @@ begin
 end;
 
 
-
 procedure TfrmHttp.NetHTTPRequest1RequestError(const Sender: TObject;
   const AError: string);
 begin
@@ -362,7 +443,12 @@ begin
   Memo1.Lines.Add( AError );
 end;
 
-
+procedure TfrmHttp.NetHTTPRequest6RequestError(const Sender: TObject;
+  const AError: string);
+begin
+  lblStatus.Caption:='接続中にエラーが起きました。';
+  Memo1.Lines.Add( AError );
+end;
 
 procedure TfrmHttp.NetHTTPRequest2ReceiveData(const Sender: TObject;
   AContentLength, AReadCount: Int64; var Abort: Boolean);

@@ -4079,9 +4079,9 @@ d110	ローランド D-110	ろーらんどでぃー110
 d2k300axp	DEC 2000 Model 300 AXP	でっく2000もでる300axp
 d2k500axp	DEC 2000 Model 500 AXP	でっく2000もでる500axp
 d461	Dasher D461	だっしゃーd461
-d50	ローランド D-50 (Ver. 2.xx)	ろーらんどでぃーごじゅう
-d50o	ローランド D-50 (Ver. 1.xx)	ろーらんどでぃーごじゅう
-d550	ローランド D-550	ろーらんどでぃーごひゃくごじゅう
+d50	ローランド D-50 (Ver. 2.xx)	ろーらんどでぃー50
+d50o	ローランド D-50 (Ver. 1.xx)	ろーらんどでぃー50
+d550	ローランド D-550	ろーらんどでぃー550
 d64plus	Dragon 64 Plus	どらごん64p
 d6800	Dream 6800	どりーむ6800
 d6809	6809 Portable	しっくすえいとおーないんぽーたぶる
@@ -4933,7 +4933,7 @@ ds2	データスリム2	でーたすりむ2
 ds3100	DECstation 3100	でっくすてーしょん3100
 ds348	Print Plus DS348 - Dot matrix printer	ぷりんとぷらすでぃーえす348
 ds5k133	DECstation 5000/133	でっくすてーしょん5000
-ds8	DS-8 Digital Synthesizer	でぃーえすえいと
+ds8	コルグ DS-8	こるぐでぃーえすえいと
 dsaber	ドラゴンセイバー (海外版, DO2)	どらごんせいばー_w
 dsabera	ドラゴンセイバー (海外版, older?)	どらごんせいばー_w
 dsaberj	ドラゴンセイバー (日本版, Rev B)	どらごんせいばー
@@ -4957,8 +4957,8 @@ dsp5500	Apollo DSP5500	あぽろdnp5500
 dspirit	ドラゴンスピリット (new version (DS3))	どらごんすぴりっと_3
 dspirit1	ドラゴンスピリット (old version (DS1))	どらごんすぴりっと_1
 dspirit2	ドラゴンスピリット (DS2)	どらごんすぴりっと_2
-dss1	DSS-1 Digital Sampling Synthesizer	でぃーえすえすわん
-dssmsrk	DSS-1 Digital Sampling Synthesizer (Memory/SCSI Retrofit)	でぃーえすえすわん
+dss1	コルグ DSS-1	こるぐでぃーえすえすわん
+dssmsrk	コルグ DSS-1 (Memory/SCSI Retrofit)	こるぐでぃーえすえすわん
 dstage	ダンスダンスレボリューション / Dancing Stage - Internet Ranking Ver (GN845 VER. EAA)	だんすだんすれぼりゅーしょん1i_ea
 dstagea	ダンスダンスレボリューション / Dancing Stage (GN845 VER. EAA)	だんすだんすれぼりゅーしょん1_ea
 dstbloom	Desert Bloom (0300111V, NSW/ACT)	でざーとぶるーむ
@@ -5006,8 +5006,8 @@ dvnimbus	DVTech Nimbus 176 in 1	でぃーぶいてっくにんばす
 dw2001	中国龍2001 / Dragon World 2001 (V100 02/21/01 16:05:16, 日本版)	ちゅうごくりゅう4
 dw225	DreamWriter 225	どりーむらいたー225
 dw2v100x	中国龍II / Dragon World II (ver. 100X, 輸出版)	ちゅうごくりゅう2_w100
-dw8000	DW-8000 Programmable Digital Waveform Synthesizer	でぃーだぶりゅー8000
-dw8000ex	DW-8000-EX Programmable Digital Waveform Synthesizer	でぃーだぶりゅー8000ex
+dw8000	コルグ DW-8000	こるぐでぃーだぶりゅー8000
+dw8000ex	コルグ DW-8000-EX	こるぐでぃーだぶりゅー8000ex
 dwarfd	Draw Poker III / Dwarfs Den (Dwarf Gfx)	どろーぽーかー3_
 dwarfda	Draw Poker III / Dwarfs Den (Card Gfx)	どろーぽーかー3_c
 dwex	Dragon World 3 EX / 中國龍 3 EX / Dungfong Zi Zyu 3 EX / 中国龍 3 EX (ver. 100)	どらごんわーるど3ex
@@ -6657,7 +6657,7 @@ evmbug	TMAM6095	てぃーえむえーえむ6095
 evosocc	Evolution Soccer	えぼりゅーしょんさっかー
 ewf	Earth Wind Fire	あーすうぃんどふぁいあ
 ews286	Ericsson WS286	えりくそんws286
-ex8000	EX-8000 Programmable Polyphonic Synthe Module	いーえっくす8000
+ex8000	コルグ EX-8000	こるぐいーえっくす8000
 excali64	Excalibur 64	えくすかりばー64
 excalibr	Excalibur	えくすかりばー
 excalibrf	Excalibur (フランス版)	えくすかりばー_f
@@ -7826,7 +7826,7 @@ gangwars	ギャングウォーズ	ぎゃんぐうぉーず_w
 gangwarsb	ギャングウォーズ (海賊版)	ぎゃんぐうぉーず-b
 gangwarsj	ギャングウォーズ (日本版)	ぎゃんぐうぉーず
 gangwarsu	ギャングウォーズ (US版)	ぎゃんぐうぉーず_u
-ganjaja	がんばれじゃじゃ丸 さいしょはグー / がんばれじゃじゃ丸 ホップステップジャンプ	がんばれじゃじゃまるさいしょはぐー
+ganjaja	ガンバレじゃじゃ丸 サイショハグー / がんばれじゃじゃ丸 ホップステップジャンプ	がんばれじゃじゃまるさいしょはぐー
 ganryu	武蔵巌流記 / Ganryu	むさしがんりゅうき
 gaplus	ギャプラス (GP2 rev. B)	ぎゃぷらす_
 gaplusa	ギャプラス (GP2)	ぎゃぷらす_
@@ -8207,9 +8207,9 @@ gnw_dkjrp	ゲーム&ウォッチ: ドンキーコングJR. (パノラマスク�
 gnw_dkong	ゲーム&ウォッチ: ドンキーコング	げーむうぉっちどんきーこんぐ1
 gnw_dkong2	ゲーム&ウォッチ: ドンキーコングII	げーむうぉっちどんきーこんぐ2
 gnw_egg	ゲーム&ウォッチ: エッグ	げーむうぉっちえっぐ
-gnw_fire	ゲーム&ウォッチ: ファイア(ワイドスクリーン)	げーむうぉっちふぁいあ
+gnw_fire	ゲーム&ウォッチ: ファイア (ワイドスクリーン)	げーむうぉっちふぁいあ
 gnw_fireatk	ゲーム&ウォッチ: ファイアアタック	げーむうぉっちふぁいああたっく
-gnw_fires	ゲーム&ウォッチ: ファイア(シルバー)	げーむうぉっちふぁいあ
+gnw_fires	ゲーム&ウォッチ: ファイア (シルバー)	げーむうぉっちふぁいあ
 gnw_flagman	ゲーム&ウォッチ: フラッグマン	げーむうぉっちふらっぐまん
 gnw_gcliff	ゲーム&ウォッチ: ゴールドクリフ	げーむうぉっちごーるどくりふ
 gnw_ghouse	ゲーム&ウォッチ: グリーンハウス	げーむうぉっちぐりーんはうす
@@ -8700,7 +8700,7 @@ guts	Guts n' Glory (プロトタイプ)	がっつんぐろーりー
 gutsn	ガツン (日本版)	がつん
 guttangt	ガッタンゴットン (ギャラクシアンタイプ基板用海賊版)	がったんごっとん-b
 guwange	ぐわんげ (日本版, Master Ver. 99/06/24)	ぐわんげ
-guwanges	ぐわんげスペシャルバージョン (日本版, Special Ver. 00/07/07)	ぐわんげすぺしゃるばーじょん
+guwanges	ぐわんげ特別バージョン (日本版, Special Ver. 00/07/07)	ぐわんげとくべつばん
 guzzler	ガズラー	がずらー
 guzzlers	ガズラー (スイマー基板)	がずらー_s
 gvrxpsup	Global VR XP OS Update/Install - 06/11/02	ぐろーばるぶいあーる
@@ -11906,13 +11906,13 @@ kontur	PK8020 Kontur	ぴーけー8020
 konzero	Zero (Konami Endeavour)	ぜろ_k
 kookabuk	Kooka Bucks (0100677V, NSW/ACT)	くーかばっくす
 kopunch	KOパンチ	けーおーぱんち
-korg707	707 Performing Synthesizer	ななまるなな
-korgm1	M1 Music Workstation (Rev 19)	えむわん
-korgm1ex	M1 EX Music Workstation (v1.29)	えむわんいーえっくす
-korgm1p1	M1 Plus+1 Music Workstation	えむわんぷらすわん
-korgm1r	M1R Music Workstation (v1.06)	えむわんあーる
-korgm1rex	M1R EX Music Workstation (v1.12)	えむわんいーえっくす
-korgz3	Z3 Guitar Synthesizer	ぜっとすりー
+korg707	コルグ 707	こるぐななまるなな
+korgm1	コルグ M1 (Rev 19)	こるぐえむわん
+korgm1ex	コルグ M1EX (v1.29)	こるぐえむわんいーえっくす
+korgm1p1	コルグ M1PLUS1	こるぐえむわんぷらすわん
+korgm1r	コルグ M1R (v1.06)	こるぐえむわんあーる
+korgm1rex	コルグ M1REX (v1.12)	こるぐえむわんいーえっくす
+korgz3	コルグ Z3	こるぐぜっとすりー
 korinai	麻雀好きの懲りない面々 (日本版 880425)	まーじゃんずきのこりないめんめん
 korinaim	麻雀好きの懲りない面々 [メダル] (日本版 880920)	まーじゃんずきのこりないめんめん
 korokoro	コロコロクエスト (日本版)	ころころくえすと
@@ -12281,7 +12281,7 @@ lhb	龍虎榜 (中華版, V035C)	ろんふーばん1_c035
 lhb2	龍虎榜 II (香港版, V185H)	ろんふーばん2
 lhbv33c	龍虎榜 (中華版, V033C)	ろんふーばん1_c033
 lhzb2	龙虎争霸2 (set 1)	ろんふーちぇんぱ2_1
-lhzb2a	龙虎争霸2 (set 2)	ろんふーちぇんぱ2_2
+lhzb2a	龙虎争霸2 (VS221M)	ろんふーちぇんぱ2_2
 lhzb3	龍虎爭霸3	ろんふーちぇんぱ3
 lhzb4	龍虎爭霸4	ろんふーちぇんぱ4
 liberate	リバレーション	りばれーしょん
@@ -20081,7 +20081,7 @@ magdrop	マジカルドロップ (日本版, Version 1.1, 1995.06.21)	まじか�
 magdrop2	マジカルドロップ2	まじかるどろっぷ2
 magdrop3	マジカルドロップIII	まじかるどろっぷ3
 magdropp	マジカルドロッププラス1！ (日本版, Version 2.1, 1995.09.12)	まじかるどろっぷ1_p1
-magerror	マジカルエラーをさがせ	まじかるえらーをさがせ
+magerror	マジカルエラーをさがせ!!	まじかるえらーをさがせ
 magforst	Magic Forest (0151139, US)	まじっくふぉれすと
 magibomb	Magic Bomb	まじっくぼむ
 magic	Magic	まじっく
@@ -20836,7 +20836,7 @@ mjifb	麻雀 イフ [メダル]	まーじゃんいふ
 mjifb2	麻雀 イフ [メダル](2921)	まーじゃんいふ_2921
 mjifb3	麻雀 イフ [メダル](2931)	まーじゃんいふ_2931
 mjikaga	麻雀いかがですか -2泊3日の慰安旅行- (日本版)	まーじゃんいかがですか
-mjjoship	麻雀女子プロレス -ギブアップ5秒前- (日本版)	まーじゃんじょしぷろれす
+mjjoship	麻雀女子プロレス -ギブUP5秒前- (日本版)	まーじゃんじょしぷろれす
 mjkinjas	麻雀 禁じられたあそび -イケイケ教師の欲望- (日本版)	まーじゃんきんじられたあそび
 mjkjidai	麻雀狂時代 (日本版)	まーじゃんきょうじだい
 mjkoiura	麻雀恋占い (set 1) (日本版)	まーじゃんこいうらない_1
@@ -23854,10 +23854,10 @@ polmega	Megamax GPD001SDG	めがまっくすgpd001sdg
 poly1	Poly 1 Educational Computer	ぽりー1
 poly1e	Poly 1 Educational Computer (early)	ぽりー1
 poly2	Poly 2 Learning System	ぽりー2
-poly61	Poly-61 Programmable Polyphonic Synthesizer	ぽり61
-poly800	Poly-800 Programmable Polyphonic Synthesizer	ぽり800
-poly800ii	Poly-800II Programmable Polyphonic Synthesizer	ぽり800_2
-poly800mdk	Poly-800 Programmable Polyphonic Synthesizer (MIDI Dump Kit)	ぽり800
+poly61	コルグ POLY-61	こるぐぽり61
+poly800	コルグ POLY-800	こるぐぽり800
+poly800ii	コルグ POLY-800II	こるぐぽり800_2
+poly800mdk	コルグ POLY-800 (MIDI Dump Kit)	こるぐぽり800
 poly88	Poly-88	ぽりー88
 poly880	Poly-Computer 880	ぽりこんぴゅーた880
 poly8813	Poly-8813	ぽりー8813
@@ -23866,7 +23866,7 @@ polynetw	ポリネットウォリアーズ (ver JAA)	ぽりねっとうぉりあ
 polyplay	Poly-Play (ZRE)	ぽりぷれい
 polyplay2	Poly-Play (ZRE-PP)	ぽりぷれい
 polyplay2c	Poly-Play (ZRE-PP - Czech)	ぽりぷれい
-polysix	Polysix Programmable Polyphonic Synthesizer	ぽりしっくす
+polysix	コルグ Polysix	こるぐぽりしっくす
 polystar	とべ！ポリスターズ (ver JAA)	とべぽりすたーず
 polyvcg	Polybrain Video Computer Game	ぽりぶれいんびでおこんぴゅーたげーむ
 pompeia6	Pompeii (10002211, NSW/ACT)	ぽんぺい1
@@ -25343,7 +25343,7 @@ rollfr_2	Roll Fruit (040318)	ろーるふるーと_
 rollfr_3	Roll Fruit (080327)	ろーるふるーと_
 rollfr_4	Roll Fruit (080331)	ろーるふるーと_
 rollfr_5	Roll Fruit (100924)	ろーるふるーと_
-rollingc	ローリングクラッシュ2イン1	ろーりんぐくらっしゅ
+rollingc	ローリングクラッシュ2イン1	ろーりんぐくらっしゅつーいんわん
 rollr_d2	Rollergames (AD-2) Prototype	ろーらーげーむず-pad2
 rollr_e1	Rollergames (PU-1)	ろーらーげーむず-ppu1
 rollr_ex	Rollergames (EXPERIMENTAL)	ろーらーげーむず-pex
@@ -34085,7 +34085,7 @@ taxi_p5	Taxi (P-5)	たくしー-p
 tazmani2	Tazz-Mania (set 2, alt hardware)	たずまにあ_2
 tazmani3	Tazz-Mania (Arfyc / Rodmar海賊版)	たずまにあ-br
 tazmania	Tazz-Mania (set 1)	たずまにあ_1
-tazmaniet	Tazz-Mania - El Trompa (U.R.V. BBCPE bootleg)	たずまにあえるとろんぱ-b
+tazmaniet	Tazz-Mania - El Trompa (U.R.V. BBCPE 海賊版)	たずまにあえるとろんぱ-b
 tazzmang	Tazz-Mania (ギャラクシアン基板海賊版)	たずまにあ-b
 tazzmang2	Tazz-Mania (ギャラクシアン基板海賊版 星空あり)	たずまにあ-bs
 tb303	ローランド TB-303 ベースライン	ろーらんどてぃーびー303
@@ -35809,14 +35809,14 @@ volfiedu	ヴォルフィード (US版, revision 1)	ぼるふぃーど_u1
 volfieduo	ヴォルフィード (US版)	ぼるふぃーど_u
 vollyrmt	Volly (Ramtek) [TTL]	ぼりー
 voltan	Voltan Escapes Cosmic Doom	ぼるたんえすけーぷすこずみっくどぅーむ
-von	電脳戦機バーチャロン (US版, Revision B)	ででんのうせんきばーちゃろん1_u
+von	電脳戦機バーチャロン (US版, Revision B)	でんのうせんきばーちゃろん1_u
 von2	電脳戦機バーチャロン -オラトリオ・タングラム- (Revision B)	でんのうせんきばーちゃろん2
 von254g	電脳戦機バーチャロン -オラトリオ・タングラム- (ver 5.4g)	でんのうせんきばーちゃろん2_5.4g
 von2a	電脳戦機バーチャロン -オラトリオ・タングラム- (Revision A)	でんのうせんきばーちゃろん2
 von2o	電脳戦機バーチャロン -オラトリオ・タングラム-	でんのうせんきばーちゃろん2
 vonj	電脳戦機バーチャロン (日本版, Revision B)	でんのうせんきばーちゃろん1
 vonot	電脳戦機バーチャロン -オラトリオ・タングラム- M.S.B.S. Ver5.66 2000エディション	でんのうせんきばーちゃろんおらとりおたんぐらむ566
-vonr	電脳戦機バーチャロン Relay (日本版)	ででんのうせんきばーちゃろん1_r
+vonr	電脳戦機バーチャロン Relay (日本版)	でんのうせんきばーちゃろん1_r
 vortex	Vortex	ぼーてっくす
 vortexp	Vortex (Pinball)	ぼーてっくす
 votrpss	Personal Speech System	ぱーそなるすぴーちしすてむ
