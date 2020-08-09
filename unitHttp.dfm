@@ -70,7 +70,7 @@ object frmHttp: TfrmHttp
   end
   object btnDownload: TButton
     Left = 435
-    Top = 208
+    Top = 204
     Width = 169
     Height = 57
     Anchors = [akRight, akBottom]

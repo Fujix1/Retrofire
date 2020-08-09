@@ -764,7 +764,7 @@ aircomb	エアーコンバット (AC2, US版)	えあーこんばっと_u
 aircombj	エアーコンバット (AC1, 日本版)	えあーこんばっと
 airduel	アイレム・エアデュエル (海外版, M82基板)	あいれむえあでゅえる_w
 airduelm72	アイレム・エアデュエル (日本版, M72基板)	あいれむえあでゅえる
-airduelu	アイレム・エアデュエル (US版ロケーションテスト, M82 hardware)	あいれむえあでゅえる_u
+airduelu	アイレム・エアデュエル (US版ロケーションテスト, M82基板)	あいれむえあでゅえる_u
 airrace	Air Race (プロトタイプ)	えあれーす
 airraid	クロスシューター / Air Raid (Single PCB)	くろすしゅーたー
 airtrix	エアトリックス (Rev A)	えあとりっくす
@@ -988,6 +988,7 @@ am_mg35i	Multi Game III (S.Ita 3.5)	まるちげーむ3_ams35
 am_mg3a	Multi Game III (V.Ger 3.64)	まるちげーむ3_amv36
 am_mg4v	Multi Game IV (V.Ger 3.44)	まるちげーむ4_am
 am_mg5hu	Multi Game V (AMGHU_V83.65)	まるちげーむふぁいぶ
+anakonda	Anakonda	あなこんだ
 anch386s	CH-386S-16/20/25G	しーえいちさんはちろくえす
 ancienta	Ancient Atlantis (set 1)	えいしゃんとあとらんてぃす_01
 ancientaa	Ancient Atlantis (set 2)	えいしゃんとあとらんてぃす_02
@@ -1021,8 +1022,7 @@ animaljr	ワイワイアニマルランドJr. / Exciting Animal Land Jr. (US, �
 animaljrj	ワイワイアニマルランドJr. (日本版)	わいわいあにまるらんどじゅにあ
 animaljrs	ワイワイアニマルランドJr. / Animalandia Jr. (スペイン版)	わいわいあにまるらんどじゅにあ_s
 animechmp	アニメチャンプ (GCA07 VER. JAA)	あにめちゃんぷ
-animpkr	名称不明な動物がテーマのゲーム (bottom)	めいしょうふめい_d
-animpkra	名称不明な動物がテーマのゲーム (top)	めいしょうふめい_d
+animpkr	名称不明なロケット/動物がテーマのポーカー	めいしょうふめい_d
 anithunt	Animal Treasure Hunt (Version 1.9R, set 1)	あにまるとれじゃーはんと_v19r1
 anithuntd1	Animal Treasure Hunt (Version 1.9R, set 2)	あにまるとれじゃーはんと_v19r2
 anithunto	Animal Treasure Hunt (Version 1.7)	あにまるとれじゃーはんと_v17
@@ -1310,6 +1310,7 @@ astrocmd	Astro Command	あすとろこまんど
 astrof	アストロファイター (set 1)	あすとろふぁいたー_1
 astrof2	アストロファイター (set 2)	あすとろふぁいたー_2
 astrof3	アストロファイター (set 3)	あすとろふぁいたー_3
+astroff	アストロファイター (set 4)	あすとろふぁいたー_4
 astrofl	アストロフラッシュ (日本版)	あすとろふらっしゅ
 astron	アストロンベルト	あすとろんべると
 astronp	アストロンベルト (Pioneer LDV1000)	あすとろんべると_p
@@ -1596,6 +1597,7 @@ austnew	Austin Powers (ARM7 Sound Board)	おーすてぃんぱわーず_a
 autmoon	Autumn Moon (1VXFC5488, New Zealand)	おーたむむーん
 autoc15	Autocue 1500	おーときゅー1500
 automat	Automat (ロボコップ海賊版)	おーとまっと
+autopapa	El auto de papa	えるあうとでぱら
 av2mj1bb	AV2麻雀No.1 ベイブリッジの聖女 (日本版)	えーぶいつーまーじゃん1
 av2mj2rg	AV2麻雀No.2 ルージュの香り (日本版)	えーぶいつーまーじゃん2
 avalnc12	アヴァロンの鍵 ver.1.20 -新たなる召還- (クライアント, Rev A) (GDT-0010A)	あばろんのかぎ120_ca
@@ -1631,6 +1633,8 @@ avigo_de	Avigo 10 (ドイツ版)	あびご10
 avigo_es	Avigo 10 (スペイン版)	あびご10
 avigo_fr	Avigo 10 (フランス版)	あびご10
 avigo_it	Avigo 10 (イタリア版)	あびご10
+avrmax	AVR-Max Chess Computer (English)	えーぶいあーるまっくすちぇすこんぴゅーた
+avrmaxg	AVR-Max-Schachzwerg (German)	あーべーあーるまっくすしゃつゔぇんぐ
 avsp	エイリアンVSプレデター (Euro版 940520)	えいりあんたいぷれでたー_e
 avspa	エイリアンVSプレデター (アジア版 940520)	えいりあんたいぷれでたー_a
 avspd	エイリアンVSプレデター (Euro版 940520 Phoenix Edition) (海賊版)	えいりあんたいぷれでたー-b
@@ -1781,6 +1785,7 @@ bassangl	バスアングラー (GE765 VER. JAA)	ばすあんぐらー1
 basschal	Sega Bass Fishing Challenge Version A	せがばすふぃっしんぐちゃれんじ_a
 basschalo	Sega Bass Fishing Challenge	せがばすふぃっしんぐちゃれんじ_
 bassdx	ゲットバス / Sega Bass Fishing (デラックス筐体)	げっとばす_dx
+bassmate	Bassmate Computer	ばすめいとこんぴゅーた
 bassstr	BassStation Rack Analogue Synthesizer Module	ばすすてーしょんらっくあなろぐしんせさいざーもじゅーる
 batcir	バトルサーキット (Euro版 970319)	ばとるさーきっと_e
 batcira	バトルサーキット (アジア版 970319)	ばとるさーきっと_a
@@ -2091,6 +2096,7 @@ bingor2	Bingo Roll / Bell Star? (set 2)	びんごろーる_2
 bingor3	Bingo Roll / Bell Star? (set 3)	びんごろーる_3
 bingor4	Bingo Roll / Bell Star? (set 4)	びんごろーる_4
 bingor5	Bingo Roll / Bell Star V3? (set 5)	びんごろーる_5
+bingor6	Bingo Roll / Turbo Bingo?	びんごろーる
 bingowav	ビンゴウェーブ	びんごうぇーぶ
 bingowng	Bingo (set 1)	びんご_w1
 bingownga	Bingo (set 2)	びんご_w2
@@ -2662,8 +2668,8 @@ bumblbugu	Bumble Bugs (CHG0479-03, US)	ばんぶるばぐず
 bumblbugua	Bumble Bugs (CHG0479-99, US)	ばんぶるばぐず
 bungeem	Bungee Monkey (set 1)	ばんじーもんきー_1
 bungeema	Bungee Monkey (set 2)	ばんじーもんきー_2
-bup	Mephisto Blitz- und Problemloesungs-Modul (set 1)	めふぃすとぶりっつうんとぷろぶれむろえずんくすもどぅる
-bupa	Mephisto Blitz- und Problemloesungs-Modul (set 2)	めふぃすとぶりっつうんとぷろぶれむろえずんくすもどぅる
+bup	Mephisto Blitz- und Problemlösungs-Modul (set 1)	めふぃすとぶりっつうんとぷろぶれむろえずんくすもどぅる
+bupa	Mephisto Blitz- und Problemlösungs-Modul (set 2)	めふぃすとぶりっつうんとぷろぶれむろえずんくすもどぅる
 buraiken	必殺！無頼拳 (日本版)	ひっさつぶらいけん_
 buraikenb	必殺！無頼拳 (日本版, 海賊版?)	ひっさつぶらいけん-b
 burglarx	Burglar X	ばーぐらーえっくす
@@ -2868,6 +2874,7 @@ carjmbre	カージャンボリー	かーじゃんぼりー
 carket	Carket Ball	かーけっとぼーる
 carlecfg	Carl Edwards' Chase For Glory	かーるえどわーずちぇいすふぉーぐろーりー
 carmarty	FM TOWNS カーマーティー	えふえむたうんずかーまーてぃ
+carnaval	E-mu Carnaval - Jugando con Fuego	いーみゅーかーなばる
 carnevil	CarnEvil (v1.0.3)	かーんえびる_103
 carnevil1	CarnEvil (v1.0.1)	かーんえびる_101
 carnival	カーニバル (アップライト筐体, AY8912 music)	かーにばる
@@ -2988,6 +2995,7 @@ cbusterw	クルードバスター (海外版 FU version)	くるーどばすた�
 cc1	Chess Challenger	ちぇすちゃれんじゃー
 cc10	Chess Challenger "10" (model CCX, rev. B)	ちぇすちゃれんじゃー10
 cc10a	Chess Challenger "10" (model CCX)	ちぇすちゃれんじゃー10
+cc10c	Chess Challenger (model UCC10, 10 levels)	ちぇすちゃれんじゃー
 cc3	Chess Challenger (upgraded version, 3 levels)	ちぇすちゃれんじゃー
 cc40	Compact Computer 40	こんぱくとこんぴゅーた40
 cc7	Chess Challenger "7" (model BCC, rev. B)	ちぇすちゃれんじゃー7
@@ -3023,6 +3031,7 @@ ccmk2	Chess Champion: MK II (ver. 1)	ちぇすちゃんぴおんまーく2
 ccmk2a	Chess Champion: MK II (ver. 2)	ちぇすちゃんぴおんまーく2
 ccmk5	Chess Champion: Mark V	ちぇすちゃんぴおんまーくふぁいぶ
 ccmk6	Chess Champion: Mark VI/Philidor	ちぇすちゃんぴおんまーくしっくす
+ccompan	Chess Companion	ちぇすこんぱにおん
 ccruise	Caribbean Cruise	かりびあんくるーず
 ccs2422	CCS Model 2422B FDC card	しーしーえすもでる2422
 ccs2810	CCS Model 2810 CPU card	しーしーえすもでる2810
@@ -3079,6 +3088,7 @@ cf3000	キングコング CF-3000 (日本版) (MSX1)	きんぐこんぐ_cf3000
 cf3300	キングコング CF-3300 (日本版) (MSX1)	きんぐこんぐ_cf3300
 cfa3000	Henson CFA 3000	へんそんしーえふえー3000
 cfarm	Chicken Farm (Version 2.0)	ちきんふぁーむ_2
+cfarwest	Far West (Compumatic)	ふぁーうえすと_c
 cfblue	Crazy Fruits Blue (Russia) (Atronic) (set 1)	くれいじーふるーつぶるー
 cfbluea	Crazy Fruits Blue (Russia) (Atronic) (set 2)	くれいじーふるーつぶるー
 cfboy0a1	フラッシュボーイ (縦スクロール) (デコカセ MD) (No.12/Ver.0/Set.1, 日本版)	ふらっしゅぼーい_v
@@ -3196,6 +3206,7 @@ chessmstdm	Chess-Master Diamond	ちぇすますたーだいあもんど
 chesster	Chesster Challenger (v1.3)	ちぇすすたーちゃれんじゃー
 chesstera	Chesster Challenger	ちぇすすたーちゃれんじゃー
 chesstrv	Chess Traveler	ちぇすとらべらー
+chesstrvi	Chess Intercontinental Traveler	ちぇすいんたーこんちねんたるとらべらー
 chewheel	Cherry Wheel (Version 1.7)	ちぇりーほいーる
 chewing	Chewing Gum	ちゅーいんぐがむ
 chexx83	Chexx (EM Bubble Hockey, 1983 1.1)	ちぇっくす
@@ -3415,6 +3426,7 @@ cmpa286	286マザーボード	にはちろくまざーぼーど
 cmpacman	Super Pacman (v1.2) + Cherry Master (Corsica, v8.31, set 1)	すーぱーぱっくまんちぇりーますたー
 cmpacmana	Super Pacman (v1.2) + Cherry Master (Corsica, v8.31, set 2)	すーぱーぱっくまんちぇりーますたー
 cmpchess	CompuChess	こんぴゅちぇす
+cmpchess2	CompuChess: The Second Edition	こんぴゅちぇす
 cmrltv75	Coinmaster Roulette P497 V75 (Y2K, スペイン版)	こいんますたーるーれっと
 cms6502	CMS 6502 Development System	しーえむえす6502
 cmspacmn	Ms. Pac-Man (Coleco)	みずぱっくまんc_coleco
@@ -3750,6 +3762,7 @@ cpsoccerj	プロサッカー (デコカセ) (日本版)	ぷろさっかー_d
 cptennis	プロテニス (デコカセ) (US版)	ぷろてにす_us
 cptennisj	プロテニス (デコカセ) (日本版)	ぷろてにす_
 cpthook	Captain Hook	きゃぷてんふっく
+cptlucky	Captain Lucky	きゃぷてんらっきー
 cpu09	CPU09	しーぴーゆー09
 cpzodiac	キャプテンゾディアック (海外版)	きゃぷてんぞでぃあっく_w
 cpzodiacj	キャプテンゾディアック (日本版)	きゃぷてんぞでぃあっく
@@ -3841,9 +3854,10 @@ crusnexoa	Cruis'n Exotica (version 2.0)	くるーじんいぐぞてぃか_20
 crusnexob	Cruis'n Exotica (version 1.6)	くるーじんいぐぞてぃか_16
 crusnexoc	Cruis'n Exotica (version 1.3)	くるーじんいぐぞてぃか_13
 crusnexod	Cruis'n Exotica (version 1.0)	くるーじんいぐぞてぃか_10
-crusnusa	Cruis'n USA (rev L4.1)	くるーじんゆーえすえー_41
+crusnusa	Cruis'n USA (rev L4.4)	くるーじんゆーえすえー_44
 crusnusa21	Cruis'n USA (rev L2.1)	くるーじんゆーえすえー_21
 crusnusa40	Cruis'n USA (rev L4.0)	くるーじんゆーえすえー_40
+crusnusa41	Cruis'n USA (rev L4.1)	くるーじんゆーえすえー_41
 crusnwld	クルージンワールド (rev L2.5)	くるーじんわーるど_25
 crusnwld13	クルージンワールド (rev L1.3)	くるーじんわーるど_13
 crusnwld17	クルージンワールド (rev L1.7)	くるーじんわーるど_17
@@ -3897,7 +3911,7 @@ cs8_ssp	Casino Strip VIII (Shooting Game version, for Pioneer LD)	かじのす�
 cs9_qps	Casino Strip IX (Poker version, for Sony LD)	かじのすとりっぷ09
 cs9_spp	Casino Strip IX (Poker version, for Pioneer LD)	かじのすとりっぷ09
 csc	Champion Sensory Chess Challenger	ちゃんぴおんせんさりーちぇすちゃれんじ
-csce	Elite Champion Challenger (Travemuende version)	えりーとちゃんぴおんちゃれんじゃー
+csce	Elite Champion Challenger (Travemünde version)	えりーとちゃんぴおんちゃれんじゃー
 csclub	カプコンスポーツクラブ (Euro版 971017)	かぷこんすぽーつくらぶ_e1017
 csclub1	カプコンスポーツクラブ (Euro版 970722)	かぷこんすぽーつくらぶ_e0722
 csclub1d	カプコンスポーツクラブ (Euro版 970722 Phoenix Edition) (海賊版)	かぷこんすぽーつくらぶ-b
@@ -4136,6 +4150,7 @@ dambustr	ダムバスター (US版, set 1)	だむばすたー_us1
 dambustra	ダムバスター (US版, set 2)	だむばすたー_us2
 dambustruk	ダムバスター (UK版)	だむばすたー_uk
 damesc	Dame Sensory Challenger	でいむせんさりーちゃれんじゃー
+dance555	Sports and Dance Fit Games Mat D-555 (PAL)	すぽーつあんどだんすふぃっとげーむずまっと
 danceyes	ダンシングアイ (US版, DC3/VER.C)	だんしんぐあい_u
 danceyesj	ダンシングアイ (日本版, DC1/VER.A)	だんしんぐあい
 danchih	団地で花札 -奥さん米屋ですよ！- (J 990607 V1.400)	だんちではなふだおくさんこめやですよ
@@ -4147,7 +4162,7 @@ dangarbt	UFOロボ ダンガー (9/26/1986, 海賊版 set 2)	ゆーふぉーろ�
 dangarj	UFOロボ ダンガー (9/26/1986, 日本版)	ゆーふぉーろぼだんがー
 dangcurv	デンジャラスカーブス (Ver 2.9 O)	でんじゃらすかーぶす_o
 dangcurvj	デンジャラスカーブス (Ver 2.2 J)	でんじゃらすかーぶす
-dangerz	デンジャーゾーン	でんじゃーぞーん
+dangerz	デンジャーゾーン (rev 2)	でんじゃーぞーん
 dangseed	デンジャラスシード (日本版)	でんじゃらすしーど
 dankuga	断仇牙 (Ver 0.0J 1994/12/13, プロトタイプ)	だんくうが
 daraku	堕落天使 -ザ・フォーレンエンジェル-	だらくてんし
@@ -4214,8 +4229,9 @@ dbldolph	Double Dolphins (20000211, NSW/ACT)	だぶるどるふぃんず
 dbldolphq	Double Dolphins (40003211, Queensland)	だぶるどるふぃんず
 dbldynj	ザ・ダブルダイナマイツ (日本版, 13NOV89)	ざだぶるだいなまいつ_
 dbldynu	ザ・ダブルダイナマイツ (US版, 13NOV89)	ざだぶるだいなまいつ_u
-dblewing	ダブルウイングス	だぶるういんぐす
-dblewinga	ダブルウイングス (アジア版)	だぶるういんぐす_a
+dblewing	ダブルウイングス (set 1)	だぶるういんぐす
+dblewinga	ダブルウイングス (set 2)	だぶるういんぐす
+dblewingb	ダブルウイングス (アジア版)	だぶるういんぐす_a
 dblplay	Super Baseball Double Play Home Run Derby	すーぱーべーすぼーるだぶるぷれいほーむらんだーびー
 dblpoint	Double Point -夜上海-	だぶるぽいんと
 dblpointd	Double Point (Dong Bang Electron, 海賊版?)	だぶるぽいんと-b
@@ -4482,6 +4498,7 @@ desertbrjd	デザートブレイカー (日本版) (FD1094 317-0194 海賊版)	�
 desertdn	Desert Dan	でざーとだん
 desertgu	デザートガン	でざーとがん
 desertwr	湾岸戦争 / Desert War (ver 1.0)	わんがんせんそう
+destdrby	Destruction Derby [TTL]	ですとらくしょんだーびー
 desterth	Destination Earth (ルナレスキュー海賊版)	ですてぃねーしょんあーす
 destiny	Destiny - The Fortuneteller (US版)	ですてぃにーざふぉーちゅんてらー
 destroyr	デストロイヤー (version O2)	ですとろいやー_2
@@ -4538,6 +4555,7 @@ diamond	Diamond Run	だいやもんどらん
 diamondp	Diamond Lady	だいあもんどれでぃ
 diamondpf	Diamond Lady (フランス版)	だいあもんどれでぃ_f
 diamondpg	Diamond Lady (ドイツ版)	だいあもんどれでぃ_g
+dibifuca	Diana Bifuca	だいあなびふか
 didakm91	Didaktik M 91	でぃだくてぃくm91
 didakm92	Didaktik M 92	でぃだくてぃくm2
 didakm93	Didaktik M 93	でぃだくてぃくm93
@@ -4569,6 +4587,7 @@ dimeye	Diamond Eyes (0251312, US)	だいあもんどあいず
 dimeyece	Diamond Eyes - Cash Express (0152039, US)	だいあもんどあいず1
 dimtouch	Diamond Touch (0400433V, NSW/ACT)	だいあもんどたっち
 dina	Dina	だいな
+dindice	Dice game	だいすげーむ
 diner_f2	Diner (LF-2) French	だいなー
 diner_l1	Diner (LU-1) Europe	だいなー
 diner_l2	Diner (LU-2) Europe	だいなー
@@ -4596,6 +4615,7 @@ dinorexj	ダイノレックス (日本版)	だいのれっくす
 dinorexu	ダイノレックス (US版)	だいのれっくす_u
 dinosa6	Dinosaur (10118811, NSW/ACT)	だいなそー
 dinou	キャディラックス -恐竜新世紀- / Cadillacs and Dinosaurs (US版 930201)	きゃでぃらっくす_u
+diolakoa	Diana Olakoa	だいあなおらこあ
 dirtdash	ダートダッシュ (Rev. DT2 Ver.A, 海外版)	だーとだっしゅ_w
 dirtdashj	ダートダッシュ (Rev. DT1 Ver.A, 日本版)	だーとだっしゅ
 dirtdvls	ダートデビルズ (輸出版, Revision A)	だーとでびるず_wa
@@ -4734,6 +4754,7 @@ doa2a	デッド・オア・アライブ2 (Rev A)	でっどおああらいぶ2
 doa2m	デッド・オア・アライブ2 ミレニアム	でっどおああらいぶ2みれにあむ
 doaa	デッド・オア・アライブ (Model 2A, Revision A)	でっどおああらいぶ1_a
 doapp	デッド・オア・アライブ プラスプラス (日本版)	でっどおああらいぶぷらすぷらす
+doappk	デッド・オア・アライブ プラスプラス (韓国版)	でっどおああらいぶぷらすぷらす_k
 dobouchn	どぼちゃん (ver JAA)	どぼちゃん
 docastle	ミスターDo! V.S ユニコーン / Mr. Do's Castle (set 1)	みすたーどぅたいゆにこーん_1
 docastle2	ミスターDo! V.S ユニコーン / Mr. Do's Castle (set 2)	みすたーどぅたいゆにこーん_2
@@ -4803,6 +4824,7 @@ donpachijs	首領蜂 (日本版, 撮影版)	どんぱち_
 donpachikr	首領蜂 (韓国版)	どんぱち_k
 dorachan	ドラちゃん (日本版)	どらちゃん
 doraemon	ドラえもんの絵合わせモンタージュ (プロトタイプ)	どらえもんのえあわせもんたーじゅ
+dorapdc	Dora l'exploratrice - Pocket Dream Console (VideoJet, France)	どーらりくすぷろらとり
 dorodon	Dorodon (set 1)	どろどん
 dorodon2	Dorodon (set 2)	どろどん
 dorunrun	スーパーピエロ / Do! Run Run (set 1)	すーぱーぴえろ_1
@@ -5011,6 +5033,7 @@ dualaslt	リバレーション / Dual Assault	りばれーしょん_u
 dualgame	Dual Games (プロトタイプ)	でゅあるげーむず
 duckhunt	Vs. ダックハント (set DH3 E)	だっくはんと
 duet16	Duet-16	でゅえっと16
+duetpp	Game Sporz Wireless Duet Play Ping-Pong	げーむすぽーつわいあれすでゅえっとぷれいぴんぽん
 dumpmtmt	ダンプ松本 (日本版, 8751 317-0011a)	だんぷまつもと
 dumpump	Dump The Ump	だんぷじあんぷ
 dungdrag	Dungeons & Dragons	だんじょんずあんどどらごんず-p
@@ -5752,6 +5775,7 @@ elvisp303	Elvis (3.03)	えるびす_303
 elvisp4	Elvis (4.00)	えるびす_400
 elwro800	800 Junior	えいとはんどれっどじゅにあ
 emate	eMate 300	いーめいと300
+emax2	E-mu EMAX II	いーみゅーいーまっくす2
 embargo	Embargo	えんばーご
 embryon	Embryon	えんぶりおん
 emeralda	エメラルディア (海外版)	えめらるでぃあ_w
@@ -6725,6 +6749,8 @@ exerizer	エクセライザー (日本版)	えくせらいざー
 exerizerb	エクセライザー (海賊版)	えくせらいざー-b
 exl100	EXL 100	えくせる
 exodus	エクソダス (海賊版?)	えくそだす
+exorciser	M6800 EXORciser (M68SDT)	えむ6800えくそさいざー
+exorterm155	EXORterm 155	えくそーたーむ155
 exospace	Explorers of Space / Разведчики космоса	えくすぷろーらーずおぶすぺーす
 exp4044	EXP4044	いーえっくすぴー4044
 exp85	Explorer/85	えくすぷろーらー85
@@ -7037,6 +7063,7 @@ fearless	Fearless Pinocchio (V101US)	ふぃあれすぴのきお
 feasbu	Elite A/S Challenger (Budapest program)	えりーとえーえすちゃれんじゃー
 feasgla	Elite A/S Challenger (Glasgow program, set 1)	えりーとえーえすちゃれんじゃー
 feasglaa	Elite A/S Challenger (Glasgow program, set 2)	えりーとえーえすちゃれんじゃー
+feasglab	Elite A/S Challenger (Glasgow program, set 3)	えりーとえーえすちゃれんじゃー
 feleg	Elegance Chess Challenger	えれがんすちぇすちゃれんじゃー
 fellow	Fellow (Finland)	ふぇろー
 fenix	Fenix (Orio, フェニックス海賊版)	ふぇにっくす-b
@@ -7132,12 +7159,14 @@ fhawkj	ファイティングホーク (日本版)	ふぁいてぃんぐほーく
 fhboxers	ファンキーヘッドボクサーズ (JUETBKAL 951218 V1.000)	ふぁんきーへっどぼくさーず
 fhunter	Fortune Hunter (2XF5196I01, USA)	ふぉーちゅんはんたー_1
 fhuntera	Fortune Hunter (2XF5196I02, USA)	ふぉーちゅんはんたー_2
-fh_905h	Funhouse 9.05H	ふぁんはうす_905
-fh_l3	Funhouse L-3	ふぁんはうす_l3
-fh_l4	Funhouse L-4	ふぁんはうす_l4
-fh_l5	Funhouse L-5	ふぁんはうす_l5
-fh_l9	Funhouse L-9 (SL-2m)	ふぁんはうす_l9
-fh_l9b	Funhouse L-9 (SL-2m) Bootleg Improved German translation	ふぁんはうす_l9
+fh_905h	Funhouse (9.05H)	ふぁんはうす
+fh_l2	Funhouse (L-2)	ふぁんはうす
+fh_l3	Funhouse (L-3)	ふぁんはうす
+fh_l4	Funhouse (L-4)	ふぁんはうす
+fh_l5	Funhouse (L-5)	ふぁんはうす
+fh_l9	Funhouse (L-9, SL-2m)	ふぁんはうす
+fh_l9b	Funhouse (L-9, SL-2m, bootleg improved German translation)	ふぁんはうす
+fh_pa1	Funhouse (L-2, prototype PA-1 System 11 sound)	ふぁんはうす
 fi6845	Fast Invaders (6845 version)	ふぁすといんべーだーず_
 fi8275	Fast Invaders (8275 version)	ふぁすといんべーだーず_
 fic4386vchd	4386-VC-HD	ふぉーすりーえいとしっくすぶいしー
@@ -7326,6 +7355,7 @@ foodf1	フードファイト (rev 1)	ふーどふぁいと_1
 foodf2	フードファイト (rev 2)	ふーどふぁいと_2
 foodfc	フードファイト (cocktail)	ふーどふぁいと_c
 foolrace	Fool Race	ふーるれーす
+football	Football	ふっとぼーる
 footbpow	Football Power (Version 1.2)	ふっとぼーるぱわー
 footchmp	ハットトリックヒーロー / Football Champ / Euro Football Champ (海外版)	はっととりっくひーろー1_w
 footchmpbl	ハットトリックヒーロー / Football Champ / Euro Football Champ (海外版) (海賊版)	はっととりっくひーろー1-bw
@@ -7617,6 +7647,7 @@ galapx	ギャラクシアンパートX	ぎゃらくしあんぱーとてん
 galastrm	ギャラクティックストーム (日本版)	ぎゃらくてぃっくすとーむ
 galaxbsf	ギャラクシアン (海賊版, set 1)	ぎゃらくしあん-b1
 galaxbsf2	ギャラクシアン (海賊版, set 3)	ぎゃらくしあん-b3
+galaxcirsa	ギャラクシアン (Cirsa スペイン製海賊版)	ぎゃらくしあん-bs
 galaxi	Galaxi (v2.0)	ぎゃらくし
 galaxia	Galaxia (set 1)	ぎゃらくしあ_1
 galaxiaa	Galaxia (set 2)	ぎゃらくしあ_2
@@ -7686,7 +7717,7 @@ galpani4k	ギャルズパニック4遊 (韓国版)	ぎゃるずぱにっく4ゆ�
 galpanic	ギャルズパニック (プロテクト無し)	ぎゃるずぱにっく1_
 galpanica	ギャルズパニック (MCU Protected, set 1)	ぎゃるずぱにっく1_1
 galpanicb	ギャルズパニック (MCU Protected, set 2)	ぎゃるずぱにっく1_2
-galpanicms	New Quiz (Modular System 海賊版)	にゅーくいず
+galpanicms	New Quiz (Modular System製ギャルズパニック海賊版)	にゅーくいず
 galpanidx	ギャルズパニック4遊 / Gals Panic DX (アジア版)	ぎゃるずぱにっく4ゆう_a
 galpanis	ギャルズパニックS -エキストラエディション- (Euro版, set 1)	ぎゃるずぱにっくs1_e1
 galpanisa	ギャルズパニックS -エキストラエディション- (アジア版)	ぎゃるずぱにっくs1_a1
@@ -8254,6 +8285,7 @@ gnw_chef	ゲーム&ウォッチ: シェフ	げーむうぉっちしぇふ
 gnw_climber	ゲーム&ウォッチ: クライマー (クリスタルスクリーン)	げーむうぉっちくらいまー
 gnw_climbern	ゲーム&ウォッチ: クライマー (ニューワイドスクリーン)	げーむうぉっちくらいまー
 gnw_dkcirc	ゲーム&ウォッチ: ドンキーコングサーカス	げーむうぉっちどんきーこんぐさーかす
+gnw_dkhockey	マイクロVSシステム: ドンキーコングホッケー	まいくろぶいえすしすてむどんきーこんぐほっけー
 gnw_dkjr	ゲーム&ウォッチ: ドンキーコングJR. (ニューワイドスクリーン)	げーむうぉっちどんきーこんぐじゅにあ
 gnw_dkjrp	ゲーム&ウォッチ: ドンキーコングJR. (パノラマスクリーン)	げーむうぉっちどんきーこんぐじゅにあ
 gnw_dkong	ゲーム&ウォッチ: ドンキーコング	げーむうぉっちどんきーこんぐ1
@@ -8686,7 +8718,9 @@ guiness	ザ・ギネス (日本版)	ざぎねす
 guitarfv	Guitar Fever (2007.07.03 Ver 2.7)	ぎたーふぃーばー
 guitarss	Guitar Super Star ('Fender Stratocaster' style)	ぎたーすーぱーすたー
 guitarssa	Guitar Super Star (red 'Gibson Flying V' style)	ぎたーすーぱーすたー
-guitarst	Guitar Star	ぎたーすたー
+guitarst	Guitar Star (US, Senario, NTSC)	ぎたーすたー
+guitarstp	Guitar Star (Europe, PAL)	ぎたーすたー
+guitrbus	Guitar Buster	ぎたーばすたー
 gulfstrm	ガルフストーム (set 1)	がるふすとーむ_1
 gulfstrma	ガルフストーム (set 2)	がるふすとーむ_1
 gulfstrmb	ガルフストーム (set 3)	がるふすとーむ_3
@@ -9156,6 +9190,7 @@ hgokou	花札 華五光 [メダル] (日本版)	はなふだはなごこう
 hg_frd	Fruit Deuce (Hazel Grove)	ふるーとでゅーす
 hh	Haunted House (Rev. 2)	ほーんてっどはうす_r2
 hharry	大工の源さん -べらんめ町騒動記- / Hammerin' Harry (海外版, M81基板)	だいくのげんさん_w
+hharryb	大工の源さん -べらんめ町騒動記- / Hammerin' Harry (海外版, M84基板 海賊版)	だいくのげんさん-b
 hharryu	大工の源さん -べらんめ町騒動記- / Hammerin' Harry (US版, M84基板)	だいくのげんさん_u
 hhotel	Haunted Hotel	ほーんてっどほてる
 hhtiger	H/H Tiger	えいちえいちたいがー
@@ -9482,6 +9517,7 @@ hvyunitu	Heavy Unit -U.S.A. Version- (US版)	へびーゆにっと_u
 hwchamp	ヘビーウエイトチャンプ	へびーうえいとちゃんぷ
 hwchampj	ヘビーウエイトチャンプ (日本版) (FD1094 317-0046)	へびーうえいとちゃんぷ
 hwchampjd	ヘビーウエイトチャンプ (日本版) (FD1094 317-0046 海賊版)	へびーうえいとちゃんぷ-b
+hwchiptn	The Hardware Chiptune Project	ざはーどうぇあちっぷちゅーんぷろじぇくと
 hwrace	ハイウェイレース	はいうぇいれーす
 hx10	パソピアIQ HX-10 (MSX1)	ぱそぴああいきゅー_hx10
 hx10d	パソピアIQ HX-10D (MSX1)	ぱそぴああいきゅー_hx10d
@@ -9738,6 +9774,7 @@ insectxj	インセクターX (日本版)	いんせくたーえっくす
 instantm	Polaroid Instant Memories	ぽらろいどいんすたんとめもりーず
 instruct	Signetics Instructor 50	しぐねてぃくすいんすとらくた50
 intact89	InterAct Complete Video Game - 89-in-1	いんたらくとこんぷりーとびでおげーむ89いん1
+intchess	Intelligent Chess	いんてりじぇんとちぇす
 intcup94	ハットトリックヒーロー'93 / International Cup '94 (Ver 2.2O 1994/05/26)	はっととりっくひーろー93_w94
 intel02	Intellect-02	いんてれくと02
 inteladv	Intelligence Advance E/R (Germany)	いんてりじぇんすあどばんすいーあーる
@@ -11314,7 +11351,9 @@ jak_dprs	Disney Princesses (JAKKS Pacific TV Game, Game-Key Ready)	でぃずに�
 jak_duck	Duck Commander (JAKKS Pacific TV Game)	だっくこまんだー
 jak_fan4	Fantastic Four (JAKKS Pacific TV Game, Game-Key Ready)	ふぁんたすてぃっくふぉー
 jak_gtg	Golden Tee Golf (JAKKS Pacific TV Game)	ごーるでんてぃーごるふ
-jak_hmhsm	Hannah Montana G2 Deluxe / High School Musical G2 Deluxe 2-in-1 (JAKKS Pacific TV Game)	はんなもんたなじーつーでらっくす
+jak_hmg2	Hannah Montana G2 Deluxe - All in One (JAKKS Pacific TV Game)	はんなもんたなじーつーでらっくす
+jak_hmhsm	Hannah Montana G2 Deluxe / High School Musical G2 Deluxe - Two in One (JAKKS Pacific TV Game)	はんなもんたなじーつーでらっくす
+jak_hsmg2	High School Musical G2 Deluxe - All in One (JAKKS Pacific TV Game)	はいすくーるみゅーじかるじーつーでらっくす
 jak_just	Justice League (JAKKS Pacific TV Game, Game-Key Ready)	じゃすてぃすりーぐ
 jak_mk	Mortal Kombat (JAKKS Pacific TV Game)	もーたるこんばっと-j
 jak_mpac	Ms. Pac-Man 5-in-1 (Ms. Pac-Man, Pole Position, Galaga, Xevious, Mappy) (JAKKS Pacific TV Game, Game-Key Ready) (07 FEB 2005 A SKU F)	みずぱっくまんふぁいぶいんわん
@@ -11323,6 +11362,7 @@ jak_nick	Nicktoons (JAKKS Pacific TV Game, Game-Key Ready)	にっくとぅーん
 jak_pf	Phineas and Ferb: Best Game Ever! (JAKKS Pacific TV Motion Game)	ふぃねあすあんどふぁーぶべすとげーむえばー
 jak_pooh	Winnie the Pooh - Piglet's Special Day (JAKKS Pacific TV Game, Game-Key Ready)	うぃにーざぷーぴぐれっつすぺしゃるでい
 jak_prft	Power Rangers Force In Time (JAKKS Pacific TV Motion Game)	ぱわーれんじゃーずふぉーすいんたいむ
+jak_prhp	Power Rangers Super Megaforce Hero Portal	ぱわーれんじゃーずすーぱーめがふぉーすひーろーぽーたる
 jak_s500	SpongeBob SquarePants Bikini Bottom 500 (JAKKS Pacific TV Motion Game)	すぽんじぼぶすくえあぱんつびきにぼとむ500
 jak_sbfc	SpongeBob SquarePants - The Fry Cook Games (JAKKS Pacific TV Game, Game-Key Ready) (AUG 18 2005 21:31:56)	すぽんじぼぶすくえあぱんつ
 jak_sdoo	Scooby-Doo! and the Mystery of the Castle (JAKKS Pacific TV Game, Game-Key Ready)	すくーびーどぅーあんどざみすてりーおぶざきゃっする
@@ -11499,10 +11539,12 @@ jolycdih	Jolly Card (Italian, bootleg, set 3)	じょりーかーど_i-b
 jolycdit	Jolly Card (Italian, blue TAB board, encrypted)	じょりーかーど_ibe
 jolycdsp	Jolly Card (Spanish, blue TAB board, encrypted)	じょりーかーど_sbt
 jolycmzs	Jolly Card Professional 2.0 (MZS Tech)	じょりーかーどぷろふぇっしょなる2
-jolyjokr	Jolly Joker (98bet, set 1)	じょりーじょーかー_1
-jolyjokra	Jolly Joker (98bet, set 2)	じょりーじょーかー_2
-jolyjokrb	Jolly Joker (40bet, クロアチア製ハック)	じょりーじょーかー-h
-jolyjokrc	Jolly Joker (Apple Time)	じょりーじょーかー_a
+jolyjokr	Jolly Joker (98bet, set 1)	じょりーじょーかー
+jolyjokra	Jolly Joker (98bet, set 2)	じょりーじょーかー
+jolyjokrb	Jolly Joker (40bet, クロアチア製ハック)	じょりーじょーかー
+jolyjokrc	Jolly Joker (Apple Time)	じょりーじょーかー
+jolyjokro	Jolly Joker (original program, interleaved GFX, Impera logo)	じょりーじょーかー
+jolyjokrp	Jolly Joker (original program, interleaved GFX, no logo)	じょりーじょーかー
 jolypark	Jolly Park	じょりーぱーく
 jongbou	マージャンブロック ジャンボウ (日本版)	まーじゃんぶろっくじゃんぼう
 jongkyo	雀狂	じゃんきょう
@@ -11533,6 +11575,7 @@ jpcoin	Joker Poker (Coinmaster set 1)	じょーかーぽーかー_c
 jpcoin2	Joker Poker (Coinmaster, Amusement Only)	じょーかーぽーかー_c
 jplstw20	The Lost World: Jurassic Park (2.00)	ざろすとわーるどじゅらしっくぱーく-p200
 jplstw22	The Lost World: Jurassic Park (2.02)	ざろすとわーるどじゅらしっくぱーく-p202
+jpmreno	Reno Reels (JPM)	りのりーるず
 jpopira	PlugIt! ジャンピンポピラ (日本版)	ぷらぐいっとじゃんぴんぽぴら
 jpopnics	Jumping Pop (Nics, プランプポップ韓国ハック版)	じゃんぴんぐぽっぷ
 jppyex98	実況パワフルプロ野球EX'98 (GC811 VER. JAA)	じっきょうぱわふるぷろやきゅうex98
@@ -11810,6 +11853,7 @@ kgbird	K.G. Bird (4VXFC5341, New Zealand, 5c)	けーじばーど_05
 kgbirda	K.G. Bird (4VXFC5341, New Zealand, 10c)	けーじばーど_10
 kgbirda5	K.G. Bird (0200024V, NSW/ACT)	けーじーばーど
 kgradius	ネメシス (LSIゲーム)	ねめしす
+kharkovsky	Kharkovsky	かるこふすきー
 kick	キックマン / Kick (upright)	きっくまん_u
 kick4csh	Kick '4' Cash (輸出版)	きっくふぉーきゃっしゅ
 kickball	Kick Ball	きっくぼーる
@@ -11861,6 +11905,7 @@ kingrt66	ザ・キング・オブ・ルート66 (Rev A)	ざきんぐおぶるー
 kingrt66p	ザ・キング・オブ・ルート66 (プロトタイプ)	ざきんぐおぶるーと66-p
 kingtut	King Tut (NSW, Australia)	きんぐたっと
 kingt_l1	King Tut (Shuffle) (L-1)	きんぐたっと
+kingyoch	キッズ屋台村 きんぎょすくい (4-player, 日本版, Ver 1.000)	きっずやたいむらきんぎょすくい
 kinniku	キン肉マン マッスルグランプリ (KN1 Ver. A)	きんにくまんまっするぐらんぷり1
 kinniku2	キン肉マン マッスルグランプリ2 (KN2 Ver. A)	きんにくまんまっするぐらんぷり2
 kinst	Killer Instinct	きらーいんすてぃんくと1
@@ -11877,6 +11922,7 @@ kiss	Kiss	きす
 kissp	Kiss (プロトタイプ)	きす-p
 kissp2	Kiss (プロトタイプ v.2)	きす-p
 kittenk	にゃんにゃんパニック / Kitten Kaboodle	にゃんにゃんぱにっく_w
+kiugames	Kiu Games	きうげーむず
 kiwame	プロ麻雀 極	ぷろまーじゃんきわめ
 kiwames	プロ麻雀 極 S (J 951020 V1.208)	ぷろまーじゃんきわめえす
 kizuna	風雲スーパータッグバトル / Kizuna Encounter	ふううんすーぱーたっぐばとる
@@ -12006,6 +12052,9 @@ korgm1ex	コルグ M1EX (v1.29)	こるぐえむわんいーえっくす
 korgm1p1	コルグ M1PLUS1	こるぐえむわんぷらすわん
 korgm1r	コルグ M1R (v1.06)	こるぐえむわんあーる
 korgm1rex	コルグ M1REX (v1.12)	こるぐえむわんいーえっくす
+korgwsad	コルグ WAVESTATION A/D	こるぐうぇーぶすてーしょんえーでぃー
+korgwsex	コルグ WAVESTATION EX	こるぐうぇーぶすてーしょんいーえっくす
+korgwssr	コルグ WAVESTATION SR	こるぐうぇーぶすてーしょんえすあーる
 korgz3	コルグ Z3	こるぐぜっとすりー
 korinai	麻雀好きの懲りない面々 (日本版 880425)	まーじゃんずきのこりないめんめん
 korinaim	麻雀好きの懲りない面々 [メダル] (日本版 880920)	まーじゃんずきのこりないめんめん
@@ -12094,6 +12143,7 @@ krullp	Krull (Pinball)	くるーる-p
 krvnjvtv	OC Jeu Video TV Karvan	おーしーじゅびでおてぃーびーかるばん
 krzybowl	Krazy Bowl	くれいじーぼうる
 ksayakyu	エキサイティング草野球	えきさいてぃんぐくさやきゅう
+ksp10	KSP10 Digital Piano	けーえすぴー10
 kt216wb5	KT216WB5-HI Rev.2	けーてぃー216
 kt76	KT-76	けーてぃー76
 ktiger	究極タイガー (日本版)	きゅうきょくたいがー1
@@ -12162,9 +12212,11 @@ ladyshot	Lady Sharpshooter (set 1)	れでぃしゃーぷしゅーたー_1
 ladyshota	Lady Sharpshooter (set 2)	れでぃしゃーぷしゅーたー_2
 lagirl	LA Girl	えるえーがーる
 lagunar	ラグナレーサー	らぐなれーさー
-lah_106c	Last Action Hero (1.06 Canada)	らすとあくしょんひーろー
+lah_106c	Last Action Hero (1.06 カナダ版)	らすとあくしょんひーろー
+lah_107	Last Action Hero (1.07)	らすとあくしょんひーろー
 lah_110	Last Action Hero (1.10)	らすとあくしょんひーろー
 lah_112	Last Action Hero (1.12)	らすとあくしょんひーろー
+lah_f104	Last Action Hero (1.04 フランス版)	らすとあくしょんひーろー
 lah_l104	Last Action Hero (1.04 スペイン版)	らすとあくしょんひーろー
 lah_l108	Last Action Hero (1.08 スペイン版)	らすとあくしょんひーろー
 lamachin	L.A.マシンガンズ	えるえーましんがんず
@@ -12582,6 +12634,7 @@ lucky37	Lucky 37	らっきー37
 lucky74	Lucky 74 (海賊版, set 1)	らっきー74-b1
 lucky74a	Lucky 74 (海賊版, set 3)	らっきー74-b3
 lucky74b	Lucky 74 (海賊版, set 2)	らっきー74-b2
+lucky7i	Lucky 7 (Impera)	らっきーせぶん_i
 lucky8	ニューラッキーエイトライン (set 1, W-4)	にゅーらっきーえいとらいん_
 lucky88	Lucky 88 (10241411, NSW/ACT)	らっきー88
 lucky8a	ニューラッキーエイトライン (set 2, W-4)	にゅーらっきーえいとらいん_
@@ -12595,6 +12648,7 @@ lucky8h	New Lucky 8 Lines Super Turbo (ハック)	にゅーらっきーえいと
 lucky8i	ニューラッキーエイトライン (set 9, W-4, Eagle, licensed by Wing)	にゅーらっきーえいとらいん_
 lucky8j	New Lucky 8 Lines Crown Turbo (ハック)	にゅーらっきーえいとらいん-h
 lucky8k	ニューラッキーエイトライン (set 10, W-4, encrypted NEC D315-5136)	にゅーらっきーえいとらいん_
+lucky8l	ニューラッキーエイトライン (set 11, W-4)	にゅーらっきーえいとらいん_
 luckybal	Lucky Ball 96 (Ver 4.01)	らっきーぼーる96
 luckybala	Lucky Ball 96 (Ver 3.50 - 627)	らっきーぼーる96
 luckybalb	Lucky Ball 96 (Ver 3.50 - 626)	らっきーぼーる96
@@ -12651,6 +12705,8 @@ lwingsb	アレスの翼 / Legendary Wings (海賊版)	あれすのつばさ-b
 lwingsj	アレスの翼 (日本版)	あれすのつばさ
 lwingsja	アレスの翼 (日本版, rev. A)	あれすのつばさ
 lwriter	Apple Laser Writer II NT	あっぷるれーざーらいたー2nt
+lxccminn	Lexibook Console Colour - Minnie Mouse	れきしぶっくこんそーるからーみにーまうす
+lxccplan	Lexibook Console Colour - Disney's Planes	れきしぶっくこんそーるからーでぃずにーずぷれーんず
 lxcmc250	Lexibook Compact Cyber Arcade - 250-in-1 (JL2375)	れきしぶっくこんぱくとさいばーあーけーど
 lxcmcy	Lexibook Compact Cyber Arcade	れきしぶっくこんぱくとさいばーあーけーど
 lxcmcydp	Lexibook Compact Cyber Arcade - Disney Princess	れきしぶっくこんぱくとさいばーあーけーどでぃずにーぷりんせす
@@ -12658,6 +12714,8 @@ lxcmcyfz	Lexibook Compact Cyber Arcade - Frozen	れきしぶっくこんぱく�
 lxcmcysp	Lexibook Compact Cyber Arcade - Marvel Ultimate Spider-Man	れきしぶっくこんぱくとさいばーあーけーどまーぶるあるてぃめってすぱいだーまん
 lxcmcysw	Lexibook Compact Cyber Arcade - Star Wars Rebels	れきしぶっくこんぱくとさいばーあーけーどすたーうぉーず
 lxspidaj	Spider-Man Super TV Air Jet (Lexibook Junior, JG6000SP)	すぱいだーまんすーぱーてぃーびーえあじぇっと
+lxts3	Toy Story 3 (Lexibook)	といすとーりー3_l
+lx_aven	Marvel Avengers TV Game Console (32-bit) (Lexibook)	まーぶるあべんじゃーずてぃーびーげーむこんそーる
 lx_jg7415	Lexibook JG7415 120-in-1	れきしぶっくじぇーじー7415
 lx_jg7425	Lexibook JG7425 221-in-1	れきしぶっくじぇーじゅー7425
 lynx	アタリリンクス	あたりりんくす
@@ -12668,8 +12726,9 @@ lyon16	Mephisto Lyon 16 Bit	めふぃすとりよん
 lyon32	Mephisto Lyon 32 Bit	めふぃすとりよん
 lyon32t	Mephisto Lyon 68030	めふぃすとりよん
 lyon32t8	Mephisto TM Lyon	めふぃすとてぃーえむりよん
-lzbal_l2	Laser Ball (L-2)	れーざーぼーる_l2
-lzbal_t2	Laser Ball (T-2)	れーざーぼーる_t2
+lzbal_l2	Laser Ball (L-2)	れーざーぼーる
+lzbal_l2sp	Laser Ball (L-2, PROM sound)	れーざーぼーる
+lzbal_t2	Laser Ball (T-2)	れーざーぼーる
 lzcolor64	Color64	からー64
 m10	M-10	えむ10
 m1albsq	Albert Square (Maygay) v4.1 (M1A/B)	あるばーとすくえあ_41
@@ -15127,6 +15186,7 @@ m4chaseic	Chase Invaders (Barcrest) (MPU4) (set 4)	ちぇいすいんべーだ�
 m4chaseid	Chase Invaders (Barcrest) (MPU4) (set 5)	ちぇいすいんべーだーずbm4
 m4chaseie	Chase Invaders (Barcrest) (MPU4) (set 6)	ちぇいすいんべーだーずbm4
 m4chaseif	Chase Invaders (Barcrest) (MPU4) (set 7)	ちぇいすいんべーだーずbm4
+m4chaseig	Chase Invaders (Barcrest) (MPU4) (set 8)	ちぇいすいんべーだーずbm4
 m4cheryo	Cherryo (Barcrest) (DCH, Dutch) (MPU4)	ちぇりお
 m4clab	Cash Lab (Qps) (MPU4) (set 1)	きゃっしゅらぶqm4
 m4clab__a	Cash Lab (Qps) (MPU4) (set 2)	きゃっしゅらぶqm4
@@ -16995,20 +17055,31 @@ m4moneym	Money Maker (Barcrest) (MPU4)	まねーめーかーmpu4
 m4monspn	Money Spinner (Empire) (MPU4, set 1)	まねーすぴなーmpu4
 m4monspna	Money Spinner (Empire) (MPU4, set 2)	まねーすぴなーmpu4
 m4monspnb	Money Spinner (Empire) (MPU4, set 3)	まねーすぴなーmpu4
-m4monte	Monte Carlo (Barcrest) (MPU4) (set 1)	もんてかるろbm4
-m4monte__a	Monte Carlo (Barcrest) (MPU4) (set 2)	もんてかるろbm4
-m4monte__b	Monte Carlo (Barcrest) (MPU4) (set 3)	もんてかるろbm4
-m4monte__c	Monte Carlo (Barcrest) (MPU4) (set 4)	もんてかるろbm4
-m4monte__d	Monte Carlo (Barcrest) (MPU4) (set 5)	もんてかるろbm4
-m4monte__e	Monte Carlo (Barcrest) (MPU4) (set 6)	もんてかるろbm4
-m4monte__f	Monte Carlo (Barcrest) (MPU4) (set 7)	もんてかるろbm4
-m4monte__g	Monte Carlo (Barcrest) (MPU4) (set 8)	もんてかるろbm4
-m4monte__h	Monte Carlo (Barcrest) (MPU4) (set 9)	もんてかるろbm4
-m4monte__i	Monte Carlo (Barcrest) (MPU4) (set 10)	もんてかるろbm4
-m4monte__j	Monte Carlo (Barcrest) (MPU4) (set 11)	もんてかるろbm4
-m4monte__k	Monte Carlo (Barcrest) (MPU4) (set 12)	もんてかるろbm4
-m4monte__l	Monte Carlo (Barcrest) (MPU4) (set 13)	もんてかるろbm4
-m4monte__m	Monte Carlo (Barcrest) (MPU4) (set 14)	もんてかるろbm4
+m4monte	Monte Carlo (NM8 0.1 B) (Barcrest) (MPU4)	もんてかるろ
+m4montez	Monte Carlo (MSS 1.6 C) (Barcrest) (MPU4)	もんてかるろ
+m4monteza	Monte Carlo (MX052.0 K) (Barcrest) (MPU4)	もんてかるろ
+m4montezb	Monte Carlo (MX102.0 K) (Barcrest) (MPU4)	もんてかるろ
+m4montezc	Monte Carlo (MC  2.0 C) (Barcrest) (MPU4)	もんてかるろ
+m4montezd	Monte Carlo (MC  2.0 K) (Barcrest) (MPU4)	もんてかるろ
+m4monteze	Monte Carlo (MC  2.0 YD) (Barcrest) (MPU4)	もんてかるろ
+m4montezf	Monte Carlo (MC_ 3.0 C) (Barcrest) (MPU4)	もんてかるろ
+m4montezg	Monte Carlo (MC_ 3.0 YD) (Barcrest) (MPU4)	もんてかるろ
+m4montezh	Monte Carlo (MC_ 3.0 K) (Barcrest) (MPU4)	もんてかるろ
+m4montezi	Monte Carlo (MX052.0 C) (Barcrest) (MPU4)	もんてかるろ
+m4montezj	Monte Carlo (MX102.0 C) (Barcrest) (MPU4)	もんてかるろ
+m4monte__a	Monte Carlo (NM8 0.1 AD) (Barcrest) (MPU4)	もんてかるろ
+m4monte__b	Monte Carlo (NM8 0.1 BD) (Barcrest) (MPU4)	もんてかるろ
+m4monte__c	Monte Carlo (NM8 0.1 C) (Barcrest) (MPU4)	もんてかるろ
+m4monte__d	Monte Carlo (NM8 0.1 D) (Barcrest) (MPU4)	もんてかるろ
+m4monte__e	Monte Carlo (NM8 0.1 KD) (Barcrest) (MPU4)	もんてかるろ
+m4monte__f	Monte Carlo (NM8 0.1 YD) (Barcrest) (MPU4)	もんてかるろ
+m4monte__g	Monte Carlo (NM8 0.1 K) (Barcrest) (MPU4)	もんてかるろ
+m4monte__h	Monte Carlo (NM8 0.1) (Barcrest) (MPU4)	もんてかるろ
+m4monte__i	Monte Carlo (NM8 0.1 Y) (Barcrest) (MPU4)	もんてかるろ
+m4monte__j	Monte Carlo (NMN 0.1 C) (Barcrest) (MPU4)	もんてかるろ
+m4monte__k	Monte Carlo (NMN 0.1 D) (Barcrest) (MPU4)	もんてかるろ
+m4monte__l	Monte Carlo (NMN 0.1 K) (Barcrest) (MPU4)	もんてかるろ
+m4monte__m	Monte Carlo (NMN 0.1) (Barcrest) (MPU4)	もんてかるろ
 m4montrl	Money Trail (Crystal) (MPU4) (set 1)	まねーとれいるcm4
 m4montrla	Money Trail (Crystal) (MPU4) (set 2)	まねーとれいるcm4
 m4montrlb	Money Trail (Crystal) (MPU4) (set 3)	まねーとれいるcm4
@@ -20202,6 +20273,7 @@ magicardb	Magic Card (set 3)	まじっくかーど_3
 magicarde	Magic Card Export 94	まじっくかーどえきすぽーと94
 magicardf	Magic Export (V.211A)	まじっくえくすぽーと
 magicardj	Magic Card Jackpot (4.01)	まじっくかーどじゃっくぽっと
+magicardw	Magic Card - Wien (Sicherheitsversion 1.2)	まじっくかーど_1
 magicbal	매직볼 파이팅 (Magicball Fighting) (韓国版)	まじっくぼーるふぁいてぃんぐ
 magicbom	Magic Bomb (Version 1)	まじっくぼむ
 magicbub	Magic Bubble	まじっくばぶる
@@ -20326,6 +20398,8 @@ marble2	マーブルマッドネス (set 2)	まーぶるまっどねす_2
 marble3	マーブルマッドネス (set 3)	まーぶるまっどねす_3
 marble4	マーブルマッドネス (set 4)	まーぶるまっどねす_4
 marble5	マーブルマッドネス (set 5 - LSI Cartridge)	まーぶるまっどねす_5
+marc101	Millennium Arcade 101 (M489) (Game Station 2 101-in-1)	みれにあむあーけーど101
+marc250	Millennium Arcade 250 (M527)	みれにあむあーけーど250
 marineb	マリンボーイ	まりんぼーい
 marinedt	マリンデート	まりんでーと
 mariner	Mariner	まりなー
@@ -20368,8 +20442,9 @@ mastboya	Master Boy (スペイン版, PCB Rev A, hack?)	ますたーぼーい_s
 mastboyi	Master Boy (イタリア版, PCB Rev A, set 1)	ますたーぼーい_i1
 mastboyia	Master Boy (イタリア版, PCB Rev A, set 2)	ますたーぼーい_i2
 mastboyo	Master Boy (1987, Z80 hardware, Covielsa, set 1)	ますたーぼーい
-mastboyoa	Master Boy (1987, Z80 hardware, set 2)	ますたーぼーい
-mastboyob	Master Boy (1987, Z80 hardware, Ichi-Funtel)	ますたーぼーい
+mastboyoa	Master Boy (1987, Z80 hardware, Covielsa, set 2)	ますたーぼーい
+mastboyob	Master Boy (1987, Z80 hardware, Ichi-Funtel, set 1)	ますたーぼーい
+mastboyoc	Master Boy (1987, Z80 hardware, Ichi-Funtel, set 2)	ますたーぼーい
 masterw	マスターオブウェポン (海外版)	ますたーおぶうぇぽん_w
 masterwj	マスターオブウェポン (日本版)	ますたーおぶうぇぽん
 masterwu	マスターオブウェポン (US版)	ますたーおぶうぇぽん_u
@@ -20405,6 +20480,7 @@ maxidbl	Maxi Double Poker (Ver. 1.10)	まきしだぶるぽーかー_110
 maxideal	Maxi-Dealer	まきしでぃーらー
 maxrpm	Max RPM (ver 2)	まっくすあーるぴ-えむ
 maxspeed	マキシマムスピード	まきしまむすぴーど
+maxx6in1	Vs Maxx 6-in-1 Casino / Senario Card & Casino Games	ぶいえすまっくすしっくすいんわんかじの
 maxxi	Maxxi	まきし
 maya	Maya (set 1)	めいや_1
 mayaa	Maya (set 2)	めいや_2
@@ -20802,9 +20878,9 @@ micral	Micral 80-22G	みくらる8022g
 micral45	Micral 45	みくらる45
 micro20	Micro 20	まいくろ20
 micro88	Micro 8088	まいくろ8088
-microdar	Microdar SPD	みくろだーspd
 microeng	Micro Engenho	まいくろえんげんほ
 microkit	COSMAC Microkit	こすまっくまいくろきっと
+microkorg	microKORG Synthesizer/Vocoder	まいくろこるぐシンセサイザーぼこーだー
 micrombc	ミクロマン バトルチャージ (J 990326 V1.000)	みくろまんばとるちゃーじ
 micromon7141	Micromon 7141 ECG unit	まいくろもん7141
 micron	Micron	まいくろん
@@ -20995,6 +21071,7 @@ mjyougo	麻雀用語の基礎体力 (日本版)	まーじゃんようごのき�
 mjyuugi	麻雀遊技 (日本版 set 1)	まーじゃんゆうぎ
 mjyuugia	麻雀遊戯 (日本版 set 2)	まーじゃんゆうぎ
 mjzoomin	麻雀ちゃんねるズームイン！ (日本版)	まーじゃんちゃんねるずーむいん
+mj_130	Michael Jordan (1.30)	まいけるじょーだん
 mk	モータルコンバット (rev 5.0 T-Unit 03/19/93)	もーたるこんばっと1_5
 mk14	MK-14	えむけー14
 mk2	モータルコンバットII (rev L3.1)	もーたるこんばっと2_31
@@ -21465,6 +21542,7 @@ mspacii	Ms. Pac-Man II (Orca海賊版, set 1)	みずぱっくまん-bo1
 mspacii2	Ms. Pac-Man II (Orca海賊版, set 2)	みずぱっくまん-bo2
 mspacmab	ミズパックマン (海賊版, set 1)	みずぱっくまん-b1
 mspacmab2	ミズパックマン (海賊版, set 2)	みずぱっくまん-b2
+mspacmab3	ミズパックマン (海賊版, set 3)	みずぱっくまん-b3
 mspacman	ミズパックマン	みずぱっくまん
 mspacmanbcc	Come-Cocos (ミズパックマン) (ギリシャ製 Tecnausa 海賊版)	こめここす
 mspacmanbco	Come-Cocos (ミズパックマン) (Cocamatic海賊版)	こめここす
@@ -21478,6 +21556,7 @@ mspacmancr	ミズパックマン (クラッシュローラー基板海賊版)	�
 mspacmat	ミズパックマン / Ms. Pac Attack	みずぱっくまん-h
 mspacmbe	ミズパックマン (海賊版, encrypted)	みずぱっくまん-b2
 mspacmbmc	ミズパックマン (Marti Colls 海賊版)	みずぱっくまん-bm
+mspacmbn	ミズパックマン (Novatronic 海賊版)	みずぱっくまん-bn
 mspacmnf	ミズパックマン (スピードアップハック)	みずぱっくまん-h
 mspacpls	Ms. Pac-Man Plus	みずぱっくまんぷらす
 mspuzzle	Miss Puzzle	みずぱずる
@@ -22059,6 +22138,7 @@ nmaster	隠忍 -ザ・ニンジャマスター- (日本版)	おに_j
 nmg5	Multi 5 / New Multi Game 5 (set 1)	まるちふぁいぶ_1
 nmg5a	Multi 5 / New Multi Game 5 (set 2, censored)	まるちふぁいぶ_2
 nmg5e	Multi 5 / New Multi Game 5 (set 3, earlier)	まるちふぁいぶ_3
+nmicro	Micro Chess	まいくろちぇす
 nmicro2	Micro II (Novag)	まいくろ2
 nmouse	Naughty Mouse (set 1)	のーてぃまうす_1
 nmouseb	Naughty Mouse (set 2)	のーてぃまうす_2
@@ -22121,6 +22201,7 @@ nouryokup	脳力向上委員会 (プロトタイプ)	のうりょくこうじょ
 nova2001	ノバ2001 (日本版)	のば2001
 nova2001h	ノバ2001 (日本版, ハック?)	のば2001_h
 nova2001u	ノバ2001 (US版)	のば2001_u
+noved	Nove Diamante (海賊版)	のぶだいなまいと
 novoplay	Novo Play Multi Card / Club Card	のぼぷれいまるちかーど
 npc8300	PC-8300	ぴーしー8300
 npcartv1	NEOプリント (海外版) (E1a)	ねおぷりんと1_w
@@ -22201,6 +22282,7 @@ nwarru	ヴァンパイアハンター / Night Warriors: Darkstalkers' Revenge (U
 nwarrud	ヴァンパイアハンター / Night Warriors: Darkstalkers' Revenge (US版 950406 Phoenix Edition) (海賊版)	ばんぱいあはんたー1-b
 nws1580	NWS-1580	えぬだぶりゅーえす1580
 nws3260	NWS-3260	えぬだぶりゅーえす3260
+nws3860	NWS-3860	にゅーす3860
 nyanpani	にゃんにゃんパニック (日本版)	にゃんにゃんぱにっく_j
 nycaptor	N.Y.キャプター	えぬわいきゃぷたー
 nyjoker	New York Joker	にゅーよーくじょーかー
@@ -22352,6 +22434,7 @@ orbatak	Orbatak (プロトタイプ)	おーばたっく
 orbeaut	Oriental Beauty (10213511, NSW/ACT)	おりえんたるびゅーてぃー
 orbit	オービット	おーびっと
 orbit1	Orbit 1	おーびっとわん
+orbit9090	E-mu Orbit 9090 - The Dance Planet	いーみゅーおーびっと9090
 orbite	Orbite (プロトタイプ)	おーばいと
 orbitor1	Orbitor 1	おーびたーわん
 orbitron	Orbitron	おーびとろん
@@ -22606,7 +22689,7 @@ paperboyr1	ペーパーボーイ (rev 1)	ぺーぱーぼーい_1
 paperboyr2	ペーパーボーイ (rev 2)	ぺーぱーぼーい_2
 papillon	Papillon	ぱぴろん
 paprazzi	Paparazzi	ぱぱらっつぃ
-papsudok	Plug and Play Sudoku (VT based?)	ぷらぐあんどぷれいすうどく
+papsudok	Plug and Play Sudoku Game (NES based)	ぷらぐあんどぷれいすうどく
 para2dx	Paradise 2 Deluxe	ぱらだいす2でらっくす
 paradar	Paradar	ぱらだー
 paradice	Paradice (オランダ版, Game Card 95-750-615)	ぱらだいす
@@ -22922,7 +23005,11 @@ pc_wcup	Nintendo World Cup (PlayChoice-10)	にんてんどうわーるどかっ�
 pc_wgnmn	ワイルドガンマン (PlayChoice-10)	わいるどがんまん-pc10
 pc_ynoid	Yo! Noid (PlayChoice-10)	よーのいど-pc10
 pda600	PenPad PDA 600	ぺんぱっどぴーでぃーえー600
-pdc100	PDC100 - Pocket Dream Console	ぴーでぃーしー100
+pdc100	PDC100 - Pocket Dream Console (Anncia, US)	ぴーでぃーしー100
+pdc150t	PDC150 Tactile - Pocket Dream Console (VideoJet, France)	ぴーでぃーしー150たくたいる
+pdc200	PDC200 - Pocket Dream Console (VideoJet, France)	ぴーでぃーしー200
+pdc40t	PDC40 Tactile - Pocket Dream Console (VideoJet, France)	ぴーでぃーしー040たくたいる
+pdc50	PDC50 - Pocket Dream Console (VideoJet, France)	ぴーでぃーしー050
 pdp1	PDP-1	ぴーでぃーぴー1
 pdp11qb	PDP-11 [Q-BUS] (M7195 - MXV11)	ぴーでぃーぴー11
 pdp11ub	PDP-11 [Unibus](M9301-YA)	ぴーでぃーぴー11
@@ -23602,6 +23689,8 @@ phantpay	Phantom Pays (0500005V, NSW/ACT)	ふぁんとむぺいず
 pharfor	Pharaoh's Fortune (40000921, NSW/ACT)	ふぁらおずふぉーちゅん
 pharo_l2	Pharaoh (L-2)	ふぁらお
 pharrier	プラネットハリアーズ -ハイパー・ソルジャーズ・フロム・アース- (Rev A)	ぷらねっとはりあーず
+phasor	Phasor	ふぇいざー
+phatt	E-mu Planet Phatt - The Swing System	いーみゅーぷらねっとふぁっと
 phc2	PHC-2 (MSX1)	ぴーえいちしー2
 phc23	ウェイビー PHC-23 (日本版) (MSX2)	うぇいびー_phc23
 phc25	PHC-25 (欧州版)	ぴーえっちしー25_e
@@ -23721,8 +23810,9 @@ pipedrmu	パイプドリーム (US版)	ぱいぷどりーむ_u
 pipeline	Pipeline	ぱいぷらいん
 pipibibs	フーピー!! (Z80 sound cpu, set 1)	ふーぴー_1
 pipibibsa	フーピー!! (Z80 sound cpu, set 2)	ふーぴー_2
-pipibibsbl	フーピー!! / Pipi ＆ Bibis (海賊版, set 1)	ふーぴー-bw
-pipibibsbl2	フーピー!! / Pipi ＆ Bibis (海賊版, set 2)	ふーぴー-bw
+pipibibsbl	フーピー!! / Pipi ＆ Bibis (Ryouta Kikaku 海賊版, set 1)	ふーぴー-bw
+pipibibsbl2	フーピー!! / Pipi ＆ Bibis (海賊版, decrypted)	ふーぴー-bw
+pipibibsbl3	フーピー!! / Pipi ＆ Bibis (Ryouta Kikaku 海賊版, decrypted)	ふーぴー-bw
 pipibibsp	フーピー!! / Pipi ＆ Bibis (プロトタイプ)	ふーぴー-p
 pippin	ピピンアットマーク	ぴぴんあっとまーく
 pir2001	Pirate 2001 (Version 2.5E Dual)	ぱいれーと2001_25ed
@@ -24140,6 +24230,7 @@ potnpkrh	Jack Potten's Poker (set 9, 'just 4 fun')	じゃっくぽってんず�
 potnpkri	Jack Potten's Poker (set 10, ICP-1 PCB)	じゃっくぽってんずぽーかー_10
 potnpkrj	Jack Potten's Poker (set 11, German, W.W.)	じゃっくぽってんずぽーかー_11
 potnpkrk	Jack Potten's Poker (set 12, no Double-Up)	じゃっくぽってんずぽーかー_12
+potnpkrl	Jack Potten's Poker (set 13, ICP-1 PCB)	じゃっくぽってんずぽーかー_13
 potogold	Leprechaun / Pot of Gold	れぷれこん
 potopoto	ポトポト (日本版, Rev A)	ぽとぽと
 poto_a29	The Phantom of the Opera (2.9)	ざふぁんとむおぶじおぺら
@@ -24162,6 +24253,7 @@ powerinsc	豪血寺一族 / Power Instinct (US版, 海賊版 set 3)	ごうけつ
 powerinsj	豪血寺一族 (日本版)	ごうけつじいちぞく1_
 powerinspj	豪血寺一族 (日本版, プロトタイプ)	ごうけつじいちぞく1-p
 powerinspu	豪血寺一族 / Power Instinct (US版, プロトタイプ)	ごうけつじいちぞく1-pu
+powernin	Power Ninja Action Challenge	ぱわーにんじゃあくしょんちゃれんじ
 powerstk	PowerStack II	ぱわーすたっく2
 powj	脱獄 -Prisoners of War- (日本版)	だつごく
 powrplay	Power Play	ぱわーぷれい
@@ -24238,6 +24330,7 @@ prmtmfgto	トップランキングスターズ / Prime Time Fighter (Ver 2.1A 19
 pro128	Prodest PC 128	ぷろですとぴーしー
 pro128s	Prodest PC 128S	ぷろですとぴーしー128
 pro80	Pro-80	ぷろ80
+procuss	E-mu Pro/Cussion Maximum Percussion Module	いーみゅーぷろかっしょん
 prodigy	Destiny Prodigy	ですてぃにーぽろでぃじー
 prof180x	PROF-180X	ぷろふ180
 prof181x	PROF-181X	ぷろふ181
@@ -24264,12 +24357,15 @@ prophecy	Prophecy (20173411, NSW/ACT)	ぷろふぇしー
 prose2k	Prose 2000/2020 v3.4.1	ぷろーず2000/2020
 prose2ko	Prose 2000/2020 v1.1	ぷろーず2000/2020
 prosoccr	プロサッカー	ぷろさっかー
+prospdp	名称不明なCompumatic ProSPDPベースのダーツマシン	めいしょうふめい
 prosport	プロスポーツ	ぷろすぽーつ_1
 prosporta	プロスポーツ (US版)	ぷろすぽーつ_us
 protenn	プロテニス (日本版)	ぷろてにす
 protennb	Tennis (プロテニス海賊版)	てにす
 proteus	Poly Proteus (Standalone)	ぽりぷろてうす
+proteus1	E-mu Proteus/1 16-Bit Multi-Timbral Digital Sound Module	いーみゅーぷろてうすわん
 proteus3	Proteus III	ぷろてうす3
+proteusxr	E-mu Proteus/1 XR 16-Bit Multi-Timbral Digital Sound Module	いーみゅぷろてうすわんえっくすあーる
 prpht600	Prophet-600	ぷろふぇっと600
 prsarcde	Personal Arcade	ぱーそなるあーけーど
 prschess	President Chess	ぷれじでんとちぇす
@@ -24542,6 +24638,7 @@ puzlstar	パズルスター / 魔幻星座 (ver. 100MG)	ぱずるすたー
 puzzldpr	パズルdeポン！R	ぱずるでぽんあーる
 puzzledp	パズルdeポン！	ぱずるでぽん
 puzzlekg	Puzzle King (Dance & Puzzle)	ぱずるきんぐ
+puzzleme	Puzzle Me!	ぱずるみー
 puzzlet	パズLET (日本版)	ぱずれっと
 puzzli	ぱづり (revision B)	ぱずり1
 puzzli2	ぱづり2 (ver. 100)	ぱずり2
@@ -24819,6 +24916,7 @@ racedrivcb	レースドライビン (compact, UK版, rev 5)	れーすどらい�
 racedrivcb4	レースドライビン (compact, UK版, rev 4)	れーすどらいびん_cou4
 racedrivcg	レースドライビン (compact, ドイツ版, rev 5)	れーすどらいびん_cog5
 racedrivcg4	レースドライビン (compact, ドイツ版, rev 4)	れーすどらいびん_cog4
+racedrivcp	レースドライビン (compact, プロトタイプ)	れーすどらいびん-p
 racedrivg	レースドライビン (cockpit, ドイツ版, rev 5)	れーすどらいびん_cpg5
 racedrivg1	レースドライビン (cockpit, ドイツ版, rev 2)	れーすどらいびん_cpg2
 racedrivg4	レースドライビン (cockpit, ドイツ版, rev 4)	れーすどらいびん_cpg4
@@ -25138,6 +25236,7 @@ re800ea	Ruleta RE-800 (earlier, no attract)	るれったあーるいー800_e
 re800v1	Ruleta RE-800 (v1.0)	るれったあーるいー800_1
 re800v3	Ruleta RE-800 (v3.0)	るれったあーるいー800_3
 re900	Ruleta RE-900	るれったあーるいー900
+react	Reactor 32-in-1 (NTSC)	りあくたー32いんわん
 reactmd	Reactor MD (PAL)	りあくたーmd
 reactor	リアクター	りあくたー
 reaktor	Reaktor (ハイパーオリンピック基板)	りあくたー
@@ -25193,7 +25292,7 @@ reelquak	Reel'N Quake! (Version 1.05)	りーるんくえいく
 reelrkfl	Reelin-n-Rockin - Fast Lane (10298611, Queensland)	りーりんろっきんふぁすとれーん
 reelrock	Reelin-n-Rockin (0100779V, NSW/ACT)	りーりんろっきん
 reelrockql	Reelin-n-Rockin (0101460V, Queensland)	りーりんろっきん
-regence	La Regence	らへじょん
+regence	La Régence	らへじょん
 regulus	レグルス (315-5033, Rev A.)	れぐるす
 reguluso	レグルス (315-5033)	れぐるす
 regulusu	レグルス (not encrypted)	れぐるす
@@ -25437,6 +25536,7 @@ robotron	ロボトロン2084 (Solid Blue label)	ろぼとろん2084
 robotron12	ロボトロン2084 (2012 'wave 201 start' hack)	ろぼとろん2084
 robotron87	ロボトロン2084 (1987 'shot-in-the-corner' bugfix)	ろぼとろん2084
 robotrontd	ロボトロン2084 (2015 'tie-die V2' hack)	ろぼとろん2084
+robotronun	ロボトロン2084 (Unidesa license)	ろぼとろん2084
 robotronyo	ロボトロン2084 (Yellow/Orange label)	ろぼとろん2084
 robowars	Robo-War	ろぼうぉー
 robowarsf	Robo-War (フランス版)	ろぼうぉー_f
@@ -25589,6 +25689,7 @@ rrvac2	リッジレーサーV -アーケードバトル- (RRV2 Ver. A)	りっじ
 rs128	RS 128	あーるえす128
 rs2030	RS2030	あーるえす2030
 rs3230	Magnum 3000	まぐなむ3000
+rs70_648	RS-70 648-in-1	あーるえす70
 rsgun	レイディアントシルバーガン (JUET 980523 V1.000)	れいでぃあんとしるばーがん
 rshark	R-Shark	あるしゃーく
 rs_l6	Red and Ted's Road Show (L-6)	れっどあんどてっずろーどしょー_l6
@@ -31569,6 +31670,7 @@ sentetst	Sente Diagnostic Cartridge	せんてだいあぐのすてぃっくか�
 sentx6p	Vs Maxx Texas Hold'em TV Poker - 6 Player Edition (UK)	ばーさすまっくすてきさすほーるでむてぃーびーぽーかー
 sentx6pd	Deluxe TV Poker - Texas Hold'em, Blackjack & Video Poker (US)	でらっくすてぃーびーぽーかー
 sentx6puk	Vs Maxx Texas Hold'em TV Poker - 6 Player Edition (UK)	ばーさすまっくすてきさすほーるでむてぃーびーぽーかー
+senwfit	Wireless Fitness / Dance Fit (Senario)	わいやれすふぃっとねす
 senwld	Win, Lose or Draw (Senario)	うぃんるーずおあどろー
 sergeysxt	Sergey's XT	せるげいずえっくすてぃー
 setaroul	The Roulette (Visco)	ざるーれっと
@@ -31767,6 +31869,7 @@ sfortea1	Super Forte (version A, set 2)	すーぱーふぉーて_a
 sfortea2	Super Forte (version A, set 3)	すーぱーふぉーて_a
 sforteb	Super Forte (version B)	すーぱーふぉーて_b
 sfortec	Super Forte (version C)	すーぱーふぉーて_c
+sfortec1	Super Forte (version C, V1.2)	すーぱーふぉーて_c
 sfp	ストリートファイター (プロトタイプ)	すとりーとふぁいたー1-p
 sfposeid	シーファイターポセイドン	しーふぁいたーぽせいどん
 sfruitb	Super Fruit Bonus (Version 2.5E Dual)	すーぱーふるーつぼーなす_25ed
@@ -32114,8 +32217,7 @@ sinvasn	戦場の狼 / Space Invasion (Europe版)	せんじょうのおおかみ
 sinvasnb	戦場の狼 / Space Invasion (海賊版)	せんじょうのおおかみ1-b
 sinvemag	Super Invaders (海賊版 set 2)	すーぱーいんべーだーず-b2
 sinvzen	Super Invaders (Zenitone-Microsec)	すーぱーいんべーだーず_z
-sirio2	Sirio II (Calfesa S.L. Spanish ムーンクレスタ海賊版, set 1)	しりお2
-sirio2a	Sirio II (Calfesa S.L. Spanish ムーンクレスタ海賊版, set 2)	しりお2
+sirio2	Sirio II (Calfesa S.L. Spanish ムーンクレスタ海賊版)	しりお2
 sis85c471	486マザーボード SiS 85C471/85C407チップセット使用	よんはちろくまざーぼーど
 sis85c496	486マザーボード SiS 85C496/85C497チップセット使用	よんはちろくまざーぼーどsis
 sisrabb	386マザーボード SiS Rabbitチップセット使用	さんはちろくまざーぼーど
@@ -32208,7 +32310,8 @@ slapfigha	スラップファイト (A76 set, GX-006-A PCB)	すらっぷふぁい
 slapfighb1	スラップファイト (海賊版 set 1)	すらっぷふぁいと-b1
 slapfighb2	スラップファイト (海賊版 set 2)	すらっぷふぁいと-b2
 slapfighb3	スラップファイト (海賊版 set 3)	すらっぷふぁいと-b3
-slapshot	スラップショット (日本版)	すらっぷしょっと
+slapshot	スラップショット (Ver 3.0 O)	すらっぷしょっと_w
+slapshotj	スラップショット (Ver 2.2 日本版)	すらっぷしょっと
 slapshtr	スラップシューター	すらっぷしゅーたー
 slasho	スラッシュアウト	すらっしゅあうと
 slashout	スラッシュアウト (GDS-0004)	すらっしゅあうと
@@ -32360,7 +32463,8 @@ sms1pal	セガ・マスターシステム (PAL)	せがますたーしすてむ1_
 sms1paln	Master System I (PAL-N)	ますたーしすてむ1
 sms2br	Master System II (Brazil)	ますたーしすてむ2
 sms2paln	Master System II (PAL-N)	ますたーしすてむ2
-sms4in1	4-in-1	ふぉーいんわん
+sms4in1	4-in-1 (version SWS1-052587)	ふぉーいんわん
+sms4in1a	4-in-1 (version SWS1-110984)	ふぉーいんわん
 smsbr	Master System III Compact (Brazil)	ますたーしすてむ3
 smshilo	HI-LO Double Up Joker Poker	はいろーだぶるあっぷじょーかーぽーかー
 smsj	セガ・マスターシステム (日本版)	せがますたーしすてむ1_
@@ -32420,7 +32524,7 @@ snspell	スピーク&スペル (US版, 1979 version)	すぴーくあんどすぺ
 snspellc	Speak & Spell Compact (US, 1981 version)	すぴーくあんどすぺるこんぱくと_
 snspellca	Speak & Spell Compact (US, 1982 version)	すぴーくあんどすぺるこんぱくと_
 snspellcuk	Speak & Write (UK)	すぴーくあんどらいと
-snspellfr	スピーク&スペル / La Dictee Magique (フランス版)	すぴーくあんどすぺる_fr
+snspellfr	スピーク&スペル / La Dictée Magique (フランス版)	すぴーくあんどすぺる_fr
 snspellit	スピーク&スペル / Grillo Parlante (イタリア版)	すぴーくあんどすぺる_it
 snspelljp	スピーク&スペル (日本版)	すぴーくあんどすぺる_
 snspellp	スピーク&スペル (US版, patent)	すぴーくあんどすぺる_usp
@@ -32673,6 +32777,7 @@ spctbird	Space Thunderbird	すぺーすさんだーばーど
 spcteam	Space Team	すぺーすちーむ
 spctrain	Space Train (ピンボール)	すぺーすとれいん
 spctraino	Space Train (ピンボール, old hardware)	すぺーすとれいん
+spctrek	Space Trek (Video Game S.A., Spanish bootleg of Scramble)	すぺーすとれっく
 spcwarp	Space Warp? (Cosmos conversion on Galaxian hardware)	すぺーすわーぷ
 spdball	Speed Ball - Contest at Neonworld (プロトタイプ)	すぴーどぼーる
 spdcoin	Speed Coin (プロトタイプ)	すぴーどこいん
@@ -32786,6 +32891,7 @@ spkrform	Super Poker (v100xD03) / Formosa	すーぱーぽーかーふぉるも�
 splasfgt	スペースレーザーファイト	すぺーすれーざーふぁいと
 splash	Splash! (Ver. 1.2 海外版)	すぷらっしゅ
 splash10	Splash! (Ver. 1.0 海外版)	すぷらっしゅ
+splashms	Splash (Modular System)	すぷらっしゅ
 splat	Splat!	すぷらっと!
 splatter	スプラッターハウス (海外版, new version (SH3))	すぷらったーはうす_w1
 splatter2	スプラッターハウス (海外版, old version (SH2))	すぷらったーはうす_w2
@@ -32837,6 +32943,7 @@ sprk_096	South Park (0.96)	さうすぱーく_096
 sprk_103	South Park (1.03)	さうすぱーく_103
 sprpuzzle	Super Puzzle (Sang Ho Soft)	すーぱーぱずる
 sprtauth	Sports Authority	すぽーつおーそりてぃ
+sprtdart	Sport Dart TV	すぽーとだーとてぃーびー
 sprtjam	スポーツジャム (GDS-0003)	すぽーつじゃむ
 sprtmtch	ドラゴンパンチ / Sports Match	どらごんぱんち
 sprtshot	スポーツシューティングUSA	すぽーつしゅーてぃんぐゆーえすえー
@@ -33273,18 +33380,18 @@ sp_swopd	Swop Shop (Ace) (sp.ACE) (set 5)	すうぉっぷしょっぷ_5
 sp_swope	Swop Shop (Ace) (sp.ACE) (set 6)	すうぉっぷしょっぷ_6
 sp_swopf	Swop Shop (Ace) (sp.ACE) (set 7)	すうぉっぷしょっぷ_7
 sp_swopg	Swop Shop (Ace) (sp.ACE) (set 8)	すうぉっぷしょっぷ_8
-sp_timem	Time Machine (Ace) (sp.ACE) (set 1)	たいむましーんa_01
-sp_timema	Time Machine (Ace) (sp.ACE) (set 2)	たいむましーんa_02
-sp_timemb	Time Machine (Ace) (sp.ACE) (set 3)	たいむましーんa_03
-sp_timemc	Time Machine (Ace) (sp.ACE) (set 4)	たいむましーんa_04
-sp_timemd	Time Machine (Ace) (sp.ACE) (set 5)	たいむましーんa_05
-sp_timeme	Time Machine (Ace) (sp.ACE) (set 6)	たいむましーんa_06
-sp_timemf	Time Machine (Ace) (sp.ACE) (set 7)	たいむましーんa_07
-sp_timemg	Time Machine (Ace) (sp.ACE) (set 8)	たいむましーんa_08
-sp_timemh	Time Machine (Ace) (sp.ACE) (set 9)	たいむましーんa_09
-sp_timemi	Time Machine (Ace) (sp.ACE) (set 10)	たいむましーんa_10
-sp_timemj	Time Machine (Ace) (sp.ACE) (set 11)	たいむましーんa_11
-sp_timemk	Time Machine (Ace) (sp.ACE) (set 12)	たいむましーんa_12
+sp_timem	Time Machine (Ace) (sp.ACE) (set 1)	たいむましーんa_
+sp_timema	Time Machine (Ace) (sp.ACE) (set 2)	たいむましーんa_
+sp_timemb	Time Machine (Ace) (sp.ACE) (set 3)	たいむましーんa_
+sp_timemc	Time Machine (Ace) (sp.ACE) (set 4)	たいむましーんa_
+sp_timemd	Time Machine (Ace) (sp.ACE) (set 5)	たいむましーんa_
+sp_timeme	Time Machine (Ace) (sp.ACE) (set 6)	たいむましーんa_
+sp_timemf	Time Machine (Ace) (sp.ACE) (set 7)	たいむましーんa_
+sp_timemg	Time Machine (Ace) (sp.ACE) (set 8)	たいむましーんa_
+sp_timemh	Time Machine (Ace) (sp.ACE) (set 9)	たいむましーんa_
+sp_timemi	Time Machine (Ace) (sp.ACE) (set 10)	たいむましーんa_
+sp_timemj	Time Machine (Ace) (sp.ACE) (set 11)	たいむましーんa_
+sp_timemk	Time Machine (Ace) (sp.ACE) (set 12)	たいむましーんa_
 sp_tkpik	Take Your Pick (Ace) (sp.ACE) (set 1)	ていくゆあぴっくa_1
 sp_tkpika	Take Your Pick (Ace) (sp.ACE) (set 2)	ていくゆあぴっくa_2
 sp_tkpikb	Take Your Pick (Ace) (sp.ACE) (set 3)	ていくゆあぴっくa_3
@@ -33993,6 +34100,7 @@ survarts	サバイバルアーツ (海外版)	さばいばるあーつ_w
 survartsj	サバイバルアーツ (日本版)	さばいばるあーつ
 survartsu	サバイバルアーツ (US版)	さばいばるあーつ_u
 survival	Survival	さばいばる
+susanita	Susanita tiene un raton	すさてぃなてぃえねうんらとん
 sushibar	とれ!とれ!寿司	とれとれずし
 sushimar	いたずらだいすき！スシマルくん	いたずらだいすきすしまるくん
 susume	進め！対戦ぱずるだま (GV027 Japan 1.20)	すすめたいせんぱずるだま
@@ -34105,6 +34213,7 @@ swtrilgya	スターウォーズ トリロジーアーケード	すたーうぉ�
 swtrilgyp	スターウォーズ トリロジーアーケード (ロケーションテスト, 16.09.98)	すたーうぉーずとりろじーあーけーど-l
 swyft	Swyft	すいふと
 sx16	SX-16	えすえっくす16
+sx240	SX-240 8-Voice Programmable Polyphonic Synthesizer	えすっくす240
 sx64	SX-64 / Executive 64 (NTSC)	えすえっくす64_
 sx64p	SX-64 / Executive 64 (PAL)	えすえっくす64_
 sx700	ローランド BOSS SX-700	ろーらんどぼすえすえっくす700
@@ -34338,6 +34447,7 @@ techromn	超鋼戦紀キカイオー / Tech Romancer (Euro版 980914)	ちょう�
 techromnu	超鋼戦紀キカイオー / Tech Romancer (US版 980914)	ちょうこうせんききかいおー_u
 tecjmon	TEC-1A with JMON	てっく1a
 tecnbras	Dot Matrix Display (70x7 pixels)	どっとまとりっくすでぃすぷれい
+tecnodar	Tecnodarts	てくのだーつ
 teddybb	テディーボーイブルース (315-5115, New Ver.)	てでぃーぼーいぶるーす
 teddybbo	テディーボーイブルース (315-5115, Old Ver.)	てでぃーぼーいぶるーす
 teddybbobl	テディーボーイブルース (Old Ver. 海賊版)	てでぃーぼーいぶるーす-bo
@@ -34852,7 +34962,7 @@ tmnta	T.M.N.T. -スーパー亀忍者- (アジア版 4 Players, version ?)	て�
 tmntbftc	Teenage Mutant Ninja Turtles: Battle for the City	てぃーんえいじみゅーたんとにんじゃたーとるずばとるふぉーざしてぃ
 tmntj	T.M.N.T. -スーパー亀忍者- (日本版 4 Players, version 2)	てぃーえむえぬてぃー1_
 tmntmutm	Teenage Mutant Ninja Turtles: Mutant and Monster Mayhem	てぃーんえいじみゅーたんとにんじゃたーとるずみゅーたんとあんどもんすたーめいへむ
-tmntpdc	Teenage Mutant Ninja Turtles - Pocket Dream Console (France)	てぃーんえいじみゅーたんとにんじゃたーとるずぽけっとどりーむこんそーる
+tmntpdc	Teenage Mutant Ninja Turtles - Pocket Dream Console (VideoJet, France)	てぃーんえいじみゅーたんとにんじゃたーとるずぽけっとどりーむこんそーる
 tmntu	T.M.N.T. -スーパー亀忍者- (US版 4 Players, version R)	てぃーえむえぬてぃー1_us4
 tmntua	T.M.N.T. -スーパー亀忍者- (US版 4 Players, version N)	てぃーえむえぬてぃー1_us4
 tmntub	T.M.N.T. -スーパー亀忍者- (US版 4 Players, version J)	てぃーえむえぬてぃー1_us4
@@ -35032,6 +35142,7 @@ totlvicj	トータルバイス (ver JAD)	とーたるばいす_
 totlvicu	トータルバイス (ver UAC)	とーたるばいす_uac
 totmejan	とってもE雀 -潜入アイドルプロダクション！-	とってもいーじゃん
 toto	Come Back Toto	かむばっくとと
+totspies	Totally Spies! (France)	とーたりーすぱいず
 touchdn	Touchdown	たっちだうん
 toucheme	Touche Me (set 1)	たっちみー_1
 touchemea	Touche Me (set 2, harder)	たっちみー_2
@@ -35105,6 +35216,7 @@ treacity202	トレジャーシティ (Ver. 202)	とれじゃーしてぃ
 treahunt	ジャックと豆の木 / Treasure hunt	じゃっくとまめのき-b
 treamary	Treasure Mary	とれじゃーまりー
 trebltop	Treble Top (39-360-070)	とれぶるとっぷ
+trebol	Trebol	とれぼる
 trek_110	Star Trek 25th Anniversary (1.10)	すたーとれっくとぅえんてぃふぃふすあにばーさりー_110
 trek_117	Star Trek 25th Anniversary (1.17)	すたーとれっくとぅえんてぃふぃふすあにばーさりー_117
 trek_11a	Star Trek 25th Anniversary (1.10 Alpha Display)	すたーとれっくとぅえんてぃふぃふすあにばーさりー_110a
@@ -35492,7 +35604,7 @@ ufosensib	UFO戦士ようこちゃん (海賊版, not encrypted)	ゆーふぉー
 ufo_x	UFO-X	ゆーえふおーえっくす
 uk101	UK101	ゆーけー101
 uk2086	UK-2086 ver. 1.2	ゆーけー2086
-uknc	UKNC	ゆーけーえぬしー
+uknc	UKNC / MS-0511	ゆーけーえぬしー
 ultarctc	Ultimate Arctic Thunder	あるてぃめっとあーくてぃっくさんだー
 ultarctcup	Ultimate Arctic Thunder Update CD ver 1.950 (5/3/04)	あるてぃめっとあーくてぃっくさんだーあっぷでーと
 ultennis	アルチメイトテニス	あるちめいとてにす_w
@@ -35527,6 +35639,7 @@ undoukai	ザ・運動会 (日本版)	ざうんどうかい
 undrfire	アンダーファイアー (海外版)	あんだーふぁいあー_w
 undrfirej	アンダーファイアー (日本版)	あんだーふぁいあー
 undrfireu	アンダーファイアー (US版)	あんだーふぁいあー_u
+unga	Unga	うんが
 uni386w	386W 367C REV 1.0	さんはちろくだぶりゅー367c
 uni4800	486マザーボード UNI4800チップセット使用	よんはちろくまざーぼーど
 uniap2en	Unitron AP II (in English)	ゆにとろんえーぴー2
@@ -35560,6 +35673,7 @@ unkrfslt	名称不明 (Recreativos Franco slot machine)	めいしょうふめい
 unks10md	名称不明のNamco System 10メダルゲーム (MTL1 SPR0B)	めいしょうふめい
 unksig	名称不明 (スペースインベーダーギャンブルゲーム) (set 1)	めいしょうふめい_sp1
 unksiga	名称不明 (スペースインベーダーギャンブルゲーム) (set 2)	めいしょうふめい_sp2
+unkte06	詳細不明 TE06	しょうさいふめい
 unsquad	エリア88 / U.N. Squadron (US版)	えりあえいてぃえいと_u
 untoucha	アンタッチャブル (Ver. 2.10)	あんたっちゃぶる
 uopoko	魚ポコ (海外版)	うおぽこ_w
@@ -35602,72 +35716,345 @@ v1050	Visual 1050	びじゅある1050
 v200	Voyage 200 PLT	ぼやーじゅ200plt
 v286c	V286C	ぶいにはちろくしー
 v364	Commodore V364 (プロトタイプ)	こもどーるv364
-v4addlad	Adders and Ladders (v2.1) (MPU4 Video)	あだーずあんどらだーず4v_21
-v4addlad20	Adders and Ladders (v2.0) (MPU4 Video)	あだーずあんどらだーず4v_20
+v4addlad	Adders and Ladders (v2.1) (MPU4 Video)	あだーずあんどらだーず
+v4addlad20	Adders and Ladders (v2.0) (MPU4 Video)	あだーずあんどらだーず
+v4addladd	Adders and Ladders (v2.1d) (MPU4 Video)	あだーずあんどらだーず
 v4barqs2	Barquest 2 (v0.3) (MPU4 Video)	ばーくえすと2
-v4barqst	Barquest (v2.6d) (MPU4 Video)	ばーくえすと1
-v4big40	Big 40 Poker (Bwb) (MPU4 Video)	びっぐふぉーてぃ
-v4bigfrt	Big Fruits (v2.0?) (MPU4 Video)	びっぐふるーつ
-v4blox	Blox (v2.0) (MPU4 Video)	ぶろっくす
-v4bloxd	Blox (v2.0, Datapak) (MPU4 Video)	ぶろっくす_d
-v4bubbnk	Bubbly Bonk (v4.0?) (MPU4 Video)	ばぶりーぼんく
-v4bulblx	Bullion Blox (Bwb) (MPU4 Video)	ばりおんぶろっくす
+v4barqst	Barquest (v2.6) (MPU4 Video)	ばーくえすと1
+v4barqstd	Barquest (v2.6d) (MPU4 Video)	ばーくえすと1
+v4big40	Big 40 Poker (BWB) (Arcade Standard) (set 1) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40a	Big 40 Poker (BWB) (Arcade Standard) (set 2) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40b	Big 40 Poker (BWB) (Arcade Standard) (set 3) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40c	Big 40 Poker (BWB) (Arcade Standard) (set 4) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40d	Big 40 Poker (BWB) (Arcade Data) (set 1) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40e	Big 40 Poker (BWB) (Arcade Data) (set 2) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40f	Big 40 Poker (BWB) (S_Site Data + %-Key + OCDM) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40g	Big 40 Poker (BWB) (S_Site Standard) (set 1) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40h	Big 40 Poker (BWB) (S_Site Standard) (set 2) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40i	Big 40 Poker (BWB) (S_Site Data + %-Key) (set 1) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40j	Big 40 Poker (BWB) (S_Site Data + %-Key) (set 2) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4big40k	Big 40 Poker (BWB) (S_Site Data) (MPU4 Video)	びっぐふぉーてぃぽーかー
+v4bigfrt	Big Fruits (v2.0?) (set 1) (MPU4 Video)	びっぐふるーつ
+v4bigfrta	Big Fruits (v2.0?) (set 2) (MPU4 Video)	びっぐふるーつ
+v4bigfrtb	Big Fruits (v2.0?) (set 3) (MPU4 Video)	びっぐふるーつ
+v4bigfrtc	Big Fruits (v2.0?) (set 4) (MPU4 Video)	びっぐふるーつ
+v4blox	Blox (SJM BLOX, 50p/20p Play, Version 2.0) (MPU4 Video)	ぶろっくす
+v4bloxd	Blox (SJM BLOX, 50p/20p Play, Version 2.0) (Datapak) (MPU4 Video)	ぶろっくす_d
+v4bubbnk	Bubbly Bonk (v4.0?) (20p Fixed, Cash+Token) (MPU4 Video)	ばぶりーぼんく
+v4bubbnka	Bubbly Bonk (v4.0?) (20p Fixed, All - Cash) (MPU4 Video)	ばぶりーぼんく
+v4bubbnkb	Bubbly Bonk (v4.0?) (20p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	ばぶりーぼんく
+v4bubbnkc	Bubbly Bonk (v4.0?) (20p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	ばぶりーぼんく
+v4bubbnkd	Bubbly Bonk (v4.0?) (20p Fixed, Cash+Token, % Key) (MPU4 Video)	ばぶりーぼんく
+v4bulblx	Bullion Blox (BWB) (set 1) (MPU4 Video)	ばりおんぶろっくす
+v4bulblxa	Bullion Blox (BWB) (Datapak) (set 1) (MPU4 Video)	ばりおんぶろっくす
+v4bulblxb	Bullion Blox (BWB) (set 2) (MPU4 Video)	ばりおんぶろっくす
+v4bulblxc	Bullion Blox (BWB) (Datapak) (set 2) (MPU4 Video)	ばりおんぶろっくす
 v4cmaze	The Crystal Maze (v1.3) (MPU4 Video)	ざくりすたるめいず_13
-v4cmaze2	The New Crystal Maze Featuring Ocean Zone (v2.2) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん_22
-v4cmaze2a	The New Crystal Maze Featuring Ocean Zone (v0.1, AMLD) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん_01
-v4cmaze2b	The New Crystal Maze Featuring Ocean Zone (v2.0) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん_20
-v4cmaze2c	The New Crystal Maze Featuring Ocean Zone (v?.?) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん_??
-v4cmaze2d	The New Crystal Maze Featuring Ocean Zone (v2.2, Datapak) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん_22d
+v4cmaze2	The New Crystal Maze Featuring Ocean Zone (v2.2) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん
+v4cmaze2b	The New Crystal Maze Featuring Ocean Zone (v2.0) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん
+v4cmaze2c	The New Crystal Maze Featuring Ocean Zone (v?.?) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん
+v4cmaze2d	The New Crystal Maze Featuring Ocean Zone (v2.2, Datapak) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん
+v4cmaze2_amld	The New Crystal Maze Featuring Ocean Zone (v0.1, AMLD) (MPU4 Video)	ざにゅーくりすたるめいずふぃーちゃりんぐおーしゃんぞーん
 v4cmaze3	The Crystal Maze Team Challenge (v0.9) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
-v4cmaze3a	The Crystal Maze Team Challenge (v1.2, AMLD) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
-v4cmaze3b	The Crystal Maze Team Challenge (v0.8) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじmpu4
-v4cmaze3c	The Crystal Maze Team Challenge (v?.?) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじmpu4
+v4cmaze3b	The Crystal Maze Team Challenge (v0.8) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
+v4cmaze3c	The Crystal Maze Team Challenge (v?.?) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
 v4cmaze3d	The Crystal Maze Team Challenge (v0.9, Datapak) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
-v4cmazea	The Crystal Maze (v0.1, AMLD) (MPU4 Video)	ざくりすたるめいず_01
-v4cmazeb	The Crystal Maze (v1.2) (MPU4 Video)	ざくりすたるめいず_12
-v4cmazec	The Crystal Maze (v1.3 alt) (MPU4 Video)	ざくりすたるめいず_13a
-v4cmazed	The Crystal Maze (v1.1) (MPU4 Video)	ざくりすたるめいず_11
-v4cmazedat	The Crystal Maze (v1.3, Datapak) (MPU4 Video)	ざくりすたるめいず_13d
-v4cshinf	Cash Inferno (Bwb) (MPU4 Video)	きゃっしゅいんふぇるの
-v4cybcas	Cyber Casino (Nova) (MPU4 Video)	さいばーかじの
-v4dbltak	Double Take (Bwb) (MPU4 Video)	だぶるていく
+v4cmaze3_amld	The Crystal Maze Team Challenge (v1.2, AMLD) (MPU4 Video)	ざくりすたるめいずちーむちゃれんじ
+v4cmazeb	The Crystal Maze (v1.2) (MPU4 Video)	ざくりすたるめいず_13
+v4cmazec	The Crystal Maze (v1.3 alt) (MPU4 Video)	ざくりすたるめいず_13
+v4cmazed	The Crystal Maze (v1.1) (MPU4 Video)	ざくりすたるめいず_13
+v4cmazedat	The Crystal Maze (v1.3, Datapak) (MPU4 Video)	ざくりすたるめいず_13
+v4cmaze_amld	The Crystal Maze (v0.1, AMLD) (MPU4 Video)	ざくりすたるめいず_13
+v4cshinf	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinf3	Cash Inferno (BWB) (Release 3) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinf3a	Cash Inferno (BWB) (Release 3) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfa	Cash Inferno (BWB) (Release 4, 5p Fixed, All - Cash) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfb	Cash Inferno (BWB) (Release 4, 10p Fixed, Cash+Token) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfd	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfe	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinff	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Showcase, Datapak) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfg	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token) (set 3) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfh	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Showcase) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfi	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfj	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Showcase, Datapak) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfk	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, Datapak) (set 3) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfl	Cash Inferno (BWB) (Release 4, 20p Fixed, Cash+Token, % Key) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfm	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfn	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token, Showcase) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfo	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token, Datapak) (set 1) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfp	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token, Datapak) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfq	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token, % Key) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfr	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token) (set 2) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfs	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, Cash+Token, Datapak) (set 3) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfu	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, All - Cash) (MPU4 Video)	きゃっしゅいんふぇるの
+v4cshinfw	Cash Inferno (BWB) (Release 4, 20p Switchable 20p/10p/5p, All - Cash, Datapak)  (MPU4 Video)	きゃっしゅいんふぇるの
+v4cybcas	Cyber Casino (Nova, German) (MPU4 Video)	さいばーかじの
+v4dbltak	Double Take (BWB) (Release 4, Arcade Standard) (MPU4 Video)	だぶるていく
+v4dbltaka	Double Take (BWB) (Release 4, Arcade Data) (MPU4 Video)	だぶるていく
+v4dbltakb	Double Take (BWB) (Release 4, S_Site Data + %-Key) (MPU4 Video)	だぶるていく
 v4dealem	Deal 'Em (MPU4 Conversion Kit, v7.0)	でぃーるえむ
 v4eyedwn	Eyes Down (v1.3) (MPU4 Video)	あいずだうん
 v4eyedwnd	Eyes Down (v1.3, Datapak) (MPU4 Video)	あいずだうん
-v4frfact	Fruit Factory (Bwb) (MPU4 Video)	ふるーとふぁくとりー
-v4gldrsh	Gold Rush (Bwb) (MPU4 Video)	ごーるどらっしゅ
+v4frfact	Fruit Factory (BWB) (set 1) (MPU4 Video)	ふるーとふぁくとりー
+v4frfacta	Fruit Factory (BWB) (set 2) (MPU4 Video)	ふるーとふぁくとりー
+v4frfactb	Fruit Factory (BWB) (set 3) (MPU4 Video)	ふるーとふぁくとりー
+v4frfactc	Fruit Factory (BWB) (set 4) (MPU4 Video)	ふるーとふぁくとりー
+v4frfactd	Fruit Factory (BWB) (set 5) (MPU4 Video)	ふるーとふぁくとりー
+v4frfacte	Fruit Factory (BWB) (set 6) (MPU4 Video)	ふるーとふぁくとりー
+v4frfactf	Fruit Factory (BWB) (set 7) (MPU4 Video)	ふるーとふぁくとりー
+v4gldrsh	Gold Rush (BWB) (Release 8, 20p Fixed, All - Cash) (set 1) (MPU4 Video)	ごーるどらっしゅ
+v4gldrsha	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (set 1) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshb	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Showcase) (set 1) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshc	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Datapak) (set 1) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshd	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Datapak) (set 2) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshe	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Showcase) (Datapak) (set 1) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshf	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (set 2) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshg	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Showcase) (set 2) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshh	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshi	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshj	Gold Rush (BWB) (Release 8, 20p Fixed, Cash+Token) (Showcase) (Datapak) (set 2) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshk	Gold Rush (BWB) (Release 8, 20p Fixed, All - Cash) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshl	Gold Rush (BWB) (Release 8, 25p Fixed, All - Cash) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshm	Gold Rush (BWB) (Release 8, 25p Fixed, All - Cash) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshn	Gold Rush (BWB) (Release 8, Switchable 20p/25p, All - Cash) (MPU4 Video)	ごーるどらっしゅ
+v4gldrsho	Gold Rush (BWB) (Release 8, Switchable 20p/25p, All - Cash) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshp	Gold Rush (BWB) (Release 8, Switchable 20p/10p/5p, Cash+Token) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshq	Gold Rush (BWB) (Release 8, Switchable 20p/10p/5p, Cash+Token) (Showcase) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshr	Gold Rush (BWB) (Release 8, Switchable 20p/10p/5p, Cash+Token) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshs	Gold Rush (BWB) (Release 8, Switchable 20p/10p/5p, Cash+Token) (Showcase) (Datapak) (MPU4 Video)	ごーるどらっしゅ
+v4gldrsht	Gold Rush (BWB) (Release 8, 20p Fixed, All - Cash) (set 2) (MPU4 Video)	ごーるどらっしゅ
+v4gldrshu	Gold Rush (BWB) (Release 8, Switchable 20p/10p/5p, All - Cash) (MPU4 Video)	ごーるどらっしゅ
 v4mate	The Mating Game (v0.4) (MPU4 Video)	ざめいてぃんぐげーむ
 v4mated	The Mating Game (v0.4, Datapak) (MPU4 Video)	ざめいてぃんぐげーむ
-v4mazbel	Mazooma Belle (v2.5) (MPU4 Video)	まずーまべるmpu4
-v4mazbla	Mazooma Belle (v1.5) (MPU4 Video)	まずーまべるmpu4
-v4mdice	Miami Dice (Bwb) (MPU4 Video)	まいあみだいすmpu4
-v4megbuk	Megabucks Poker (Bwb) (MPU4 Video)	めがばっくすぽーかーmpu4
-v4miami	Miami Dice (Nova) (MPU4 Video)	まいあみだいすmpu4
-v4missis	Mississippi Lady (Nova) (MPU4 Video)	みししっぴれでぃーmpu4
-v4monte	Monte Carlo Or Bust (Bwb) (MPU4 Video)	もんてかるろおあばすとmpu4
+v4mazbel	Mazooma Belle (v2.5 DY, S/Site, Cash+Token, Datapak) (MPU4 Video)	まずーまべる
+v4mazbel15	Mazooma Belle (v1.5) (set 1) (MPU4 Video)	まずーまべる
+v4mazbel15a	Mazooma Belle (v1.5) (set 2) (MPU4 Video)	まずーまべる
+v4mdice	Miami Dice (BWB) (Release 8, S/Site Standard, 25p-£10 Cash - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdice5	Miami Dice (BWB) (Release 5) (MPU4 Video)	まいあみだいすmpu4
+v4mdicea	Miami Dice (BWB) (Release 8, Arcade Standard, 5p-£4 Cash - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceb	Miami Dice (BWB) (Release 8, Arcade Standard, 10p-£4 Cash - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4mdicec	Miami Dice (BWB) (Release 8, Arcade Standard, 10p-£8 Token - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4mdiced	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£4 Cash - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4mdicee	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£4 Cash - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4mdicef	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£8 Token - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceg	Miami Dice (BWB) (Release 8, Arcade Showcase, 20p-£8 Token - Fixed) (set 3) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceger	Miami Dice (Nova, German) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceh	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£8 Token - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdicei	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£8 Token - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdicej	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£8 Token - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdicek	Miami Dice (BWB) (Release 8, S/Site Showcase, 20p-£8 Token - Fixed) (set 5) (MPU4 Video)	まいあみだいすmpu4
+v4mdicel	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£8 Token - Fixed) (set 3) (MPU4 Video)	まいあみだいすmpu4
+v4mdicem	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£8 Token - Fixed) (set 4) (MPU4 Video)	まいあみだいすmpu4
+v4mdicen	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£10 Cash - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceo	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£10 Cash - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdicep	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£10 Cash - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceq	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£10 Cash - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdicer	Miami Dice (BWB) (Release 8, S/Site Standard, 20p-£10 Cash - Fixed) (set 3) (MPU4 Video)	まいあみだいすmpu4
+v4mdices	Miami Dice (BWB) (Release 8, Arcade Standard, 25p-£10 Cash - Fixed) (set 1) (MPU4 Video)	まいあみだいすmpu4
+v4mdicet	Miami Dice (BWB) (Release 8, Arcade Standard, 25p-£10 Cash - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdiceu	Miami Dice (BWB) (Release 8, S/Site Standard, 25p-£10 Cash - Fixed) (set 2) (MPU4 Video)	まいあみだいすmpu4
+v4mdicev	Miami Dice (BWB) (Release 8, S/Site Standard, 25p-£10 Cash - Fixed) (set 3) (MPU4 Video)	まいあみだいすmpu4
+v4mdicew	Miami Dice (BWB) (Release 8, Arcade Standard, 20p-£8 Cash - Fixed) (MPU4 Video)	まいあみだいすmpu4
+v4megbuk	Megabucks Poker (BWB) (set 1) (MPU4 Video)	めがばっくすぽーかー
+v4megbuka	Megabucks Poker (BWB) (set 2) (MPU4 Video)	めがばっくすぽーかー
+v4megbukb	Megabucks Poker (BWB) (set 3) (MPU4 Video)	めがばっくすぽーかー
+v4megbukc	Megabucks Poker (BWB) (set 4) (MPU4 Video)	めがばっくすぽーかー
+v4missis	Mississippi Lady (Nova, German) (MPU4 Video)	みししっぴれでぃーmpu4
+v4monte	Monte Carlo Or Bust (BWB) (Release D, S/Site Standard, 20p Switchable, £8 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4monte9	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Fixed, £8 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4monte9a	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Switchable, £8 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4monte9b	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Switchable, Cash and Tokens) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9c	Monte Carlo Or Bust (BWB) (Release 9, Arcade Special, Options 4 Cabinet, 20p Switchable, Cash and Tokens) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9d	Monte Carlo Or Bust (BWB) (Release 9, Arcade Special, Options 4 Cabinet, 20p Switchable, Cash and Tokens) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9e	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Switchable, Cash and Tokens) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9f	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Switchable, £10 All Cash) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9g	Monte Carlo Or Bust (BWB) (Release 9, Arcade Special, Options 4 Cabinet, 20p Fixed, Cash and Tokens) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9h	Monte Carlo Or Bust (BWB) (Release 9, Arcade Special, Options 4 Cabinet, 20p Fixed, Cash and Tokens) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9i	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Fixed, Cash and Tokens) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9j	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Fixed, £10 All Cash) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9k	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Fixed, £10 All Cash) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9l	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 25p Fixed, £10 All Cash) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4monte9m	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 25p Fixed, £10 All Cash) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9n	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Switchable, £10 All Cash) (set 2) (MPU4 Video)	もんてかるろおあばすと
+v4monte9o	Monte Carlo Or Bust (BWB) (Release 9, S/Site Standard, Options 4 Cabinet, 20p Fixed, Cash and Tokens) (set 1) (MPU4 Video)	もんてかるろおあばすと
+v4montea	Monte Carlo Or Bust (BWB) (Release D, S/Site Standard, 20p Switchable, £10 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4monteaa	Monte Carlo Or Bust (BWB) (Release ?, set 20) (MPU4 Video)	もんてかるろおあばすと
+v4monteab	Monte Carlo Or Bust (BWB) (Release ?, set 21) (MPU4 Video)	もんてかるろおあばすと
+v4monteac	Monte Carlo Or Bust (BWB) (Release ?, set 22) (MPU4 Video)	もんてかるろおあばすと
+v4montead	Monte Carlo Or Bust (BWB) (Release ?, set 23) (MPU4 Video)	もんてかるろおあばすと
+v4monteae	Monte Carlo Or Bust (BWB) (Release ?, set 24) (MPU4 Video)	もんてかるろおあばすと
+v4monteaf	Monte Carlo Or Bust (BWB) (Release ?, set 25) (MPU4 Video)	もんてかるろおあばすと
+v4monteag	Monte Carlo Or Bust (BWB) (Release ?, set 26) (MPU4 Video)	もんてかるろおあばすと
+v4monteah	Monte Carlo Or Bust (BWB) (Release ?, set 27) (MPU4 Video)	もんてかるろおあばすと
+v4monteai	Monte Carlo Or Bust (BWB) (Release ?, set 28) (MPU4 Video)	もんてかるろおあばすと
+v4monteaj	Monte Carlo Or Bust (BWB) (Release ?, set 29) (MPU4 Video)	もんてかるろおあばすと
+v4monteak	Monte Carlo Or Bust (BWB) (Release ?, set 30) (MPU4 Video)	もんてかるろおあばすと
+v4monteal	Monte Carlo Or Bust (BWB) (Release ?, set 31) (MPU4 Video)	もんてかるろおあばすと
+v4monteam	Monte Carlo Or Bust (BWB) (Release ?, set 32) (MPU4 Video)	もんてかるろおあばすと
+v4montean	Monte Carlo Or Bust (BWB) (Release ?, set 33) (MPU4 Video)	もんてかるろおあばすと
+v4monteao	Monte Carlo Or Bust (BWB) (Release ?, set 34) (MPU4 Video)	もんてかるろおあばすと
+v4montec	Monte Carlo Or Bust (BWB) (Release D, Arcade Special, 20p Fixed, Cash and Tokens) (MPU4 Video)	もんてかるろおあばすと
+v4monted	Monte Carlo Or Bust (BWB) (Release D, S/Site Standard, 20p Fixed, £10 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4montee	Monte Carlo Or Bust (BWB) (Release D, S/Site Standard, 20p Switchable, Cash and Tokens) (MPU4 Video)	もんてかるろおあばすと
+v4monteg	Monte Carlo Or Bust (BWB) (Release D, S/Site Standard, 25p Fixed, £10 All Cash) (MPU4 Video)	もんてかるろおあばすと
+v4monteh	Monte Carlo Or Bust (BWB) (Release ?, set 1) (MPU4 Video)	もんてかるろおあばすと
+v4montei	Monte Carlo Or Bust (BWB) (Release ?, set 2) (MPU4 Video)	もんてかるろおあばすと
+v4montej	Monte Carlo Or Bust (BWB) (Release ?, set 3) (MPU4 Video)	もんてかるろおあばすと
+v4montek	Monte Carlo Or Bust (BWB) (Release ?, set 4) (MPU4 Video)	もんてかるろおあばすと
+v4montel	Monte Carlo Or Bust (BWB) (Release ?, set 5) (MPU4 Video)	もんてかるろおあばすと
+v4montem	Monte Carlo Or Bust (BWB) (Release ?, set 6) (MPU4 Video)	もんてかるろおあばすと
+v4monten	Monte Carlo Or Bust (BWB) (Release ?, set 7) (MPU4 Video)	もんてかるろおあばすと
+v4monteo	Monte Carlo Or Bust (BWB) (Release ?, set 8) (MPU4 Video)	もんてかるろおあばすと
+v4montep	Monte Carlo Or Bust (BWB) (Release ?, set 9) (MPU4 Video)	もんてかるろおあばすと
+v4monteq	Monte Carlo Or Bust (BWB) (Release ?, set 10) (MPU4 Video)	もんてかるろおあばすと
+v4monter	Monte Carlo Or Bust (BWB) (Release ?, set 11) (MPU4 Video)	もんてかるろおあばすと
+v4montes	Monte Carlo Or Bust (BWB) (Release ?, set 12) (MPU4 Video)	もんてかるろおあばすと
+v4montet	Monte Carlo Or Bust (BWB) (Release ?, set 13) (MPU4 Video)	もんてかるろおあばすと
+v4monteu	Monte Carlo Or Bust (BWB) (Release ?, set 14) (MPU4 Video)	もんてかるろおあばすと
+v4montev	Monte Carlo Or Bust (BWB) (Release ?, set 15) (MPU4 Video)	もんてかるろおあばすと
+v4montew	Monte Carlo Or Bust (BWB) (Release ?, set 16) (MPU4 Video)	もんてかるろおあばすと
+v4montex	Monte Carlo Or Bust (BWB) (Release ?, set 17) (MPU4 Video)	もんてかるろおあばすと
+v4montey	Monte Carlo Or Bust (BWB) (Release ?, set 18) (MPU4 Video)	もんてかるろおあばすと
+v4montez	Monte Carlo Or Bust (BWB) (Release ?, set 19) (MPU4 Video)	もんてかるろおあばすと
+v4montezz	Monte Carlo Or Bust (BWB) (Release ?, set 35) (MPU4 Video)	もんてかるろおあばすと
 v4opt3	Option 3 (v1.0) (MPU4 Video)	おぷしょん3
 v4opt3d	Option 3 (v1.0) (Datapak) (MPU4 Video)	おぷしょん3mpu4
-v4ovrmn3	Over Moon Pt3 (Bwb) (MPU4 Video)	おーばーむーんpt3mpu4
+v4ovrmn3	Over Moon Pt3 (BWB) (20p Fixed, Cash+Token) (MPU4 Video)	おーばーむーん
+v4ovrmn3a	Over Moon Pt3 (BWB) (20p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	おーばーむーん
+v4ovrmn3b	Over Moon Pt3 (BWB) (20p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	おーばーむーん
+v4ovrmn3c	Over Moon Pt3 (BWB) (20p Fixed, Cash+Token, % Key) (MPU4 Video)	おーばーむーん
+v4ovrmn3d	Over Moon Pt3 (BWB) (20p Fixed, All - Cash) (MPU4 Video)	おーばーむーん
 v4p895p3	V4P895P3/SMT V5.0	ぶいふぉーぴー895
-v4picdil	Piccadilly Nights (Nova) (MPU4 Video)	ぴかでぃりーないつmpu4
-v4psi	Prize Space Invaders (v1.1) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
-v4psi14d	Prize Space Invaders (v1.4D?) (MPU4 Video)	ぷらいずすぺーすいんべーだーず
-v4psi20d	Prize Space Invaders (v2.0D?) (MPU4 Video)	ぷらいずすぺーすいんべーだーず
-v4psi214	Prize Space Invaders (v2.14?) (MPU4 Video)	ぷらいずすぺーすいんべーだーず
-v4psia	Prize Space Invaders (v1.2) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_12
-v4psib	Prize Space Invaders (v2.0?) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_20
-v4pztet	Prize Tetris (Bwb) (MPU4 Video, set 1)	ぷらいずてとりすmpu4
-v4pzteta	Prize Tetris (Bwb) (MPU4 Video, set 2)	ぷらいずてとりすmpu4
+v4picdil	Piccadilly Nights (Nova, German) (MPU4 Video)	ぴかでぃりーないつmpu4
+v4psi	Prize Space Invaders (BWB IN2, £20, 50p/30p Play, 20" Version 1.1) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4psi14	Prize Space Invaders (BWB IN2, £20, 50p/30p Play, 14" Version 1.1, set 1) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4psi14a	Prize Space Invaders (BWB IN2, £20, 50p/30p Play, 14" Version 1.1, set 2) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4psibc	Prize Space Invaders (BWB INV1, 50p/30p Play, Version 1.2) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4psibcd	Prize Space Invaders (BWB INV1, 50p/30p Play, Version 1.2) (Datapak) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4psid	Prize Space Invaders (BWB IN2, £20, 50p/30p Play, 20" Version 1.1) (Datapak) (MPU4 Video)	ぷらいずすぺーすいんべーだーず_11
+v4pztet	Prize Tetris (BWB) (MPU4 Video)	ぷらいずてとりすmpu4
+v4pzteta	Prize Tetris (BWB) (Datapak) (MPU4 Video)	ぷらいずてとりすmpu4
+v4pztetb	Prize Tetris (BWB) (Showcase) (MPU4 Video)	ぷらいずてとりすmpu4
+v4pztetc	Prize Tetris (BWB) (Showcase) (Datapak) (MPU4 Video)	ぷらいずてとりすmpu4
 v4quidgr	Ten Quid Grid (v1.2) (MPU4 Video)	てんくいっどぐりっど_12
 v4quidgr2	Ten Quid Grid (v2.4) (MPU4 Video)	てんくいっどぐりっど_24
 v4quidgr2d	Ten Quid Grid (v2.4, Datapak) (MPU4 Video)	てんくいっどぐりっど_24
 v4quidgrd	Ten Quid Grid (v1.2, Datapak) (MPU4 Video)	てんくいっどぐりっど_12
-v4redhtp	Red Hot Poker (20p/10GBP Cash, release 3) (MPU4 Video)	れっどほっとぽーかー
-v4rencas	Reno Casino (Bwb) (MPU4 Video)	りのかじの
-v4reno	Reno Reels (20p/10GBP Cash, release A) (MPU4 Video)	りのりーるず
-v4rhmaz	Red Hot Mazooma Belle (Bwb) (MPU4 Video)	れっどほっとまずーまべる
-v4shpwnd	Shop Window (v2.0) (MPU4 Video)	しょっぷうぃんどうmpu4
-v4sixx	6-X (Bwb) (MPU4 Video)	ふぁいぶえっくす
+v4redhtp	Red Hot Poker (Release 3, 20p Fixed, Cash+Token) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2	Red Hot Poker (Release 2, 1993 copyright, 5p Fixed, Cash+Token) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2a	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2b	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2c	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2d	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, % Key) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2e	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, Datapak) (set 3) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2f	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, Datapak) (set 4) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2g	Red Hot Poker (Release 2, 1993 copryight, 5p Fixed, Cash+Token, % Key) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtp2z	Red Hot Poker (Release 2, 1992 copyright, 20p Fixed, Cash+Token) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpa	Red Hot Poker (Release 3, 20p Switchable to 10p, All - Cash) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpaa	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, % Key) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpab	Red Hot Poker (Release 3, 10p Fxed, All-Cash) (MPU4 Video)	れっどほっとぽーかー
+v4redhtparc	Red Hot Poker (Arcade, Cash+Tokens, 1993 Awards, 20p Fixed, Version 1.9) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpb	Red Hot Poker (Release 3, 10p Fixed, Cash+Token) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpc	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpd	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpe	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, % Key) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpf	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, Datapak) (set 3) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpg	Red Hot Poker (Release 3, 10p Fixed, Cash+Token) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtph	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, Datapak) (set 5) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpi	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, Datapak) (set 4) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpj	Red Hot Poker (Release 3, 10p Fixed, Cash+Token, % Key) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpk	Red Hot Poker (Release 3, 20p Fixed, Cash+Token) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpl	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpm	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpn	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, % Key) (set 1)  (MPU4 Video)	れっどほっとぽーかー
+v4redhtpo	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, Datapak) (set 3) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpp	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, Datapak) (set 4) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpq	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, Datapak) (set 5) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpr	Red Hot Poker (Release 3, 20p Fixed, Cash+Token, % Key) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtps	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpt	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpu	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpunk	Red Hot Poker (unknown release) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpv	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, % Key) (set 1) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpw	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 3) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpx	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token) (set 2) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpy	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 4) (MPU4 Video)	れっどほっとぽーかー
+v4redhtpz	Red Hot Poker (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 5) (MPU4 Video)	れっどほっとぽーかー
+v4rencas	Reno Casino (BWB) (set 1) (MPU4 Video)	りのかじの
+v4rencasa	Reno Casino (BWB) (set 2) (MPU4 Video)	りのかじの
+v4rencasb	Reno Casino (BWB) (set 3) (MPU4 Video)	りのかじの
+v4rencasc	Reno Casino (BWB) (set 4) (MPU4 Video)	りのかじの
+v4rencasd	Reno Casino (BWB) (set 5) (MPU4 Video)	りのかじの
+v4rencase	Reno Casino (BWB) (set 6) (MPU4 Video)	りのかじの
+v4rencasf	Reno Casino (BWB) (set 7) (MPU4 Video)	りのかじの
+v4rencasg	Reno Casino (BWB) (set 8) (MPU4 Video)	りのかじの
+v4rencash	Reno Casino (BWB) (set 9) (MPU4 Video)	りのかじの
+v4rencasi	Reno Casino (BWB) (set 10) (MPU4 Video)	りのかじの
+v4reno	Reno Reels (Release A, 20p Fixed, All - Cash) (set 1) (MPU4 Video)	りのりーるず
+v4reno5	Reno Reels (Release 5) (MPU4 Video)	りのりーるず
+v4reno7	Reno Reels (Release 7) (MPU4 Video)	りのりーるず
+v4reno8	Reno Reels (Release 8, 20p Fixed, Cash+Token) (MPU4 Video)	りのりーるず
+v4renoa	Reno Reels (Release A, 20p Fixed, All - Cash) (set 2) (MPU4 Video)	りのりーるず
+v4renob	Reno Reels (Release A, 20p Switchable 20p/10p/5p, All - Cash) (MPU4 Video)	りのりーるず
+v4renoc	Reno Reels (Release A, 20p Fixed, Cash+Token) (Datapak) (set 1) (MPU4 Video)	りのりーるず
+v4renod	Reno Reels (Release A, 20p Fixed, Cash+Token) (Showcase) (set 1) (MPU4 Video)	りのりーるず
+v4renoe	Reno Reels (Release A, 20p Fixed, Cash+Token) (set 1) (MPU4 Video)	りのりーるず
+v4renof	Reno Reels (Release A, 20p Fixed, Cash+Token) (Showcase) (set 1) (Datapak) (MPU4 Video)	りのりーるず
+v4renog	Reno Reels (Release A, 20p Fixed, Cash+Token) (Datapak) (set 2) (MPU4 Video)	りのりーるず
+v4renoh	Reno Reels (Release A, 20p Fixed, Cash+Token) (Showcase) (set 2) (MPU4 Video)	りのりーるず
+v4renoi	Reno Reels (Release A, 20p Fixed, Cash+Token) (set 2) (MPU4 Video)	りのりーるず
+v4renoj	Reno Reels (Release A, 20p Fixed, Cash+Token) (Showcase) (set 2) (Datapak) (MPU4 Video)	りのりーるず
+v4renok	Reno Reels (Release A, 20p Fixed, Cash+Token) (Datapak) (set 3) (MPU4 Video)	りのりーるず
+v4renol	Reno Reels (Release A, 20p Fixed, Cash+Token) (set 3) (MPU4 Video)	りのりーるず
+v4renom	Reno Reels (Release A, 20p Fixed, All - Cash) (Datapak) (MPU4 Video)	りのりーるず
+v4renon	Reno Reels (Release A, 25p Fixed, All - Cash) (Datapak) (MPU4 Video)	りのりーるず
+v4renoo	Reno Reels (Release A, 25p Fixed, All - Cash) (MPU4 Video)	りのりーるず
+v4renop	Reno Reels (Release A, 20p Switchable 20p/25p, All - Cash) (Datapak) (MPU4 Video)	りのりーるず
+v4renoq	Reno Reels (Release A, 20p Switchable 20p/25p, All - Cash) (MPU4 Video)	りのりーるず
+v4renor	Reno Reels (Release A, 20p Switchable 20p/10p/5p, Cash+Token) (Showcase) (set 1) (MPU4 Video)	りのりーるず
+v4renos	Reno Reels (Release A, 20p Switchable 20p/10p/5p, Cash+Token) (set 1) (MPU4 Video)	りのりーるず
+v4renot	Reno Reels (Release A, 20p Switchable 20p/10p/5p, Cash+Token) (Showcase) (set 2) (MPU4 Video)	りのりーるず
+v4renou	Reno Reels (Release A, 20p Switchable 20p/10p/5p, Cash+Token) (set 2) (MPU4 Video)	りのりーるず
+v4rhmaz	Red Hot Mazooma Belle (BWB) (Version 1.4, Cash+Token, 1993 Awards, 10p Fixed) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmaza	Red Hot Mazooma Belle (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 10p Fixed, Datapak) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazb	Red Hot Mazooma Belle (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 10p Fixed, Datapak) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazc	Red Hot Mazooma Belle (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Fixed) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazd	Red Hot Mazooma Belle (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Fixed, Datapak) (set 1) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmaze	Red Hot Mazooma Belle (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Fixed, Datapak) (set 2) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazf	Red Hot Mazooma Belle (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Fixed, Datapak) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazg	Red Hot Mazooma Belle (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazh	Red Hot Mazooma Belle (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Switchable to 10p, Datapak) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazi	Red Hot Mazooma Belle (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Switchable to 10p, Datapak) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazj	Red Hot Mazooma Belle (BWB) (Version 1.4 Y, Cash+Token, 1993 Awards, 20p Switchable to 10p, % Key) (MPU4 Video)	れっどほっとまずーまべる
+v4rhmazk	Red Hot Mazooma Belle (BWB) (Version 1.4 C, Cash+Token, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	れっどほっとまずーまべる
+v4shpwnd	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token) (set 1) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwnda	Shop Window (v2.0) (Release 2, 10p Fixed, Cash + Special BWB Token) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndb	Shop Window (v2.0) (Release 2, 10p Fixed, Cash + Special BWB Token, Datapak) (set 1) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndc	Shop Window (v2.0) (Release 2, 10p Fixed, Cash + Special BWB Token, Datapak) (set 2) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndd	Shop Window (v2.0) (Release 2, 10p Fixed, Cash + Special BWB Token, % Key) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwnde	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token, Datapak) (set 1) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndf	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token, Datapak) (set 2) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndg	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token, % Key) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndh	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token, Datapak) (set 3) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndi	Shop Window (v2.0) (Release 2, 20p Fixed, Cash + Special BWB Token) (set 2) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndj	Shop Window (v2.0) (Release 2, 20p Switchable to 10p, Cash + Special BWB Token) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndk	Shop Window (v2.0) (Release 2, 20p Switchable to 10p, Cash + Special BWB Token, Datapak) (set 1) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndl	Shop Window (v2.0) (Release 2, 20p Switchable to 10p, Cash + Special BWB Token, Datapak) (set 2) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4shpwndm	Shop Window (v2.0) (Release 2, 20p Switchable to 10p, Cash + Special BWB Token, % Key) (MPU4 Video)	しょっぷうぃんどうmpu4
+v4sixx	6-X (BWB) (Release 3, 20p Fixed, Cash+Token) (set 1) (MPU4 Video)	しっくすえっくす
+v4sixxa	6-X (BWB) (Release 3, 20p Fixed, Cash+Token) (set 2) (MPU4 Video)	しっくすえっくす
+v4sixxb	6-X (BWB) (Release 3, 20p Fixed, Cash+Token, Datapak) (set 1) (MPU4 Video)	しっくすえっくす
+v4sixxc	6-X (BWB) (Release 3, 20p Fixed, Cash+Token, % Key) (MPU4 Video)	しっくすえっくす
+v4sixxd	6-X (BWB) (Release 3, 20p Fixed, Cash+Token, Datapak) (set 2) (MPU4 Video)	しっくすえっくす
+v4sixxe	6-X (BWB) (Release 3, 20p Fixed, Cash+Token) (set 3) (MPU4 Video)	しっくすえっくす
+v4sixxf	6-X (BWB) (Release 3, 20p Fixed, Cash+Token, Datapak) (set 3) (MPU4 Video)	しっくすえっくす
+v4sixxg	6-X (BWB) (Release 3, 20p Switchable to 10p, Cash+Token) (MPU4 Video)	しっくすえっくす
+v4sixxh	6-X (BWB) (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 1) (MPU4 Video)	しっくすえっくす
+v4sixxi	6-X (BWB) (Release 3, 20p Switchable to 10p, Cash+Token, Datapak) (set 2) (MPU4 Video)	しっくすえっくす
+v4sixxj	6-X (BWB) (Release 3, 20p Switchable to 10p, Cash+Token, % Key) (MPU4 Video)	しっくすえっくす
+v4sixxk	6-X (BWB) (Release 3, 20p Fixed, All - Cash) (MPU4 Video)	しっくすえっくす
+v4sixxl	6-X (BWB) (Release 3, 20p Switchable to 10p, All - Cash) (MPU4 Video)	しっくすえっくす
+v4sixxm	6-X (BWB) (Release 3, 20p Switchable to 10p, All - Cash, Datapak) (MPU4 Video)	しっくすえっくす
 v4sklcsh	Skill Cash (v1.1) (MPU4 Video)	すきるきゃっしゅmpu4
 v4skltrk	Skill Trek (v1.1) (MPU4 Video, set 1)	すきるとれっく_1
 v4skltrka	Skill Trek (v1.1) (MPU4 Video, set 2)	すきるとれっく_2
@@ -35675,15 +36062,53 @@ v4strike	Strike it Lucky (v0.5) (MPU4 Video)	すとらいくいっとらっき�
 v4strike2	Strike it Lucky (v0.53) (MPU4 Video)	すとらいくいっとらっきーmpu4
 v4strike2d	Strike it Lucky (v0.53, Datapak) (MPU4 Video)	すとらいくいっとらっきーmpu4
 v4striked	Strike it Lucky (v0.5, Datapak) (MPU4 Video)	すとらいくいっとらっきーmpu4
-v4sunbst	Sunburst (Bwb) (MPU4 Video)	さんばーすとmpu4
-v4tetrs	BwB Tetris v 2.2 (MPU4 Video)	びーだぶりゅーびーてとりす
-v4tetrs1	BwB Tetris v 1.0? (MPU4 Video)	びーだぶりゅーびーてとりす
-v4time	Time Machine (v2.0) (MPU4 Video)	たいむましんmpu4
-v4timebn	Time Bandit (Bwb) (MPU4 Video)	たいむばんでぃっとmpu4
+v4sunbst	Sunburst (BWB) (Version 1.4, Cash+Token, 1993 Awards, 10p Fixed) (MPU4 Video)	さんばーすと
+v4sunbsta	Sunburst (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 10p Fixed) (MPU4 Video)	さんばーすと
+v4sunbstb	Sunburst (BWB) (Version 1.4 D, Cash + Token, 1993 Awards, 10p Fixed) (MPU4 Video)	さんばーすと
+v4sunbstc	Sunburst (BWB) (Version 1.4 Y, Cash+Token, 1993 Awards, 10p Fixed) (MPU4 Video)	さんばーすと
+v4sunbstd	Sunburst (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Fixed) (set 1) (MPU4 Video)	さんばーすと
+v4sunbste	Sunburst (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Fixed) (set 1) (MPU4 Video)	さんばーすと
+v4sunbstf	Sunburst (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Fixed) (set 2) (MPU4 Video)	さんばーすと
+v4sunbstg	Sunburst (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Fixed) (set 1) (MPU4 Video)	さんばーすと
+v4sunbsth	Sunburst (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Fixed) (set 2) (MPU4 Video)	さんばーすと
+v4sunbsti	Sunburst (BWB) (Version 1.4 Y, Cash+Token, 1993 Awards, 20p Fixed, % Key) (MPU4 Video)	さんばーすと
+v4sunbstj	Sunburst (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Fixed) (MPU4 Video)	さんばーすと
+v4sunbstk	Sunburst (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Fixed) (set 2) (MPU4 Video)	さんばーすと
+v4sunbstl	Sunburst (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Switchable to 10p) (set 1) (MPU4 Video)	さんばーすと
+v4sunbstm	Sunburst (BWB) (Version 1.4, Cash+Token, 1993 Awards, 20p Switchable to 10p) (set 2) (MPU4 Video)	さんばーすと
+v4sunbstn	Sunburst (BWB) (Version 1.4 DY, Cash+Token, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	さんばーすと
+v4sunbsto	Sunburst (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Switchable to 10p (MPU4 Video)	さんばーすと
+v4sunbstp	Sunburst (BWB) (Version 1.4 D, Cash+Token, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	さんばーすと
+v4sunbstq	Sunburst (BWB) (Version 1.4 Y, Cash+Token, 1993 Awards, 20p Switchable to 10p, % Key) (MPU4 Video)	さんばーすと
+v4sunbstr	Sunburst (BWB) (Version 1.4 C, 1993 Awards, 10p Fixed) (MPU4 Video)	さんばーすと
+v4sunbsts	Sunburst (BWB) (Version 1.4 C, 1993 Awards, 20p Fixed) (MPU4 Video)	さんばーすと
+v4sunbstt	Sunburst (BWB) (Version 1.4 C, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	さんばーすと
+v4sunbstu	Sunburst (BWB) (Version 1.4 IC, 1993 Awards, 20p Switchable to 10p) (MPU4 Video)	さんばーすと
+v4tetrs	Tetris Payout (BWB TET1 Version 2.2, set 1) (MPU4 Video)	てとりすぺいあうと
+v4tetrs1	Tetris Payout (BWB TET1 Version 2.2, set 2) (MPU4 Video)	てとりすぺいあうと
+v4timebn	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (set 1) (MPU4 Video)	たいむばんでぃっとmpu4
+v4timebna	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (set 2) (MPU4 Video)	たいむばんでぃっとmpu4
+v4timebnb	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (Datapak) (set 1) (MPU4 Video)	たいむばんでぃっとmpu4
+v4timebnc	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (set 3) (MPU4 Video)	たいむばんでぃっとmpu4
+v4timebnd	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (Datapak) (set 2) (MPU4 Video)	たいむばんでぃっとmpu4
+v4timebne	Time Bandit (BWB) (Release 1, 20p Fixed, Cash + Tokens) (Datapak) (set 3) (MPU4 Video)	たいむばんでぃっとmpu4
+v4tmach	Time Machine (v2.0) (Issue 3 Questions) (MPU4 Video)	たいむましんb_
+v4tmach1	Time Machine (v2.0) (Issue 1 Questions) (MPU4 Video)	たいむましんb_
+v4tmach1d	Time Machine (v2.0) (Issue 1 Questions) (Datapak) (MPU4 Video)	たいむましんb_
+v4tmach2	Time Machine (v2.0) (Issue 2 Questions) (MPU4 Video)	たいむましんb_
+v4tmach2d	Time Machine (v2.0) (Issue 2 Questions) (Datapak) (MPU4 Video)	たいむましんb_
+v4tmachd	Time Machine (v2.0) (Issue 3 Questions) (Datapak) (MPU4 Video)	たいむましんb_
 v4turnov	Turnover (v2.3) (MPU4 Video)	たーんおーばーmpu4
+v4turnova	Turnover (v2.33) (MPU4 Video)	たーんおーばーmpu4
+v4turnovc	Turnover (v2.3O) (MPU4 Video)	たーんおーばーmpu4
+v4turnovd	Turnover (v?.?) (MPU4 Video)	たーんおーばーmpu4
 v4vgpok	Vegas Poker (prototype, release 2) (MPU4 Video)	べかすぽーかー
-v4wize	Wize Move (v1.3d) (MPU4 Video)	わいずむーぶ
-v4wizea	Wize Move (v1.2) (MPU4 Video)	わいずむーぶ
+v4wize	Wize Move (v1.3) (MPU4 Video)	わいずむーぶ
+v4wizeb	Wize Move (v1.33) (MPU4 Video)	わいずむーぶ
+v4wizec	Wize Move (v1.3d3) (Datapak) (MPU4 Video)	わいずむーぶ
+v4wized	Wize Move (v1.3d) (Datapak) (MPU4 Video)	わいずむーぶ
+v4wizen	Wize Move (v?.?) (MPU4 Video)	わいずむーぶ
+v4wizeo	Wize Move (v1.2) (MPU4 Video)	わいずむーぶ
 v550	Visual 550	びじゅある550
 v6809	Vegas 6809	べがす6809
 valkyrie	ワルキューレの伝説 (日本版)	わるきゅーれのでんせつ
@@ -35934,6 +36359,7 @@ vindictre	ビンジケーターズ (Euro版, rev 5)	びんじけーたーず_5
 vindictre3	ビンジケーターズ (Euro版, rev 3)	びんじけーたーず_3
 vindictre4	ビンジケーターズ (Euro版, rev 4)	びんじけーたーず_4
 vindictrg	ビンジケーターズ (ドイツ版, rev 1)	びんじけーたーず_1
+vintkeys	E-mu Vintage Keys Classic Analog Keyboards	いーみゅびんてーじきーずくらしっくあなろぐきーぼーど
 vinvader	Invaders (VTech)	いんべーだーず
 viofight	バイオレンスファイト (海外版)	ばいおれんすふぁいと_w
 viofightj	バイオレンスファイト (日本版)	ばいおれんすふぁいと_
@@ -35983,6 +36409,7 @@ vitaminc	マージャンビタミンC (日本版)	まーじゃんびたみんし
 vivdolls	ビビッドドールズ	びびっどどーるず
 vixen	Vixen	びくせん
 vjdash	VJ ビジュアル・アンド・ミュージック スラップ	ぶいじぇーびじゅあるあんどみゅーじっくすらっぷ
+vjpp2	Plug Play TV Games 2 (4-in-1) (VideoJet, France)	ぷらぐあんどぷれいてぃーびーげーむず2
 vk100	VK100 'GIGI'	ぶいけー100
 vl70	VL70-m	ぶいえる70m
 vlcno_1a	Volcano (Sound Only set 3)	ぼるけーの_
@@ -36143,6 +36570,7 @@ vtennis3	パワースマッシュ3 (日本版)	ぱわーすまっしゅ3_
 vtennisg	パワースマッシュ / Virtua Tennis (GDS-0011)	ぱわーすまっしゅ1_g
 vtpinball	VRT VT SDK 'Pinball' (C-Compiler Demo Program 2)	ぶいあーるてぃーぶいてぃーえすでぃーけー
 vtsndtest	VRT VT SDK 'VT03 Sound Test' (Sound Generator FMDemo)	ぶいあーるてぃーぶいてぃーえすでぃーけー
+vtvppong	Virtual TV Ping Pong	ばーちゃるてぃーびーぴんぽん
 vulcan	グラディウスII -GOFERの野望- / Vulcan Venture (海外版, New)	ぐらでぃうす2_w
 vulcana	グラディウスII -GOFERの野望- / Vulcan Venture (海外版, Old)	ぐらでぃうす2_woa
 vulcanb	グラディウスII -GOFERの野望- / Vulcan Venture (海外版, Oldest)	ぐらでぃうす2_wob
@@ -36435,6 +36863,7 @@ witchgme	Witch Game (Video Klein, set 1)	うぃっちげーむ_1
 witchjol	Jolli Witch (Export, 6T/12T ver 1.57D)	じょりーうぃっち
 witchryl	Witch Royal (Export version 2.1)	うぃっちろいやる
 witchs	ウィッチ (Sega license)	うぃっち_s
+witchstar	ウィッチ / Witch Star	うぃっちすたー
 wits	ウィッツ (日本版)	うぃっつ
 wivernwg	Wivern Wings	わいばーんういんぐす_
 wiwi18	WiWi 18-in-1 Sports Game	うぃうぃ18いんわん
@@ -36785,6 +37214,7 @@ xfilesp	X-Files (3.03)	えっくすふぁいる
 xfilespf	X-Files (3.03 France)	えっくすふぁいる
 xforce	X Force	えっくすふぉーす
 xiistag	XII STAG ＜トゥエルブスタッグ＞ (V2.01J 2002/6/26 22:27)	とぅえるぶすたっぐ
+xing48	Xing Wireless Interactive TV Game 'Wi TV Zone' 48-in-1 (Europe, PAL)	しんわいやれすいんたらくてぃぶてぃーびーげーむ
 xiprocessor	Xi processor board	えっくすあいぷろせっさぼーど
 xl25	XL 25	えくせる25
 xmcota	エックスメン -チルドレンオブジアトム- (Euro版 950331)	えっくすめんちるどれんおぶじあとむ_e950331
@@ -36986,6 +37416,7 @@ zeroteamsr	Zero Team Suicide Revival Kit	ぜろちーむすーさいどりばい
 zerotime	Zero Time (Petaco S.A.)	ぜろたいむ
 zerotimed	Zero Time (Datamat)	ぜろたいむ_d
 zerotimemc	Zero Time (Marti Colls)	ぜろたいむ_m
+zerotimeu	Zero Time (スペイン海賊版)	ぜろたいむ_s
 zerotm2k	ゼロチーム2000	ぜろちーむ2000
 zerotrgt	撃墜王 / Zero Target (海外版, CW)	げきついおう_cw
 zerotrgta	撃墜王 / Zero Target (海外版, CT)	げきついおう_ct
@@ -37028,7 +37459,9 @@ zone100	Zone 100	ぞーん100
 zone3d	Zone 3D	ぞーんすりーでぃー
 zone40	Zone 40	ぞーん40
 zone60	Zone 60	ぞーん60
-zone7in1	Zone 7-in-1 Sports (US)	ぞーんせぶんいんわんすぽーつ
+zone7in1	Zone 7-in-1 Sports (NTSC)	ぞーんせぶんいんわんすぽーつ
+zone7in1p	Zone 7-in-1 Sports (PAL)	ぞーんせぶんいんわんすぽーつ
+zonemini	Zone Mini	ぞーんみに
 zoo	Zoo (Ver. ZO.02.D)	ずー
 zoofari	Zoofari	ずーふぁり
 zookeep	ズーキーパー (set 1)	ずーきーぱー_1
@@ -37047,6 +37480,7 @@ zsl5500	ザウルス SL-5500 "Collie"	ざうるす_sl5500
 zsl5600	ザウルス SL-5600 / SL-B500 "Poodle"	ざうるす_sl5600
 zslc1000	ザウルス SL-C1000 "Akita" (日本版)	ざうるす_slc1000
 zslc3000	ザウルス SL-C3000 "Spitz" (日本版)	ざうるす_slc3000
+zslc500	ザウルス SL-C500	ざうるす_slc500
 zslc750	ザウルス SL-C750 "Shepherd" (日本版)	ざうるす_slc0750
 zslc760	ザウルス SL-C760 "Husky" (日本版)	ざうるす_slc0760
 zt8802	ZT-8802 SBC	ぜっとてぃー8802

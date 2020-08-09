@@ -4309,6 +4309,8 @@ begin
            (PRecordSet(TLMaster[i]).Master=False) then
         begin
 
+          PRecordSet(TLMaster[i]).Kana := masterkana;
+          {
           // ゲーム名に set ##がある場合は処理する
           desc:=PRecordSet(TLMaster[i]).DescE;
 
@@ -4340,9 +4342,10 @@ begin
             PRecordSet(TLMaster[i]).Kana := masterkana+st;
 
           end;
+          }
         end;
       end;
-
+           {
       // 親セットも処理する
 
       // ゲーム名に set ##がある場合は処理する
@@ -4375,7 +4378,7 @@ begin
             PRecordSet(TLMaster[SelMasterID]).Kana := masterkana;
 
           end;
-
+            }
   end;
 
   // 編集ウィンドウに情報表示
