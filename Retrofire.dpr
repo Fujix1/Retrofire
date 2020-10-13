@@ -61,6 +61,7 @@ begin
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TfrmFavorites, frmFavorites);
   Application.CreateForm(TfrmHttp, frmHttp);
+  Application.CreateForm(TfrmCommand, frmCommand);
   //  Application.CreateForm(TfrmUpdater, frmUpdater);
   Application.CreateForm(TfrmCommand, frmCommand);
   Application.Run;

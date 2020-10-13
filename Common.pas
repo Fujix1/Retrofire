@@ -11,7 +11,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '261';
+  BUILDNO = '262';
   LATESTRESVER = 238;
 
   MAXFAVORITES2 = 128;
@@ -39,7 +39,7 @@ const
   RF_CUBIC   = 1;
 
   // 最大ゲーム数
-  MAXGAMES = 60000;
+  MAXGAMES = 50000;
 
   // 1レコード当たりのセット数
   MAXSETS = 100;
@@ -934,6 +934,8 @@ procedure FindDat(const idx: integer);
 var St,S: String;
 begin
 
+  if idx = -1 then Exit;
+  
   St:='';
   S:='';
 
