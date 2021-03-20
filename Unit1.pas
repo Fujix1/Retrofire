@@ -243,8 +243,6 @@ type
     JoyLaunchTimer: TTimer;
     S1: TMenuItem;
     actFEmma: TAction;
-    EMMA1: TMenuItem;
-    EMMA2: TMenuItem;
     sbtHTTP: TSpeedButton;
     actFArcadeDB: TAction;
     ArcadeDB1: TMenuItem;

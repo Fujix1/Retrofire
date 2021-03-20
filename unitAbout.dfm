@@ -23,9 +23,9 @@ object Form5: TForm5
   object Label4: TLabel
     Left = 350
     Top = 323
-    Width = 94
+    Width = 95
     Height = 15
-    Caption = '2004-2020 '#169' Fujix'
+    Caption = '2004-2021 '#169' Fujix'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -40,9 +40,9 @@ object Form5: TForm5
   object Label7: TLabel
     Left = 350
     Top = 346
-    Width = 291
+    Width = 292
     Height = 15
-    Caption = 'Graphics32 '#169' 2000-2020 Alex Denisov and Contributors'
+    Caption = 'Graphics32 '#169' 2000-2021 Alex Denisov and Contributors'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
