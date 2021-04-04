@@ -3,8 +3,8 @@ object frmSetting: TfrmSetting
   Top = 191
   BorderStyle = bsDialog
   Caption = #35373#23450
-  ClientHeight = 497
-  ClientWidth = 586
+  ClientHeight = 532
+  ClientWidth = 699
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -17,13 +17,13 @@ object frmSetting: TfrmSetting
   OnClose = FormClose
   OnShow = FormShow
   DesignSize = (
-    586
-    497)
+    699
+    532)
   PixelsPerInch = 96
   TextHeight = 18
   object btnCancel: TBitBtn
-    Left = 496
-    Top = 454
+    Left = 609
+    Top = 489
     Width = 84
     Height = 29
     Anchors = [akRight, akBottom]
@@ -32,10 +32,12 @@ object frmSetting: TfrmSetting
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitLeft = 496
+    ExplicitTop = 454
   end
   object btnOK: TBitBtn
-    Left = 406
-    Top = 454
+    Left = 519
+    Top = 489
     Width = 83
     Height = 29
     Anchors = [akRight, akBottom]
@@ -44,24 +46,30 @@ object frmSetting: TfrmSetting
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitLeft = 406
+    ExplicitTop = 454
   end
   object PageControl1: TPageControl
     Left = 6
     Top = 6
-    Width = 575
-    Height = 435
-    ActivePage = TabSheet2
+    Width = 688
+    Height = 470
+    ActivePage = TabSheet1
     Anchors = [akLeft, akTop, akRight, akBottom]
     Images = Form1.ImageList2
     TabOrder = 0
+    ExplicitWidth = 575
+    ExplicitHeight = 435
     object TabSheet1: TTabSheet
       Caption = 'MAME'#23455#34892#12501#12449#12452#12523
       ImageIndex = 37
+      ExplicitWidth = 567
+      ExplicitHeight = 402
       DesignSize = (
-        567
-        402)
+        680
+        437)
       object btnAdd: TButton
-        Left = 479
+        Left = 592
         Top = 12
         Width = 81
         Height = 24
@@ -69,9 +77,10 @@ object frmSetting: TfrmSetting
         Caption = #36861#21152'(&A)...'
         TabOrder = 1
         OnClick = btnAddClick
+        ExplicitLeft = 479
       end
       object btnDelete: TButton
-        Left = 479
+        Left = 592
         Top = 70
         Width = 81
         Height = 24
@@ -80,16 +89,19 @@ object frmSetting: TfrmSetting
         Enabled = False
         TabOrder = 3
         OnClick = btnDeleteClick
+        ExplicitLeft = 479
       end
       object GroupBox1: TGroupBox
         Left = 12
-        Top = 234
-        Width = 548
+        Top = 260
+        Width = 661
         Height = 138
         Anchors = [akLeft, akRight]
         TabOrder = 6
+        ExplicitTop = 234
+        ExplicitWidth = 548
         DesignSize = (
-          548
+          661
           138)
         object Label2: TLabel
           Left = 20
@@ -126,35 +138,38 @@ object frmSetting: TfrmSetting
         object Edit1: TEdit
           Left = 103
           Top = 13
-          Width = 405
+          Width = 518
           Height = 26
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 64
           TabOrder = 0
           OnChange = Edit1Change
+          ExplicitWidth = 405
         end
         object Edit2: TEdit
           Left = 103
           Top = 41
-          Width = 405
+          Width = 518
           Height = 26
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 255
           TabOrder = 1
           OnChange = Edit2Change
+          ExplicitWidth = 405
         end
         object Edit3: TEdit
           Left = 103
           Top = 69
-          Width = 405
+          Width = 518
           Height = 26
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 255
           TabOrder = 3
           OnChange = Edit3Change
+          ExplicitWidth = 405
         end
         object Button2: TButton
-          Left = 516
+          Left = 629
           Top = 41
           Width = 26
           Height = 24
@@ -162,19 +177,21 @@ object frmSetting: TfrmSetting
           Caption = '...'
           TabOrder = 2
           OnClick = Button2Click
+          ExplicitLeft = 516
         end
         object Edit4: TEdit
           Left = 103
           Top = 98
-          Width = 321
+          Width = 434
           Height = 26
           Anchors = [akLeft, akTop, akRight]
-          MaxLength = 64
+          MaxLength = 1024
           TabOrder = 5
           OnChange = Edit4Change
+          ExplicitWidth = 321
         end
         object Button8: TButton
-          Left = 516
+          Left = 629
           Top = 69
           Width = 26
           Height = 24
@@ -182,9 +199,10 @@ object frmSetting: TfrmSetting
           Caption = '...'
           TabOrder = 4
           OnClick = Button8Click
+          ExplicitLeft = 516
         end
         object CheckBox1: TCheckBox
-          Left = 439
+          Left = 552
           Top = 103
           Width = 115
           Height = 17
@@ -192,13 +210,14 @@ object frmSetting: TfrmSetting
           Caption = #12458#12503#12471#12519#12531#26377#21177
           TabOrder = 6
           OnClick = CheckBox1Click
+          ExplicitLeft = 439
         end
       end
       object ListBox1: TListBox
         Left = 12
         Top = 12
-        Width = 458
-        Height = 207
+        Width = 571
+        Height = 242
         Style = lbOwnerDrawFixed
         Anchors = [akLeft, akTop, akRight, akBottom]
         Ctl3D = True
@@ -212,9 +231,11 @@ object frmSetting: TfrmSetting
         OnMouseDown = ListBox1MouseDown
         OnMouseMove = ListBox1MouseMove
         OnMouseUp = ListBox1MouseUp
+        ExplicitWidth = 458
+        ExplicitHeight = 207
       end
       object BitBtn2: TBitBtn
-        Left = 479
+        Left = 592
         Top = 104
         Width = 31
         Height = 24
@@ -233,9 +254,10 @@ object frmSetting: TfrmSetting
           000000000000}
         TabOrder = 4
         OnClick = BitBtn2Click
+        ExplicitLeft = 479
       end
       object BitBtn3: TBitBtn
-        Left = 479
+        Left = 592
         Top = 132
         Width = 31
         Height = 23
@@ -254,9 +276,10 @@ object frmSetting: TfrmSetting
           000000000000}
         TabOrder = 5
         OnClick = BitBtn3Click
+        ExplicitLeft = 479
       end
       object btnCopy: TButton
-        Left = 479
+        Left = 592
         Top = 41
         Width = 81
         Height = 24
@@ -265,29 +288,33 @@ object frmSetting: TfrmSetting
         Enabled = False
         TabOrder = 2
         OnClick = btnCopyClick
+        ExplicitLeft = 479
       end
     end
     object TabSheet2: TTabSheet
       Caption = #12487#12451#12524#12463#12488#12522
       ImageIndex = 12
+      ExplicitWidth = 567
+      ExplicitHeight = 402
       DesignSize = (
-        567
-        402)
+        680
+        437)
       object GroupBox6: TGroupBox
         Left = 4
         Top = 9
-        Width = 557
+        Width = 670
         Height = 223
         Anchors = [akLeft, akTop, akRight]
         Caption = #12487#12451#12524#12463#12488#12522#35373#23450
         TabOrder = 0
+        ExplicitWidth = 557
         DesignSize = (
-          557
+          670
           223)
         object ListView1: TListView
           Left = 11
           Top = 59
-          Width = 456
+          Width = 569
           Height = 151
           Anchors = [akLeft, akTop, akRight]
           Columns = <
@@ -300,11 +327,12 @@ object frmSetting: TfrmSetting
           TabOrder = 1
           ViewStyle = vsReport
           OnEdited = ListView1Edited
+          ExplicitWidth = 456
         end
         object ComboBox1: TComboBox
           Left = 11
           Top = 24
-          Width = 456
+          Width = 569
           Height = 26
           Style = csDropDownList
           Anchors = [akLeft, akTop, akRight]
@@ -323,9 +351,10 @@ object frmSetting: TfrmSetting
             'dat'#12501#12449#12452#12523
             'lang'#12501#12457#12523#12480
             'version.ini'#12501#12449#12452#12523)
+          ExplicitWidth = 456
         end
         object btnAddDir: TButton
-          Left = 473
+          Left = 586
           Top = 154
           Width = 76
           Height = 26
@@ -334,9 +363,10 @@ object frmSetting: TfrmSetting
           Enabled = False
           TabOrder = 3
           OnClick = btnAddDirClick
+          ExplicitLeft = 473
         end
         object btnDelDir: TButton
-          Left = 473
+          Left = 586
           Top = 184
           Width = 76
           Height = 26
@@ -345,9 +375,10 @@ object frmSetting: TfrmSetting
           Enabled = False
           TabOrder = 4
           OnClick = btnDelDirClick
+          ExplicitLeft = 473
         end
         object Button1: TButton
-          Left = 473
+          Left = 586
           Top = 24
           Width = 76
           Height = 26
@@ -355,6 +386,7 @@ object frmSetting: TfrmSetting
           Caption = #21442#29031'(&B)...'
           TabOrder = 2
           OnClick = Button1Click
+          ExplicitLeft = 473
         end
       end
     end
