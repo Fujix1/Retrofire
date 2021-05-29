@@ -286,7 +286,7 @@ begin
   end
   else
   begin
-    Memo1.Lines.Add('mame32j.lst: たぶん最新版です');
+    Memo1.Lines.Add('mame32j.lst: 最新版');
   end;
 
   checkIfDownloadable();  // ダウンロードボタンの有効化
@@ -328,7 +328,7 @@ begin
   end
   else
   begin
-    Memo1.Lines.Add('version.ini: たぶん最新版です');
+    Memo1.Lines.Add('version.ini: 最新版');
   end;
 
   checkIfDownloadable();  // ダウンロードボタンの有効化
@@ -369,7 +369,7 @@ begin
   end
   else
   begin
-    Memo1.Lines.Add('mameinfo.dat: たぶん最新版です');
+    Memo1.Lines.Add('mameinfo.dat: 最新版');
   end;
 
   checkIfDownloadable();  // ダウンロードボタンの有効化
@@ -408,7 +408,7 @@ begin
   end
   else
   begin
-    Memo1.Lines.Add('history.dat: たぶん最新版です');
+    Memo1.Lines.Add('history.dat: 最新版');
   end;
 
   checkIfDownloadable();  // ダウンロードボタンの有効化
