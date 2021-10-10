@@ -4,33 +4,33 @@ interface
 
 uses Windows, Forms, SysUtils, Graphics, Classes, StrUtils, PngImage,
      CommCtrl, GR32, GR32_Image, GR32_Resamplers, ShellAPI, WSDLIntf,
-     Controls, mmsystem, System.UITypes;
+     Controls, mmsystem, System.UITypes, System.Generics.Collections;
 
 const
 
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '264';
-  LATESTRESVER = 238;
+  BUILDNO = '265';
+  LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
 
-  TEXT_MAKER_ALL = '(製造元)';
-  TEXT_YEAR_ALL = '(年代)';
-  TEXT_SOUND_ALL = '(音源)';
-  TEXT_CPU_ALL = '(CPU)';
-  TEXT_VERSION_ALL = '(バージョン)';
+  TEXT_MAKER_ALL    = '(製造元)';
+  TEXT_YEAR_ALL     = '(年代)';
+  TEXT_SOUND_ALL    = '(音源)';
+  TEXT_CPU_ALL      = '(CPU)';
+  TEXT_VERSION_ALL  = '(バージョン)';
 
   CRLF   = #13#10;
   CRLF2  = #13#10#13#10;
   MAKER  = 7; // メーカーリストの最低数
 
   // ステータスアイコンの表示間隔
-  SB_LRMARGIN = 18;
+  SB_LRMARGIN     = 18;
   SB_ITEMDISTANCE = 17;
   SB_MARKDISTANCE = 1;
-  SB_NUMOFITEMS = 6;
+  SB_NUMOFITEMS   = 6;
 
   // スクリーンショットの再サンプラー
   RF_NEAREST = 0;
@@ -43,6 +43,12 @@ const
 
   // 1レコード当たりのセット数
   MAXSETS = 100;
+
+  // ソフトリスト用
+  SL_DIR          = 'softlists/'; // ソフトリストのディレクトリ
+  SL_MASTER       = '_master.csv'; // システムとサポートするソフトリストの一覧
+  SL_INI          = '_stats.ini';
+  SL_DATA         = '_softlist.data'; // ソフトリスト全データ
 
 
 // ゲームステータス
@@ -169,7 +175,38 @@ type // mame本体用
     WorkDir : string;
     Option  : string;
     OptEnbld: boolean;
-end;
+  end;
+
+// ソフトウェアとソフトリスト用
+type
+  PSoftware = ^TSoftware;
+  TSoftware = record
+    name  :string;
+    cloneof: string;
+    desc  :string;
+    alt   :string;
+    year  :string;
+    publisher: string;
+    supported: string;
+  end;
+
+type
+  PSoftlist = ^TSoftlist;
+  TSoftlist = record
+    softwares: array of TSoftware;
+    desc: string;
+    lastSelect: string;
+  end;
+
+type
+  PSoftlist2 = ^TSoftlist2;
+  TSoftlist2 = record
+    softwares: TList;
+    name: string;
+    desc: string;
+    lastSelect: string;
+  end;
+
 
 var
   // ini設定
@@ -252,6 +289,16 @@ var
   ComViewerIndex      : integer; // 選択中のインデックス　未選択は-1
   ComViewerAlwaysOnTop: boolean; // 常に手前に表示
 
+
+  // ソフトウェアリスト用
+  SoftwareListVisible     : boolean; // ウインドウの表示
+  SoftwareListLeft        : integer;
+  SoftwareListTop         : integer;
+  SoftwareListWidth       : integer;
+  SoftwareListHeight      : integer;
+  SoftwareListAlwaysOnTop : boolean;
+  SoftwareListColumnSort  : integer;
+  SoftwareListSearch      : string;
 
   // データ用
   TLMaster      : TList;   // データ保持用TList
@@ -344,7 +391,7 @@ function  RelToAbs(const RelPath, BasePath: string): string;
 
 implementation
 
-uses Unit1, unitCommandViewer;
+uses Unit1, unitCommandViewer, unitSoftwareList;
 
 //------------------------------------------------------------------------------
 // zip名の検索インデックスを作成する
@@ -1390,6 +1437,17 @@ begin
   ComViewerIndex      := -1;    //: integer; // 選択中のインデックス　未選択は-1
   ComViewerAlwaysOnTop:= true;  //: boolean; // 常に手前に表示
 
+  // ソフトウェアリスト用
+  SoftwareListVisible     := false;
+  SoftwareListLeft        := Form1.Left + Form1.Width;
+  SoftwareListTop         := Form1.Top;
+  SoftwareListWidth       := 600;
+  SoftwareListHeight      := 800;
+  SoftwareListAlwaysOnTop := true;
+  SoftwareListColumnSort  := 1;
+  SoftwareListSearch      := '';
+
+
   // HTTPダウンロードデータ用
   ETag_mame32j  := '';
   ETag_version  := '';
@@ -1606,13 +1664,6 @@ begin
   // ショットのフィルタ
   sltIni.Add('shot_filter '+InttoStr(CurrentFilter));
 
-  // ショットのサイズ
-{  if Form1.actShotSizeLarge.Checked then
-    sltIni.Add('shot_size large')
-  else
-  if Form1.actShotSizeVertical.Checked then
-    sltIni.Add('shot_size vertical');
-}
   // ショット部分の幅
   sltIni.Add('subpane_width '+InttoStr(Form1.Panel3.Width));
 
@@ -1743,6 +1794,52 @@ begin
   sltIni.Add('cv_alwaysontop '+ BooltoStr( frmCommand.chkAlwaysOnTop.Checked ));
   sltIni.Add('cv_index '+ InttoStr( frmCommand.cmbCommandType.ItemIndex ));
 
+
+  /// ------------------------------------------
+  /// ソフトウェアリスト
+  sltIni.Add('');
+  sltIni.Add('### Software List ###');
+  sltIni.Add('');
+
+  // ウインドウの表示
+  SoftwareListVisible := frmSoftwareList.Showing;
+  St:=BooltoStr(SoftwareListVisible);
+  sltIni.Add('sw_visible '+St);
+
+  // ウインドウ幅高位置
+  sltIni.Add('sw_top '+ InttoStr(frmSoftwareList.Top));
+  sltIni.Add('sw_left '+ InttoStr(frmSoftwareList.Left));
+  sltIni.Add('sw_width '+ InttoStr(frmSoftwareList.Width));
+  sltIni.Add('sw_height '+ InttoStr(frmSoftwareList.Height));
+
+  sltIni.Add('sw_alwaysontop '+ BooltoStr( frmSoftwareList.chkAlwaysOnTop.Checked ));
+
+  // カラム
+  St:=Inttostr(ListView_GetColumnWidth(frmSoftwareList.ListView1.Handle,0));
+
+  for i:=1 to frmSoftwareList.ListView1.Columns.Count-1 do
+  begin
+    St:=St+','+Inttostr(ListView_GetColumnWidth(frmSoftwareList.ListView1.Handle,i));
+  end;
+  sltIni.Add('sw_column_widths '+St);
+
+  // カラム順
+  SetLength(iOrderArray,frmSoftwareList.ListView1.Columns.Count);
+  piOrderArray:=@iOrderArray[0];
+  ListView_GetColumnOrderArray(frmSoftwareList.ListView1.Handle,
+                       frmSoftwareList.ListView1.Columns.Count,
+                       piOrderArray);
+
+  St:=Inttostr(iOrderArray[0]);
+
+  for i:=1 to Length(iOrderArray)-1 do
+  begin
+    St:=St+','+Inttostr(iOrderArray[i]);
+  end;
+  sltIni.Add('sw_column_order '+St);
+
+  sltIni.Add('sw_column_sort '+ inttostr(frmSoftwareList.columnSort));
+  sltIni.Add('sw_search '+trim(frmSoftwareList.SearchBox1.Text));
 
 
   //// --------------------------------------------
@@ -2017,17 +2114,7 @@ begin
       end;
 
     end
-    {else
-    // ショットのサイズ
-    if Copy(St,1,15)='shot_size large' then
-    begin
-      Form1.actShotSizeLargeExecute(nil);
-    end
-    else
-    if Copy(St,1,18)='shot_size vertical' then
-    begin
-      Form1.actShotSizeVerticalExecute(nil);
-    end}
+
     // サブパネルの幅
     else
     if AnsiStartsStr( 'subpane_width', St ) then
@@ -2489,7 +2576,97 @@ begin
       St:=Copy(St,pos(' ',St)+1,Length(St));
       ComViewerIndex:=StrtoInt(St);
       frmCommand.initialIndex:= ComViewerIndex; // 初期選択値
+    end
+    else
+    /// -------------------
+    ///  ソフトリスト用
+    // ウィンドウ
+    if Copy(St,1,11)='sw_visible ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListVisible:=StrtoBool(St);
+    end
+    else
+    // 上
+    if Copy(St,1,7)='sw_top ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListTop:=StrtoInt(St);
+    end
+    else
+    // 左
+    if Copy(St,1,8)='sw_left ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListLeft:=StrtoInt(St);
+    end
+    else
+    // 幅
+    if Copy(St,1,9)='sw_width ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListWidth:=StrtoInt(St);
+    end
+    else
+    // 高さ
+    if Copy(St,1,10)='sw_height ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListHeight:=StrtoInt(St);
+    end
+    else
+    if Copy(St,1,15)='sw_alwaysontop ' then // 常に手前
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListAlwaysOnTop:=StrtoBool(St);
+    end
+    else
+    // コラム幅
+    if AnsiStartsStr( 'sw_column_widths ', St ) then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      StrList:=TStringList.Create;
+      CsvSeparate(St,StrList);
+      for i:=0 to StrList.Count-1 do
+      begin
+        ListView_SetColumnWidth(frmSoftwareList.ListView1.Handle,i,StrtoInt(StrList[i]));
+      end;
+      StrList.Free;
+    end
+    else
+    // コラム順
+    if AnsiStartsStr( 'sw_column_order ', St ) then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      StrList:=TStringList.Create;
+      CsvSeparate(St,StrList);
+
+      SetLength(iOrderArray,frmSoftwareList.ListView1.Columns.Count);
+      piOrderArray:=@iOrderArray[0];
+
+      for i:=0 to frmSoftwareList.ListView1.Columns.Count-1 do
+      begin
+        iOrderArray[i]:=StrtoInt(StrList[i]);
+      end;
+
+      ListView_SetColumnOrderArray(frmSoftwareList.ListView1.Handle,
+                                   frmSoftwareList.ListView1.Columns.Count,
+                                   piOrderArray);
+      StrList.Free;
+    end
+    else
+    if Copy(St,1,15)='sw_column_sort ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListColumnSort := strtoint(st);
+    end
+    else
+    if Copy(St,1,10)='sw_search ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListSearch := trim(St);
     end;
+
 
     inc(intLine);
 

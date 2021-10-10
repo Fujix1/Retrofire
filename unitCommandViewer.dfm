@@ -2,7 +2,7 @@ object frmCommand: TfrmCommand
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
-  Caption = 'Retrofire Command Viewer'
+  Caption = #12467#12510#12531#12489#12499#12517#12540#12450
   ClientHeight = 781
   ClientWidth = 330
   Color = clBtnFace

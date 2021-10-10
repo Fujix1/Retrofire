@@ -17,7 +17,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   unitFavorites in 'unitFavorites.pas' {frmFavorites},
-  unitHttp in 'unitHttp.pas' {frmHttp};
+  unitHttp in 'unitHttp.pas' {frmHttp},
+  unitSoftwareList in 'unitSoftwareList.pas' {frmSoftwareList};
 
 {$R *.res}
 
@@ -62,8 +63,7 @@ begin
   Application.CreateForm(TfrmFavorites, frmFavorites);
   Application.CreateForm(TfrmHttp, frmHttp);
   Application.CreateForm(TfrmCommand, frmCommand);
-  //  Application.CreateForm(TfrmUpdater, frmUpdater);
-  Application.CreateForm(TfrmCommand, frmCommand);
+  Application.CreateForm(TfrmSoftwareList, frmSoftwareList);
   Application.Run;
 
   //ミューテックスを開放

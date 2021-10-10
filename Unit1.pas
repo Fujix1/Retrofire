@@ -5,12 +5,12 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Controls, Forms, Graphics, StrUtils,
   Dialogs, ComCtrls, StdCtrls, ImgList, Buttons, ExtCtrls, Menus, ShellAPI,
-  CommCtrl, Common, Unit2, unitSetting, unitAbout, ActnList, XPStyleActnCtrls, Clipbrd,
-  ActnMan, ActnCtrls, ActnMenus, ActnColorMaps, mmSystem, GR32,
-  GR32_Image, ToolWin, PngImage, AppEvnts,untUpdateChecker,
+  CommCtrl, Common, Unit2, unitSetting, unitAbout, unitSoftwareList, ActnList,
+  XPStyleActnCtrls, Clipbrd, ActnMan, ActnCtrls, ActnMenus, ActnColorMaps,
+  mmSystem, GR32, GR32_Image, ToolWin, PngImage, AppEvnts,untUpdateChecker,
   ActnPopup, PlatformDefaultStyleActnCtrls, CategoryButtons, ButtonGroup, Tabs,
-  DockTabSet, Unit3, unitScreenShotCleaner, unitCommandViewer,  System.Actions, comobj,
-  Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,System.IOUtils, unitHttp;
+  DockTabSet, Unit3, unitScreenShotCleaner, unitCommandViewer,  System.Actions,
+  comobj, Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,System.IOUtils, unitHttp;
 
 const
   WM_SHOWED = WM_USER + 1;
@@ -246,6 +246,8 @@ type
     sbtHTTP: TSpeedButton;
     actFArcadeDB: TAction;
     ArcadeDB1: TMenuItem;
+    actVSoftwarelist: TAction;
+    N15: TMenuItem;
 
 
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
@@ -371,8 +373,6 @@ type
     procedure Action1Execute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
     procedure ApplicationEvents1Activate(Sender: TObject);
-
-    procedure ListView1Enter(Sender: TObject);
     procedure cmbVersionChange(Sender: TObject);
     procedure ListView1DataFind(Sender: TObject; Find: TItemFind;
       const FindString: String; const FindPosition: TPoint;
@@ -389,7 +389,6 @@ type
     procedure actShotSizeLargeExecute(Sender: TObject);
     procedure actShotSizeVerticalExecute(Sender: TObject);
     procedure actSMakerExecute(Sender: TObject);
-    procedure edtSearchExit(Sender: TObject);
     procedure edtSearchEnter(Sender: TObject);
     procedure actDelScreenShotUpdate(Sender: TObject);
     procedure actSaveLstExecute(Sender: TObject);
@@ -440,6 +439,8 @@ type
     procedure actFHttpExecute(Sender: TObject);
     procedure actFArcadeDBUpdate(Sender: TObject);
     procedure actFArcadeDBExecute(Sender: TObject);
+    procedure actVSoftwarelistUpdate(Sender: TObject);
+    procedure actVSoftwarelistExecute(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -462,10 +463,6 @@ type
 
     procedure SubClassProc(var msg: TMessage); // 置き換えメッセージ処理関数
 
-
-    procedure ExecuteMAME(const ZipName:String;const ExePath:String;
-              const WorkDir:String; const Option:String);
-
     procedure UpdateStatus;
     procedure UpdateEditPanel(const idx: integer);
     procedure ToggleEditPanel(const Flag: boolean);
@@ -478,13 +475,16 @@ type
     procedure RunMAME(const ZipName: string);
     function  FormatHistory( Item: PRecordSet ) : String;
     function  FormatSets( Item: PRecordSet ) : String;
-
+    procedure ExecuteMAME(const ZipName:String;const ExePath:String;
+              const WorkDir:String; const Option:String);
   public
     { Public 宣言 }
     procedure ReadYearDat;
     procedure UpdateListView;
     function  LoadResource: Integer;
     function  ReadLang: boolean;
+    procedure RunSoft(const SoftName: string);
+
   end;
 
 var
@@ -704,7 +704,6 @@ end;
 
 //--------------------------------------------------------------------------------
 // Reconstruct data and redraw ListView
-// Temporal
 procedure TForm1.UpdateListView;
 var i,idx: integer;
     Maker, Year, CPU, Sound: String;
@@ -720,12 +719,12 @@ begin
 
   LVUpdating:=True;
 
-  SW      :=WideLowerCase(Trim(edtSearch.Text));
-  Maker   :=cmbMaker.Text;
-  Year    :=cmbYear.Text;
-  Sound   :=cmbSound.Text;
-  CPU     :=cmbCPU.Text;
-  Version :=cmbVersion.ItemIndex;
+  SW      := WideLowerCase(Trim(edtSearch.Text));
+  Maker   := cmbMaker.Text;
+  Year    := cmbYear.Text;
+  Sound   := cmbSound.Text;
+  CPU     := cmbCPU.Text;
+  Version := cmbVersion.ItemIndex;
 
   // バージョンは常に逆
   if Version<>0 then
@@ -1139,7 +1138,12 @@ begin
       ListView1.Items[idx].Selected:=True;
       ListView1.ItemFocused.MakeVisible(True);
       DoNotUpdate:=False;
+
     end;
+
+    // ソフトリスト更新
+     frmSoftwareList.setSoftlist(ListView1.Selected.SubItems[0]);
+
   end
   else   // リスト項目が無いとき
   begin
@@ -1153,7 +1157,6 @@ begin
     ToggleEditPanel(False);
     
     // アクションの管理
-    //actDelScreenShot.Enabled:=False;
     actRRefine.Hint:='';
     actROpenSrc.Hint:='';
 
@@ -1167,6 +1170,9 @@ begin
 
     // コマンドビューを空に
     frmCommand.LoadCommand('','');
+
+    // ソフトリストを空に
+    frmSoftwareList.setSoftlist('');
 
   end;
 
@@ -1857,9 +1863,6 @@ begin
     Memo1.Text:='';
     CurrentShot:='';
 
-    // アクションの管理
-    //actDelScreenShot.Enabled:=False;
-
     // 編集ウィンドウ
     ToggleEditPanel(False);
 
@@ -1868,6 +1871,9 @@ begin
 
     // コマンドビュー
     frmCommand.LoadCommand('','');
+
+    // ソフトリスト
+    frmSoftwareList.setSoftlist('');
 
   end
   else
@@ -1881,8 +1887,6 @@ begin
             PRecordSet(TLMaster[ CurrentIndex ]).ZipName,
             PRecordSet(TLMaster[ PRecordSet(TLMaster[currentIndex]).MasterID ]).ZipName );
 
-
-
     // 編集ウィンドウに情報表示
     EditingIndex:=CurrentIndex; // 編集対象のインデックス
     UpdateEditPanel(EditingIndex);
@@ -1890,14 +1894,12 @@ begin
     // ステータスバー
     StatusBar1.Panels[3].Text:=PRecordSet(TLMaster[CurrentIndex]).DescE;
 
-
     /// サブリストにROMファミリ表示
     //  サブリストの更新が必要な場合
     SelMasterID:=PRecordSet(TLMaster[CurrentIndex]).MasterID;
 
     if SubListID <> SelMasterID then
     begin
-
       SubListID:=SelMasterID;
 
       TLFamily.Clear;
@@ -1921,8 +1923,6 @@ begin
 
     end;
 
-
-
     // サブリスト項目の選択
     DoNotUpdateSL:=True;
     for i:=0 to ListView2.Items.Count-1 do
@@ -1933,16 +1933,13 @@ begin
         break;
       end;
     end;
-
     if ListView2.ItemIndex<>-1 then
     begin
       ListView2.Items[ListView2.ItemIndex].Focused:=True;
       ListView2.ItemFocused.Selected:=True;
       ListView2.ItemFocused.MakeVisible(False);
     end;
-
     DoNotUpdateSL:=False;
-
 
     // 表示中ならすぐ更新をかける
     if Panel7.Visible then
@@ -1954,16 +1951,19 @@ begin
     // dat
     FindDat(CurrentIndex);
 
+    // ソフトリスト
+    frmSoftwareList.setSoftlist(Item.SubItems[0]);
+
     // スナップショット
     ShowSnapshot(CurrentIndex);
 
     // アクション
     if ListView1.ItemIndex<>-1 then
     begin
-      //actDelScreenShot.Enabled:=(CurrentShot<>'');
       actRRefine.Hint:=PRecordSet(TLSub[ListView1.ItemIndex]).Source;
       actROpenSrc.Hint:=PRecordSet(TLSub[ListView1.ItemIndex]).Source;
     end;
+
 
   end;
 
@@ -1984,6 +1984,21 @@ begin
     opt:= MameExe[CurrentProfile].Option;
 
   ExecuteMAME(ZipName,
+              MameExe[CurrentProfile].ExePath,
+              MameExe[CurrentProfile].WorkDir,
+              opt);
+end;
+
+//------------------------------------------------------------------------
+// ソフトリスト起動処理
+procedure TForm1.RunSoft(const SoftName: string);
+  var opt: string;
+begin
+  opt:= '';
+  if MameExe[CurrentProfile].OptEnbld then
+    opt:= MameExe[CurrentProfile].Option;
+
+  ExecuteMAME(SelZip + ' ' + SoftName,
               MameExe[CurrentProfile].ExePath,
               MameExe[CurrentProfile].WorkDir,
               opt);
@@ -2139,7 +2154,7 @@ begin
   if result=1 then
   begin
     Application.MessageBox('データファイルのフォーマットが更新されました。  '+CRLF2+
-          '「'+RESNAME+'」を削除して、再起動して下さい。  ',APPNAME, MB_ICONWARNING  + MB_OK);
+          '「'+RESNAME+'」ファイルを削除して、再起動して下さい。  ',APPNAME, MB_ICONWARNING  + MB_OK);
     PostMessage(Handle,WM_CLOSE,0,0);
     Application.Terminate;
     Exit;
@@ -2183,6 +2198,40 @@ begin
   frmCommand.chkAutoResize.Checked  := ComViewerAutoResize;
 
   frmCommand.initialIndex := ComViewerIndex; // ドロップダウン初期値（候補）
+
+
+  // ソフトウェアリスト
+  if SoftwareListLeft < Screen.Width-10 then
+    frmSoftwareList.Left := SoftwareListLeft
+  else
+    frmSoftwareList.Left := Screen.Width-SoftwareListWidth;
+
+  // 下端を超えていないか
+  if SoftwareListTop < Screen.WorkAreaRect.Bottom-10 then
+    frmSoftwareList.Top := SoftwareListTop
+  else
+    frmSoftwareList.Top := Form1.Top;
+
+  frmSoftwareList.Width := SoftwareListWidth;
+  frmSoftwareList.Height := SoftwareListHeight;
+
+
+  // ソフトウェアリスト初期化
+  actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
+  if En then
+    frmSoftwareList.updateLang('en');
+
+
+  // 常に手前とか
+  frmSoftwareList.chkAlwaysOnTop.Checked  := SoftwareListAlwaysOnTop;
+
+  frmSoftwareList.columnSort := SoftwareListColumnSort;
+  frmSoftwareList.SetListViewColumnSortMark(SoftwareListColumnSort);
+
+  frmSoftwareList.DoNotUpdateListView := true;
+  frmSoftwareList.SearchBox1.Text:=SoftwareListSearch;
+  frmSoftwareList.DoNotUpdateListView := false;
+
 
   //
   if En then
@@ -2249,12 +2298,10 @@ begin
   end;
   SetLength(SampleTemp,0);
 
-  //showmessage(inttostr( gettickcount- ms )) ;
 
   // カラムソート矢印設定
   SetListViewColumnSortMark( ListView1, SortHistory[0] );
   CurrentMaker:= Form1.cmbMaker.Text;
-
 
 
   // プロファイル設定
@@ -2295,11 +2342,12 @@ begin
   if ComViewerVisible then
     frmCommand.Show;
 
+  // ソフトリスト表示
+  if SoftwareListVisible then
+    frmSoftwareList.Show;
 
   // 起動
   Booting:=False;
-
-//  ShowMessage( inttostr(GetTickCount-Tick)+' ms' );
 
 end;
 
@@ -2576,6 +2624,7 @@ begin
 end;
 
 procedure TForm1.actEngExecute(Sender: TObject);
+var lang: string;
 begin
 
   if EngExecuteFlag then Exit;
@@ -2587,16 +2636,19 @@ begin
     En:=False;
     ActEng.ImageIndex:=1;
     ActionManager1.ActionBars[0].Items[1].Items[3].ImageIndex:=1;
+    lang:='ja';
   end
   else
   begin
     En:=True;
     ActEng.ImageIndex:=2;
     ActionManager1.ActionBars[0].Items[1].Items[3].ImageIndex:=2;
+    lang:='en';
   end;
 
   UpdateListView;
 
+  frmSoftwareList.updateLang(lang);
 
   Application.ProcessMessages;
   EngExecuteFlag:=False;
@@ -2709,6 +2761,7 @@ begin
 
   if not (ListView1.Focused or ListView2.Focused) then exit;
 
+
   SetCurrentDir(ExeDir);
   
   if FileExists(cfgDir+'\'+SelZip+'.cfg') then
@@ -2768,23 +2821,8 @@ end;
 
 procedure TForm1.edtSearchEnter(Sender: TObject);
 begin
-  //edtSearch.Font.Style:=[];
+
   edtSearch.SelectAll;
-end;
-
-procedure TForm1.edtSearchExit(Sender: TObject);
-begin
-  {
-  if edtSearch.Text='' then
-  begin
-    edtSearch.Font.Style:=[fsItalic];
-  end
-  else
-  begin
-    edtSearch.Font.Style:=[];
-  end;
- }
-
 end;
 
 procedure TForm1.edtSearchKeyPress(Sender: TObject; var Key: Char);
@@ -3155,6 +3193,30 @@ begin
   
 end;
 
+procedure TForm1.actVSoftwarelistExecute(Sender: TObject);
+begin
+  if frmSoftwareList.Showing then
+  begin
+    frmSoftwareList.Hide;
+  end
+  else
+  begin
+    frmSoftwareList.Show;
+  end;
+end;
+
+procedure TForm1.actVSoftwarelistUpdate(Sender: TObject);
+begin
+  if frmSoftwareList.Showing then
+  begin
+    actVSoftwarelist.Caption:='ソフトウェアリストを閉じる';
+  end
+  else
+  begin
+    actVSoftwarelist.Caption:='ソフトウェアリストを開く';
+  end;
+end;
+
 procedure TForm1.actVEditorUpdate(Sender: TObject);
 begin
 
@@ -3269,6 +3331,7 @@ begin
 
   SaveIni;
 
+  frmSoftwareList.saveIni();
 
 end;
 
@@ -4288,7 +4351,7 @@ procedure TForm1.Button2Click(Sender: TObject);
 
 
 var SelMasterID: Integer;
-    masterkana, st, desc: string;
+    masterkana, st: string;
     i: integer;
 begin
 
@@ -4308,75 +4371,10 @@ begin
         begin
 
           PRecordSet(TLMaster[i]).Kana := masterkana;
-          {
-          // ゲーム名に set ##がある場合は処理する
-          desc:=PRecordSet(TLMaster[i]).DescE;
 
-          if pos('set ', desc ) <>0 then
-          begin
-
-            // 二桁の場合
-            st := copy( desc, pos('set ', desc)+4, 2);
-            if IsNumeric(st) then
-            begin
-              PRecordSet(TLMaster[i]).Kana := masterkana+st;
-            end
-            else
-            begin
-              // 一桁の場合
-              st := copy( desc, pos('set ', desc)+4, 1);
-              if IsNumeric(st) then
-              begin
-                PRecordSet(TLMaster[i]).Kana := masterkana+'0'+st;
-              end;
-
-            end;
-
-          end
-          else
-          begin
-            // setがない場合は元の説明部分をそのまま追加
-            st:= copy( desc, pos('(',desc), length(desc));
-            PRecordSet(TLMaster[i]).Kana := masterkana+st;
-
-          end;
-          }
         end;
       end;
-           {
-      // 親セットも処理する
 
-      // ゲーム名に set ##がある場合は処理する
-          desc:=PRecordSet(TLMaster[SelMasterID]).DescE;
-
-          if pos('set ', desc ) <>0 then
-          begin
-
-            // 二桁の場合
-            st := copy( desc, pos('set ', desc)+4, 2);
-            if IsNumeric(st) then
-            begin
-             PRecordSet(TLMaster[SelMasterID]).Kana := masterkana+st;
-            end
-            else
-            begin
-              // 一桁の場合
-              st := copy( desc, pos('set ', desc)+4, 1);
-              if IsNumeric(st) then
-              begin
-                PRecordSet(TLMaster[SelMasterID]).Kana := masterkana+'0'+st;
-              end;
-
-            end;
-
-          end
-          else
-          begin
-            // setがない場合はそのまま追加
-            PRecordSet(TLMaster[SelMasterID]).Kana := masterkana;
-
-          end;
-            }
   end;
 
   // 編集ウィンドウに情報表示
@@ -4515,6 +4513,9 @@ begin
   // dat
   FindDat(CurrentIndex);
 
+  // ソフトリスト
+  frmSoftwareList.setSoftlist(SelZip);
+
   actDelUpdate(nil);
 
 end;
@@ -4553,35 +4554,7 @@ begin
 
 end;
 
-// お気に入り追加
-{procedure TForm1.actFAVAddExecute(Sender: TObject);
-var
-  i: integer;
-begin
 
-  // 数チェック
-  if favorites.Count >= MAXFAVORITES then
-  begin
-    Application.MessageBox(PWideChar('お気に入りの最大数は '+InttoStr(MAXFAVORITES)+' 件です。'), APPNAME, MB_ICONSTOP );
-    exit;
-  end;
-
-  // 重複チェック
-  for i := 0 to favorites.Count - 1 do
-  begin
-    if favorites[i]=SelZip then
-    begin
-      Application.MessageBox(PWideChar(SelZip+' はお気に入りに登録済みです。'), APPNAME, MB_ICONSTOP );
-      exit;
-    end;
-  end;
-
-  favorites.Add(SelZip);
-
-  beep;
-
-end;
- }
 procedure TForm1.actFArcadeDBExecute(Sender: TObject);
 begin
   if (SelZip<>'') // 選択項目
@@ -4801,7 +4774,7 @@ begin
       end;
     end;
   end;
-//  SetLength(SampleTemp,0);
+
   Finalize( SampleTemp );
 
   // 各データの再読み込み
@@ -4815,9 +4788,13 @@ begin
   // 絞り込みリセット
   CurrentAssort:=0;
 
+  // ソフトリスト再初期化
+  frmSoftwareList.setSoftlist('');
+  actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
+  frmSoftwareList.setSoftlist(SelZip, true);
 
   UpdateListView;
-  
+
 end;
 
 
@@ -5542,6 +5519,7 @@ begin
                 st:=copy(st,0,40)+'...';
               end;
 
+
               // アイコン
               if PRecordSet(TLMaster[idx]).Status then
               begin
@@ -5559,7 +5537,8 @@ begin
               end;
 
               if PRecordset(TLMaster[idx]).ROM=False then
-                icoidx:=icoidx+3;
+                icoidx:=icoidx+4;
+
             end;
 
             FavActions2[n] := TAction.Create( self );
@@ -5674,14 +5653,6 @@ begin
   beep;
   
 end;
-
-procedure TForm1.ListView1Enter(Sender: TObject);
-begin
-
-  ListView1SelectItem(Form1, ListView1.ItemFocused, True);
-
-end;
-
 
 procedure TForm1.ListView1DataFind(Sender: TObject; Find: TItemFind;
   const FindString: String; const FindPosition: TPoint; FindData: Pointer;

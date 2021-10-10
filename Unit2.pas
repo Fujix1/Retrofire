@@ -17,6 +17,7 @@ type
     Label4:     TLabel;
     Timer1: TTimer;
     Label1: TLabel;
+    chkSoftlist: TCheckBox;
 
     procedure FormShow(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
@@ -31,6 +32,9 @@ type
   end;
 
   function ExtractListXML: boolean;
+  function processSoftwareList(filePath:String): boolean;
+
+  function ZenToHan( fromText: String ): string;
 
 var
   Form2: TForm2;
@@ -61,8 +65,7 @@ begin
 end;
 
 procedure TForm2.Timer1Timer(Sender: TObject);
-var m:integer;
-ss,mm:string;
+var ss,mm:string;
 begin
 
   inc(second);
@@ -98,96 +101,160 @@ var
   PI :TProcessInformation;
   parameter: string;
   cmd: Commd;
-  papp: PChar;
 begin
 
   Save_Cursor := Screen.Cursor;
   Screen.Cursor := crHourGlass;    // Show hourglass cursor
   ModalResult:=mrOK;
 
-try
-
   timer1.Enabled:=true;
-  Label4.Caption:='listxml出力中...';
   Edit2.Enabled:=False;
   Button3.Enabled:=False;
   BtnOK.Enabled:=False;
+  chkSoftlist.Enabled:=False;
   LastExePath:=ExtractFilePath(OpenDialog1.FileName);
 
 
+  // softwarelistの出力 --------------------------------------------------
+  if chkSoftList.Checked then
+  begin
+    try
+      Label4.Caption:='listsoftware出力中...';
 
-  Application.ProcessMessages;
+      Application.ProcessMessages;
 
-  /// listxmlの出力 ---------------------------------------------------
-  if FileExists(ExeDir+'listxml.tmp') then
-    DeleteFile(ExeDir+'listxml.tmp');
+      if FileExists(ExeDir+'listsoftware.tmp') then
+        DeleteFile(ExeDir+'listsoftware.tmp');
 
-	cmd := SetCommand;
+      cmd := SetCommand;
+      parameter := '"'+cmd.App+ '" ' +cmd.Param + '""'+ Edit2.Text +'"'+
+                    ' -listsoftware > "' + ExeDir +'listsoftware.tmp""';
 
-	parameter := '"'+cmd.App+ '" ' +cmd.Param + '""'+ Edit2.Text +'"'+
-         ' -listxml > "' + ExeDir +'listxml.tmp""';
 
-	if cmd.App = '' then
-		papp := nil
-	else
-		papp := PChar(cmd.App);
+      GetStartupInfo(SI);
 
-	GetStartupInfo(SI);
+      SetLength(parameter, Length(parameter));
 
-  SetLength(parameter, Length(parameter));
+      // コンソールを隠した状態で起動する
+      SI.wShowWindow := SW_HIDE;
 
-	// コンソールを隠した状態で起動する
-	SI.wShowWindow := SW_HIDE;
+      UniqueString(parameter);  // 指定された文字列が 1 つの参照カウントを持つことを保証します
 
-  UniqueString(parameter);  // 指定された文字列が 1 つの参照カウントを持つことを保証します
+      if not CreateProcessW(
+                          nil,
+                          PWideChar(parameter),
+                          nil,
+                          nil,
+                          False,
+                          CREATE_DEFAULT_ERROR_MODE,
+                          nil,
+                          PWideChar(ExtractFilePath(Edit2.Text)),  // カレントディレクトリはmame本体じゃないと動かない
+                          SI,
+                          PI
+                          )
+      then
+        Exit;
 
-	if not CreateProcessW(
-                      nil,
-                      PWideChar(parameter),
-                      nil,
-                      nil,
-                      False,
-                      CREATE_DEFAULT_ERROR_MODE,
-                      nil,
-                      PWideChar(ExeDir),
-                      SI,
-                      PI
-                      )
-	then
-		Exit;
+      // アプリケーションの終了待ち
+      try
+        while (WaitForSingleObject(PI.hProcess, 100) = WAIT_TIMEOUT) and
+              (CancelFlag=False) do
+        begin
+          Application.ProcessMessages;
+          Sleep(100);
+        end;
 
-	// アプリケーションの終了待ち
+      finally
+        CloseHandle(PI.hThread);
+        CloseHandle(PI.hProcess);
+      end;
+
+      if CancelFlag then
+      begin
+        ModalResult:=mrCancel;
+        exit;
+      end;
+
+      /// listsoftware の解析 ---------------------------------------------------
+      if processSoftwareList(ExeDir+'listsoftware.tmp') = False then
+      begin
+        MessageBox(Form2.Handle,'listsoftwareファイルが正しく出力されていません。',APPNAME,MB_OK or MB_ICONERROR);
+        ModalResult:=mrCancel;
+      end;
+    finally
+      Screen.Cursor := Save_Cursor;  // Always restore to normal
+    end;
+
+
+  end;
+
+
   try
-  	while (WaitForSingleObject(PI.hProcess, 100) = WAIT_TIMEOUT) and
-          (CancelFlag=False) do
-    begin
-		  Application.ProcessMessages;
-      Sleep(50);
+
+    Label4.Caption:='listxml出力中...';
+
+    Application.ProcessMessages;
+
+    /// listxmlの出力 ---------------------------------------------------
+    if FileExists(ExeDir+'listxml.tmp') then
+      DeleteFile(ExeDir+'listxml.tmp');
+
+    cmd := SetCommand;
+
+    parameter := '"'+cmd.App+ '" ' +cmd.Param + '""'+ Edit2.Text +'"'+
+           ' -listxml > "' + ExeDir +'listxml.tmp""';
+
+    GetStartupInfo(SI);
+
+    SetLength(parameter, Length(parameter));
+
+    // コンソールを隠した状態で起動する
+    SI.wShowWindow := SW_HIDE;
+
+    UniqueString(parameter);  // 指定された文字列が 1 つの参照カウントを持つことを保証します
+
+    if not CreateProcessW(
+                        nil,
+                        PWideChar(parameter),
+                        nil,
+                        nil,
+                        False,
+                        CREATE_DEFAULT_ERROR_MODE,
+                        nil,
+                        PWideChar(ExeDir),
+                        SI,
+                        PI
+                        )
+    then
+      Exit;
+
+    // アプリケーションの終了待ち
+    try
+      while (WaitForSingleObject(PI.hProcess, 100) = WAIT_TIMEOUT) and
+            (CancelFlag=False) do
+      begin
+        Application.ProcessMessages;
+        Sleep(50);
+      end;
+
+    finally
+      CloseHandle(PI.hThread);
+      CloseHandle(PI.hProcess);
     end;
 
-    // キャンセル時にプロセスがまだ生きてる場合
-    {if WaitForSingleObject(PI.hProcess, 0) = WAIT_TIMEOUT then
+    if CancelFlag then
     begin
-      TerminateProcess(PI.hProcess, 0);
+      ModalResult:=mrCancel;
+      exit;
     end;
-    }
-  finally
-    CloseHandle(PI.hThread);
-    CloseHandle(PI.hProcess);
-  end;
-  
-  if CancelFlag then
-  begin
-    ModalResult:=mrCancel;
-    exit;
-  end;
 
-  /// listxmlの解析 ---------------------------------------------------
-  if ExtractListXML=False then
-  begin
-    MessageBox(Form2.Handle,'listxmlファイルが正しく出力されていません。',APPNAME,MB_OK or MB_ICONERROR);
-    ModalResult:=mrCancel;
-  end;
+
+    /// listxmlの解析 ---------------------------------------------------
+    if ExtractListXML=False then
+    begin
+      MessageBox(Form2.Handle,'listxmlファイルが正しく出力されていません。',APPNAME,MB_OK or MB_ICONERROR);
+      ModalResult:=mrCancel;
+    end;
 
   finally
     Screen.Cursor := Save_Cursor;  // Always restore to normal
@@ -198,79 +265,355 @@ try
   begin
     if FileExists(ExeDir+'listxml.tmp') then
       DeleteFile(ExeDir+'listxml.tmp');
-    if FileExists(ExeDir+'listsourcefile.tmp') then
-      DeleteFile(ExeDir+'listsourcefile.tmp');
+
+    if FileExists(ExeDir+'listsoftware.tmp') then
+      DeleteFile(ExeDir+'listsoftware.tmp');
   end;
-  //
+
 
   timer1.Enabled:=False;
   Form2.Hide;
+
+  Label1.Caption:='';
   Label4.Caption:='';
   Edit2.Enabled:=True;
-  Button3.Enabled:=True;
   BtnOK.Enabled:=True;
+  Button3.Enabled:=True;
+  chkSoftlist.Enabled:=true;
 
 end;
+
+
+//------------------------------------------------------------------------------
+// ソフトリストを解析してtsv書き出し
+function processSoftwareList(FILEPATH :String): boolean;
+
+type
+  PSoftware = ^TSoftware;
+  TSoftware = record
+    name    :string;
+    cloneof :string;
+    desc    :string;
+    year    :string;
+    alt     :string;
+    publisher: string;
+    supported: string; // yes|partial|no
+end;
+var
+  i,j,k: integer;
+  softlist : TList;
+  NewSoftware : PSoftware;
+
+  Rec : TSearchRec; // ファイルサイズ取得用
+  fs : single;
+  F1, F2 : TextFile;
+  St, temp, output, S: string;
+  name, description: string;
+
+  catalog: TStringList;
+
+  allcatalog: TStringList;
+  softlistEntry: string;
+
+
+  function AscSort(Item1, Item2: Pointer): Integer;
+  begin
+    Result := CompareText(PSoftware(Item1).name, PSoftware(Item2).name);
+  end;
+
+  function escape(st: string):string;
+  begin
+    st := StringReplace( st, '&lt;','<', [rfReplaceAll]);
+    st := StringReplace( st, '&gt;','>', [rfReplaceAll]);
+    st := StringReplace( st, '&amp;','&', [rfReplaceAll]);
+    st := StringReplace( st, '&quot;','"', [rfReplaceAll]);
+    st := StringReplace( st, '　',' ', [rfReplaceAll]);
+    st := ZenToHan(st);
+    result:=st;
+  end;
+
+  function translate(st: string):string;
+  begin
+
+    st := StringReplace( st, 'Nintendo Entertainment System cartridges','任天堂ファミリーコンピュータカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Entertainment System','任天堂ファミリーコンピュータ', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo SNES cartridges','任天堂スーパーファミコンカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo SNES - Sufami Turbo cartridges','任天堂スーパーファミコン - スーファミターボカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo SNES Satellaview Memory Packs','任天堂スーパーファミコンサテラビューメモリパック', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Virtual Boy cartridges','任天堂バーチャルボーイカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nantettatte!! Baseball mini-cartridges','なんてったってベースボール ミニカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Karaoke Studio expansion cartridges','カラオケスタジオ拡張カセット', [rfReplaceAll]);
+
+    st := StringReplace( st, 'Nintendo Famicom Family BASIC cassettes','任天堂ファミリーベーシックテープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Famicom Disk images','任天堂ファミコンディスクシステムイメージ', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Game Boy cartridges','任天堂ゲームボーイカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Game Boy Color cartridges','任天堂ゲームボーイカラーカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Game Boy Advance cartridges','任天堂ゲームボーイアドバンスカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Dreamcast GD-ROMs','セガドリームキャストGD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Game Gear cartridges','セガゲームギアカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Saturn cartridges','セガサターンカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Saturn CD-ROM','セガサターンCD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Mega CD (Euro) CD-ROMs','セガメガCD (Euro版) CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Mega CD (Jpn) CD-ROMs','セガメガCD (日本版) CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega MegaDrive/Genesis cartridges','セガメガドライブ/Genesisカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega Master System cartridges','セガマスターシステムカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Sega SG-1000 and SG-1000 Mark II cartridges','セガSG-1000/SG-1000 Mark IIカセット', [rfReplaceAll]);
+
+    st := StringReplace( st, 'Sony Playstation CD-ROMs','ソニープレイステーションCD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM-7 cassettes','富士通FM-7テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM-7 disk images','富士通FM-7ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM-77AV disk images','富士通FM-77AVディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM Towns CD-ROMs','富士通FM TOWNS CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM Towns cracked floppy disk images','富士通FM TOWNSフロッピーディスク(クラック済み)', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM Towns miscellaneous floppy disk images','富士通FM TOWNSフロッピーディスク(その他)', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM Towns original floppy disk images','富士通FM TOWNSフロッピーディスク(オリジナル)', [rfReplaceAll]);
+    st := StringReplace( st, 'SNK NeoGeo CD CD-ROMs','SNKネオジオCD CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'SNK Neo-Geo cartridges','SNKネオジオカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'SNK Neo Geo Pocket cartridges','SNKネオジオポケットカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'SNK Neo Geo Pocket Color cartridges','SNKネオジオポケットカラーカセット', [rfReplaceAll]);
+
+    st := StringReplace( st, 'Sharp X68k disk images','シャープX68000ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-2200 cassettes','シャープMZ-2200テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-700 cassettes','シャープMZ-700テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-800 cassettes','シャープMZ-800テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp X1 cassettes','シャープX1テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp X1 disk images','シャープX1ディスク', [rfReplaceAll]);
+
+    st := StringReplace( st, 'NEC PC-Engine / Turbografx 16 CD-ROMs','NEC PCエンジン/Turbografx 16 CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'NEC PC-Engine Cartridges','NEC PCエンジン Huカード', [rfReplaceAll]);
+
+    st := StringReplace( st, 'CD-ROMs','CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'ROMs','ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'tapes/cartridges','テープ/カセット', [rfReplaceAll]);
+    st := StringReplace( st, 'cassettes','テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'disk images','ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'hard disks','ハードディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'floppy disks','フロッピー', [rfReplaceAll]);
+    st := StringReplace( st, 'floppy images','フロッピー', [rfReplaceAll]);
+    st := StringReplace( st, 'ROM images','ROMイメージ', [rfReplaceAll]);
+    st := StringReplace( st, 'diskettes','ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'cartridges','カセット', [rfReplaceAll]);
+    st := StringReplace( st, 'floppy disk images','フロッピー', [rfReplaceAll]);
+    st := StringReplace( st, 'discs','ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'disks','ディスク', [rfReplaceAll]);
+    st := StringReplace( st, 'floppies','フロッピー', [rfReplaceAll]);
+
+    result:=st;
+  end;
+
+begin
+
+  if not DirectoryExists(ExeDir + SL_DIR) then MkDir(ExeDir + SL_DIR);
+
+  // ファイルサイズチェック
+  fs:=0;
+  if FindFirst(FILEPATH, faAnyFile, Rec) = 0 then
+  begin
+    fs:= Rec.Size / 1024; // KBに変換
+  end;
+  FindClose(Rec);
+
+  if fs<=20 then // 20kB以下なら
+  begin
+    result:=False;
+    exit;
+  end;
+
+  FindClose(Rec);
+
+  AssignFile(F1, FILEPATH, CP_UTF8);
+  Reset(F1);
+
+  catalog := TStringList.Create;
+  catalog.Sorted := true;
+
+  allcatalog := TStringList.Create;
+
+  try
+
+    ReadLn(F1, St);
+
+    while not Eof(F1) do
+    begin
+      // softwarelist 始め
+      if (Copy(St,1,14) = #9+'<softwarelist' ) then
+      begin
+        name := ExtractXML('name', St);
+        description := ExtractXML('description', St);
+        Form2.Label4.Caption:= name + ': ' + description;
+        Application.ProcessMessages;
+
+        description := escape(description);
+        description := translate(description);
+
+        catalog.Add( name + #9 + description + #9 );
+
+        softlistEntry := name + #9 + description + #9;
+
+        softlist := TList.Create;
+
+        while (Copy(St,1,15) <> #9+'</softwarelist') do
+        begin
+          // software 取得
+          while St <> #9#9+'</software>' do
+          begin
+            // software 始め
+            if (Copy(St,1,12) = #9#9+'<software ' ) then
+            begin
+              New(NewSoftware);
+              NewSoftware.name := ExtractXML('name', St);
+              NewSoftware.cloneof := ExtractXML('cloneof', St);
+              NewSoftware.supported := ExtractXML('supported', St);
+              if NewSoftware.supported = '' then
+                NewSoftware.supported := 'yes';
+            end
+            else
+            /// Description
+            if Copy(St,1,15)=#9#9#9+'<description' then
+            begin
+              i:=Pos('>',St)+1;
+              NewSoftware.desc := Copy(St,i,PosEx('<',St,i)-i);
+            end
+            else
+            /// Year
+            if Copy(St,1,8)=#9#9#9+'<year' then
+            begin
+              i:=Pos('>',St)+1;
+              NewSoftware.year := Copy(St,i,PosEx('<',St,i)-i);
+            end
+            else
+            /// publisher
+            if Copy(St,1,13)=#9#9#9+'<publisher' then
+            begin
+              i:=Pos('>',St)+1;
+              NewSoftware.publisher := Copy(St,i,PosEx('<',St,i)-i);
+            end
+            else
+            /// alt_title
+            if Copy(St,1,25)=#9#9#9+'<info name="alt_title"' then
+            begin
+              NewSoftware.alt:=ExtractXML('value', St);
+            end;
+            ReadLn(F1, St);
+          end;
+
+
+          softlist.Add(NewSoftware);
+          ReadLn(F1, St);
+        end;
+
+        // Zip名昇順で並べ替え
+        softlist.Sort(@AscSort);
+
+        // ファイル作成
+        //AssignFile(F2, ExeDir + SL_DIR + name +'.csv', CP_UTF8);
+        //ReWrite(F2);
+
+
+        // ソフトウェアリストエントリ
+        allCatalog.Add(softlistEntry+inttostr(softlist.Count));
+
+        for i:=0 to softlist.Count-1 do
+        begin
+          Application.ProcessMessages;
+
+          output := PSoftware(softlist[i]).name + #9 +
+                    PSoftware(softlist[i]).cloneof + #9 +
+                    PSoftware(softlist[i]).desc + #9 +
+                    PSoftware(softlist[i]).alt + #9 +
+                    PSoftware(softlist[i]).year+ #9 +
+                    PSoftware(softlist[i]).publisher+ #9+
+                    PSoftware(softlist[i]).supported;
+
+          output := escape(output);
+          //WriteLn(F2, output);
+
+          allCatalog.Add(output);
+        end;
+
+        //CloseFile(F2);
+
+        softlist.Clear;
+        softlist.free;
+
+      end;
+      ReadLn(F1, St);
+    end;
+
+
+    allCatalog.SaveToFile(ExeDir + SL_DIR + SL_DATA, TEncoding.UTF8);
+
+  finally
+    CloseFile(F1);
+    catalog.Free;
+    allCatalog.Free;
+  end;
+
+  result:= true;
+  exit;
+
+end;
+
 
 
 // listxmlからのデータ抽出
 function ExtractListXML : boolean;
 
-type //
-  PListInfo = ^TListInfo;
-  TListInfo = record
+  type //
+    PListInfo = ^TListInfo;
+    TListInfo = record
 
-    ZipName : string;     // Zip名
-    DescE   : string;     // 英語名
-    Maker   : string;     // メーカー
-    Year    : string;     // 製造年
+      ZipName : string;     // Zip名
+      DescE   : string;     // 英語名
+      Maker   : string;     // メーカー
+      Year    : string;     // 製造年
 
-    CloneOf : string;     // マスタ名
-    MasterID: integer;    // マスタのID
-    Master  : boolean;    // マスタ
+      CloneOf : string;     // マスタ名
+      MasterID: integer;    // マスタのID
+      Master  : boolean;    // マスタ
 
-    RomOf   : string;     //  RomOf
+      RomOf   : string;     //  RomOf
 
-    SampleOf: string;     // サンプル名
+      SampleOf: string;     // サンプル名
 
-    Vector  : boolean;    // ベクター
-    LightGun: boolean;    // 光線銃
-    Analog  : boolean;    // アナログ操作
-    Status  : boolean;    // ステータス Good=True
-    Channels: integer;    // サウンドチャンネル数
-    Vertical: boolean;    // 縦画面
+      Vector  : boolean;    // ベクター
+      LightGun: boolean;    // 光線銃
+      Analog  : boolean;    // アナログ操作
+      Status  : boolean;    // ステータス Good=True
+      Channels: integer;    // サウンドチャンネル数
+      Vertical: boolean;    // 縦画面
 
-    CPUs    : string;     // CPUs
-    Sounds  : string;     // Sound chips
-    Screens : string;     // 画面情報
-    NumScreens: integer;  // 画面数
-    Palettesize :integer; // 色数
-    ResX    : Word;       // 解像度X
-    ResY    : Word;       // 解像度Y
-    ScanRate: string;     // スキャンレート
-    Color   : TGameStatus;// 色ステータス
-    Sound   : TGameStatus;// 音ステータス
-    GFX     : TGameStatus;// GFXステータス
-    Protect : TGameStatus;// プロテクトステータス
-    Cocktail: TGameStatus;// カクテルステータス
-    SaveState:TGameStatus;// セーブステート
-    Source  : string;     // ソースファイル
-    CHD     : string;     // CHD
-    CHDOnly : boolean;    // CHDのみのゲーム
-    CHDMerge: boolean;    // CHDのマージ指定あり
-    LD      : boolean;    // レーザーディスク
-    CHDNoDump: boolean;   // CHD未吸い出し
-    isMechanical: boolean;// メカニカルゲーム
+      CPUs    : string;     // CPUs
+      Sounds  : string;     // Sound chips
+      Screens : string;     // 画面情報
+      NumScreens: integer;  // 画面数
+      Palettesize :integer; // 色数
+      ResX    : Word;       // 解像度X
+      ResY    : Word;       // 解像度Y
+      ScanRate: string;     // スキャンレート
+      Color   : TGameStatus;// 色ステータス
+      Sound   : TGameStatus;// 音ステータス
+      GFX     : TGameStatus;// GFXステータス
+      Protect : TGameStatus;// プロテクトステータス
+      Cocktail: TGameStatus;// カクテルステータス
+      SaveState:TGameStatus;// セーブステート
+      Source  : string;     // ソースファイル
+      CHD     : string;     // CHD
+      CHDOnly : boolean;    // CHDのみのゲーム
+      CHDMerge: boolean;    // CHDのマージ指定あり
+      LD      : boolean;    // レーザーディスク
+      CHDNoDump: boolean;   // CHD未吸い出し
+      isMechanical: boolean;// メカニカルゲーム
 
-    Flag    : boolean;    // 汎用
-end;
+      Flag    : boolean;    // 汎用
+  end;
 
-type
-  TMakerList = record
-    Maker : string;  // 製造元
-    Count : integer; // カウント
-    Clone : boolean; //
-end;
+  type
+    TMakerList = record
+      Maker : string;  // 製造元
+      Count : integer; // カウント
+      Clone : boolean; //
+  end;
 
 
   function AscSort(Item1, Item2: Pointer): Integer;
@@ -278,32 +621,34 @@ end;
     Result := CompareText(PListInfo(Item1).ZipName, PListInfo(Item2).ZipName);
   end;
 
-var
-  ListInfo : TList;
-  NewItem : PListInfo;
+  var
+    ListInfo : TList;
+    NewItem : PListInfo;
 
-  MakerList: array of TMakerList;
-  F1 : TextFile;
-  St,S,S2,Years,CPUs,Sounds: string;
-  CPU   : array of string;
-  Audio : array of string;
-  Screen: array of string;
-  w,h: string;
-  r: real;
-  i,j,ii: integer;
-  StrList,SL: TStringList;
-  CPUList,SoundList: TStringList;
-  Clock,Count: integer;
+    MakerList: array of TMakerList;
+    F1 : TextFile;
+    St,S,S2,Years,CPUs,Sounds: string;
+    CPU   : array of string;
+    Audio : array of string;
+    Screen: array of string;
+    w,h: string;
+    r: real;
+    i,j,ii: integer;
+    StrList,SL: TStringList;
+    CPUList,SoundList: TStringList;
+    Clock,Count: integer;
 
-  Rec : TSearchRec; // ファイルサイズ取得用
-  fs : Single;
+    softlist: TStringList;
 
-  sltRes  :  TStringList;
+    Rec : TSearchRec; // ファイルサイズ取得用
+    fs : Single;
+
+    sltRes  :  TStringList;
+
+    name, software: String;
 
 
 begin
-
-
 
   Form2.Label4.Caption:='データ解析中...';
   Application.ProcessMessages;
@@ -344,11 +689,14 @@ begin
     SoundList.Duplicates:=dupIgnore;
     SoundList.Sorted:=True;
 
+    softlist := TStringList.Create;
+    softlist.Sorted := true;
+    softlist.Duplicates := dupIgnore;
+
     while not Eof(F1) do
     begin
 
       ReadLn(F1,St);
-//      St:=Utf8ToString(uSt);
 
       // MAMEのバージョン
       if Pos('<mame build=',St)<>0 then
@@ -363,13 +711,12 @@ begin
 
       end;
 
-
       // 始め
       if ( (Copy(St,1,6)=#9+'<game') and
            (Pos('runnable="no"',St)=0) and
            (Pos('isbios="yes"',St)=0) ) // biosじゃない (0.117u2)
          or (
-           (Copy(St,1,6)=#9+'<mach') and
+           (Copy(St,1,7)=#9+'<machi') and
            (Pos('runnable="no"',St)=0) and
            (Pos('isbios="yes"',St)=0) ) // biosじゃない (0.117u2)
 
@@ -418,6 +765,9 @@ begin
         NewItem.LD          :=False;
         NewItem.CHDNoDump   :=False;
         NewItem.isMechanical:=False;
+
+        software := '';
+
 
         /// ZIP name
         if pos('name=',St)<>0 then
@@ -801,13 +1151,32 @@ begin
 
             //
 
+          end
+          else
+          /// softwarelist
+          if Copy(St,1,11)=#9#9+'<software' then
+          begin
+            name := ExtractXML('name',St);
+            if software='' then
+            begin
+              software:=NewItem.ZipName;
+            end;
+
+            software:=software + #9 + name;
+
           end;
 
-//          ReadLn(F1,uSt);   // utf-8で読み込み
-//          St:=Utf8ToString(uSt);
           ReadLn(F1,St);
 
         end;
+
+        // ソフトリスト
+        if software <> '' then
+        begin
+          softlist.Add(software);
+          software:='';
+        end;
+
 
         // CPUまとめ
         St:='';
@@ -944,10 +1313,19 @@ begin
       Application.ProcessMessages;
 
     end;
-                                      
+
+    // ソフトリスト情報書き出し
+    if Form2.chkSoftlist.Checked then
+    begin
+      if not DirectoryExists(ExeDir + SL_DIR) then MkDir(ExeDir + SL_DIR);
+      softlist.SaveToFile(ExeDir + SL_DIR + SL_MASTER);
+
+    end;
+
+
   finally
     CloseFile(F1);
-
+    softlist.Free;
   end;
 
   // 項目がきちんと読み込まれたか
@@ -1258,6 +1636,32 @@ begin
 
   btnOK.Enabled:=(FileExists(Edit2.Text));
 
+end;
+
+
+//---------------------------------------------------
+// 全角半角変換
+function ZenToHan( fromText: String ): string;
+const
+  Dis = $FEE0;
+var
+  Str   : String;
+  i     : Integer;
+  AChar : Cardinal;
+begin
+  Str := '';
+  for i := 1 to Length( fromText ) do begin
+    AChar := Ord(fromText[i]);
+    if (AChar >= $FF01) and (AChar <= $FF5A) then
+    begin
+      Str := Str + Chr(AChar - Dis);
+    end
+    else
+    begin
+      Str := Str + fromText[i];
+    end;
+  end;
+  Result := Str;
 end;
 
 end.

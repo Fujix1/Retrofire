@@ -3,13 +3,13 @@ object Form2: TForm2
   Top = 127
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsDialog
-  Caption = 'Retrofire: '#12466#12540#12512#24773#22577#12398#21462#24471
-  ClientHeight = 143
-  ClientWidth = 567
+  Caption = 'Retrofire - '#12466#12540#12512#24773#22577#21462#24471
+  ClientHeight = 200
+  ClientWidth = 721
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -12
   Font.Name = #12513#12452#12522#12458
   Font.Style = []
   OldCreateOrder = False
@@ -17,14 +17,14 @@ object Form2: TForm2
   Scaled = False
   OnShow = FormShow
   DesignSize = (
-    567
-    143)
+    721
+    200)
   PixelsPerInch = 96
-  TextHeight = 17
+  TextHeight = 18
   object Label4: TLabel
-    Left = 20
-    Top = 110
-    Width = 212
+    Left = 21
+    Top = 157
+    Width = 396
     Height = 16
     AutoSize = False
     Font.Charset = SHIFTJIS_CHARSET
@@ -35,8 +35,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 296
-    Top = 113
+    Left = 439
+    Top = 162
     Width = 4
     Height = 18
     Anchors = [akLeft, akBottom]
@@ -47,12 +47,13 @@ object Form2: TForm2
     Font.Name = #12513#12452#12522#12458
     Font.Style = []
     ParentFont = False
+    ExplicitTop = 157
   end
   object btnOK: TButton
-    Left = 395
-    Top = 105
-    Width = 79
-    Height = 27
+    Left = 510
+    Top = 150
+    Width = 92
+    Height = 38
     Anchors = [akRight, akBottom]
     Caption = 'OK'
     Default = True
@@ -61,10 +62,10 @@ object Form2: TForm2
     OnClick = btnOKClick
   end
   object btnCancel: TButton
-    Left = 480
-    Top = 105
-    Width = 79
-    Height = 27
+    Left = 608
+    Top = 150
+    Width = 89
+    Height = 38
     Anchors = [akRight, akBottom]
     Cancel = True
     Caption = #12461#12515#12531#12475#12523
@@ -72,10 +73,10 @@ object Form2: TForm2
     TabOrder = 1
   end
   object GroupBox1: TGroupBox
-    Left = 8
-    Top = 14
-    Width = 551
-    Height = 81
+    Left = 21
+    Top = 16
+    Width = 676
+    Height = 121
     Anchors = [akLeft, akTop, akRight]
     Caption = #12466#12540#12512#24773#22577#12434#21462#24471#12377#12427'MAME'#23455#34892#12501#12449#12452#12523#12434#25351#23450#12375#12390#12367#12384#12373#12356
     Font.Charset = SHIFTJIS_CHARSET
@@ -86,26 +87,40 @@ object Form2: TForm2
     ParentFont = False
     TabOrder = 2
     DesignSize = (
-      551
-      81)
+      676
+      121)
     object Edit2: TEdit
       Left = 12
       Top = 34
-      Width = 500
+      Width = 614
       Height = 26
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = Edit2Change
     end
     object Button3: TButton
-      Left = 517
+      Left = 632
       Top = 34
-      Width = 24
+      Width = 34
       Height = 26
       Anchors = [akTop, akRight]
       Caption = '...'
       TabOrder = 1
       OnClick = Button3Click
+    end
+    object chkSoftlist: TCheckBox
+      Left = 12
+      Top = 80
+      Width = 369
+      Height = 17
+      Caption = #12477#12501#12488#12454#12455#12450#12522#12473#12488#12398#24773#22577#12418#21462#24471#12377#12427#65288#12486#12473#12488#29256#65289
+      Font.Charset = SHIFTJIS_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #12513#12452#12522#12458
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
     end
   end
   object OpenDialog1: TOpenDialog
@@ -116,7 +131,7 @@ object Form2: TForm2
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    Left = 8
-    Top = 20
+    Left = 432
+    Top = 4
   end
 end
