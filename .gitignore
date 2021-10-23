@@ -73,3 +73,7 @@ modules/
 retrofire.ini
 favorites.ini
 listxml.tmp
+
+softlists/
+softlists/_stats.ini
+softlists/_stats.ini

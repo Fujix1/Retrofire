@@ -2232,6 +2232,7 @@ begin
   frmSoftwareList.SearchBox1.Text:=SoftwareListSearch;
   frmSoftwareList.DoNotUpdateListView := false;
 
+  frmSoftwareList.softlistHistory := SoftwareListHistory;
 
   //
   if En then

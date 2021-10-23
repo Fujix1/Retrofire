@@ -299,6 +299,7 @@ var
   SoftwareListAlwaysOnTop : boolean;
   SoftwareListColumnSort  : integer;
   SoftwareListSearch      : string;
+  SoftwareListHistory     : TStringList;
 
   // データ用
   TLMaster      : TList;   // データ保持用TList
@@ -1446,7 +1447,9 @@ begin
   SoftwareListAlwaysOnTop := true;
   SoftwareListColumnSort  := 1;
   SoftwareListSearch      := '';
-
+  SoftwareListHistory                 := TStringList.Create;
+  SoftwareListHistory.Delimiter       :=#9;
+  SoftwareListHistory.StrictDelimiter :=true;
 
   // HTTPダウンロードデータ用
   ETag_mame32j  := '';
@@ -1840,6 +1843,14 @@ begin
 
   sltIni.Add('sw_column_sort '+ inttostr(frmSoftwareList.columnSort));
   sltIni.Add('sw_search '+trim(frmSoftwareList.SearchBox1.Text));
+
+  // ソフトウェアリストヒストリー
+  St:='';
+  for i:=0 to frmSoftwareList.softlistHistory.Count-1 do
+  begin
+    St:=St + #9 + frmSoftwareList.softlistHistory[i];
+  end;
+  sltIni.Add('sw_history '+St);
 
 
   //// --------------------------------------------
@@ -2665,8 +2676,13 @@ begin
     begin
       St:=Copy(St,pos(' ',St)+1,Length(St));
       SoftwareListSearch := trim(St);
+    end
+    else
+    if Copy(St,1,11)='sw_history ' then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      SoftwareListHistory.DelimitedText := trim(St);
     end;
-
 
     inc(intLine);
 

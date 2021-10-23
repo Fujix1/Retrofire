@@ -315,6 +315,10 @@ var
   allcatalog: TStringList;
   softlistEntry: string;
 
+  alt: string;
+  version: string;
+  p1,p2: integer;
+
 
   function AscSort(Item1, Item2: Pointer): Integer;
   begin
@@ -399,6 +403,12 @@ var
     st := StringReplace( st, 'floppies','フロッピー', [rfReplaceAll]);
 
     result:=st;
+  end;
+
+  //最後に見つかる文字列位置を調べる
+  function LastPos(const substr, str: String) : Integer;
+  begin
+    result := Length(str) - Pos( ReverseString(substr) , ReverseString(str) ) - Length(substr) + 2;
   end;
 
 begin
@@ -505,17 +515,30 @@ begin
         // Zip名昇順で並べ替え
         softlist.Sort(@AscSort);
 
-        // ファイル作成
-        //AssignFile(F2, ExeDir + SL_DIR + name +'.csv', CP_UTF8);
-        //ReWrite(F2);
-
-
         // ソフトウェアリストエントリ
         allCatalog.Add(softlistEntry+inttostr(softlist.Count));
 
         for i:=0 to softlist.Count-1 do
         begin
           Application.ProcessMessages;
+
+          // 括弧を日本語タイトルに移植
+          {alt := PSoftware(softlist[i]).alt;
+          if alt<>'' then
+          begin
+            if Pos(')',alt)<>0 then
+            begin
+              version:=PSoftware(softlist[i]).desc;
+              p1:=LastPos(' (', version);
+              p2:=LastPos(')', version);
+              if (p1<>0) and (p2<>0) then
+              begin
+                version:=Copy(version,p1,p2-1);
+                alt := alt+version;
+              end;
+            end;
+          end;
+           }
 
           output := PSoftware(softlist[i]).name + #9 +
                     PSoftware(softlist[i]).cloneof + #9 +
@@ -526,12 +549,9 @@ begin
                     PSoftware(softlist[i]).supported;
 
           output := escape(output);
-          //WriteLn(F2, output);
-
           allCatalog.Add(output);
         end;
 
-        //CloseFile(F2);
 
         softlist.Clear;
         softlist.free;

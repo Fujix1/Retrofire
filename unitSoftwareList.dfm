@@ -19,6 +19,7 @@ object frmSoftwareList: TfrmSoftwareList
   Scaled = False
   ScreenSnap = True
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnResize = FormResize
   PixelsPerInch = 96

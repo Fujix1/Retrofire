@@ -44,6 +44,7 @@ type
     procedure SearchBox1Enter(Sender: TObject);
     procedure SearchBox1Exit(Sender: TObject);
     procedure SearchBox1KeyPress(Sender: TObject; var Key: Char);
+    procedure FormDestroy(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -70,7 +71,6 @@ type
   public
     { Public 宣言 }
 
-
     function init(const ExeDir:string): boolean;
     procedure setSoftlist(const zip:string; forceUpdate:boolean = false);
     procedure updateLang(newLang: string);
@@ -85,9 +85,12 @@ type
       DoNotUpdateListView: boolean;
 
       softMaster: TObjectDictionary<string, TStringList>;
-
-
       softlistData2: TList;
+
+      softlistHistory: TStringList; // 選んだソフトリストのヒストリー
+
+    const
+      MAXSOFTLISTHISTORY = 16;       // ヒストリーを保持する最大数
 
   end;
 
@@ -122,8 +125,16 @@ begin
   lang := 'ja';
   columnSort := 1;
   SetListViewColumnSortMark( columnSort );
+
+  softlistHistory := TStringList.Create;
+  softlistHistory.Capacity := MAXSOFTLISTHISTORY;
 end;
 
+
+procedure TfrmSoftwareList.FormDestroy(Sender: TObject);
+begin
+    softlistHistory.Free;
+end;
 
 procedure TfrmSoftwareList.FormKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -483,8 +494,6 @@ end;
 procedure TfrmSoftwareList.ListView1Data(Sender: TObject; Item: TListItem);
 var
   i:integer;
-  softname: string;
-
 begin
 
   i:=Item.Index;
@@ -595,9 +604,10 @@ var
   needUpdate: boolean;
 
   sl: TStringList;
-  softList: TSoftList;
   lastListCount: integer; // 変更直前のドロップダウンリスト数
 
+  softlistIndex: integer;//
+  hit: boolean;
 begin
 
   if not softlistAvailable then exit;
@@ -648,18 +658,36 @@ begin
       for i := 0 to sl.Count-1 do
       begin
 
-        for j := 0 to softlistData2.Count-1 do // 存在しないソフトリストがある
+        for j := 0 to softlistData2.Count-1 do
         begin
           if sl[i] = PSoftlist2(SoftlistData2[j]).name then
           begin
-            cmbSoftList.Items.Add(PSoftlist2(SoftlistData2[j]).desc + ' (' + PSoftlist2(SoftlistData2[j]).name+')');
+            softlistIndex := j;
+            cmbSoftList.Items.Add(PSoftlist2(SoftlistData2[softlistIndex]).desc + ' (' + PSoftlist2(SoftlistData2[softlistIndex]).name+')');
             break;
           end;
         end;
 
       end;
       cmbSoftList.Enabled := true;
-      cmbSoftList.ItemIndex := 0;
+
+      // ヒストリーにあればそれを選択
+      hit := false;
+      for i := 0 to softlistHistory.Count-1 do
+      begin
+        for j := 0 to sl.Count-1 do
+        begin
+          if softlistHistory[i] = sl[j] then
+          begin
+            cmbSoftList.ItemIndex := j;
+            hit := true;
+            break;
+          end;
+        end;
+        if hit then break;
+      end;
+
+      if not hit then cmbSoftList.ItemIndex := 0;
     end;
 
     lastZip:=zip;
@@ -705,7 +733,7 @@ end;
 procedure TfrmSoftwareList.updateListView;
 var i: integer;
     st: string;
-
+    idx: integer;
 begin
 
   if (cmbSoftlist.items.Count=0) then
@@ -730,7 +758,19 @@ begin
 
   currentSoftlistName := softMaster[lastZip][cmbSoftlist.ItemIndex]; // 選択中のソフトリスト名
 
-  if ( updateSoftItems(currentSoftlistName, 0, true, SearchBox1.Text) = 0 ) then
+  // ソフトリスト選択ヒストリー
+  idx := softlistHistory.IndexOf(currentSoftlistName); // すでに登録があれば削除して先頭に追加
+  if (idx<>-1) then
+  begin
+    softlistHistory.Delete(idx);
+  end;
+  softlistHistory.Insert(0, currentSoftlistName);
+  // 最大数超えてたら削る
+  if softlistHistory.Count>MAXSOFTLISTHISTORY then
+    softlistHistory.Delete(MAXSOFTLISTHISTORY);
+
+
+  if (updateSoftItems(currentSoftlistName, 0, true, SearchBox1.Text) = 0) then
   begin
     // 表示するものが0件
     ListView1.Items.BeginUpdate;
@@ -738,10 +778,10 @@ begin
     ListView1.Enabled := true;
     ListView1.Refresh;
     ListView1.Items.EndUpdate;
-    StatusBar1.Panels[0].Text:= '';
+    StatusBar1.Panels[0].Text:=inttostr(SubList.Count) + ' / ' + inttostr(PSoftlist2(softlistData2[currentSoftListIndex]).softwares.Count);
     StatusBar1.Panels[1].Text:= '';
     StatusBar1.Panels[2].Text:= '';
-
+    searchbox1.enabled := true;
     exit;
   end;
 
