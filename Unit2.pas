@@ -345,6 +345,8 @@ var
     st := StringReplace( st, 'Nintendo SNES - Sufami Turbo cartridges','任天堂スーパーファミコン - スーファミターボカセット', [rfReplaceAll]);
     st := StringReplace( st, 'Nintendo SNES Satellaview Memory Packs','任天堂スーパーファミコンサテラビューメモリパック', [rfReplaceAll]);
     st := StringReplace( st, 'Nintendo Virtual Boy cartridges','任天堂バーチャルボーイカセット', [rfReplaceAll]);
+    st := StringReplace( st, 'Nintendo Entertainment System - Datach Joint ROM System mini-cartridges','任天堂ファミリーコンピュータ - データックジョイントROMシステムミニカセット', [rfReplaceAll]);
+
     st := StringReplace( st, 'Nantettatte!! Baseball mini-cartridges','なんてったってベースボール ミニカセット', [rfReplaceAll]);
     st := StringReplace( st, 'Karaoke Studio expansion cartridges','カラオケスタジオ拡張カセット', [rfReplaceAll]);
 
@@ -364,7 +366,7 @@ var
     st := StringReplace( st, 'Sega SG-1000 and SG-1000 Mark II cartridges','セガSG-1000/SG-1000 Mark IIカセット', [rfReplaceAll]);
 
     st := StringReplace( st, 'Sony Playstation CD-ROMs','ソニープレイステーションCD-ROM', [rfReplaceAll]);
-    st := StringReplace( st, 'Fujitsu FM-7 cassettes','富士通FM-7テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Fujitsu FM-7 cassettes','富士通FM-7カセットテープ', [rfReplaceAll]);
     st := StringReplace( st, 'Fujitsu FM-7 disk images','富士通FM-7ディスク', [rfReplaceAll]);
     st := StringReplace( st, 'Fujitsu FM-77AV disk images','富士通FM-77AVディスク', [rfReplaceAll]);
     st := StringReplace( st, 'Fujitsu FM Towns CD-ROMs','富士通FM TOWNS CD-ROM', [rfReplaceAll]);
@@ -377,19 +379,19 @@ var
     st := StringReplace( st, 'SNK Neo Geo Pocket Color cartridges','SNKネオジオポケットカラーカセット', [rfReplaceAll]);
 
     st := StringReplace( st, 'Sharp X68k disk images','シャープX68000ディスク', [rfReplaceAll]);
-    st := StringReplace( st, 'Sharp MZ-2200 cassettes','シャープMZ-2200テープ', [rfReplaceAll]);
-    st := StringReplace( st, 'Sharp MZ-700 cassettes','シャープMZ-700テープ', [rfReplaceAll]);
-    st := StringReplace( st, 'Sharp MZ-800 cassettes','シャープMZ-800テープ', [rfReplaceAll]);
-    st := StringReplace( st, 'Sharp X1 cassettes','シャープX1テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-2200 cassettes','シャープMZ-2200カセットテープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-700 cassettes','シャープMZ-700カセットテープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp MZ-800 cassettes','シャープMZ-800カセットテープ', [rfReplaceAll]);
+    st := StringReplace( st, 'Sharp X1 cassettes','シャープX1カセットテープ', [rfReplaceAll]);
     st := StringReplace( st, 'Sharp X1 disk images','シャープX1ディスク', [rfReplaceAll]);
 
-    st := StringReplace( st, 'NEC PC-Engine / Turbografx 16 CD-ROMs','NEC PCエンジン/Turbografx 16 CD-ROM', [rfReplaceAll]);
-    st := StringReplace( st, 'NEC PC-Engine Cartridges','NEC PCエンジン Huカード', [rfReplaceAll]);
+    st := StringReplace( st, 'NEC PC-Engine / Turbografx 16 CD-ROMs','NEC PCエンジン / Turbografx 16 CD-ROM', [rfReplaceAll]);
+    st := StringReplace( st, 'NEC PC-Engine cartridges','NEC PCエンジン Huカード', [rfReplaceAll]);
 
     st := StringReplace( st, 'CD-ROMs','CD-ROM', [rfReplaceAll]);
     st := StringReplace( st, 'ROMs','ROM', [rfReplaceAll]);
     st := StringReplace( st, 'tapes/cartridges','テープ/カセット', [rfReplaceAll]);
-    st := StringReplace( st, 'cassettes','テープ', [rfReplaceAll]);
+    st := StringReplace( st, 'cassettes','カセットテープ', [rfReplaceAll]);
     st := StringReplace( st, 'disk images','ディスク', [rfReplaceAll]);
     st := StringReplace( st, 'hard disks','ハードディスク', [rfReplaceAll]);
     st := StringReplace( st, 'floppy disks','フロッピー', [rfReplaceAll]);

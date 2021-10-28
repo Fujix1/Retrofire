@@ -698,6 +698,7 @@ begin
   begin
     cmbSoftList.Items.Clear;
     cmbSoftList.Enabled:=false;
+    searchBox1.Enabled:=false;
     lastZip:='';
     frmSoftwareList.Caption:='ソフトウェアリスト';
     StatusBar1.Panels[0].Text:='';

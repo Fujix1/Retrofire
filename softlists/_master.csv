@@ -1062,6 +1062,7 @@ laser_turbo_xt	ibm5150
 laser_xt3	ibm5150
 laser110	vz_cass	vz_snap
 laser128	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+laser128o	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 laser200	vz_cass	vz_snap
 laser210	vz_cass	vz_snap
 laser2c	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
@@ -1313,6 +1314,7 @@ mpu9088vf	ibm5150
 mpx16	ibm5150
 mpz80	mpz80
 mratlus	arcadia
+ms1600	coco_cart	coco_flop	dragon_cart
 ms4125	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4132	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4134	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -1480,7 +1482,13 @@ pc45iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc486mu	pc98	pc98_cd
 pc486se	pc98	pc98_cd
 pc50ii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pc6001	pc6001_cart
+pc6001a	pc6001_cart
+pc6001mk2	pc6001_cart
+pc6001mk2sr	pc6001_cart
 pc60iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pc6601	pc6001_cart
+pc6601sr	pc6001_cart
 pc7000	ibm5150
 pc70iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc8001	pc8001_flop
