@@ -10,7 +10,8 @@ uses
   mmSystem, GR32, GR32_Image, ToolWin, PngImage, AppEvnts,untUpdateChecker,
   ActnPopup, PlatformDefaultStyleActnCtrls, CategoryButtons, ButtonGroup, Tabs,
   DockTabSet, Unit3, unitScreenShotCleaner, unitCommandViewer,  System.Actions,
-  comobj, Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,System.IOUtils, unitHttp;
+  comobj, Vcl.XPMan, System.ImageList, unitFavorites, Vcl.StdStyleActnCtrls,
+  System.IOUtils, unitHttp, DWMAPI;
 
 const
   WM_SHOWED = WM_USER + 1;
@@ -459,7 +460,12 @@ type
 
     OriginProc: TWndMethod;     // 元のウィンドウ関数保持用
 
-    bFormActivated: Boolean;        // AfterShow実装用
+    bFormActivated: Boolean;    // AfterShow実装用
+
+    FpntMoveOrg,
+    FpntMoveFit     : TPoint;   // フォームフィット用
+    oldForm1        : TPoint;
+
 
     procedure SubClassProc(var msg: TMessage); // 置き換えメッセージ処理関数
 
@@ -477,6 +483,13 @@ type
     function  FormatSets( Item: PRecordSet ) : String;
     procedure ExecuteMAME(const ZipName:String;const ExePath:String;
               const WorkDir:String; const Option:String);
+
+
+    procedure WMSizing(var MSG: Tmessage); message WM_Sizing;
+    procedure WMEnterSizeMove(var MSG: Tmessage); message WM_EnterSizeMove;
+    procedure WMMoving(var MSG: Tmessage); message WM_Moving;
+    procedure WMMove(var msg: TMessage); message WM_Move;
+
   public
     { Public 宣言 }
     procedure ReadYearDat;
@@ -500,6 +513,313 @@ var
 implementation
 
 {$R *.dfm}
+
+//------------------------------------------------------------------------------
+// フォームフィット
+
+procedure FormFitSizeToForms(frmTgt: TForm; var rectNew: TRect; iSide: integer);
+  function Sub(const rectTgt: TRect; var rectForm: TRect) : boolean;
+  begin
+    result := false;
+    if ((rectForm.Bottom + ciFittingThreshold >= rectTgt.Top   ) and
+        (rectForm.Top    - ciFittingThreshold <= rectTgt.Bottom))then begin
+      if (Abs(rectForm.Left - rectTgt.Left) <= ciFittingThreshold) then begin
+        Inc(rectForm.Left, rectTgt.Left - rectForm.Left);
+      end else if (Abs(rectForm.Left  - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Left, rectTgt.Right - rectForm.Left);
+        result := true;
+      end;
+
+      if (Abs(rectForm.Right - rectTgt.Right) <= ciFittingThreshold) then begin
+        Inc(rectForm.Right, rectTgt.Right - rectForm.Right);
+      end else if (Abs(rectForm.Right - rectTgt.Left )
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Right, rectTgt.Left- rectForm.Right);
+        result := true;
+      end;
+    end;
+
+    if ((rectForm.Right + ciFittingThreshold >= rectTgt.Left ) and
+        (rectForm.Left  - ciFittingThreshold <= rectTgt.Right))then begin
+      if (Abs(rectForm.Top - rectTgt.Top) <= ciFittingThreshold) then begin
+        Inc(rectForm.Top, rectTgt.Top - rectForm.Top);
+      end else if (Abs(rectForm.Top  - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Top, rectTgt.Bottom - rectForm.Top);
+        result:=true;
+      end;
+      if (Abs(rectForm.Bottom - rectTgt.Bottom)
+          <= ciFittingThreshold) then begin
+        Inc(rectForm.Bottom, rectTgt.Bottom - rectForm.Bottom);
+      end else if (Abs(rectForm.Bottom - rectTgt.Top )
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Bottom, rectTgt.Top - rectForm.Bottom);
+        result:=true;
+      end;
+    end;
+  end;
+
+var
+  iCntr   : integer;
+  frmTmp  : TForm;
+  rectScreen,
+  rectTmp,
+  rectBuf : TRect;
+begin
+
+  getFrameSize(Form1);
+
+  rectBuf := Rect(rectNew.Left   + Frame.Left,
+                  rectNew.Top    + Frame.Top,
+                  rectNew.Right  + Frame.Right,
+                  rectNew.Bottom + Frame.Left);
+
+  if (SystemParametersInfo(SPI_GETWORKAREA, 0, @rectScreen, 0) = TRUE) then begin
+    Sub(rectScreen, rectBuf);
+  end;
+
+  for iCntr := 0 to Screen.FormCount - 1 do begin
+    frmTmp  := Screen.Forms[iCntr];
+    if (frmTmp = frmSoftwareList) and (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+      Sub(rectTmp, rectBuf);
+    end;
+  end;
+
+  case (iSide) of
+    WMSZ_LEFT,
+    WMSZ_TOPLEFT,
+    WMSZ_BOTTOMLEFT  : rectNew.Left  := rectBuf.Left-Frame.Left;
+    WMSZ_RIGHT,
+    WMSZ_TOPRIGHT,
+    WMSZ_BOTTOMRIGHT : rectNew.Right := rectBuf.Right-Frame.Right;
+  end;
+
+  case (iSide) of
+    WMSZ_TOP,
+    WMSZ_TOPLEFT,
+    WMSZ_TOPRIGHT    : rectNew.Top    := rectBuf.Top-Frame.Top;
+
+    WMSZ_BOTTOM,
+    WMSZ_BOTTOMLEFT,
+    WMSZ_BOTTOMRIGHT : rectNew.Bottom := rectBuf.Bottom-Frame.Bottom;
+  end;
+
+end;
+
+
+procedure FormFitMoveToForms(frmTgt: TForm; var rectForm: TRect);
+
+  function SubH(const rectTgt: TRect): boolean;
+  begin
+    Result := FALSE;
+    if ((rectForm.Bottom + ciFittingThreshold >= rectTgt.Top   ) and
+        (rectForm.Top    - ciFittingThreshold <= rectTgt.Bottom))then begin
+      if (Abs(rectForm.Left - rectTgt.Left) <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Left - rectForm.Left, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Right - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Right - rectForm.Right, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Left  - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Right - rectForm.Left, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Right - rectTgt.Left )
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Left- rectForm.Right, 0);
+        Result := TRUE;
+      end;
+    end;
+  end;
+
+  function SubV(const rectTgt: TRect): boolean;
+  begin
+    Result := FALSE;
+    if ((rectForm.Right + ciFittingThreshold >= rectTgt.Left ) and
+        (rectForm.Left  - ciFittingThreshold <= rectTgt.Right))then begin
+      if (Abs(rectForm.Top - rectTgt.Top) <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Top - rectForm.Top);
+        Result := TRUE;
+      end else if (Abs(rectForm.Bottom - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Bottom - rectForm.Bottom);
+        Result := TRUE;
+      end else if (Abs(rectForm.Top  - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Bottom - rectForm.Top);
+        Result := TRUE;
+      end else if (Abs(rectForm.Bottom - rectTgt.Top )
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Top - rectForm.Bottom);
+        Result := TRUE;
+      end;
+    end;
+  end;
+
+var
+  iCntr       : integer;
+  frmTmp      : TForm;
+  rectTmp     : TRect;
+  rectScreen  : TRect;
+  boolScreen  : boolean;
+begin
+
+  boolScreen := SystemParametersInfo(SPI_GETWORKAREA, 0, @rectScreen, 0);
+
+  if ((boolScreen = FALSE) or (SubH(rectScreen) = FALSE)) and (frmSoftwareList.isSnapped = FALSE) then begin
+    for iCntr := 0 to Screen.FormCount - 1 do begin
+      frmTmp  := Screen.Forms[iCntr];
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+
+      if (frmTmp = frmSoftwareList) and  (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+        if (SubH(rectTmp)) then
+        begin
+          break;
+        end;
+      end;
+    end;
+  end;
+
+
+  if ((boolScreen = FALSE) or (SubV(rectScreen) = FALSE)) and (frmSoftwareList.isSnapped = FALSE) then begin
+    for iCntr := 0 to Screen.FormCount - 1 do begin
+      frmTmp  := Screen.Forms[iCntr];
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+
+      if (frmTmp = frmSoftwareList) and (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+        if (SubV(rectTmp)) then
+        begin
+          break;
+        end;
+      end;
+    end;
+  end;
+
+
+end;
+
+procedure TForm1.WMSizing(var MSG: Tmessage);
+begin
+  inherited;
+  FormFitSizeToForms(Self, PRect(Msg.LParam)^, Msg.WParam);
+  Msg.Result := -1;
+end;
+
+
+procedure TForm1.WMEnterSizeMove(var MSG: Tmessage);
+var rectTmp: TRect;
+    rectForm1, rectSoft: TRect;
+begin
+  inherited;
+
+  DwmGetWindowAttribute(Self.Handle,
+                        DWMWA_EXTENDED_FRAME_BOUNDS,
+                        @rectTmp,
+                        SizeOf(TRect));
+
+  FpntMoveOrg.X := rectTmp.Left;
+  FpntMoveOrg.Y := rectTmp.Top;
+  FpntMoveFit   := FpntMoveOrg;
+
+  // snap check
+  if frmSoftwareList.Visible then
+  begin
+    getFrameSize(Form1);
+    rectForm1 :=Rect(Form1.Left                                     + Frame.Left,
+                     Form1.Top                                      + Frame.Top,
+                     Form1.Left + Form1.Width                       + Frame.Right,
+                     Form1.Top + Form1.Height                       + Frame.Bottom);
+    rectSoft  :=Rect( frmSoftwareList.Left                          + Frame.Left,
+                      frmSoftwareList.Top                           + Frame.Top,
+                      frmSoftwareList.Left + frmSoftwareList.Width  + Frame.Right,
+                      frmSoftwareList.Top + frmSoftwareList.Height  + Frame.Bottom);
+
+    if (rectForm1.Right = rectSoft.Left) or
+       (rectForm1.Left = rectSoft.Right) or
+       (rectForm1.Top = rectSoft.Bottom) or
+       (rectForm1.Bottom = rectSoft.Top) then
+    begin
+      frmSoftwareList.isSnapped := true;
+    end
+    else
+      frmSoftwareList.isSnapped := false;
+
+  end;
+
+end;
+
+procedure TForm1.WMMoving(var MSG: Tmessage);
+var
+  rectNew : TRect;
+  iWidth,
+  iHeight : integer;
+begin
+  inherited;
+
+  oldForm1.X:=Form1.Left;
+  oldForm1.Y:=Form1.Top;
+
+  getFrameSize(Form1);
+
+  rectNew := PRect(Msg.LParam)^;
+
+  rectNew.Left    :=  rectNew.Left   + Frame.Left;
+  rectNew.Top     :=  rectNew.Top    + Frame.Top;
+  rectNew.Right   :=  rectNew.Right  + Frame.Right;
+  rectNew.Bottom  :=  rectNew.Bottom + Frame.Bottom;
+
+  FpntMoveOrg.X := FpntMoveOrg.X + rectNew.Left - FpntMoveFit.X;
+  FpntMoveOrg.Y := FpntMoveOrg.Y + rectNew.Top  - FpntMoveFit.Y;
+
+  iWidth  := rectNew.Width;
+  iHeight := rectNew.Height;
+
+  rectNew.TopLeft := FpntMoveOrg;
+  rectNew.Right   := FpntMoveOrg.X + iWidth;
+  rectNew.Bottom  := FpntMoveOrg.Y + iHeight;
+
+  FormFitMoveToForms(Self, rectNew);
+
+  FpntMoveFit := rectNew.TopLeft;
+
+  PRect(Msg.LParam)^:= Rect(
+    rectNew.Left    - Frame.Left,
+    rectNew.Top     - Frame.Top,
+    rectNew.Right   - Frame.Right,
+    rectNew.Bottom  - Frame.Bottom
+  );
+
+  Msg.Result := -1;
+
+end;
+
+procedure TForm1.WMMove(var msg: TMessage);
+var dX,dY : Integer;
+begin
+  if Form1.Visible then
+  begin
+    if frmSoftwareList.isSnapped then
+    begin
+      dX:= Form1.Left - oldForm1.X;
+      dY:= Form1.Top  - oldForm1.Y;
+      frmSoftwareList.Left:=frmSoftwareList.Left + dX;
+      frmSoftwareList.Top :=frmSoftwareList.Top  + dY;
+    end;
+  end;
+end;
 
 
 //------------------------------------------------------------------------------

@@ -17,7 +17,6 @@ object frmSoftwareList: TfrmSoftwareList
   KeyPreview = True
   OldCreateOrder = False
   Scaled = False
-  ScreenSnap = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress

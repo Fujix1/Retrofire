@@ -4,14 +4,15 @@ interface
 
 uses Windows, Forms, SysUtils, Graphics, Classes, StrUtils, PngImage,
      CommCtrl, GR32, GR32_Image, GR32_Resamplers, ShellAPI, WSDLIntf,
-     Controls, mmsystem, System.UITypes, System.Generics.Collections;
+     Controls, mmsystem, System.UITypes, System.Generics.Collections,
+     DWMAPI;
 
 const
 
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '265';
+  BUILDNO = '266';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -50,6 +51,8 @@ const
   SL_INI          = '_stats.ini';
   SL_DATA         = '_softlist.data'; // ソフトリスト全データ
 
+
+  ciFittingThreshold = 10; // ウインドウスナップ閾値
 
 // ゲームステータス
 type TGameStatus = (gsGood, gsImperfect, gsPreliminary, gsUnknown);
@@ -350,6 +353,10 @@ var
   LVUpdating : boolean; // リストビューの更新中
   LVTerminate: boolean; // リストビュー更新の停止
 
+
+  // ウインドウエアロフレームサイズ
+  Frame :TRect;
+
 procedure ReadHistoryDat;
 procedure ReadMameInfoDat;
 function  ReadMame32jlst: boolean;
@@ -390,9 +397,31 @@ function  GetInpGame(FileName: string): string;
 procedure DeleteDirectory(path: String);
 function  RelToAbs(const RelPath, BasePath: string): string;
 
+procedure getFrameSize(frm: TForm);
+
 implementation
 
 uses Unit1, unitCommandViewer, unitSoftwareList;
+
+//------------------------------------------------------------------------------
+// フォームフレームサイズ
+procedure getFrameSize(frm:TForm);
+var rectTmp1, rectTmp2: TRect;
+begin
+
+  DwmGetWindowAttribute(frm.Handle,
+                        DWMWA_EXTENDED_FRAME_BOUNDS,
+                        @rectTmp1,
+                        SizeOf(TRect));
+  GetWindowRect(frm.Handle, rectTmp2);
+  Frame:=Rect(
+    rectTmp1.Left -   rectTmp2.Left,
+    rectTmp1.Top -    rectTmp2.Top,
+    rectTmp1.Right -  rectTmp2.Right,
+    rectTmp1.Bottom - rectTmp2.Bottom
+  );
+
+end;
 
 //------------------------------------------------------------------------------
 // zip名の検索インデックスを作成する

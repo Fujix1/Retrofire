@@ -1,11 +1,11 @@
-unit unitSoftwareList;
+ï»¿unit unitSoftwareList;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, System.Generics.Collections,
-  Vcl.WinXCtrls, Vcl.ComCtrls, Generics.Collections, Common, Diagnostics,CommCtrl;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Generics.Collections, Common, Diagnostics,CommCtrl, DWMAPI;
 
 type
   TfrmSoftwareList = class(TForm)
@@ -47,13 +47,13 @@ type
     procedure FormDestroy(Sender: TObject);
 
   private
-    { Private éŒ¾ }
+    { Private å®£è¨€ }
 
     var
-      softlistAvailable: boolean; // ƒ\ƒtƒgƒŠƒXƒg—LŒø
+      softlistAvailable: boolean; // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆæœ‰åŠ¹
 
-      lastZip: string; // ’¼‘O‘I‘ğ‚³‚ê‚Ä‚¢‚½zip–¼
-      lastMasterIndex: integer; // ’¼‘O‚É‘I‘ğ‚³‚ê‚Ä‚¢‚½zipƒ}ƒXƒ^ƒCƒ“ƒfƒbƒNƒX
+      lastZip: string; // ç›´å‰é¸æŠã•ã‚Œã¦ã„ãŸzipå
+      lastMasterIndex: integer; // ç›´å‰ã«é¸æŠã•ã‚Œã¦ã„ãŸzipãƒã‚¹ã‚¿ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
 
       currentSoftMasterIndex: integer;
       currentSoftlistName: string;
@@ -64,12 +64,17 @@ type
       selectedSoftName: string;
 
       SubList: TList;
+      FpntMoveOrg,
+      FpntMoveFit     : TPoint;
 
     procedure updateListView;
     function updateSoftItems(const SLName:string; orderBy: integer; asc:boolean; searchWord: string): integer;
+    procedure WMSizing(var MSG: Tmessage); message WM_Sizing;
+    procedure WMEnterSizeMove(var MSG: Tmessage); message WM_EnterSizeMove;
+    procedure WMMoving(var MSG: Tmessage); message WM_Moving;
 
   public
-    { Public éŒ¾ }
+    { Public å®£è¨€ }
 
     function init(const ExeDir:string): boolean;
     procedure setSoftlist(const zip:string; forceUpdate:boolean = false);
@@ -78,8 +83,8 @@ type
     procedure SetListViewColumnSortMark(ColumnIndex: Integer);
 
     var
-      lastSoftlist: string; // ÅV‚Ì‘I‘ğƒ\ƒtƒgƒŠƒXƒg
-      lastSoftware: string; // ÅV‚Ì‘I‘ğƒ\ƒtƒgƒEƒFƒA
+      lastSoftlist: string; // æœ€æ–°ã®é¸æŠã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆ
+      lastSoftware: string; // æœ€æ–°ã®é¸æŠã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
       columnSort: integer; //
 
       DoNotUpdateListView: boolean;
@@ -87,10 +92,12 @@ type
       softMaster: TObjectDictionary<string, TStringList>;
       softlistData2: TList;
 
-      softlistHistory: TStringList; // ‘I‚ñ‚¾ƒ\ƒtƒgƒŠƒXƒg‚ÌƒqƒXƒgƒŠ[
+      softlistHistory: TStringList; // é¸ã‚“ã ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆã®ãƒ’ã‚¹ãƒˆãƒªãƒ¼
+
+      isSnapped: Boolean;
 
     const
-      MAXSOFTLISTHISTORY = 16;       // ƒqƒXƒgƒŠ[‚ğ•Û‚·‚éÅ‘å”
+      MAXSOFTLISTHISTORY = 16;       // ãƒ’ã‚¹ãƒˆãƒªãƒ¼ã‚’ä¿æŒã™ã‚‹æœ€å¤§æ•°
 
   end;
 
@@ -98,7 +105,7 @@ type
 var
   frmSoftwareList: TfrmSoftwareList;
 
-// ”äŠr”Ÿ”
+// æ¯”è¼ƒå‡½æ•°
 function AscSort2(Item1, Item2: Pointer): Integer;
 
 implementation
@@ -106,6 +113,280 @@ implementation
 uses Unit1;
 
 {$R *.dfm}
+
+
+
+procedure FormFitSizeToForms(frmTgt: TForm; var rectNew: TRect; iSide: integer);
+  function Sub(const rectTgt: TRect; var rectForm: TRect) : boolean;
+  begin
+    result := false;
+    if ((rectForm.Bottom + ciFittingThreshold >= rectTgt.Top   ) and
+        (rectForm.Top    - ciFittingThreshold <= rectTgt.Bottom))then begin
+      if (Abs(rectForm.Left - rectTgt.Left) <= ciFittingThreshold) then begin
+        Inc(rectForm.Left, rectTgt.Left - rectForm.Left);
+      end else if (Abs(rectForm.Left  - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Left, rectTgt.Right - rectForm.Left);
+        result := true;
+      end;
+
+      if (Abs(rectForm.Right - rectTgt.Right) <= ciFittingThreshold) then begin
+        Inc(rectForm.Right, rectTgt.Right - rectForm.Right);
+      end else if (Abs(rectForm.Right - rectTgt.Left )
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Right, rectTgt.Left- rectForm.Right);
+        result := true;
+      end;
+    end;
+
+    if ((rectForm.Right + ciFittingThreshold >= rectTgt.Left ) and
+        (rectForm.Left  - ciFittingThreshold <= rectTgt.Right))then begin
+      if (Abs(rectForm.Top - rectTgt.Top) <= ciFittingThreshold) then begin
+        Inc(rectForm.Top, rectTgt.Top - rectForm.Top);
+      end else if (Abs(rectForm.Top  - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Top, rectTgt.Bottom - rectForm.Top);
+        result:=true;
+      end;
+      if (Abs(rectForm.Bottom - rectTgt.Bottom)
+          <= ciFittingThreshold) then begin
+        Inc(rectForm.Bottom, rectTgt.Bottom - rectForm.Bottom);
+      end else if (Abs(rectForm.Bottom - rectTgt.Top )
+                   <= ciFittingThreshold) then begin
+        Inc(rectForm.Bottom, rectTgt.Top - rectForm.Bottom);
+        result:=true;
+      end;
+    end;
+  end;
+
+var
+  iCntr   : integer;
+  frmTmp  : TForm;
+  rectScreen,
+  rectTmp,
+  rectBuf : TRect;
+begin
+
+  getFrameSize(frmSoftwareList);
+
+  rectBuf := Rect(rectNew.Left   + Frame.Left,
+                  rectNew.Top    + Frame.Top,
+                  rectNew.Right  + Frame.Right,
+                  rectNew.Bottom + Frame.Left);
+
+  if (SystemParametersInfo(SPI_GETWORKAREA, 0, @rectScreen, 0) = TRUE) then begin
+    Sub(rectScreen, rectBuf);
+  end;
+
+  for iCntr := 0 to Screen.FormCount - 1 do begin
+    frmTmp  := Screen.Forms[iCntr];
+    if (frmTmp = Form1) and (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+
+
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+      Sub(rectTmp, rectBuf);
+    end;
+  end;
+
+  case (iSide) of
+    WMSZ_LEFT,
+    WMSZ_TOPLEFT,
+    WMSZ_BOTTOMLEFT  : rectNew.Left  := rectBuf.Left-Frame.Left;
+    WMSZ_RIGHT,
+    WMSZ_TOPRIGHT,
+    WMSZ_BOTTOMRIGHT : rectNew.Right := rectBuf.Right-Frame.Right;
+  end;
+
+  case (iSide) of
+    WMSZ_TOP,
+    WMSZ_TOPLEFT,
+    WMSZ_TOPRIGHT    : rectNew.Top    := rectBuf.Top-Frame.Top;
+
+    WMSZ_BOTTOM,
+    WMSZ_BOTTOMLEFT,
+    WMSZ_BOTTOMRIGHT : rectNew.Bottom := rectBuf.Bottom-Frame.Bottom;
+  end;
+
+end;
+
+
+procedure FormFitMoveToForms(frmTgt: TForm; var rectForm: TRect);
+
+  function SubH(const rectTgt: TRect): boolean;
+  begin
+    Result := FALSE;
+    if ((rectForm.Bottom + ciFittingThreshold >= rectTgt.Top   ) and
+        (rectForm.Top    - ciFittingThreshold <= rectTgt.Bottom))then begin
+      if (Abs(rectForm.Left - rectTgt.Left) <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Left - rectForm.Left, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Right - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Right - rectForm.Right, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Left  - rectTgt.Right)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Right - rectForm.Left, 0);
+        Result := TRUE;
+      end else if (Abs(rectForm.Right - rectTgt.Left )
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, rectTgt.Left- rectForm.Right, 0);
+        Result := TRUE;
+      end;
+    end;
+  end;
+
+  function SubV(const rectTgt: TRect): boolean;
+  begin
+    Result := FALSE;
+    if ((rectForm.Right + ciFittingThreshold >= rectTgt.Left ) and
+        (rectForm.Left  - ciFittingThreshold <= rectTgt.Right))then begin
+      if (Abs(rectForm.Top - rectTgt.Top) <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Top - rectForm.Top);
+        Result := TRUE;
+      end else if (Abs(rectForm.Bottom - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Bottom - rectForm.Bottom);
+        Result := TRUE;
+      end else if (Abs(rectForm.Top  - rectTgt.Bottom)
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Bottom - rectForm.Top);
+        Result := TRUE;
+      end else if (Abs(rectForm.Bottom - rectTgt.Top )
+                   <= ciFittingThreshold) then begin
+        OffsetRect(rectForm, 0, rectTgt.Top - rectForm.Bottom);
+        Result := TRUE;
+      end;
+    end;
+  end;
+
+var
+  iCntr       : integer;
+  frmTmp      : TForm;
+  rectTmp     : TRect;
+  rectScreen  : TRect;
+  boolScreen  : boolean;
+  flag        : boolean;
+begin
+
+  flag := false;
+  boolScreen := SystemParametersInfo(SPI_GETWORKAREA, 0, @rectScreen, 0);
+
+  if (boolScreen = FALSE) or (SubH(rectScreen) = FALSE) then begin
+    for iCntr := 0 to Screen.FormCount - 1 do begin
+      frmTmp  := Screen.Forms[iCntr];
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+
+      if (frmTmp = Form1) and  (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+        if (SubH(rectTmp)) then
+        begin
+          flag := true;
+          break;
+        end;
+      end;
+    end;
+  end;
+
+
+  if (boolScreen = FALSE) or (SubV(rectScreen) = FALSE) then begin
+    for iCntr := 0 to Screen.FormCount - 1 do begin
+      frmTmp  := Screen.Forms[iCntr];
+      DwmGetWindowAttribute(frmTmp.Handle,
+                            DWMWA_EXTENDED_FRAME_BOUNDS,
+                            @rectTmp,
+                            SizeOf(TRect));
+
+      if (frmTmp = Form1) and (frmTmp <> frmTgt) and (frmTmp.Visible) then begin
+        if (SubV(rectTmp)) then
+        begin
+          flag := true;
+          break;
+        end;
+      end;
+    end;
+  end;
+
+
+end;
+
+
+
+procedure TfrmSoftwareList.WMSizing(var MSG: Tmessage);
+begin
+  inherited;
+  FormFitSizeToForms(Self, PRect(Msg.LParam)^, Msg.WParam);
+  Msg.Result := -1;
+end;
+
+
+procedure TfrmSoftwareList.WMEnterSizeMove(var MSG: Tmessage);
+var rectTmp: TRect;
+begin
+  inherited;
+
+  DwmGetWindowAttribute(Self.Handle,
+                        DWMWA_EXTENDED_FRAME_BOUNDS,
+                        @rectTmp,
+                        SizeOf(TRect));
+
+  FpntMoveOrg.X := rectTmp.Left;
+  FpntMoveOrg.Y := rectTmp.Top;
+  FpntMoveFit   := FpntMoveOrg;
+end;
+
+procedure TfrmSoftwareList.WMMoving(var MSG: Tmessage);
+var
+  rectNew : TRect;
+  iWidth,
+  iHeight : integer;
+begin
+  inherited;
+
+
+  getFrameSize(frmSoftwareList);
+
+  rectNew := PRect(Msg.LParam)^;
+
+  rectNew.Left    :=  rectNew.Left   + Frame.Left;
+  rectNew.Top     :=  rectNew.Top    + Frame.Top;
+  rectNew.Right   :=  rectNew.Right  + Frame.Right;
+  rectNew.Bottom  :=  rectNew.Bottom + Frame.Bottom;
+
+  FpntMoveOrg.X := FpntMoveOrg.X + rectNew.Left - FpntMoveFit.X;
+  FpntMoveOrg.Y := FpntMoveOrg.Y + rectNew.Top  - FpntMoveFit.Y;
+
+  iWidth  := rectNew.Width;
+  iHeight := rectNew.Height;
+
+  rectNew.TopLeft := FpntMoveOrg;
+  rectNew.Right   := FpntMoveOrg.X + iWidth;
+  rectNew.Bottom  := FpntMoveOrg.Y + iHeight;
+
+  FormFitMoveToForms(Self, rectNew);
+
+  FpntMoveFit := rectNew.TopLeft;
+
+  PRect(Msg.LParam)^:= Rect(
+    rectNew.Left    - Frame.Left,
+    rectNew.Top     - Frame.Top,
+    rectNew.Right   - Frame.Right,
+    rectNew.Bottom  - Frame.Bottom
+  );
+
+  Msg.Result := -1;
+
+end;
+
+
+
+
+
 
 procedure TfrmSoftwareList.updateLang(newLang: string);
 begin
@@ -154,9 +435,9 @@ begin
 end;
 
 
-// ‰Šú‰»ˆ—
-// •¡”‰ñŒÄ‚Ño‚³‚ê‚é‚Ì‚Å’ˆÓ
-// return ¬Œ÷/¸”s
+// åˆæœŸåŒ–å‡¦ç†
+// è¤‡æ•°å›å‘¼ã³å‡ºã•ã‚Œã‚‹ã®ã§æ³¨æ„
+// return æˆåŠŸ/å¤±æ•—
 function TfrmSoftwareList.init(const ExeDir:string): boolean;
 var
 
@@ -196,7 +477,7 @@ begin
     exit;
   end;
 
-  // İ’è•œ‹Œ
+  // è¨­å®šå¾©æ—§
   try
     dicSetting := TDictionary<string, string>.create;
     sl := TStringList.Create;
@@ -215,7 +496,7 @@ begin
   end;
 
 
-  // ƒ\ƒtƒgƒŠƒXƒg‘S•”“Ç‚İ
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆå…¨éƒ¨èª­è¾¼ã¿
   try
 
     if Assigned(softlistData2) then
@@ -223,7 +504,7 @@ begin
 
       saveIni;
 
-      // ƒ\ƒtƒgƒŠƒXƒgƒf[ƒ^Š®‘Síœ
+      // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆãƒ‡ãƒ¼ã‚¿å®Œå…¨å‰Šé™¤
       for i := 0 to softlistData2.Count-1 do
       begin
         p := PSoftlist2(softlistData2[i]);
@@ -244,14 +525,14 @@ begin
 
       fields.DelimitedText:=softdata[i];
 
-      // ƒ\ƒtƒgƒŠƒXƒgƒGƒ“ƒgƒŠ
+      // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆã‚¨ãƒ³ãƒˆãƒª
       if (fields.Count = 3) then
       begin
 
         New(newItem);
-        newItem.name := fields[0]; // –¼‘O
-        newItem.desc := fields[1]; // à–¾
-        newItem.softwares := TList.Create;  // ƒ\ƒtƒgƒGƒ“ƒgƒŠ
+        newItem.name := fields[0]; // åå‰
+        newItem.desc := fields[1]; // èª¬æ˜
+        newItem.softwares := TList.Create;  // ã‚½ãƒ•ãƒˆã‚¨ãƒ³ãƒˆãƒª
         if (dicSetting.TryGetValue(newItem.name ,st)) then
         begin
           newItem.lastSelect:=st;
@@ -285,7 +566,7 @@ begin
     end;
 
 
-    // ƒf[ƒ^QÆ•û–@
+    // ãƒ‡ãƒ¼ã‚¿å‚ç…§æ–¹æ³•
 {
     for i := 0 to softlistData2.Count-1 do
     begin
@@ -300,7 +581,7 @@ begin
 
 
 
-    // ƒ\ƒtƒgƒŠƒXƒgƒf[ƒ^íœ
+    // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆãƒ‡ãƒ¼ã‚¿å‰Šé™¤
     for i := 0 to softlistData2.Count-1 do
     begin
       p := PSoftlist2(softlistData2[i]);
@@ -319,7 +600,7 @@ begin
 
   try
 
-    // ƒ\ƒtƒgƒEƒFƒA‚Ìƒ}ƒXƒ^î•ñ
+    // ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã®ãƒã‚¹ã‚¿æƒ…å ±
     if (Assigned(softMaster)) then softMaster.Free;
 
     softMaster := TObjectDictionary<String, TStringList>.Create;
@@ -355,7 +636,7 @@ begin
 end;
 
 
-// •\¦‚Ég‚¤ƒ\ƒtƒg€–Ú‚ğÄ\¬‚·‚é
+// è¡¨ç¤ºã«ä½¿ã†ã‚½ãƒ•ãƒˆé …ç›®ã‚’å†æ§‹æˆã™ã‚‹
 function TfrmSoftwareList.updateSoftItems(const SLName:string; orderBy: integer; asc:boolean; searchWord: string):integer;
 var key: string;
     i, j, n: integer;
@@ -371,7 +652,7 @@ begin
 
   searchWord:= Trim(searchWord);
 
-  // SLName ‚ÅŒŸõ
+  // SLName ã§æ¤œç´¢
   for j := 0 to softlistData2.Count-1 do
   begin
     if PSoftlist2(softlistData2[j]).name = SLName then
@@ -421,7 +702,7 @@ begin
   SubList.Capacity:=SubList.Count;
 
 
-  // ƒ\[ƒg
+  // ã‚½ãƒ¼ãƒˆ
   SubList.Sort(@AscSort2);
 
 
@@ -433,7 +714,7 @@ begin
 end;
 
 
-// ”äŠr”Ÿ”
+// æ¯”è¼ƒå‡½æ•°
 function AscSort2(Item1, Item2: Pointer): Integer;
 begin
 
@@ -476,11 +757,11 @@ var
   idx: integer;
 begin
 
-  if Column.Caption = 'ƒQ[ƒ€–¼' then idx := 1
-  else if Column.Caption = 'ZIP–¼' then idx := 2
-  else if Column.Caption = 'ƒ[ƒJ[' then idx := 3
-  else if Column.Caption = '”N“x' then idx := 4
-  else if Column.Caption = 'ƒ}ƒXƒ^' then idx := 5;
+  if Column.Caption = 'ã‚²ãƒ¼ãƒ å' then idx := 1
+  else if Column.Caption = 'ZIPå' then idx := 2
+  else if Column.Caption = 'ãƒ¡ãƒ¼ã‚«ãƒ¼' then idx := 3
+  else if Column.Caption = 'å¹´åº¦' then idx := 4
+  else if Column.Caption = 'ãƒã‚¹ã‚¿' then idx := 5;
 
   if abs(columnSort) = idx then columnSort:=columnSort*-1
   else columnSort:=idx;
@@ -528,7 +809,7 @@ begin
   begin
     repeat
 
-      // ˆê”Ô‰º‚Ü‚Ås‚Á‚½‚çæ“ª‚©‚çŒŸõ‚ğ‘±‚¯‚é
+      // ä¸€ç•ªä¸‹ã¾ã§è¡Œã£ãŸã‚‰å…ˆé ­ã‹ã‚‰æ¤œç´¢ã‚’ç¶šã‘ã‚‹
       if (i = SubList.Count-1) then
         if Wrap then i := 0 else Exit;
 
@@ -555,9 +836,9 @@ procedure TfrmSoftwareList.ListView1SelectItem(Sender: TObject; Item: TListItem;
    sl2: TSoftlist;
    supported: string;
 begin
-  // ‘I‘ğ‚ÉXV‘O‚ÆXVŒã‚Ì2‰ñŒÄ‚Ño‚³‚ê‚é‚Ì‚Å‘O‚Ì•û‚ğ‚Í‚¶‚­
-  // XV‘O: Selected=False, Item.Index=•s’è
-  // XVŒã: Selected=True,  Item.Index=‚ ‚è
+  // é¸æŠæ™‚ã«æ›´æ–°å‰ã¨æ›´æ–°å¾Œã®2å›å‘¼ã³å‡ºã•ã‚Œã‚‹ã®ã§å‰ã®æ–¹ã‚’ã¯ã˜ã
+  // æ›´æ–°å‰: Selected=False, Item.Index=ä¸å®š
+  // æ›´æ–°å¾Œ: Selected=True,  Item.Index=ã‚ã‚Š
 
   if not Selected then exit;
 
@@ -568,11 +849,11 @@ begin
 
   supported := PSoftware(SubList[ListView1.ItemIndex]).supported;
   if (supported = 'yes') then
-    StatusBar1.Panels[2].Text:='“®ì‰Â”\ '
+    StatusBar1.Panels[2].Text:='å‹•ä½œå¯èƒ½ '
   else if (supported = 'partial') then
-    StatusBar1.Panels[2].Text:='•”•ªƒTƒ|[ƒg '
+    StatusBar1.Panels[2].Text:='éƒ¨åˆ†ã‚µãƒãƒ¼ãƒˆ '
   else if (supported = 'no') then
-    StatusBar1.Panels[2].Text:='–¢ƒTƒ|[ƒg '
+    StatusBar1.Panels[2].Text:='æœªã‚µãƒãƒ¼ãƒˆ '
   else
     StatusBar1.Panels[2].Text:='';
 
@@ -596,7 +877,7 @@ begin
 
 end;
 
-// zip –¼‚Åƒ\ƒtƒgƒŠƒXƒg‚ğXV‚·‚é
+// zip åã§ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆã‚’æ›´æ–°ã™ã‚‹
 procedure TfrmSoftwareList.setSoftlist(const zip:string; forceUpdate:boolean = false);
 var
   i,j,n: integer;
@@ -604,7 +885,7 @@ var
   needUpdate: boolean;
 
   sl: TStringList;
-  lastListCount: integer; // •ÏX’¼‘O‚Ìƒhƒƒbƒvƒ_ƒEƒ“ƒŠƒXƒg”
+  lastListCount: integer; // å¤‰æ›´ç›´å‰ã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãƒªã‚¹ãƒˆæ•°
 
   softlistIndex: integer;//
   hit: boolean;
@@ -612,7 +893,7 @@ begin
 
   if not softlistAvailable then exit;
 
-  // 2‰ñŒÄ‚Î‚ê‚é‚Ì‚ğ–h~
+  // 2å›å‘¼ã°ã‚Œã‚‹ã®ã‚’é˜²æ­¢
   if (zip = lastZip) then exit;
 
 
@@ -621,18 +902,18 @@ begin
 
   if forceUpdate then
   begin
-    lastListCount:=0; // ‹­§XV
+    lastListCount:=0; // å¼·åˆ¶æ›´æ–°
     lastZip:='';
   end;
 
 
-  // ƒ\ƒtƒgƒŠƒXƒg‚ ‚é‚©Šm”F
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆã‚ã‚‹ã‹ç¢ºèª
   if (softMaster.TryGetValue(zip, sl)) then
   begin
 
     needUpdate := true;
 
-    // ’¼‘O‚Ì‘I‘ğ‚Æˆê’v‚·‚é‚©
+    // ç›´å‰ã®é¸æŠã¨ä¸€è‡´ã™ã‚‹ã‹
     if lastZip<>'' then
     begin
       if softMaster[lastZip].Count = sl.Count then
@@ -651,7 +932,7 @@ begin
     end;
 
 
-    // ˆê’v‚µ‚È‚©‚Á‚½‚Æ‚«‚ÍXV
+    // ä¸€è‡´ã—ãªã‹ã£ãŸã¨ãã¯æ›´æ–°
     if needUpdate then
     begin
       cmbSoftList.Items.Clear;
@@ -671,7 +952,7 @@ begin
       end;
       cmbSoftList.Enabled := true;
 
-      // ƒqƒXƒgƒŠ[‚É‚ ‚ê‚Î‚»‚ê‚ğ‘I‘ğ
+      // ãƒ’ã‚¹ãƒˆãƒªãƒ¼ã«ã‚ã‚Œã°ãã‚Œã‚’é¸æŠ
       hit := false;
       for i := 0 to softlistHistory.Count-1 do
       begin
@@ -691,7 +972,7 @@ begin
     end;
 
     lastZip:=zip;
-    frmSoftwareList.Caption:='ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg - '+zip+' - ƒŠƒXƒg”: '+inttostr(cmbSoftList.Items.Count);
+    frmSoftwareList.Caption:='ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆ - '+zip+' - ãƒªã‚¹ãƒˆæ•°: '+inttostr(cmbSoftList.Items.Count);
 
   end
   else
@@ -700,7 +981,7 @@ begin
     cmbSoftList.Enabled:=false;
     searchBox1.Enabled:=false;
     lastZip:='';
-    frmSoftwareList.Caption:='ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg';
+    frmSoftwareList.Caption:='ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆ';
     StatusBar1.Panels[0].Text:='';
     StatusBar1.Panels[1].Text:='';
     StatusBar1.Panels[2].Text:='';
@@ -708,7 +989,7 @@ begin
   end;
 
 
-  // •`‰æXV
+  // æç”»æ›´æ–°
   if ((lastListCount<>0) and (cmbSoftlist.items.Count = 0)) or (needUpdate) or (forceUpdate) then
   begin
     updateListView;
@@ -730,7 +1011,7 @@ begin
     self.FormStyle:=fsNormal;
 end;
 
-// ƒŠƒXƒgƒrƒ…[‚ÌXV
+// ãƒªã‚¹ãƒˆãƒ“ãƒ¥ãƒ¼ã®æ›´æ–°
 procedure TfrmSoftwareList.updateListView;
 var i: integer;
     st: string;
@@ -757,23 +1038,23 @@ begin
     exit;
   end;
 
-  currentSoftlistName := softMaster[lastZip][cmbSoftlist.ItemIndex]; // ‘I‘ğ’†‚Ìƒ\ƒtƒgƒŠƒXƒg–¼
+  currentSoftlistName := softMaster[lastZip][cmbSoftlist.ItemIndex]; // é¸æŠä¸­ã®ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆå
 
-  // ƒ\ƒtƒgƒŠƒXƒg‘I‘ğƒqƒXƒgƒŠ[
-  idx := softlistHistory.IndexOf(currentSoftlistName); // ‚·‚Å‚É“o˜^‚ª‚ ‚ê‚Îíœ‚µ‚Äæ“ª‚É’Ç‰Á
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆé¸æŠãƒ’ã‚¹ãƒˆãƒªãƒ¼
+  idx := softlistHistory.IndexOf(currentSoftlistName); // ã™ã§ã«ç™»éŒ²ãŒã‚ã‚Œã°å‰Šé™¤ã—ã¦å…ˆé ­ã«è¿½åŠ 
   if (idx<>-1) then
   begin
     softlistHistory.Delete(idx);
   end;
   softlistHistory.Insert(0, currentSoftlistName);
-  // Å‘å”’´‚¦‚Ä‚½‚çí‚é
+  // æœ€å¤§æ•°è¶…ãˆã¦ãŸã‚‰å‰Šã‚‹
   if softlistHistory.Count>MAXSOFTLISTHISTORY then
     softlistHistory.Delete(MAXSOFTLISTHISTORY);
 
 
   if (updateSoftItems(currentSoftlistName, 0, true, SearchBox1.Text) = 0) then
   begin
-    // •\¦‚·‚é‚à‚Ì‚ª0Œ
+    // è¡¨ç¤ºã™ã‚‹ã‚‚ã®ãŒ0ä»¶
     ListView1.Items.BeginUpdate;
     ListView1.Items.Count:=0;
     ListView1.Enabled := true;
@@ -791,10 +1072,10 @@ begin
   ListView1.Enabled := true;
   SearchBox1.Enabled := true;
 
-  // ‘I‘ğ€–Ú•œ‹Œ
+  // é¸æŠé …ç›®å¾©æ—§
   st := PSoftList2(softListData2[currentSoftlistIndex]).lastSelect;
 
-  if (st<>'') then // ‘I‘ğ—š—ğ‚ª‚ ‚é
+  if (st<>'') then // é¸æŠå±¥æ­´ãŒã‚ã‚‹
   begin
     for i := 0 to SubList.Count-1 do
     begin
@@ -848,7 +1129,7 @@ end;
 
 
 //------------------------------------------------------------------------------
-// ƒJƒ‰ƒ€–îˆóİ’è
+// ã‚«ãƒ©ãƒ çŸ¢å°è¨­å®š
 procedure TfrmSoftwareList.edtSearchKeyPress(Sender: TObject; var Key: Char);
 begin
          {
@@ -867,7 +1148,7 @@ begin
   Timer1.Enabled := true;
 end;
 
-// DELƒL[‚Ì“ü—Í‚ªæ‚ç‚ê‚é‚Ì‚Å‘Îô
+// DELã‚­ãƒ¼ã®å…¥åŠ›ãŒå–ã‚‰ã‚Œã‚‹ã®ã§å¯¾ç­–
 procedure TfrmSoftwareList.SearchBox1Enter(Sender: TObject);
 begin
   Form1.actDelAllCfg.Enabled:=false;
@@ -898,11 +1179,11 @@ begin
 
   LV:=ListView1;
 
-  // Œü‚«
+  // å‘ã
   IsAsc := ( ColumnIndex > 0);
   ColumnIndex:= abs(ColumnIndex)-1;
 
-  //ƒwƒbƒ_‚Ìƒnƒ“ƒhƒ‹æ“¾
+  //ãƒ˜ãƒƒãƒ€ã®ãƒãƒ³ãƒ‰ãƒ«å–å¾—
   hColumn := SendMessage(LV.Handle, LVM_GETHEADER, 0, 0);
   for i := 0 to ListView1.Columns.Count-1 do
   begin
