@@ -1,4 +1,4 @@
-unit Unit1;
+ï»¿unit Unit1;
 
 interface
 
@@ -403,7 +403,7 @@ type
 
     procedure RunFavorite(Sender: TObject);
     procedure RunFavorite2(Sender: TObject);
-    procedure Dummy(Sender: TObject); // ƒAƒNƒVƒ‡ƒ“ƒƒjƒ…[‚ğŠˆ«‰»‚³‚¹‚é‚½‚ß‚Ìƒ_ƒ~[
+    procedure Dummy(Sender: TObject); // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æ´»æ€§åŒ–ã•ã›ã‚‹ãŸã‚ã®ãƒ€ãƒŸãƒ¼
 
     procedure actVHideMechanicalExecute(Sender: TObject);
     procedure actVHideMechanicalUpdate(Sender: TObject);
@@ -444,30 +444,31 @@ type
     procedure actVSoftwarelistExecute(Sender: TObject);
 
   private
-    { Private éŒ¾ }
+    { Private å®£è¨€ }
 
-    EngExecuteFlag: Boolean;    // ‰pŒê¨“ú–{Œê•ÏX‚ÌI—¹ƒ`ƒFƒbƒN
-    SB_HintText:  String;       // ƒXƒe[ƒ^ƒXƒo[‚Ìƒqƒ“ƒg
-//    JoyStick:     TJoyInfo;     // ƒWƒ‡ƒCƒXƒeƒBƒbƒN‚Ìî•ñ—p
-    OldDescJ, OldKana: String;  // ƒQ[ƒ€–¼•ÒWUndo—p
-    EditUpdating     : boolean; // ƒQ[ƒ€–¼•ÒW—p
-    SubListID  : Integer;       // ƒTƒuƒŠƒXƒg•\¦’†‚ÌROMƒtƒ@ƒ~ƒŠƒ}ƒXƒ^ID
+    EngExecuteFlag: Boolean;    // è‹±èªâ†’æ—¥æœ¬èªå¤‰æ›´æ™‚ã®çµ‚äº†ãƒã‚§ãƒƒã‚¯
+    SB_HintText:  String;       // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ã®ãƒ’ãƒ³ãƒˆ
+//    JoyStick:     TJoyInfo;     // ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ã®æƒ…å ±ç”¨
+    OldDescJ, OldKana: String;  // ã‚²ãƒ¼ãƒ åç·¨é›†Undoç”¨
+    EditUpdating     : boolean; // ã‚²ãƒ¼ãƒ åç·¨é›†ç”¨
+    SubListID  : Integer;       // ã‚µãƒ–ãƒªã‚¹ãƒˆè¡¨ç¤ºä¸­ã®ROMãƒ•ã‚¡ãƒŸãƒªãƒã‚¹ã‚¿ID
 
-    JoyDelayTick: Cardinal;     // ƒWƒ‡ƒCƒXƒeƒBƒbƒNƒŠƒs[ƒg—pA‰Ÿ‚³‚ê‚½TickCount
+    JoyDelayTick: Cardinal;     // ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ãƒªãƒ”ãƒ¼ãƒˆç”¨ã€æŠ¼ã•ã‚ŒãŸTickCount
     JoyStatus: TJoyStickStatus; //
 
-    ChangingMemo: boolean;      // Memo•ÏX’†(ƒXƒNƒ[ƒ‹ƒo[‚Ì•ÏX)
+    ChangingMemo: boolean;      // Memoå¤‰æ›´ä¸­(ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã®å¤‰æ›´)
 
-    OriginProc: TWndMethod;     // Œ³‚ÌƒEƒBƒ“ƒhƒEŠÖ”•Û—p
+    OriginProc: TWndMethod;     // å…ƒã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢æ•°ä¿æŒç”¨
 
-    bFormActivated: Boolean;    // AfterShowÀ‘•—p
+    bFormActivated: Boolean;    // AfterShowå®Ÿè£…ç”¨
 
     FpntMoveOrg,
-    FpntMoveFit     : TPoint;   // ƒtƒH[ƒ€ƒtƒBƒbƒg—p
+    FpntMoveFit     : TPoint;   // ãƒ•ã‚©ãƒ¼ãƒ ãƒ•ã‚£ãƒƒãƒˆç”¨
     oldForm1        : TPoint;
+    isSizing        : boolean;
 
 
-    procedure SubClassProc(var msg: TMessage); // ’u‚«Š·‚¦ƒƒbƒZ[ƒWˆ—ŠÖ”
+    procedure SubClassProc(var msg: TMessage); // ç½®ãæ›ãˆãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å‡¦ç†é–¢æ•°
 
     procedure UpdateStatus;
     procedure UpdateEditPanel(const idx: integer);
@@ -475,7 +476,7 @@ type
     procedure ShowGameInfo(const idx: integer);
     procedure SetFormTitle;
 
-    procedure SetListViewColumnSortMark(LV: TListView; ColumnIndex: Integer);  // ƒJƒ‰ƒ€ƒ\[ƒg–îˆóİ’è
+    procedure SetListViewColumnSortMark(LV: TListView; ColumnIndex: Integer);  // ã‚«ãƒ©ãƒ ã‚½ãƒ¼ãƒˆçŸ¢å°è¨­å®š
 
     procedure CreateFavoriteActions;
     procedure RunMAME(const ZipName: string);
@@ -491,7 +492,7 @@ type
     procedure WMMove(var msg: TMessage); message WM_Move;
 
   public
-    { Public éŒ¾ }
+    { Public å®£è¨€ }
     procedure ReadYearDat;
     procedure UpdateListView;
     function  LoadResource: Integer;
@@ -515,7 +516,7 @@ implementation
 {$R *.dfm}
 
 //------------------------------------------------------------------------------
-// ƒtƒH[ƒ€ƒtƒBƒbƒg
+// ãƒ•ã‚©ãƒ¼ãƒ ãƒ•ã‚£ãƒƒãƒˆ
 
 procedure FormFitSizeToForms(frmTgt: TForm; var rectNew: TRect; iSide: integer);
   function Sub(const rectTgt: TRect; var rectForm: TRect) : boolean;
@@ -715,6 +716,7 @@ procedure TForm1.WMSizing(var MSG: Tmessage);
 begin
   inherited;
   FormFitSizeToForms(Self, PRect(Msg.LParam)^, Msg.WParam);
+  isSizing:=true;
   Msg.Result := -1;
 end;
 
@@ -724,6 +726,7 @@ var rectTmp: TRect;
     rectForm1, rectSoft: TRect;
 begin
   inherited;
+  isSizing:=false;
 
   DwmGetWindowAttribute(Self.Handle,
                         DWMWA_EXTENDED_FRAME_BOUNDS,
@@ -768,6 +771,7 @@ var
   iHeight : integer;
 begin
   inherited;
+  isSizing:=false;
 
   oldForm1.X:=Form1.Left;
   oldForm1.Y:=Form1.Top;
@@ -809,6 +813,8 @@ end;
 procedure TForm1.WMMove(var msg: TMessage);
 var dX,dY : Integer;
 begin
+  if isSizing=true then exit;
+
   if Form1.Visible then
   begin
     if frmSoftwareList.isSnapped then
@@ -823,17 +829,17 @@ end;
 
 
 //------------------------------------------------------------------------------
-// ‚¨‹C‚É“ü‚è—pƒAƒNƒVƒ‡ƒ“¶¬‚Æ’Ç‰Á
+// ãŠæ°—ã«å…¥ã‚Šç”¨ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ç”Ÿæˆã¨è¿½åŠ 
 procedure TForm1.CreateFavoriteActions;
 //var
 //  i: integer;
 //  AC  : TActionClientItem;
 begin
   {
-  // ‚¨‹C‚É“ü‚è‚ª‚ ‚éƒƒjƒ…[ˆÊ’u
+  // ãŠæ°—ã«å…¥ã‚ŠãŒã‚ã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼ä½ç½®
   AC:=Form1.ActionManager1.ActionBars[5].Items[3];
 
-  // ƒAƒNƒVƒ‡ƒ“¶¬‚Æ’Ç‰Á
+  // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ç”Ÿæˆã¨è¿½åŠ 
   for i:= 0 to MAXFAVORITES-1 do
   begin
     FavActions[i] := TAction.Create(Self);
@@ -851,13 +857,13 @@ end;
 
 
 //------------------------------------------------------------------------------
-// ƒTƒuƒNƒ‰ƒXƒEƒBƒ“ƒhƒEŠÖ”
+// ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢æ•°
 procedure TForm1.SubClassProc(var msg: TMessage);
 begin
 
-  OriginProc(msg); //–{—ˆ‚ÌƒEƒBƒ“ƒhƒEŠÖ”‚ğÀs
+  OriginProc(msg); //æœ¬æ¥ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢æ•°ã‚’å®Ÿè¡Œ
 
-  // ƒJƒ‰ƒ€ƒTƒCƒY•ÏXŠ®—¹ˆ—
+  // ã‚«ãƒ©ãƒ ã‚µã‚¤ã‚ºå¤‰æ›´å®Œäº†æ™‚å‡¦ç†
   case msg.Msg of
     WM_NOTIFY:
     begin
@@ -871,7 +877,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------
-// ƒJƒ‰ƒ€–îˆóİ’è
+// ã‚«ãƒ©ãƒ çŸ¢å°è¨­å®š
 procedure TForm1.SetListViewColumnSortMark(LV: TListView; ColumnIndex: Integer);
 var i: Integer;
   hColumn: THandle;
@@ -879,11 +885,11 @@ var i: Integer;
   IsAsc: boolean;
 begin
 
-  // Œü‚«
+  // å‘ã
   IsAsc := ( ColumnIndex > 0);
   ColumnIndex:= abs(ColumnIndex)-1;
 
-  //ƒwƒbƒ_‚Ìƒnƒ“ƒhƒ‹æ“¾
+  //ãƒ˜ãƒƒãƒ€ã®ãƒãƒ³ãƒ‰ãƒ«å–å¾—
   hColumn := SendMessage(LV.Handle, LVM_GETHEADER, 0, 0);
   for i := 0 to ListView1.Columns.Count-1 do
   begin
@@ -926,26 +932,26 @@ begin
 
   if ListView1.Items.Count=0 then exit;
 
-  // –{“–‚ÌƒJƒ‰ƒ€ƒCƒ“ƒfƒbƒNƒX‚ğ’²‚×‚é(ƒoƒO‘Î‰‚²‚è‰Ÿ‚µ”Å)
+  // æœ¬å½“ã®ã‚«ãƒ©ãƒ ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’èª¿ã¹ã‚‹(ãƒã‚°å¯¾å¿œã”ã‚ŠæŠ¼ã—ç‰ˆ)
   st:=Column.Caption;
 
-  if st='ƒQ[ƒ€–¼' then ColIndex:=0
-  else if st='ZIP–¼' then ColIndex:=1
-  else if st='ƒ[ƒJ[' then ColIndex:=2
-  else if st='”N“x' then ColIndex:=3
-  else if st='ƒ}ƒXƒ^' then ColIndex:=4
-  else if st='ƒhƒ‰ƒCƒo' then ColIndex:=5
+  if st='ã‚²ãƒ¼ãƒ å' then ColIndex:=0
+  else if st='ZIPå' then ColIndex:=1
+  else if st='ãƒ¡ãƒ¼ã‚«ãƒ¼' then ColIndex:=2
+  else if st='å¹´åº¦' then ColIndex:=3
+  else if st='ãƒã‚¹ã‚¿' then ColIndex:=4
+  else if st='ãƒ‰ãƒ©ã‚¤ãƒ' then ColIndex:=5
   else ColIndex:=0;
 
-  // ƒRƒ‰ƒ€—š—ğ‚ğ’²‚×‚é
+  // ã‚³ãƒ©ãƒ å±¥æ­´ã‚’èª¿ã¹ã‚‹
   if Abs(SortHistory[0]) = ColIndex+1 then
-  begin // æ“ª‚É‚ ‚éê‡‹t‡‚É‚·‚é
+  begin // å…ˆé ­ã«ã‚ã‚‹å ´åˆé€†é †ã«ã™ã‚‹
     SortHistory[0]:=-SortHistory[0];
   end
   else
   begin
 
-    // Œã‚ë‚©‚ç‚Á‚Ä—ˆ‚é
+    // å¾Œã‚ã‹ã‚‰æŒã£ã¦æ¥ã‚‹
     for i:=0 to Length(SortHistory)-1 do
     begin
       if Abs(SortHistory[i])=ColIndex+1 then
@@ -961,11 +967,11 @@ begin
 
   end;
 
-  // ƒJƒ‰ƒ€–îˆó
+  // ã‚«ãƒ©ãƒ çŸ¢å°
   SetListViewColumnSortMark( ListView1, SortHistory[0] );
   TLSub.Sort(TListSortCompare(@AscSort));
 
-  // ‘I‘ğ‚µ‚Ä‚½s‚ğ’T‚·‚Ì‚ÆAƒ\[ƒgŒã‚ÌIndex‚Ì’£‚è’¼‚µ
+  // é¸æŠã—ã¦ãŸè¡Œã‚’æ¢ã™ã®ã¨ã€ã‚½ãƒ¼ãƒˆå¾Œã®Indexã®å¼µã‚Šç›´ã—
   for i:=0 to TLMaster.Count-1 do
   begin
     if PRecordset(TLSub[i]).ZipName=SelZip then
@@ -1013,9 +1019,9 @@ begin
     else
       Result:=0;
     end;
-    
+
     if SortHistory[i] < 0 then Result:=-Result;
-    
+
     if Result<>0 then break;
 
   end;
@@ -1035,7 +1041,7 @@ begin
 
   if DoNotUpdateLV then exit;
 
-  if LVUpdating then exit; // ˆÀ‘S•Ù
+  if LVUpdating then exit; // å®‰å…¨å¼
 
   LVUpdating:=True;
 
@@ -1046,7 +1052,7 @@ begin
   CPU     := cmbCPU.Text;
   Version := cmbVersion.ItemIndex;
 
-  // ƒo[ƒWƒ‡ƒ“‚Íí‚É‹t
+  // ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯å¸¸ã«é€†
   if Version<>0 then
   begin
     Version:=cmbVersion.Items.Count-Version;
@@ -1058,7 +1064,7 @@ begin
   if Sound = TEXT_SOUND_ALL then Sound:='';
   if CPU   = TEXT_CPU_ALL then CPU:='';
 
-  // ƒeƒLƒXƒgŒŸõ‚ª–³‚¢‚Æ‚«
+  // ãƒ†ã‚­ã‚¹ãƒˆæ¤œç´¢ãŒç„¡ã„ã¨ã
   if SW='' then
   begin
 
@@ -1066,8 +1072,8 @@ begin
     TLSub.Capacity:=TLMaster.Count;
 
 
-    // ğŒ0
-    // ƒo[ƒWƒ‡ƒ“•Ê
+    // æ¡ä»¶0
+    // ãƒãƒ¼ã‚¸ãƒ§ãƒ³åˆ¥
     TLVersion.Clear;
     if Version<>0 then
     begin
@@ -1080,7 +1086,7 @@ begin
         if idx<>-1 then
         begin
 
-          // ƒMƒƒƒ“ƒuƒ‹‰B‚·ê‡
+          // ã‚®ãƒ£ãƒ³ãƒ–ãƒ«éš ã™å ´åˆ
           if HideGambling then
           begin
 
@@ -1113,7 +1119,7 @@ begin
             then
             begin
 
-                // ƒƒJƒjƒJƒ‹‚à‰B‚·ê‡
+                // ãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã‚‚éš ã™å ´åˆ
                 if HideMechanical then
                 begin
                   if PRecordset(TLMaster[idx]).isMechanical=false then
@@ -1125,7 +1131,7 @@ begin
 
           end
           else
-          // ƒƒJƒjƒJƒ‹‚¾‚¯‰B‚·ê‡
+          // ãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã ã‘éš ã™å ´åˆ
           if HideMechanical then
           begin
             if PRecordset(TLMaster[idx]).isMechanical=false then
@@ -1139,10 +1145,10 @@ begin
 
       end;
     end
-    else   // ƒo[ƒWƒ‡ƒ“•Ê‚¶‚á‚È‚¢‚Æ‚«
+    else   // ãƒãƒ¼ã‚¸ãƒ§ãƒ³åˆ¥ã˜ã‚ƒãªã„ã¨ã
     begin
 
-      // ƒƒJƒjƒJƒ‹‚ÆƒMƒƒƒ“ƒuƒ‹‰B‚·‚Æ‚«‚Ìê‡•ª‚¯
+      // ãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã¨ã‚®ãƒ£ãƒ³ãƒ–ãƒ«éš ã™ã¨ãã®å ´åˆåˆ†ã‘
       if HideMechanical and HideGambling then
         TLVersion.Assign(liNonMechGamb)
       else if HideMechanical then
@@ -1153,52 +1159,52 @@ begin
         TLVersion.Assign(TLMaster);
     end;
 
-    /// ğŒ‚P
-    // ‘¬“x—DæƒR[ƒh
+    /// æ¡ä»¶ï¼‘
+    // é€Ÿåº¦å„ªå…ˆã‚³ãƒ¼ãƒ‰
     case cmbEtc.ItemIndex of
-      1:begin // ƒ}ƒXƒ^ƒZƒbƒg
+      1:begin // ãƒã‚¹ã‚¿ã‚»ãƒƒãƒˆ
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).Master then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      2:begin // ƒNƒ[ƒ“ƒZƒbƒg
+      2:begin // ã‚¯ãƒ­ãƒ¼ãƒ³ã‚»ãƒƒãƒˆ
           for i:=0 to TLVersion.Count-1 do
           begin
             if not PRecordset(TLVersion[i]).Master then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      3:begin // “®ì‰Â”\
+      3:begin // å‹•ä½œå¯èƒ½
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).Status then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      4:begin // “®ì•s‰Â
+      4:begin // å‹•ä½œä¸å¯
           for i:=0 to TLVersion.Count-1 do
           begin
             if not PRecordset(TLVersion[i]).Status then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      5:begin // CHDƒQ[ƒ€
+      5:begin // CHDã‚²ãƒ¼ãƒ 
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).CHD<>'' then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      6:begin // ƒxƒNƒ^[
+      6:begin // ãƒ™ã‚¯ã‚¿ãƒ¼
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).Vector then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      7:begin // Œõüe
+      7:begin // å…‰ç·šéŠƒ
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).LightGun then
@@ -1214,35 +1220,35 @@ begin
           end;
         end;
 
-      9:begin // c‰æ–Ê
+      9:begin // ç¸¦ç”»é¢
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).Vertical then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      10:begin // ‰¡‰æ–Ê
+      10:begin // æ¨ªç”»é¢
           for i:=0 to TLVersion.Count-1 do
           begin
             if not PRecordset(TLVersion[i]).Vertical then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      11:begin // ƒAƒiƒƒO‘€ì
+      11:begin // ã‚¢ãƒŠãƒ­ã‚°æ“ä½œ
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).Analog then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      12:begin // ƒTƒ“ƒvƒ‹
+      12:begin // ã‚µãƒ³ãƒ—ãƒ«
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).SampleOf<>'' then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      13:begin // ƒTƒ“ƒvƒ‹•s–¾
+      13:begin // ã‚µãƒ³ãƒ—ãƒ«ä¸æ˜
           for i:=0 to TLVersion.Count-1 do
           begin
             if (PRecordset(TLVersion[i]).Sample=False) and
@@ -1250,14 +1256,14 @@ begin
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      14:begin // ROM—L‚è
+      14:begin // ROMæœ‰ã‚Š
           for i:=0 to TLVersion.Count-1 do
           begin
             if PRecordset(TLVersion[i]).ROM then
               TLSub.Add(TLVersion[i]);
           end;
         end;
-      15:begin // ROM–³‚µ
+      15:begin // ROMç„¡ã—
           for i:=0 to TLVersion.Count-1 do
           begin
             if not PRecordset(TLVersion[i]).ROM then
@@ -1270,7 +1276,7 @@ begin
         end;
     end;
 
-    // ”N
+    // å¹´
     if Year<>'' then
     begin
       i:=0;
@@ -1284,7 +1290,7 @@ begin
     end;
 
 
-    // ƒ[ƒJ[
+    // ãƒ¡ãƒ¼ã‚«ãƒ¼
     if Maker<>'' then
     begin
       i:=0;
@@ -1326,15 +1332,15 @@ begin
 
   end
   else
-  // ƒeƒLƒXƒgŒŸõ‚Ì‚Æ‚«
+  // ãƒ†ã‚­ã‚¹ãƒˆæ¤œç´¢ã®ã¨ã
   begin
 
     TLSub.Clear;
     TLSub.Capacity:=TLMaster.Count;
 
-    TLVersion.Clear;// ˆê—p
+    TLVersion.Clear;// ä¸€æ™‚ç”¨
 
-    // ƒƒJƒjƒJƒ‹‚ÆƒMƒƒƒ“ƒuƒ‹‰B‚·‚Æ‚«‚Ìê‡•ª‚¯
+    // ãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã¨ã‚®ãƒ£ãƒ³ãƒ–ãƒ«éš ã™ã¨ãã®å ´åˆåˆ†ã‘
     if HideMechanical and HideGambling then
       TLVersion.Assign(liNonMechGamb)
     else if HideMechanical then
@@ -1344,7 +1350,7 @@ begin
     else
       TLVersion.Assign(TLMaster);
 
-    // ŒŸõˆ—
+    // æ¤œç´¢å‡¦ç†
     if En then
     begin
 
@@ -1430,7 +1436,7 @@ begin
   // Update ListView
   ListView1.Items.Count:=TLSub.Count;
 
-  // ‘I‘ğ€–Ú‚Ì•œ‹A
+  // é¸æŠé …ç›®ã®å¾©å¸°
   idx:=-1;
   for i:=0 to TLSub.Count-1 do
   begin
@@ -1441,9 +1447,9 @@ begin
     end;
   end;
 
-  if TLSub.Count<>0 then  // ƒŠƒXƒg€–Ú‚ª‚ ‚é‚Æ‚«
+  if TLSub.Count<>0 then  // ãƒªã‚¹ãƒˆé …ç›®ãŒã‚ã‚‹ã¨ã
   begin
-    if idx=-1 then // ƒ}ƒbƒ`–³‚µ
+    if idx=-1 then // ãƒãƒƒãƒç„¡ã—
     begin
       ListView1.Selected:=nil; // have to be called to bring selected event
       ListView1.Items[0].Focused:=True;
@@ -1461,11 +1467,11 @@ begin
 
     end;
 
-    // ƒ\ƒtƒgƒŠƒXƒgXV
+    // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆæ›´æ–°
      frmSoftwareList.setSoftlist(ListView1.Selected.SubItems[0]);
 
   end
-  else   // ƒŠƒXƒg€–Ú‚ª–³‚¢‚Æ‚«
+  else   // ãƒªã‚¹ãƒˆé …ç›®ãŒç„¡ã„ã¨ã
   begin
 
     ListView1.Update;
@@ -1473,10 +1479,10 @@ begin
     CurrentIndex:=-1;
     UpdateStatus;
 
-    // •ÒWƒpƒlƒ‹
+    // ç·¨é›†ãƒ‘ãƒãƒ«
     ToggleEditPanel(False);
-    
-    // ƒAƒNƒVƒ‡ƒ“‚ÌŠÇ—
+
+    // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã®ç®¡ç†
     actRRefine.Hint:='';
     actROpenSrc.Hint:='';
 
@@ -1485,18 +1491,18 @@ begin
     SelZip:='';
     SelDriver:='';
 
-    // ƒXƒe[ƒ^ƒXƒo[
+    // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼
     StatusBar1.Panels[3].Text:='';
 
-    // ƒRƒ}ƒ“ƒhƒrƒ…[‚ğ‹ó‚É
+    // ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚’ç©ºã«
     frmCommand.LoadCommand('','');
 
-    // ƒ\ƒtƒgƒŠƒXƒg‚ğ‹ó‚É
+    // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆã‚’ç©ºã«
     frmSoftwareList.setSoftlist('');
 
   end;
 
-  // ‚±‚ê‚ğ—LŒø‚É‚·‚é‚Æƒhƒƒbƒvƒ_ƒEƒ“ƒŠƒXƒg‚ÌXV‚É’Ç‚¢‚Â‚©‚È‚¢
+  // ã“ã‚Œã‚’æœ‰åŠ¹ã«ã™ã‚‹ã¨ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãƒªã‚¹ãƒˆã®æ›´æ–°ã«è¿½ã„ã¤ã‹ãªã„
   //Application.ProcessMessages;
 
   ListView1.Repaint;
@@ -1509,7 +1515,7 @@ end;
 
 
 //----------------------------------------------------------------------
-// .resƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+// .resãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 //
 function TForm1.LoadResource: Integer;
 var
@@ -1524,12 +1530,12 @@ begin
 //
 
   Result:=0;
-  TLMaster.Clear;     // ƒŒƒR[ƒh‚ÌƒŠƒZƒbƒg
-  liNonMech.Clear;    // ”ñƒƒJƒjƒJƒ‹‚ÌƒŠƒZƒbƒg
+  TLMaster.Clear;     // ãƒ¬ã‚³ãƒ¼ãƒ‰ã®ãƒªã‚»ãƒƒãƒˆ
+  liNonMech.Clear;    // éãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã®ãƒªã‚»ãƒƒãƒˆ
   liNonGambling.Clear;
   liNonMechGamb.Clear;
 
-  Error := false; // ƒGƒ‰[ƒtƒ‰ƒO
+  Error := false; // ã‚¨ãƒ©ãƒ¼ãƒ•ãƒ©ã‚°
 
   StrList:=TStringList.Create;
   Flag:=False;
@@ -1547,7 +1553,7 @@ begin
       Exit;
     end;
 
-    // res‚Ìƒo[ƒWƒ‡ƒ“ƒ`ƒFƒbƒN
+    // resã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒã‚§ãƒƒã‚¯
     if AnsiPos('ResVersion=',ResList[n])=0 then
     begin
       Result:=1;
@@ -1561,14 +1567,14 @@ begin
     end;
     Inc(n);
 
-    // ƒo[ƒWƒ‡ƒ“
+    // ãƒãƒ¼ã‚¸ãƒ§ãƒ³
     if AnsiPos('version=',ResList[n])<>0 then
     begin
       DatVersion:=Copy(ResList[n],pos('version=',ResList[n])+8,Length(ResList[n]));
       Flag:=True;
     end;
 
-    // ƒ[ƒJ[–¼
+    // ãƒ¡ãƒ¼ã‚«ãƒ¼å
     if Flag then Inc(n);
     cmbMaker.Items.Clear;
     cmbMaker.Items.Add(TEXT_MAKER_ALL);
@@ -1578,12 +1584,12 @@ begin
       cmbMaker.Items.Add(StrList[i]);
     end;
 
-    // ƒ[ƒJ[–¼ŒŸõƒLƒƒƒbƒVƒ…‚Ì‰Šú‰»
+    // ãƒ¡ãƒ¼ã‚«ãƒ¼åæ¤œç´¢ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã®åˆæœŸåŒ–
     SetLength(TLManu, 0);
     SetLength(TLManu, cmbMaker.Items.Count);
     Inc(n);
 
-    // ”N‘ãƒŠƒXƒg
+    // å¹´ä»£ãƒªã‚¹ãƒˆ
     cmbYear.Items.Clear;
     cmbYear.Items.Add(TEXT_YEAR_ALL);
     cmbYear.ItemIndex:=0;
@@ -1620,11 +1626,11 @@ begin
     SetVersionINI;
     ////
 
-    // ‚»‚Ì‘¼
+    // ãã®ä»–
     cmbEtc.ItemIndex:=0;
 
 //  ms := GetTickCount;
-    // ƒQ[ƒ€î•ñ
+    // ã‚²ãƒ¼ãƒ æƒ…å ±
     i:=0;
 
     try
@@ -1639,53 +1645,53 @@ begin
 
         With NewItem^ do
         begin
-          ZipName     := StrList[0];              // Zip–¼
-          DescE       := StrList[1];              // ‰pŒê–¼
-          DescJ       := StrList[1];              // “ú–{Œê–¼i‰¼)
-          Kana        := StrList[1];              // ‚©‚Èi‰¼)
-          Maker       := StrList[2];              // ƒ[ƒJ[
-          Year        := StrList[3];              // »‘¢”N
-          CloneOf     := StrList[4];              // ƒ}ƒXƒ^–¼
+          ZipName     := StrList[0];              // Zipå
+          DescE       := StrList[1];              // è‹±èªå
+          DescJ       := StrList[1];              // æ—¥æœ¬èªåï¼ˆä»®)
+          Kana        := StrList[1];              // ã‹ãªï¼ˆä»®)
+          Maker       := StrList[2];              // ãƒ¡ãƒ¼ã‚«ãƒ¼
+          Year        := StrList[3];              // è£½é€ å¹´
+          CloneOf     := StrList[4];              // ãƒã‚¹ã‚¿å
           RomOf       := StrList[5];              // RomOf
-          SampleOf    := StrList[6];              // ƒTƒ“ƒvƒ‹–¼
-          ID          := i;                       // ƒCƒ“ƒfƒbƒNƒX (ƒTƒuƒŠƒXƒg‚©‚çQÆ)
-          MasterID    := StrtoInt(StrList[7]);    // ƒ}ƒXƒ^‚ÌID
-          Master      := StrtoBool(StrList[8]);   // ƒ}ƒXƒ^
-          Vector      := StrtoBool(StrList[9]);   // ƒxƒNƒ^[
-          Lightgun    := StrtoBool(StrList[10]);  // Œõüe
-          Analog      := StrtoBool(StrList[11]);  // ƒAƒiƒƒO“ü—Í
-          Status      := StrtoBool(StrList[12]);  // ƒXƒe[ƒ^ƒX
-          Vertical    := StrtoBool(StrList[13]);  // c‰æ–Ê
-          Channels    := StrtoInt(StrList[14]);   // ƒTƒEƒ“ƒhƒ`ƒƒƒ“ƒlƒ‹”
+          SampleOf    := StrList[6];              // ã‚µãƒ³ãƒ—ãƒ«å
+          ID          := i;                       // ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ (ã‚µãƒ–ãƒªã‚¹ãƒˆã‹ã‚‰å‚ç…§)
+          MasterID    := StrtoInt(StrList[7]);    // ãƒã‚¹ã‚¿ã®ID
+          Master      := StrtoBool(StrList[8]);   // ãƒã‚¹ã‚¿
+          Vector      := StrtoBool(StrList[9]);   // ãƒ™ã‚¯ã‚¿ãƒ¼
+          Lightgun    := StrtoBool(StrList[10]);  // å…‰ç·šéŠƒ
+          Analog      := StrtoBool(StrList[11]);  // ã‚¢ãƒŠãƒ­ã‚°å…¥åŠ›
+          Status      := StrtoBool(StrList[12]);  // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
+          Vertical    := StrtoBool(StrList[13]);  // ç¸¦ç”»é¢
+          Channels    := StrtoInt(StrList[14]);   // ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ£ãƒ³ãƒãƒ«æ•°
           CPUs        := StrList[15];             // CPUs
           Sounds      := StrList[16];             // Sound chips
-          Screens     := StrList[17];             // ‰æ–Êî•ñ
-          NumScreens  := StrtoInt(StrList[18]);   // ‰æ–Ê”
-          Palettesize := StrtoInt(StrList[19]);   // F”
-          ResX        := StrtoInt(StrList[20]);   // ‰ğ‘œ“xX
-          ResY        := StrtoInt(StrList[21]);   // ‰ğ‘œ“xY
+          Screens     := StrList[17];             // ç”»é¢æƒ…å ±
+          NumScreens  := StrtoInt(StrList[18]);   // ç”»é¢æ•°
+          Palettesize := StrtoInt(StrList[19]);   // è‰²æ•°
+          ResX        := StrtoInt(StrList[20]);   // è§£åƒåº¦X
+          ResY        := StrtoInt(StrList[21]);   // è§£åƒåº¦Y
 
           Color       := TGameStatus(StrtoInt(StrList[22]));
-                                                  // FƒXƒe[ƒ^ƒX
+                                                  // è‰²ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
           Sound       := TGameStatus(StrtoInt(StrList[23]));
-                                                  // ‰¹ƒXƒe[ƒ^ƒX
+                                                  // éŸ³ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
           GFX         := TGameStatus(StrtoInt(StrList[24]));
-                                                  // GFXƒXƒe[ƒ^ƒX
+                                                  // GFXã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
           Protect     := TGameStatus(StrtoInt(StrList[25]));
-                                                  // ƒvƒƒeƒNƒgƒXƒe[ƒ^ƒX
+                                                  // ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
           Cocktail    := TGameStatus(StrtoInt(StrList[26]));
-                                                  // ƒJƒNƒeƒ‹ƒe[ƒ^ƒX
+                                                  // ã‚«ã‚¯ãƒ†ãƒ«ãƒ†ãƒ¼ã‚¿ã‚¹
           SaveState   := TGameStatus(StrtoInt(StrList[27]));
-                                                  // ƒZ[ƒuƒXƒe[ƒg
-          Source      := StrList[28];             // ƒ\[ƒX
+                                                  // ã‚»ãƒ¼ãƒ–ã‚¹ãƒ†ãƒ¼ãƒˆ
+          Source      := StrList[28];             // ã‚½ãƒ¼ã‚¹
           CHD         := StrList[29];             // CHD
-          CHDOnly     := StrtoBool(StrList[30]);  // CHD‚Ì‚İ
-          CHDMerge    := StrtoBool(StrList[31]);  // CHDƒ}[ƒW
-          LD          := StrtoBool(StrList[32]);  // ƒŒ[ƒU[ƒfƒBƒXƒN
-          CHDNoDump   := StrtoBool(StrList[33]);  // CHD–¢‹z‚¢o‚µ
-          isMechanical:= StrtoBool(StrList[34]);  // ƒƒJƒjƒJƒ‹ƒQ[ƒ€
-          ROM         := False;                   // ROM—L‚è‚©
-          Sample      := False;                   // Sample—L‚è‚©
+          CHDOnly     := StrtoBool(StrList[30]);  // CHDã®ã¿
+          CHDMerge    := StrtoBool(StrList[31]);  // CHDãƒãƒ¼ã‚¸
+          LD          := StrtoBool(StrList[32]);  // ãƒ¬ãƒ¼ã‚¶ãƒ¼ãƒ‡ã‚£ã‚¹ã‚¯
+          CHDNoDump   := StrtoBool(StrList[33]);  // CHDæœªå¸ã„å‡ºã—
+          isMechanical:= StrtoBool(StrList[34]);  // ãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã‚²ãƒ¼ãƒ 
+          ROM         := False;                   // ROMæœ‰ã‚Šã‹
+          Sample      := False;                   // Sampleæœ‰ã‚Šã‹
 
         end;
 
@@ -1702,7 +1708,7 @@ begin
   end;
 
 
-  // ”ñƒƒJƒjƒJƒ‹ƒZƒbƒg‚Ì’Šo
+  // éãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã‚»ãƒƒãƒˆã®æŠ½å‡º
   for i := 0 to TLMaster.Count - 1 do
   begin
 
@@ -1711,7 +1717,7 @@ begin
 
   end;
 
-  // ”ñƒMƒƒƒ“ƒuƒ‹ƒZƒbƒg‚Ì’Šo
+  // éã‚®ãƒ£ãƒ³ãƒ–ãƒ«ã‚»ãƒƒãƒˆã®æŠ½å‡º
   for i := 0 to TLMaster.Count - 1 do
   begin
 
@@ -1766,7 +1772,7 @@ begin
 
   end;
 
-  // ”ñƒMƒƒƒ“ƒuƒ‹{”ñƒƒJƒjƒJƒ‹ƒZƒbƒg‚Ì’Šo
+  // éã‚®ãƒ£ãƒ³ãƒ–ãƒ«ï¼‹éãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã‚»ãƒƒãƒˆã®æŠ½å‡º
   for i := 0 to liNonGambling.Count - 1 do
   begin
 
@@ -1778,7 +1784,7 @@ end;
 
 
 /// ----------------------------------------------------------------------------
-// mame32plus‚Ìlangƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İ
+// mame32plusã®langãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã¿
 function TForm1.ReadLang: boolean;
 
 type
@@ -1789,14 +1795,14 @@ type
     Kana  : string;  //
     Flag  : boolean; //
   end;
-  
-  // lang‚Ì•À‚Ñ‡‚É‡‚í‚¹‚é(‰pŒê–¼‚Åƒ\[ƒg)
+
+  // langã®ä¸¦ã³é †ã«åˆã‚ã›ã‚‹(è‹±èªåã§ã‚½ãƒ¼ãƒˆ)
   function LangSort(Item1, Item2: Pointer): Integer;
   begin
     Result := CompareText(PRecordset(Item1).DescE, PRecordset(Item2).DescE);
   end;
 
-  // MMO(‰pŒê–¼‚Åƒ\[ƒg)
+  // MMO(è‹±èªåã§ã‚½ãƒ¼ãƒˆ)
   function MMOSort(Item1, Item2: Pointer): Integer;
   begin
     Result := CompareText(PMMOList(Item1).DescE, PMMOList(Item2).DescE);
@@ -1809,11 +1815,11 @@ var
   StrStream:  TStringStream;
   Buf1,Buf2:  Byte;
   ST,DescE:   String;
-  MMOList:    TList; // .mmo‚©‚ç“Ç‚İ‚ñ‚¾ƒtƒ@ƒCƒ‹—p
+  MMOList:    TList; // .mmoã‹ã‚‰èª­ã¿è¾¼ã‚“ã ãƒ•ã‚¡ã‚¤ãƒ«ç”¨
   i,j,k:      Integer;
   p:          PByte;
   Flag:       boolean;
-  TLSort:     TList;  // ƒ\[ƒg—p
+  TLSort:     TList;  // ã‚½ãƒ¼ãƒˆç”¨
 
 begin
 
@@ -1832,7 +1838,7 @@ begin
   mmo2:= TMemoryStream.Create;
   StrStream := TStringStream.Create(St);
   MMOList:=TList.Create;
-  
+
   try
     try
       mmo.LoadFromFile(langDir+'\ja_JP\lst.mmo');
@@ -1841,7 +1847,7 @@ begin
         mmo.Seek(2,soFromCurrent);
         mmo.Read(Buf1,1);
         mmo.Read(Buf2,1);
-      until ((Buf2<>0) and (buf1>13)); // Š®‘S‚¶‚á‚È‚¢‚©‚à
+      until ((Buf2<>0) and (buf1>13)); // å®Œå…¨ã˜ã‚ƒãªã„ã‹ã‚‚
 
       mmo.Seek(-4,soFromCurrent);
 
@@ -1858,7 +1864,7 @@ begin
       for i:=0 to mmo2.Size-1 do
       begin
 
-        if (p^)=0 then // Null•¶š
+        if (p^)=0 then // Nullæ–‡å­—
         begin
           StrStream.CopyFrom(mmo2,i-j);
 
@@ -1888,9 +1894,9 @@ begin
       end;
 
     except
-      Application.MessageBox('lst.mmo‚Ì“Ç‚İ‚İ‚ÉƒGƒ‰[‚ª‹N‚«‚Ü‚µ‚½B'+CRLF2+
-                              '‚½‚Ô‚ñmmoƒtƒ@ƒCƒ‹‘¤‚É–â‘è‚ª‚ ‚è‚Ü‚·B ',
-                              'ƒGƒ‰[', MB_ICONERROR + MB_OK);
+      Application.MessageBox('lst.mmoã®èª­ã¿è¾¼ã¿æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒèµ·ãã¾ã—ãŸã€‚'+CRLF2+
+                              'ãŸã¶ã‚“mmoãƒ•ã‚¡ã‚¤ãƒ«å´ã«å•é¡ŒãŒã‚ã‚Šã¾ã™ã€‚ ',
+                              'ã‚¨ãƒ©ãƒ¼', MB_ICONERROR + MB_OK);
       Result:=False;
     end;
 
@@ -1919,7 +1925,7 @@ begin
         mmo.Seek(2,soFromCurrent);
         mmo.Read(Buf1,1);
         mmo.Read(Buf2,1);
-      until ((Buf2<>0) and (buf1>13)); // Š®‘S‚¶‚á‚È‚¢‚©‚à
+      until ((Buf2<>0) and (buf1>13)); // å®Œå…¨ã˜ã‚ƒãªã„ã‹ã‚‚
 
       mmo.Seek(-4,soFromCurrent);
 
@@ -1935,7 +1941,7 @@ begin
       for i:=0 to mmo2.Size-1 do
       begin
 
-        if (p^)=0 then // Null•¶š
+        if (p^)=0 then // Nullæ–‡å­—
         begin
           StrStream.CopyFrom(mmo2,i-j);
 
@@ -1973,9 +1979,9 @@ begin
       end;
 
     except
-      Application.MessageBox('readings.mmo‚Ì“Ç‚İ‚İ‚ÉƒGƒ‰[‚ª‹N‚«‚Ü‚µ‚½B'+
-                             CRLF2+'‚½‚Ô‚ñƒtƒ@ƒCƒ‹‚É–â‘è‚ª‚ ‚è‚Ü‚·B  ',
-                             'ƒGƒ‰[', MB_ICONERROR + MB_OK);
+      Application.MessageBox('readings.mmoã®èª­ã¿è¾¼ã¿æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒèµ·ãã¾ã—ãŸã€‚'+
+                             CRLF2+'ãŸã¶ã‚“ãƒ•ã‚¡ã‚¤ãƒ«ã«å•é¡ŒãŒã‚ã‚Šã¾ã™ã€‚  ',
+                             'ã‚¨ãƒ©ãƒ¼', MB_ICONERROR + MB_OK);
       Result:=False;
     end;
 
@@ -1987,7 +1993,7 @@ begin
   if Result=False then
     exit;
 
-  // Š„‚è“–‚Ä
+  // å‰²ã‚Šå½“ã¦
   j:=0;
   TLSort:=TList.Create;
   for i:=0 to TLMaster.Count-1 do
@@ -2014,7 +2020,7 @@ begin
 
   end;
 
-  // ƒƒ‚ƒŠ‰ğ•ú
+  // ãƒ¡ãƒ¢ãƒªè§£æ”¾
   for i:=0 to MMOList.Count-1 do
     dispose(PMMOList(MMOList[i]));
 
@@ -2062,11 +2068,11 @@ begin
       end;
 
     end;
-    
+
   finally
     CloseFile(F1);
   end;
-  
+
 end;
 
 
@@ -2080,16 +2086,16 @@ begin
   Application.HintPause := 250;
   Application.HintHidePause := 5000;
 
-  // ƒRƒ“ƒgƒ[ƒ‹‚ÌƒEƒBƒ“ƒhƒEŠÖ”‚ğ“ü‚ê‘Ö‚¦
-  // Œ³‚ÌƒEƒBƒ“ƒhƒEŠÖ”‚Í•Û‘¶‚µ‚Ä‚¨‚­
+  // ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢æ•°ã‚’å…¥ã‚Œæ›¿ãˆ
+  // å…ƒã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢æ•°ã¯ä¿å­˜ã—ã¦ãŠã
   OriginProc :=ListView1.WindowProc;
   ListView1.WindowProc :=SubClassProc;
 
 
-  // ƒXƒiƒbƒv—pƒoƒbƒtƒ@
+  // ã‚¹ãƒŠãƒƒãƒ—ç”¨ãƒãƒƒãƒ•ã‚¡
   SnapBitMap:=TPngImage.Create;
 
-  // ƒXƒe[ƒ^ƒXƒo[—pƒoƒbƒtƒ@
+  // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ç”¨ãƒãƒƒãƒ•ã‚¡
   StatusBarBuf:=TBitMap.Create;
   StatusBarBuf.Width:= SB_LRMARGIN * 2 +
                        (32 + SB_MARKDISTANCE + SB_ITEMDISTANCE) *
@@ -2099,7 +2105,7 @@ begin
   StatusBarBuf.Height:=16;
   StatusBar1.Panels[4].Width:=StatusBarBuf.Width;
 
-  // TrackList—pTList
+  // TrackListç”¨TList
   TLMaster:=TList.Create;
   TLSub:=TList.Create;
   TLFamily:=TList.Create;
@@ -2109,7 +2115,7 @@ begin
   liNonMechGamb:=TList.Create;
 
 
-  // ƒTƒuƒŠƒXƒg‚É•\¦’†‚ÌROMƒZƒbƒg
+  // ã‚µãƒ–ãƒªã‚¹ãƒˆã«è¡¨ç¤ºä¸­ã®ROMã‚»ãƒƒãƒˆ
   SubListID:=-1;
 
 
@@ -2129,10 +2135,10 @@ begin
   Panel12.DoubleBuffered:=True;
   Panel10.DoubleBuffered:=True;
 
-  // ‚¨‹C‚É“ü‚è—pƒAƒNƒVƒ‡ƒ“İ’è
+  // ãŠæ°—ã«å…¥ã‚Šç”¨ã‚¢ã‚¯ã‚·ãƒ§ãƒ³è¨­å®š
   CreateFavoriteActions;
 
-  // Å‰‚ÉƒtƒH[ƒ€‚ªSHOW‚µ‚½Œã‚ğActive‚ÅŠm”F‚·‚é‚½‚ß‚Ìƒtƒ‰ƒO
+  // æœ€åˆã«ãƒ•ã‚©ãƒ¼ãƒ ãŒSHOWã—ãŸå¾Œã‚’Activeã§ç¢ºèªã™ã‚‹ãŸã‚ã®ãƒ•ãƒ©ã‚°
   bFormActivated := False;
 
 end;
@@ -2142,7 +2148,7 @@ procedure TForm1.FormDestroy(Sender: TObject);
 var i: integer;
 begin
 
-  // TList‚ÌŠe€–Ú‚Ìƒƒ‚ƒŠ‰ğ•ú
+  // TListã®å„é …ç›®ã®ãƒ¡ãƒ¢ãƒªè§£æ”¾
   for i:= 0 to TLMaster.count-1 do dispose(PRecordset(TLMaster[i]));
 
   TLMaster.Clear;
@@ -2165,9 +2171,9 @@ var
   SelMasterID:Integer;
 begin
 
-  // ‘I‘ğ‚ÉXV‘O‚ÆXVŒã‚Ì2‰ñŒÄ‚Ño‚³‚ê‚é‚Ì‚Å‘O‚Ì•û‚ğ‚Í‚¶‚­
-  // XV‘O: Selected=False, Item.Index=•s’è
-  // XVŒã: Selected=True,  Item.Index=‚ ‚è
+  // é¸æŠæ™‚ã«æ›´æ–°å‰ã¨æ›´æ–°å¾Œã®2å›å‘¼ã³å‡ºã•ã‚Œã‚‹ã®ã§å‰ã®æ–¹ã‚’ã¯ã˜ã
+  // æ›´æ–°å‰: Selected=False, Item.Index=ä¸å®š
+  // æ›´æ–°å¾Œ: Selected=True,  Item.Index=ã‚ã‚Š
   if not Selected then exit;
 
   if DoNotUpdate and (booting=false) then exit;
@@ -2175,7 +2181,7 @@ begin
   //
   if TLSub.Count=0 then exit;
 
-  // ‹óƒŠƒXƒg‚Ì‚Æ‚«
+  // ç©ºãƒªã‚¹ãƒˆã®ã¨ã
   if (ListView1.Items.Count=0) or (Item.Index=-1) then
   begin
 
@@ -2183,39 +2189,39 @@ begin
     Memo1.Text:='';
     CurrentShot:='';
 
-    // •ÒWƒEƒBƒ“ƒhƒE
+    // ç·¨é›†ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
     ToggleEditPanel(False);
 
-    // ƒQ[ƒ€ƒXƒe[ƒ^ƒXƒAƒCƒRƒ“
+    // ã‚²ãƒ¼ãƒ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚¢ã‚¤ã‚³ãƒ³
     UpdateStatus;
 
-    // ƒRƒ}ƒ“ƒhƒrƒ…[
+    // ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼
     frmCommand.LoadCommand('','');
 
-    // ƒ\ƒtƒgƒŠƒXƒg
+    // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆ
     frmSoftwareList.setSoftlist('');
 
   end
   else
-  // ƒŠƒXƒg€–Ú‚ ‚è
+  // ãƒªã‚¹ãƒˆé …ç›®ã‚ã‚Š
   begin
 
     CurrentIndex:=StrtoInt(Item.SubItems[5]);
 
-    // ƒRƒ}ƒ“ƒhƒrƒ…[
+    // ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼
     frmCommand.LoadCommand(
             PRecordSet(TLMaster[ CurrentIndex ]).ZipName,
             PRecordSet(TLMaster[ PRecordSet(TLMaster[currentIndex]).MasterID ]).ZipName );
 
-    // •ÒWƒEƒBƒ“ƒhƒE‚Éî•ñ•\¦
-    EditingIndex:=CurrentIndex; // •ÒW‘ÎÛ‚ÌƒCƒ“ƒfƒbƒNƒX
+    // ç·¨é›†ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«æƒ…å ±è¡¨ç¤º
+    EditingIndex:=CurrentIndex; // ç·¨é›†å¯¾è±¡ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
     UpdateEditPanel(EditingIndex);
 
-    // ƒXƒe[ƒ^ƒXƒo[
+    // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼
     StatusBar1.Panels[3].Text:=PRecordSet(TLMaster[CurrentIndex]).DescE;
 
-    /// ƒTƒuƒŠƒXƒg‚ÉROMƒtƒ@ƒ~ƒŠ•\¦
-    //  ƒTƒuƒŠƒXƒg‚ÌXV‚ª•K—v‚Èê‡
+    /// ã‚µãƒ–ãƒªã‚¹ãƒˆã«ROMãƒ•ã‚¡ãƒŸãƒªè¡¨ç¤º
+    //  ã‚µãƒ–ãƒªã‚¹ãƒˆã®æ›´æ–°ãŒå¿…è¦ãªå ´åˆ
     SelMasterID:=PRecordSet(TLMaster[CurrentIndex]).MasterID;
 
     if SubListID <> SelMasterID then
@@ -2224,10 +2230,10 @@ begin
 
       TLFamily.Clear;
 
-      // ƒ}ƒXƒ^’Ç‰Á
+      // ãƒã‚¹ã‚¿è¿½åŠ 
       TLFamily.Add(TLMaster[SubListID]);
 
-      // ƒNƒ[ƒ“’Ç‰Á
+      // ã‚¯ãƒ­ãƒ¼ãƒ³è¿½åŠ 
       for i:=0 to TLMaster.Count-1 do
       begin
 
@@ -2243,7 +2249,7 @@ begin
 
     end;
 
-    // ƒTƒuƒŠƒXƒg€–Ú‚Ì‘I‘ğ
+    // ã‚µãƒ–ãƒªã‚¹ãƒˆé …ç›®ã®é¸æŠ
     DoNotUpdateSL:=True;
     for i:=0 to ListView2.Items.Count-1 do
     begin
@@ -2261,23 +2267,23 @@ begin
     end;
     DoNotUpdateSL:=False;
 
-    // •\¦’†‚È‚ç‚·‚®XV‚ğ‚©‚¯‚é
+    // è¡¨ç¤ºä¸­ãªã‚‰ã™ãæ›´æ–°ã‚’ã‹ã‘ã‚‹
     if Panel7.Visible then
       Panel7.Update;
 
-    // ƒQ[ƒ€ƒXƒe[ƒ^ƒXƒAƒCƒRƒ“•\¦
+    // ã‚²ãƒ¼ãƒ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚¢ã‚¤ã‚³ãƒ³è¡¨ç¤º
     UpdateStatus;
 
     // dat
     FindDat(CurrentIndex);
 
-    // ƒ\ƒtƒgƒŠƒXƒg
+    // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆ
     frmSoftwareList.setSoftlist(Item.SubItems[0]);
 
-    // ƒXƒiƒbƒvƒVƒ‡ƒbƒg
+    // ã‚¹ãƒŠãƒƒãƒ—ã‚·ãƒ§ãƒƒãƒˆ
     ShowSnapshot(CurrentIndex);
 
-    // ƒAƒNƒVƒ‡ƒ“
+    // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
     if ListView1.ItemIndex<>-1 then
     begin
       actRRefine.Hint:=PRecordSet(TLSub[ListView1.ItemIndex]).Source;
@@ -2287,14 +2293,14 @@ begin
 
   end;
 
-  SelZip:=Item.SubItems[0]; // ‘I‘ğ’†‚ÌZip–¼
-  SelDriver:=Item.SubItems[4]; // ‘I‘ğ’†‚Ìƒhƒ‰ƒCƒo–¼
+  SelZip:=Item.SubItems[0]; // é¸æŠä¸­ã®Zipå
+  SelDriver:=Item.SubItems[4]; // é¸æŠä¸­ã®ãƒ‰ãƒ©ã‚¤ãƒå
   actDelUpdate(nil);
 
 end;
 
 //-------------------------------------------------------------------------
-// MAME‹N“®ˆ—
+// MAMEèµ·å‹•å‡¦ç†
 procedure TForm1.RunMAME(const ZipName: string);
   var opt: string;
 begin
@@ -2310,7 +2316,7 @@ begin
 end;
 
 //------------------------------------------------------------------------
-// ƒ\ƒtƒgƒŠƒXƒg‹N“®ˆ—
+// ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆèµ·å‹•å‡¦ç†
 procedure TForm1.RunSoft(const SoftName: string);
   var opt: string;
 begin
@@ -2325,7 +2331,7 @@ begin
 end;
 
 //-----------------------------------------------------------------------
-// MAME‹N“®Àˆ—
+// MAMEèµ·å‹•å®Ÿå‡¦ç†
 procedure TForm1.ExecuteMAME(
             const ZipName: String;
             const ExePath: String;
@@ -2352,7 +2358,7 @@ begin
       WshShell := CreateOleObject('WScript.Shell');
       Exe := ExePath;
       Work:= WorkDir;
-      
+
       if not System.IOUtils.TPath.IsPathRooted( Exe ) then
       begin
         Exe := RelToAbs( Exe, ExeDir );
@@ -2362,12 +2368,12 @@ begin
       begin
         Work := RelToAbs( Work, ExeDir );
       end;
-      
-      WshShell.CurrentDirectory := Work;      
+
+      WshShell.CurrentDirectory := Work;
       oExec := WshShell.run('%comspec% /k "'+ Exe+'" '+ZipName+' '+Option);
 
     except
-      showMessage('‹N“®¸”sB’Êí‚Ì‹N“®•û–@‚ğ‚µ‚Ä‚­‚¾‚³‚¢B');
+      showMessage('èµ·å‹•å¤±æ•—ã€‚é€šå¸¸ã®èµ·å‹•æ–¹æ³•ã‚’è©¦ã—ã¦ãã ã•ã„ã€‚');
     end;
   end;
 
@@ -2391,7 +2397,7 @@ begin
   Item.Subitems.Add(PRecordSet(TLSub[i]).Source);
   Item.Subitems.Add(InttoStr(PRecordSet(TLSub[i]).ID));
 
-  // ƒAƒCƒRƒ“
+  // ã‚¢ã‚¤ã‚³ãƒ³
   if PRecordSet(TLSub[i]).Status then
     if PRecordSet(TLSub[i]).Master then
       Item.ImageIndex:=0
@@ -2420,12 +2426,12 @@ begin
 
 end;
 
-// ƒf[ƒ^ŒŸõ—v‹iƒL[“ü—Í‚ ‚èj
+// ãƒ‡ãƒ¼ã‚¿æ¤œç´¢è¦æ±‚ï¼ˆã‚­ãƒ¼å…¥åŠ›ã‚ã‚Šï¼‰
 procedure TForm1.FormShow(Sender: TObject);
 var
   i,j,k: Integer;
   result: Integer;
-  // debug—p
+  // debugç”¨
   ms          : Cardinal;
 begin
 
@@ -2436,26 +2442,26 @@ begin
   // ExeDir
   ExeDir:=ExtractFilePath(Application.ExeName);
 
-  // İ’è‰Šú‰»
+  // è¨­å®šåˆæœŸåŒ–
   InitParams;
 
 
-  // resƒtƒ@ƒCƒ‹–¼‚Ì•ÏX‚É”º‚¤XV
+  // resãƒ•ã‚¡ã‚¤ãƒ«åã®å¤‰æ›´ã«ä¼´ã†æ›´æ–°
   if ( FileExists(ExeDir+'retrofire.res') AND ( NOT FileExists( ExeDir+RESNAME ))) then
   begin
     try
       RenameFile(ExeDir+'retrofire.res', ExeDir+RESNAME);
     except
       PostMessage(Handle,WM_CLOSE,0,0);
-       Application.MessageBox('ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ìƒtƒ@ƒCƒ‹–¼‚ª•ÏX‚³‚ê‚Ü‚µ‚½B  '+CRLF2+
-      'uretrofire.resvƒtƒ@ƒCƒ‹‚ğu'+RESNAME+'v‚É‰ü–¼‚µ‚ÄÄ‹N“®‚µ‚Ä‰º‚³‚¢B  ',APPNAME, MB_ICONWARNING  + MB_OK);
+       Application.MessageBox('ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åãŒå¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚  '+CRLF2+
+      'ã€Œretrofire.resã€ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã€Œ'+RESNAME+'ã€ã«æ”¹åã—ã¦å†èµ·å‹•ã—ã¦ä¸‹ã•ã„ã€‚  ',APPNAME, MB_ICONWARNING  + MB_OK);
       Application.Terminate;
       exit;
     end;
   end;
 
 
-  // ‰‰ñ‹N“®‚Ìˆ—
+  // åˆå›èµ·å‹•æ™‚ã®å‡¦ç†
   if FileExists(ExeDir+RESNAME)=False then
   begin
 
@@ -2470,11 +2476,11 @@ begin
 
   result:= LoadResource;
 
-  // ƒŠƒ\[ƒX“Ç‚İ‚İ
+  // ãƒªã‚½ãƒ¼ã‚¹èª­ã¿è¾¼ã¿
   if result=1 then
   begin
-    Application.MessageBox('ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÌƒtƒH[ƒ}ƒbƒg‚ªXV‚³‚ê‚Ü‚µ‚½B  '+CRLF2+
-          'u'+RESNAME+'vƒtƒ@ƒCƒ‹‚ğíœ‚µ‚ÄAÄ‹N“®‚µ‚Ä‰º‚³‚¢B  ',APPNAME, MB_ICONWARNING  + MB_OK);
+    Application.MessageBox('ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒæ›´æ–°ã•ã‚Œã¾ã—ãŸã€‚  '+CRLF2+
+          'ã€Œ'+RESNAME+'ã€ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¦ã€å†èµ·å‹•ã—ã¦ä¸‹ã•ã„ã€‚  ',APPNAME, MB_ICONWARNING  + MB_OK);
     PostMessage(Handle,WM_CLOSE,0,0);
     Application.Terminate;
     Exit;
@@ -2482,27 +2488,27 @@ begin
   else
   if result=2 then
   begin
-    Application.MessageBox('ƒf[ƒ^ƒtƒ@ƒCƒ‹u'+RESNAME+'v‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B  '+CRLF2+
-          'iMAME‚ÌXV‚É”º‚¢ALIST.XMLƒtƒH[ƒ}ƒbƒg‚ª•ÏX‚³‚ê‚½‰Â”\«‚ª‚ ‚è‚Ü‚·Bj',APPNAME, MB_ICONWARNING  + MB_OK);
+    Application.MessageBox('ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã€Œ'+RESNAME+'ã€ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚  '+CRLF2+
+          'ï¼ˆMAMEã®æ›´æ–°ã«ä¼´ã„ã€LIST.XMLãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒå¤‰æ›´ã•ã‚ŒãŸå¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚ï¼‰',APPNAME, MB_ICONWARNING  + MB_OK);
     PostMessage(Handle,WM_CLOSE,0,0);
     Application.Terminate;
     Exit;
   end;
 
 
-  // ini“Ç‚İ‚İ
+  // inièª­ã¿è¾¼ã¿
   LoadIni;
 
-  /// ƒRƒ}ƒ“ƒhƒrƒ…[ƒA
-  // ˆê‰’l‚ğƒ`ƒFƒbƒN
-  // ‰E’[‚ğ’´‚¦‚Ä‚¢‚È‚¢‚©
+  /// ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢
+  // ä¸€å¿œå€¤ã‚’ãƒã‚§ãƒƒã‚¯
+  // å³ç«¯ã‚’è¶…ãˆã¦ã„ãªã„ã‹
   frmCommand.LoadCommandDat(datDir);
   if ComViewerLeft < Screen.Width-10 then
     frmCommand.Left := ComViewerLeft
   else
     frmCommand.Left := Screen.Width-ComViewerWidth;
 
-  // ‰º’[‚ğ’´‚¦‚Ä‚¢‚È‚¢‚©
+  // ä¸‹ç«¯ã‚’è¶…ãˆã¦ã„ãªã„ã‹
   if ComViewerTop < Screen.WorkAreaRect.Bottom-10 then
     frmCommand.Top := ComViewerTop
   else
@@ -2511,22 +2517,22 @@ begin
   frmCommand.Width := ComViewerWidth;
   frmCommand.Height := ComViewerHeight;
 
-  // í‚Éè‘O‚Æ‚©
+  // å¸¸ã«æ‰‹å‰ã¨ã‹
   frmCommand.chkP2.Checked          := ComViewerP2;
   frmCommand.chkZentoHan.Checked    := ComViewerZentoHan;
   frmCommand.chkAlwaysOnTop.Checked := ComViewerAlwaysOnTop;
   frmCommand.chkAutoResize.Checked  := ComViewerAutoResize;
 
-  frmCommand.initialIndex := ComViewerIndex; // ƒhƒƒbƒvƒ_ƒEƒ“‰Šú’liŒó•âj
+  frmCommand.initialIndex := ComViewerIndex; // ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³åˆæœŸå€¤ï¼ˆå€™è£œï¼‰
 
 
-  // ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg
+  // ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆ
   if SoftwareListLeft < Screen.Width-10 then
     frmSoftwareList.Left := SoftwareListLeft
   else
     frmSoftwareList.Left := Screen.Width-SoftwareListWidth;
 
-  // ‰º’[‚ğ’´‚¦‚Ä‚¢‚È‚¢‚©
+  // ä¸‹ç«¯ã‚’è¶…ãˆã¦ã„ãªã„ã‹
   if SoftwareListTop < Screen.WorkAreaRect.Bottom-10 then
     frmSoftwareList.Top := SoftwareListTop
   else
@@ -2536,13 +2542,13 @@ begin
   frmSoftwareList.Height := SoftwareListHeight;
 
 
-  // ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‰Šú‰»
+  // ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆåˆæœŸåŒ–
   actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
   if En then
     frmSoftwareList.updateLang('en');
 
 
-  // í‚Éè‘O‚Æ‚©
+  // å¸¸ã«æ‰‹å‰ã¨ã‹
   frmSoftwareList.chkAlwaysOnTop.Checked  := SoftwareListAlwaysOnTop;
 
   frmSoftwareList.columnSort := SoftwareListColumnSort;
@@ -2566,14 +2572,14 @@ begin
     ActionManager1.ActionBars[0].Items[1].Items[3].ImageIndex:=1;
   end;
 
-  // ƒoƒO‘Î‰
+  // ãƒã‚°å¯¾å¿œ
   ActionMainMenuBar1.UseSystemFont:=True;
 
   //
   Booting:=True;
 
 
-  // ƒAƒXƒyƒNƒg”ä‚ğ•Û‚Ìƒ`ƒFƒbƒN
+  // ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã‚’ä¿æŒã®ãƒã‚§ãƒƒã‚¯
   actKeepAspect.Checked := KeepAspect;
 
 
@@ -2581,12 +2587,12 @@ begin
   ReadHistoryDat;
   ReadMameInfoDat;
 
-  CreateZipIndex; // ZIP–¼‚ÌƒCƒ“ƒfƒbƒNƒXì¬
+  CreateZipIndex; // ZIPåã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ä½œæˆ
 
 
   ms:=gettickcount;
 
-  // ROMƒXƒe[ƒ^ƒX
+  // ROMã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
   k:=0;
 
   for i:=0 to TLMaster.Count-1 do
@@ -2603,7 +2609,7 @@ begin
   end;
   SetLength(ROMTemp,0);
 
-  // SampleƒXƒe[ƒ^ƒX
+  // Sampleã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
   k:=0;
   for i:=0 to TLMaster.Count-1 do
   begin
@@ -2620,13 +2626,13 @@ begin
   SetLength(SampleTemp,0);
 
 
-  // ƒJƒ‰ƒ€ƒ\[ƒg–îˆóİ’è
+  // ã‚«ãƒ©ãƒ ã‚½ãƒ¼ãƒˆçŸ¢å°è¨­å®š
   SetListViewColumnSortMark( ListView1, SortHistory[0] );
   CurrentMaker:= Form1.cmbMaker.Text;
 
 
-  // ƒvƒƒtƒ@ƒCƒ‹İ’è
-  // ƒhƒƒbƒvƒ_ƒEƒ“ƒŠƒXƒg
+  // ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«è¨­å®š
+  // ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãƒªã‚¹ãƒˆ
   for i:=0 to Length(MameExe)-1 do
   begin
     ComboBox1.Items.Add(MameExe[i].Title);
@@ -2659,15 +2665,15 @@ begin
   sbtHTTP.Caption   := '';
 
 
-  // ƒRƒ}ƒ“ƒhƒrƒ…[ƒA•\¦
+  // ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢è¡¨ç¤º
   if ComViewerVisible then
     frmCommand.Show;
 
-  // ƒ\ƒtƒgƒŠƒXƒg•\¦
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆè¡¨ç¤º
   if SoftwareListVisible then
     frmSoftwareList.Show;
 
-  // ‹N“®
+  // èµ·å‹•
   Booting:=False;
 
 end;
@@ -2688,7 +2694,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------
-// ƒ|ƒbƒvƒAƒbƒv‚Ìƒvƒƒtƒ@ƒCƒ‹’Ç‰Á
+// ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—æ™‚ã®ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«è¿½åŠ 
 procedure TForm1.PopupActionBar1Popup(Sender: TObject);
 var
   NewItem: TMenuItem;
@@ -2747,7 +2753,7 @@ begin
     ExecuteMAME(SelZip,
                 MameExe[TempProfile].ExePath, MameExe[TempProfile].WorkDir,
                 MameExe[TempProfile].Option );
-    
+
 end;
 
 procedure TForm1.PopupRunClickSub(Sender: TObject);
@@ -2763,15 +2769,15 @@ begin
     ExecuteMAME(SelZip,
                 MameExe[TempProfile].ExePath, MameExe[TempProfile].WorkDir,
                 MameExe[TempProfile].Option );
-    
+
 end;
 
 // ----------------------------------------------------------------------------
-// ƒAƒNƒVƒ‡ƒ“ƒ}ƒl[ƒWƒƒ
+// ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ãƒãƒãƒ¼ã‚¸ãƒ£
 procedure TForm1.actPlayExecute(Sender: TObject);
 begin
 
-  actPlayUpdate(nil);   // ƒpƒXŠÖŒW‚Ìƒ`ƒFƒbƒN
+  actPlayUpdate(nil);   // ãƒ‘ã‚¹é–¢ä¿‚ã®ãƒã‚§ãƒƒã‚¯
   if actPlay.Enabled then
   begin
 
@@ -2785,19 +2791,19 @@ end;
 procedure TForm1.actPlayUpdate(Sender: TObject);
 begin
 
-  // ‹N“®‘ÎÛ‚È‚µ
+  // èµ·å‹•å¯¾è±¡ãªã—
   if SelZip='' then
   begin
-    actPlay.Caption :='‹N“®(&P)';
+    actPlay.Caption :='èµ·å‹•(&P)';
     actPlay.Enabled := False;
     actRCPlayEx.Enabled:=False;
     actRRefine.Enabled:=False;
 
   end
   else
-  // ‚ ‚è
+  // ã‚ã‚Š
   begin
-    actPlay.Caption :='u'+SelZip+'v‚ğ‹N“®(&P)';
+    actPlay.Caption :='ã€Œ'+SelZip+'ã€ã‚’èµ·å‹•(&P)';
 
     if CurrentProfile=-1 then
     begin
@@ -2819,7 +2825,7 @@ begin
       begin
         actPlay.Enabled := False;
       end;
-      
+
     end;
 
     actRCPlayEx.Enabled:=true;
@@ -2852,7 +2858,7 @@ procedure TForm1.actListColorExecute(Sender: TObject);
 begin
 
   ColorDialog1.Color:=ListColor;
-  
+
   if ColorDialog1.Execute then
   begin
     ListColor:=ColorDialog1.Color;
@@ -2884,7 +2890,7 @@ begin
   SetCurrentDir(ExeDir);
 
   if IDYES=MessageBox(Form1.Handle,
-                      PChar('‚±‚ÌƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+St+'    '),
+                      PChar('ã“ã®ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+St+'    '),
                       APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
 
@@ -2896,7 +2902,7 @@ begin
     except
 
       MessageBox(Form1.Handle,
-                 PChar('ƒGƒ‰[‚ª‹N‚«‚Ü‚µ‚½B'),
+                 PChar('ã‚¨ãƒ©ãƒ¼ãŒèµ·ãã¾ã—ãŸã€‚'),
                  APPNAME, MB_OK or MB_ICONEXCLAMATION);
     end;
   end;
@@ -2910,7 +2916,7 @@ end;
 
 procedure TForm1.actBranch1Execute(Sender: TObject);
 begin
-  // ƒ_ƒ~[ƒAƒNƒVƒ‡ƒ“
+  // ãƒ€ãƒŸãƒ¼ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
 end;
 
 procedure TForm1.actSearchExecute(Sender: TObject);
@@ -2982,7 +2988,7 @@ begin
   SetCurrentDir(ExeDir);
 
   if IDYES=MessageBox(Form1.Handle,
-             PChar('ˆÈ‰º‚Ì.cfgƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+
+             PChar('ä»¥ä¸‹ã®.cfgãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+
              cfgDir+'\'+SelZip+'.cfg'+'    '),
              APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
@@ -2990,7 +2996,7 @@ begin
       DeleteFile(cfgDir+'\'+SelZip+'.cfg');
     except
       MessageBox(Form1.Handle,
-             PChar('íœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B   '),
+             PChar('å‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚   '),
              APPNAME, MB_OK or MB_ICONERROR);
     end;
   end;
@@ -3002,12 +3008,12 @@ begin
 
   SetCurrentDir(ExeDir);
 
-  // ƒtƒHƒ‹ƒ_“ü‚ènvƒtƒ@ƒCƒ‹
+  // ãƒ•ã‚©ãƒ«ãƒ€å…¥ã‚Šnvãƒ•ã‚¡ã‚¤ãƒ«
   if DirectoryExists(nvramDir+'\'+SelZip) then
   begin
 
     if IDYES=MessageBox(Form1.Handle,
-             PChar('ˆÈ‰º‚ÌnvramƒtƒHƒ‹ƒ_‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+
+             PChar('ä»¥ä¸‹ã®nvramãƒ•ã‚©ãƒ«ãƒ€ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+
              nvramDir+'\'+SelZip+'\'+'    '),
              APPNAME, MB_YESNO or MB_ICONQUESTION) then
     begin
@@ -3015,7 +3021,7 @@ begin
         DeleteDirectory(nvramDir+'\'+SelZip);
       except
         MessageBox(Form1.Handle,
-               PChar('íœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B   '),
+               PChar('å‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚   '),
                APPNAME, MB_OK or MB_ICONERROR);
       end;
     end;
@@ -3026,7 +3032,7 @@ begin
   begin
 
     if IDYES=MessageBox(Form1.Handle,
-             PChar('ˆÈ‰º‚Ì.nvƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+
+             PChar('ä»¥ä¸‹ã®.nvãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+
              nvramDir+'\'+SelZip+'.nv'+'    '),
              APPNAME, MB_YESNO or MB_ICONQUESTION) then
     begin
@@ -3034,7 +3040,7 @@ begin
         DeleteFile(nvramDir+'\'+SelZip+'.nv');
       except
         MessageBox(Form1.Handle,
-               PChar('íœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B   '),
+               PChar('å‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚   '),
                APPNAME, MB_OK or MB_ICONERROR);
       end;
     end;
@@ -3047,9 +3053,9 @@ procedure TForm1.actDelAutosaveExecute(Sender: TObject);
 begin
 
   SetCurrentDir(ExeDir);
-  
+
   if IDYES=MessageBox(Form1.Handle,
-             PChar('ˆÈ‰º‚Ìautosave.staƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+
+             PChar('ä»¥ä¸‹ã®autosave.staãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+
              staDir+'\'+SelZip+'\auto.sta    '),
              APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
@@ -3057,21 +3063,21 @@ begin
       DeleteFile(staDir+'\'+SelZip+'\auto.sta');
     except
       MessageBox(Form1.Handle,
-             PChar('íœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B   '),
+             PChar('å‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚   '),
              APPNAME, MB_OK or MB_ICONERROR);
     end;
   end;
-  
+
 end;
 
 procedure TForm1.actBranch2Execute(Sender: TObject);
 begin
-  // ƒ_ƒ~[
+  // ãƒ€ãƒŸãƒ¼
 end;
 
 procedure TForm1.actBranchExecute(Sender: TObject);
 begin
-  // ƒ_ƒ~[
+  // ãƒ€ãƒŸãƒ¼
 end;
 
 procedure TForm1.actDelAllCfgExecute(Sender: TObject);
@@ -3084,13 +3090,13 @@ begin
 
 
   SetCurrentDir(ExeDir);
-  
+
   if FileExists(cfgDir+'\'+SelZip+'.cfg') then
     St:=cfgDir+'\'+SelZip+'.cfg' +CRLF;
   if FileExists(nvramDir+'\'+SelZip+'.nv') then
     St:=St+nvramDir+'\'+SelZip+'.nv' +CRLF;
 
-  // ƒtƒHƒ‹ƒ_“ü‚ènvƒtƒ@ƒCƒ‹
+  // ãƒ•ã‚©ãƒ«ãƒ€å…¥ã‚Šnvãƒ•ã‚¡ã‚¤ãƒ«
   if DirectoryExists(nvramDir+'\'+SelZip) then
     St:=St+nvramDir+'\'+SelZip+'\' +CRLF;
 
@@ -3100,7 +3106,7 @@ begin
   St:=Trim(St);
 
   if IDYES=MessageBox(Form1.Handle,
-             PChar('ˆÈ‰º‚Ìİ’èƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ü‚·‚©H   '+CRLF2+St+'    '),
+             PChar('ä»¥ä¸‹ã®è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ   '+CRLF2+St+'    '),
              APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
 
@@ -3111,20 +3117,20 @@ begin
       if FileExists(nvramDir+'\'+SelZip+'.nv') then
         DeleteFile(nvramDir+'\'+SelZip+'.nv');
 
-      // ƒtƒHƒ‹ƒ_“ü‚ènvƒtƒ@ƒCƒ‹
+      // ãƒ•ã‚©ãƒ«ãƒ€å…¥ã‚Šnvãƒ•ã‚¡ã‚¤ãƒ«
       if DirectoryExists(nvramDir+'\'+SelZip) then
         DeleteDirectory(nvramDir+'\'+SelZip);
 
       if FileExists(staDir+'\'+SelZip+'\auto.sta') then
       begin
         DeleteFile(staDir+'\'+SelZip+'\auto.sta');
-        // ‹óƒtƒHƒ‹ƒ_íœ
-        RemoveDir(staDir+'\'+SelZip); // ¸”s‚É—áŠO‚Ío‚³‚È‚¢
+        // ç©ºãƒ•ã‚©ãƒ«ãƒ€å‰Šé™¤
+        RemoveDir(staDir+'\'+SelZip); // å¤±æ•—æ™‚ã«ä¾‹å¤–ã¯å‡ºã•ãªã„
       end;
 
     except
       MessageBox(Form1.Handle,
-                 PChar('íœ‚É¸”s‚µ‚Ü‚µ‚½B   '),
+                 PChar('å‰Šé™¤ã«å¤±æ•—ã—ã¾ã—ãŸã€‚   '),
                  APPNAME, MB_OK or MB_ICONERROR);
     end;
   end;
@@ -3318,17 +3324,17 @@ begin
 
   if actROpenSrc.Hint<>'' then
   begin
-    actROpenSrc.Caption:='u'+actROpenSrc.Hint+'v‚ğGitHub‚ÅŠJ‚­(&O)';
-    //actROpenSrc.Caption:='\drivers\'+actROpenSrc.Hint+'‚ğŠJ‚­(&O)';
+    actROpenSrc.Caption:='ã€Œ'+actROpenSrc.Hint+'ã€ã‚’GitHubã§é–‹ã(&O)';
+    //actROpenSrc.Caption:='\drivers\'+actROpenSrc.Hint+'ã‚’é–‹ã(&O)';
     actROpenSrc.Enabled:=true;
     //actROpenSrc.Enabled:=FileExists(SrcDir+'\'+actROpenSrc.Hint);
   end
   else
   begin
-    actROpenSrc.Caption:='GitHub‚ğŠJ‚­(&O)';
+    actROpenSrc.Caption:='GitHubã‚’é–‹ã(&O)';
     actROpenSrc.Enabled:=False;
   end;
-  
+
 end;
 
 procedure TForm1.actRRefineUpdate(Sender: TObject);
@@ -3336,12 +3342,12 @@ begin
 
   if actRRefine.Hint<>'' then
   begin
-    actRRefine.Caption := 'u'+actRRefine.Hint+'v‚Åi‚è‚Ş(&S)';
+    actRRefine.Caption := 'ã€Œ'+actRRefine.Hint+'ã€ã§çµã‚Šè¾¼ã‚€(&S)';
     actRRefine.Enabled :=True;
   end
   else
   begin
-    actRRefine.Caption := 'ƒ\[ƒX‚Åi‚è‚Ş(&S)';
+    actRRefine.Caption := 'ã‚½ãƒ¼ã‚¹ã§çµã‚Šè¾¼ã‚€(&S)';
     actRRefine.Enabled :=False;
   end;
 
@@ -3359,15 +3365,15 @@ begin
      (edtSearch.Text='') then exit;
 
   DoNotUpdateLV:=True;
-  
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
 
   DoNotUpdateLV:=False;
   UpdateListView;
   CurrentMaker:=cmbMaker.Text;
   Sleep(0);
-  
+
 end;
 
 procedure TForm1.cmbYearChange(Sender: TObject);
@@ -3379,7 +3385,7 @@ begin
      (edtSearch.Text='') then exit;
 
   DoNotUpdateLV:=True;
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
 
   DoNotUpdateLV:=False;
@@ -3397,14 +3403,14 @@ begin
      (edtSearch.Text='') then exit;
 
   DoNotUpdateLV:=True;
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
 
   DoNotUpdateLV:=False;
 
   UpdateListView;
   CurrentCPU:=cmbCPU.Text;
-  
+
 end;
 
 procedure TForm1.cmbSoundChange(Sender: TObject);
@@ -3416,7 +3422,7 @@ begin
      (edtSearch.Text='') then exit;
 
   DoNotUpdateLV:=True;
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
 
   DoNotUpdateLV:=False;
@@ -3437,7 +3443,7 @@ begin
 
 
   DoNotUpdateLV:=True;
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
 
   DoNotUpdateLV:=False;
@@ -3457,7 +3463,7 @@ begin
      (edtSearch.Text='') then exit;
 
   DoNotUpdateLV:=True;
-  // ƒT[ƒ`ƒ{ƒbƒNƒXƒŠƒZƒbƒg
+  // ã‚µãƒ¼ãƒãƒœãƒƒã‚¯ã‚¹ãƒªã‚»ãƒƒãƒˆ
   edtSearch.Text:='';
   DoNotUpdateLV:=False;
 
@@ -3500,18 +3506,18 @@ begin
   begin
     actVSearchBar.ImageIndex:=33;
   end;
-  
+
 end;
 
 procedure TForm1.actVSearchBarUpdate(Sender: TObject);
 begin
 
   if Panel12.Visible then
-    actVSearchBar.Caption:='ŒŸõƒpƒlƒ‹‚ğ‰B‚·'
+    actVSearchBar.Caption:='æ¤œç´¢ãƒ‘ãƒãƒ«ã‚’éš ã™'
   else
-    actVSearchBar.Caption:='ŒŸõƒpƒlƒ‹‚ğ•\¦';
+    actVSearchBar.Caption:='æ¤œç´¢ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤º';
 
-  
+
 end;
 
 procedure TForm1.actVSoftwarelistExecute(Sender: TObject);
@@ -3530,11 +3536,11 @@ procedure TForm1.actVSoftwarelistUpdate(Sender: TObject);
 begin
   if frmSoftwareList.Showing then
   begin
-    actVSoftwarelist.Caption:='ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‚ğ•Â‚¶‚é';
+    actVSoftwarelist.Caption:='ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆã‚’é–‰ã˜ã‚‹';
   end
   else
   begin
-    actVSoftwarelist.Caption:='ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‚ğŠJ‚­';
+    actVSoftwarelist.Caption:='ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒªã‚¹ãƒˆã‚’é–‹ã';
   end;
 end;
 
@@ -3542,9 +3548,9 @@ procedure TForm1.actVEditorUpdate(Sender: TObject);
 begin
 
   if Panel7.Visible then
-    actVEditor.Caption:='•ÒWƒpƒlƒ‹‚ğ‰B‚·'
+    actVEditor.Caption:='ç·¨é›†ãƒ‘ãƒãƒ«ã‚’éš ã™'
   else
-    actVEditor.Caption:='•ÒWƒpƒlƒ‹‚ğ•\¦';
+    actVEditor.Caption:='ç·¨é›†ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤º';
 
 end;
 
@@ -3565,11 +3571,11 @@ begin
 
   if frmCommand.Showing then
   begin
-    actVCommand.Caption:='ƒRƒ}ƒ“ƒhƒrƒ…[ƒA‚ğ•Â‚¶‚é';
+    actVCommand.Caption:='ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢ã‚’é–‰ã˜ã‚‹';
   end
   else
   begin
-    actVCommand.Caption:='ƒRƒ}ƒ“ƒhƒrƒ…[ƒA‚ğŠJ‚­';
+    actVCommand.Caption:='ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢ã‚’é–‹ã';
   end;
 end;
 
@@ -3577,8 +3583,8 @@ procedure TForm1.actVEditorExecute(Sender: TObject);
 var i:integer;
 begin
 
-  // •Â‚¶‚é‚Æ‚«‚Ìˆ—
-  // •ÒWƒpƒlƒ‹‚ÉƒtƒH[ƒJƒX‚ª‚ ‚éê‡‚ÍListView1‚ÉˆÚ‚·
+  // é–‰ã˜ã‚‹ã¨ãã®å‡¦ç†
+  // ç·¨é›†ãƒ‘ãƒãƒ«ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ãŒã‚ã‚‹å ´åˆã¯ListView1ã«ç§»ã™
   if ListView2.Focused or edtDescJ.Focused or edtKana.Focused or Edit1.Focused or
      memCPU.Focused or memSound.Focused or memDisp.Focused or edtSource.Focused then
   begin
@@ -3590,7 +3596,7 @@ begin
   Panel7.Visible:= not Panel7.Visible;
 
 
-  // •\¦‚·‚é‚Æ‚«‚ÍSplitter‚ÌˆÊ’uC³
+  // è¡¨ç¤ºã™ã‚‹ã¨ãã¯Splitterã®ä½ç½®ä¿®æ­£
   if Splitter1.Visible then
   begin
     Splitter1.Top:=Panel7.Top-5;
@@ -3598,8 +3604,8 @@ begin
       ListView1.Selected.MakeVisible(True);
   end;
 
-  // •Â‚¶‚½‚Æ‚«‚ÍListView1‚Ì€–Ú‚ğÄ‘I‘ğ
-  // ƒƒCƒ“ƒŠƒXƒg‚É–³‚¢‚à‚Ì‚ğ‘I‚ñ‚Å‚éê‡‚Ì‚½‚ß
+  // é–‰ã˜ãŸã¨ãã¯ListView1ã®é …ç›®ã‚’å†é¸æŠ
+  // ãƒ¡ã‚¤ãƒ³ãƒªã‚¹ãƒˆã«ç„¡ã„ã‚‚ã®ã‚’é¸ã‚“ã§ã‚‹å ´åˆã®ãŸã‚
   if (Panel7.Visible=False) and (ListView1.ItemFocused<>nil) then
   begin
     i:=ListView1.ItemFocused.Index;
@@ -3620,8 +3626,8 @@ begin
   if Edited then
   begin
 
-    Re:=MessageBox(Form1.Handle,PChar('ƒQ[ƒ€–¼‚ª•ÒW‚³‚ê‚Ä‚¢‚Ü‚·B'+CRLF2+
-                   '•ÏX‚ğmame32j.lst‚É•Û‘¶‚µ‚Ü‚·‚©?      '),PChar('Šm”F'),
+    Re:=MessageBox(Form1.Handle,PChar('ã‚²ãƒ¼ãƒ åãŒç·¨é›†ã•ã‚Œã¦ã„ã¾ã™ã€‚'+CRLF2+
+                   'å¤‰æ›´ã‚’mame32j.lstã«ä¿å­˜ã—ã¾ã™ã‹?      '),PChar('ç¢ºèª'),
                     MB_YESNOCANCEL+MB_ICONEXCLAMATION);
 
     Case Re of
@@ -3633,7 +3639,7 @@ begin
           Action := caFree;
         end
         else
-        begin  // MAME32j.lst‚Ì•Û‘¶ƒLƒƒƒ“ƒZƒ‹‚Í–ß‚é
+        begin  // MAME32j.lstã®ä¿å­˜ã‚­ãƒ£ãƒ³ã‚»ãƒ«æ™‚ã¯æˆ»ã‚‹
           Action := TCloseAction(0);//=caNone
           Exit;
         end;
@@ -3698,9 +3704,9 @@ end;
 procedure TForm1.actVInfoPaneUpdate(Sender: TObject);
 begin
   if Panel3.Visible then
-    actVInfoPane.Caption:='î•ñƒpƒlƒ‹‚ğ‰B‚·'
+    actVInfoPane.Caption:='æƒ…å ±ãƒ‘ãƒãƒ«ã‚’éš ã™'
   else
-    actVInfoPane.Caption:='î•ñƒpƒlƒ‹‚ğ•\¦';
+    actVInfoPane.Caption:='æƒ…å ±ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤º';
 end;
 
 procedure TForm1.actVFLinearExecute(Sender: TObject);
@@ -3740,7 +3746,7 @@ end;
 
 procedure TForm1.actRCPlayExExecute(Sender: TObject);
 begin
- // ƒ_ƒ~[
+ // ãƒ€ãƒŸãƒ¼
 end;
 
 
@@ -3801,7 +3807,7 @@ begin
  // dummy
 end;
 
-// ƒ}[ƒWƒZƒbƒg‚ÅROMŒŸõ
+// ãƒãƒ¼ã‚¸ã‚»ãƒƒãƒˆã§ROMæ¤œç´¢
 procedure TForm1.actFRMargeExecute(Sender: TObject);
 var i,j:integer;
     CHD,ROM: Boolean;
@@ -3814,13 +3820,13 @@ begin
   Screen.Cursor := crHourGlass;    // Show hourglass cursor
 
   try
-    // eƒZƒbƒg‚¾‚¯’²‚×‚é
+    // è¦ªã‚»ãƒƒãƒˆã ã‘èª¿ã¹ã‚‹
     for i:=0 to TLMaster.Count-1 do
     begin
       PRecordset(TLMaster[i]).ROM:=False;
       CHD:=False;
 
-      // CHD‚¾‚¯‚ÌƒZƒbƒg‚Ìê‡
+      // CHDã ã‘ã®ã‚»ãƒƒãƒˆã®å ´åˆ
       ROM:=PRecordset(TLMaster[i]).CHDOnly;
 
       if PRecordset(TLMaster[i]).Master then
@@ -3829,18 +3835,18 @@ begin
         for j:=0 to Length(RomDirs)-1 do
         begin
 
-          if PRecordset(TLMaster[i]).CHD='' then // CHD‚ª–³‚¢ê‡
+          if PRecordset(TLMaster[i]).CHD='' then // CHDãŒç„¡ã„å ´åˆ
           begin
             CHD:=True;
             ROM:= ( FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'.zip') OR
                     FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'.7z')
                   );
 
-            // Š®‘S‚É•ÊƒZƒbƒg‚ÌROM‚ğg‚¤ê‡ (CloneOf‚ª‚È‚¢‚Ì‚ÉRomOf‚ª‚ ‚é)
+            // å®Œå…¨ã«åˆ¥ã‚»ãƒƒãƒˆã®ROMã‚’ä½¿ã†å ´åˆ (CloneOfãŒãªã„ã®ã«RomOfãŒã‚ã‚‹)
             if (PRecordset(TLMaster[i]).CloneOf='') and (PRecordset(TLMaster[i]).RomOf<>'') then
             begin
               if PRecordset(TLMaster[i]).RomOf='gts1s' then
-                PRecordset(TLMaster[i]).RomOf:='gts1'; // æ‚è‚ ‚¦‚¸
+                PRecordset(TLMaster[i]).RomOf:='gts1'; // å–ã‚Šã‚ãˆãš
 
               ROM:=( FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).RomOf+'.zip') OR
                      FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).RomOf+'.7z')
@@ -3849,9 +3855,9 @@ begin
 
 
           end
-          else  // CHD‚ª‚ ‚éê‡
+          else  // CHDãŒã‚ã‚‹å ´åˆ
           begin
-            if ROM=False then // CHD‚Ì‚İƒZƒbƒg
+            if ROM=False then // CHDã®ã¿ã‚»ãƒƒãƒˆ
               ROM:= ( FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'.zip') OR
                       FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'.7z')
                     );
@@ -3862,7 +3868,7 @@ begin
               CHD:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'\'+
                 PRecordset(TLMaster[i]).CHD+'.chd');
 
-            // ƒ}[ƒWCHD‚ª‚ ‚éê‡
+            // ãƒãƒ¼ã‚¸CHDãŒã‚ã‚‹å ´åˆ
             if PRecordset(TLMaster[i]).CHDMerge=True then
             begin
               CHD:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[PRecordset(TLMaster[i]).MasterID]).ZipName+'\'+
@@ -3880,7 +3886,7 @@ begin
       end;
     end;
 
-    // qƒZƒbƒg‚ÌROMó‘Ô‚ğe‚É‡‚í‚¹‚é
+    // å­ã‚»ãƒƒãƒˆã®ROMçŠ¶æ…‹ã‚’è¦ªã«åˆã‚ã›ã‚‹
     for i:=0 to TLMaster.Count-1 do
     begin
       if not PRecordset(TLMaster[i]).Master then
@@ -3889,13 +3895,13 @@ begin
       end;
     end;
 
-    /// ƒTƒ“ƒvƒ‹ƒZƒbƒg‚ÌŒŸõ‚à
+    /// ã‚µãƒ³ãƒ—ãƒ«ã‚»ãƒƒãƒˆã®æ¤œç´¢ã‚‚
     actFSearchSampleExecute(nil);
 
-    // ƒAƒCƒRƒ“‚ÌÄ•`‰æ
+    // ã‚¢ã‚¤ã‚³ãƒ³ã®å†æç”»
     ListView1.Repaint;
 
-    // ƒTƒuƒŠƒXƒgXV
+    // ã‚µãƒ–ãƒªã‚¹ãƒˆæ›´æ–°
     ListView2.Repaint;
 
   finally
@@ -3903,7 +3909,7 @@ begin
   end;
 end;
 
-// ƒXƒvƒŠƒbƒgƒZƒbƒg‚ÅROMŒŸõ
+// ã‚¹ãƒ—ãƒªãƒƒãƒˆã‚»ãƒƒãƒˆã§ROMæ¤œç´¢
 procedure TForm1.actFRSplitExecute(Sender: TObject);
 var i, j:integer;
     CHD, ROM, SameROM: boolean;
@@ -3923,11 +3929,11 @@ begin
       PRecordset(TLMaster[i]).ROM:=False;
       CHD:=False;
       SameROM:=False;
-      
-      // CHD‚¾‚¯‚ÌƒZƒbƒg‚Ìê‡
+
+      // CHDã ã‘ã®ã‚»ãƒƒãƒˆã®å ´åˆ
       ROM:=PRecordset(TLMaster[i]).CHDOnly;
 
-      // eƒZƒbƒg‚ÆqƒZƒbƒg‚ª“¯‚¶ê‡
+      // è¦ªã‚»ãƒƒãƒˆã¨å­ã‚»ãƒƒãƒˆãŒåŒã˜å ´åˆ
       if (PRecordset(TLMaster[i]).ZipName = 'candance') or
          (PRecordset(TLMaster[i]).ZipName = 'galpanica') or
          (PRecordset(TLMaster[i]).ZipName = 'wotwc') or
@@ -3938,15 +3944,15 @@ begin
          (PRecordset(TLMaster[i]).ZipName = 'trvwzha')
          then
         SameROM:=True;
-      
-      
+
+
       for j:=0 to Length(RomDirs)-1 do
       begin
 
         if (PRecordset(TLMaster[i]).CHD='') or
-           (PRecordset(TLMaster[i]).CHDNoDump) then // CHD‚ª–³‚¢ê‡/CHD‚ªNoDump‚Ìê‡
+           (PRecordset(TLMaster[i]).CHDNoDump) then // CHDãŒç„¡ã„å ´åˆ/CHDãŒNoDumpã®å ´åˆ
         begin
-        
+
           CHD:=True;
 
           if SameRom then
@@ -3962,20 +3968,20 @@ begin
                  );
           end;
 
-          // RomOf‚ª‚ ‚éê‡‚Ìˆ—
+          // RomOfãŒã‚ã‚‹å ´åˆã®å‡¦ç†
           if (PRecordset(TLMaster[i]).RomOf<>'') then
           begin
 
-            // BIOS‚ğƒ`ƒFƒbƒN
+            // BIOSã‚’ãƒã‚§ãƒƒã‚¯
             blBIOS := ( FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).RomOf+'.zip') OR
                         FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).RomOf+'.7z')
                         );
 
-            // ROM–{‘Ì‚à‚ ‚ê‚ÎOK‚É‚·‚é
+            // ROMæœ¬ä½“ã‚‚ã‚ã‚Œã°OKã«ã™ã‚‹
             if blBIOS and ROM then
               ROM := True;
 
-            // BIOS‚Ì‚İƒZƒbƒg—p‚ÌŒÂ•Ê‘Î‰
+            // BIOSã®ã¿ã‚»ãƒƒãƒˆç”¨ã®å€‹åˆ¥å¯¾å¿œ
             if (PRecordset(TLMaster[i]).RomOf='gp_110') or
                (PRecordset(TLMaster[i]).RomOf='allied') then
             begin
@@ -3987,11 +3993,11 @@ begin
           end;
 
 
-          // Š®‘S‚É•ÊƒZƒbƒg‚ÌROM‚ğg‚¤ê‡ (CloneOf‚ª‚È‚¢‚Ì‚ÉRomOf‚ª‚ ‚é)
+          // å®Œå…¨ã«åˆ¥ã‚»ãƒƒãƒˆã®ROMã‚’ä½¿ã†å ´åˆ (CloneOfãŒãªã„ã®ã«RomOfãŒã‚ã‚‹)
           {if (PRecordset(TLMaster[i]).CloneOf='') and (PRecordset(TLMaster[i]).RomOf<>'') then
           begin
             if PRecordset(TLMaster[i]).RomOf='gts1s' then
-              PRecordset(TLMaster[i]).RomOf:='gts1'; // æ‚è‚ ‚¦‚¸
+              PRecordset(TLMaster[i]).RomOf:='gts1'; // å–ã‚Šã‚ãˆãš
 
             ROM:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).RomOf+'.zip');
           end;
@@ -3999,10 +4005,10 @@ begin
 
 
         end
-        else  // CHD‚ª‚ ‚éê‡
+        else  // CHDãŒã‚ã‚‹å ´åˆ
         begin
 
-          if ROM=False then // CHD‚Ì‚İƒZƒbƒg
+          if ROM=False then // CHDã®ã¿ã‚»ãƒƒãƒˆ
           begin
             if SameRom then
             begin
@@ -4017,7 +4023,7 @@ begin
                    );
             end;
           end;
-          
+
           if CHD=False then
             CHD:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[PRecordset(TLMaster[i]).MasterID]).ZipName+'\'+
                PRecordset(TLMaster[i]).CHD+'.chd');
@@ -4025,13 +4031,13 @@ begin
             CHD:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[i]).ZipName+'\'+
                PRecordset(TLMaster[i]).CHD+'.chd');
 
-          // ƒ}[ƒWCHD‚ª‚ ‚éê‡
+          // ãƒãƒ¼ã‚¸CHDãŒã‚ã‚‹å ´åˆ
           if PRecordset(TLMaster[i]).CHDMerge=True then
           begin
             CHD:=FileExists(RomDirs[j]+'\'+PRecordset(TLMaster[PRecordset(TLMaster[i]).MasterID]).ZipName+'\'+
                PRecordset(TLMaster[PRecordset(TLMaster[i]).MasterID]).CHD+'.chd');
           end;
-               
+
         end;
 
         if (ROM and CHD) then
@@ -4044,13 +4050,13 @@ begin
 
     end;
 
-    /// ƒTƒ“ƒvƒ‹ƒZƒbƒg‚ÌŒŸõ‚à
+    /// ã‚µãƒ³ãƒ—ãƒ«ã‚»ãƒƒãƒˆã®æ¤œç´¢ã‚‚
     actFSearchSampleExecute(nil);
 
-    // ƒAƒCƒRƒ“‚ÌÄ•`‰æ
+    // ã‚¢ã‚¤ã‚³ãƒ³ã®å†æç”»
     ListView1.Repaint;
 
-    // ƒTƒuƒŠƒXƒgXV
+    // ã‚µãƒ–ãƒªã‚¹ãƒˆæ›´æ–°
     ListView2.Repaint;
 
   finally
@@ -4059,7 +4065,7 @@ begin
 
 end;
 
-// ƒTƒ“ƒvƒ‹‚ÌŒŸõ
+// ã‚µãƒ³ãƒ—ãƒ«ã®æ¤œç´¢
 procedure TForm1.actFSearchSampleExecute(Sender: TObject);
 var i:integer;
 begin
@@ -4078,14 +4084,14 @@ begin
 
 end;
 
-// ƒNƒ‰ƒEƒhXV
+// ã‚¯ãƒ©ã‚¦ãƒ‰æ›´æ–°
 procedure TForm1.actFHttpExecute(Sender: TObject);
 var response: integer;
 begin
 
   response := frmHttp.ShowModal;
 
-  // XVŒ‹‰Ê‚ª mrOK ‚È‚ç
+  // æ›´æ–°çµæœãŒ mrOK ãªã‚‰
   if response=mrOK then
   begin
     ReadMame32jlst;
@@ -4105,7 +4111,7 @@ end;
 
 procedure TForm1.actOJoyExecute(Sender: TObject);
 begin
-  //ƒ_ƒ~[
+  //ãƒ€ãƒŸãƒ¼
 end;
 
 procedure TForm1.actOJoyPOVExecute(Sender: TObject);
@@ -4119,44 +4125,44 @@ begin
 end;
 
 //------------------------------------------------------------------------------
-// ƒXƒe[ƒ^ƒXƒo[‚Ìƒpƒlƒ‹XV
+// ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ã®ãƒ‘ãƒãƒ«æ›´æ–°
 procedure TForm1.UpdateStatus;
 var Idx:integer;
 begin
 
 
   Idx:=CurrentIndex;
-  
+
   StatusBarBuf.Canvas.Brush.Color:=clBtnFace;
   StatusBarBuf.Canvas.FillRect(Rect(0,0,StatusBarBuf.Width,StatusBarBuf.Height));
   SB_HintText:='';
-  
-  ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN ,0,20); // “®ì
-  
+
+  ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN ,0,20); // å‹•ä½œ
+
   ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN +
                   (32+SB_ITEMDISTANCE)*1,0,23);            // GFX
   ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN +
-                  (32+SB_ITEMDISTANCE)*2+SB_MARKDISTANCE,0,21); // F
+                  (32+SB_ITEMDISTANCE)*2+SB_MARKDISTANCE,0,21); // è‰²
   ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN +
-                  (32+SB_ITEMDISTANCE)*3+SB_MARKDISTANCE,0,22); // ‰¹
+                  (32+SB_ITEMDISTANCE)*3+SB_MARKDISTANCE,0,22); // éŸ³
   ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN +
-                  (32+SB_ITEMDISTANCE)*4+SB_MARKDISTANCE,0,24); // ƒvƒƒeƒNƒg
+                  (32+SB_ITEMDISTANCE)*4+SB_MARKDISTANCE,0,24); // ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆ
   ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN +
-                  (32+SB_ITEMDISTANCE)*5+SB_MARKDISTANCE,0,34); // ƒZ[ƒuƒXƒe[ƒg
+                  (32+SB_ITEMDISTANCE)*5+SB_MARKDISTANCE,0,34); // ã‚»ãƒ¼ãƒ–ã‚¹ãƒ†ãƒ¼ãƒˆ
 
-                  
+
   if Idx=-1 then
   begin
-    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+16,0,28); // 
+    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+16,0,28); //
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*1+16,0,28); // GFX
-    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*2+16,0,28); // F
-    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*3+16,0,28); // ‰¹
-    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*4+16,0,28); // ƒvƒƒeƒNƒg
-    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*5+16,0,28); // ƒZ[ƒuƒXƒe[ƒg
+    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*2+16,0,28); // è‰²
+    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*3+16,0,28); // éŸ³
+    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*4+16,0,28); // ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆ
+    ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*5+16,0,28); // ã‚»ãƒ¼ãƒ–ã‚¹ãƒ†ãƒ¼ãƒˆ
   end
   else
   begin
-    if PRecordSet(TLMaster[Idx]).Status then // “®ì
+    if PRecordSet(TLMaster[Idx]).Status then // å‹•ä½œ
       ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+16+SB_MARKDISTANCE, 0,25)
     else
       ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+16+SB_MARKDISTANCE, 0,27);
@@ -4164,40 +4170,40 @@ begin
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*1+16,
                     0,25+Ord(PRecordSet(TLMaster[Idx]).GFX)); // GFX
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*2+16,
-                    0,25+Ord(PRecordSet(TLMaster[Idx]).Color)); // F
+                    0,25+Ord(PRecordSet(TLMaster[Idx]).Color)); // è‰²
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*3+16,
-                    0,25+Ord(PRecordSet(TLMaster[Idx]).Sound)); // ‰¹
+                    0,25+Ord(PRecordSet(TLMaster[Idx]).Sound)); // éŸ³
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*4+16,
-                    0,25+Ord(PRecordSet(TLMaster[Idx]).Protect)); // ƒvƒƒeƒNƒg
+                    0,25+Ord(PRecordSet(TLMaster[Idx]).Protect)); // ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆ
     ImageList2.Draw(StatusBarBuf.Canvas, SB_LRMARGIN+(32+SB_ITEMDISTANCE+SB_MARKDISTANCE)*5+16,
-                    0,25+Ord(PRecordSet(TLMaster[Idx]).SaveState)); // ƒZ[ƒuƒXƒe[ƒg
+                    0,25+Ord(PRecordSet(TLMaster[Idx]).SaveState)); // ã‚»ãƒ¼ãƒ–ã‚¹ãƒ†ãƒ¼ãƒˆ
 
     if not PRecordSet(TLMaster[Idx]).Status then
-      SB_HintText:='“®ì•s‰Â'+CRLF;
+      SB_HintText:='å‹•ä½œä¸å¯'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).GFX=gsImperfect then
-      SB_HintText:=SB_HintText+'ƒOƒ‰ƒtƒBƒbƒNF•sŠ®‘S'+CRLF;
+      SB_HintText:=SB_HintText+'ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ï¼šä¸å®Œå…¨'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).Color=gsImperfect then
-      SB_HintText:=SB_HintText+'FF•sŠ®‘S'+CRLF
+      SB_HintText:=SB_HintText+'è‰²ï¼šä¸å®Œå…¨'+CRLF
     else
     if PRecordSet(TLMaster[Idx]).Color=gsPreliminary then
-      SB_HintText:=SB_HintText+'FF•s—Ç'+CRLF;
+      SB_HintText:=SB_HintText+'è‰²ï¼šä¸è‰¯'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).Sound=gsImperfect then
-      SB_HintText:=SB_HintText+'ƒTƒEƒ“ƒhF•sŠ®‘S'+CRLF
+      SB_HintText:=SB_HintText+'ã‚µã‚¦ãƒ³ãƒ‰ï¼šä¸å®Œå…¨'+CRLF
     else
     if PRecordSet(TLMaster[Idx]).Sound=gsPreliminary then
-      SB_HintText:=SB_HintText+'ƒTƒEƒ“ƒhF‚È‚µ'+CRLF;
+      SB_HintText:=SB_HintText+'ã‚µã‚¦ãƒ³ãƒ‰ï¼šãªã—'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).Protect=gsPreliminary then
-      SB_HintText:=SB_HintText+'ƒvƒƒeƒNƒgF•sŠ®‘S'+CRLF;
+      SB_HintText:=SB_HintText+'ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆï¼šä¸å®Œå…¨'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).Cocktail=gsPreliminary then
-      SB_HintText:=SB_HintText+'‰æ–Ê”½“]F–¢À‘•'+CRLF;
+      SB_HintText:=SB_HintText+'ç”»é¢åè»¢ï¼šæœªå®Ÿè£…'+CRLF;
 
     if PRecordSet(TLMaster[Idx]).SaveState=gsPreliminary then
-      SB_HintText:=SB_HintText+'ƒZ[ƒuƒXƒe[ƒgF–¢ƒTƒ|[ƒg'+CRLF;
+      SB_HintText:=SB_HintText+'ã‚»ãƒ¼ãƒ–ã‚¹ãƒ†ãƒ¼ãƒˆï¼šæœªã‚µãƒãƒ¼ãƒˆ'+CRLF;
 
   end;
 
@@ -4236,14 +4242,14 @@ begin
 
     StatusBar1.Canvas.CopyRect(DRct,StatusBarBuf.Canvas,Rct);
   end;
-  
+
 end;
 
 
 procedure TForm1.StatusBar1Resize(Sender: TObject);
 const
-  ResizePanelNumber=3;    //ƒŠƒTƒCƒY‚·‚éStatusbar‚Ìƒpƒlƒ‹”Ô†‚ğw’è
-  MinSize=0;              //ƒŠƒTƒCƒY‚³‚ê‚Ä‚àˆÛ‚µ‚½‚¢Å¬‚ÌWidth‚ğw’è
+  ResizePanelNumber=3;    //ãƒªã‚µã‚¤ã‚ºã™ã‚‹Statusbarã®ãƒ‘ãƒãƒ«ç•ªå·ã‚’æŒ‡å®š
+  MinSize=0;              //ãƒªã‚µã‚¤ã‚ºã•ã‚Œã¦ã‚‚ç¶­æŒã—ãŸã„æœ€å°ã®Widthã‚’æŒ‡å®š
 var
   BarWidth,i: Integer;
 begin
@@ -4288,7 +4294,7 @@ begin
 end;
 
 //------------------------------------------------------------------------------
-// ƒWƒ‡ƒCƒXƒeƒBƒbƒN
+// ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯
 procedure TForm1.JoyLaunchTimerTimer(Sender: TObject);
 begin
   TTimer(Sender).Enabled := false;
@@ -4305,7 +4311,7 @@ begin
   if (Result = JOYERR_NOERROR) AND (UseJoystick) AND (FindControl(GetForegroundWindow()) <> nil) then
   begin
 
-    // ƒ{ƒ^ƒ“1‚Í‹N“®
+    // ãƒœã‚¿ãƒ³1ã¯èµ·å‹•
     if (JoyInfo.wButtons and JOY_BUTTON1)>0 then begin
 
       if JoyLaunchTimer.Enabled=false then begin
@@ -4317,16 +4323,16 @@ begin
 
     end;
 
-    // ƒ{ƒ^ƒ“3‚ÍPageDown
+    // ãƒœã‚¿ãƒ³3ã¯PageDown
     if (JoyInfo.wButtons and JOY_BUTTON3)>0 then
         PostMessage(ListView1.Handle, WM_KEYDOWN, 33, 1 );
 
-    // ƒ{ƒ^ƒ“4‚ÍPageUp
+    // ãƒœã‚¿ãƒ³4ã¯PageUp
     if (JoyInfo.wButtons and JOY_BUTTON4)>0 then
         PostMessage(ListView1.Handle, WM_KEYDOWN, 34, 1 );
 
 
-    // ãƒ{ƒ^ƒ“
+    // ä¸Šãƒœã‚¿ãƒ³
     if (JoyInfo.wYpos < 20000) OR ((UsePOV = true) and (JoyInfo.dwPOV = JOY_POVFORWARD)) then
     begin
 
@@ -4336,7 +4342,7 @@ begin
       if (JoyDelayTick=0) or (JoyDelayTick + KeyBoardDelay < GetTickCount) then
       begin
 
-        ListView1.ItemIndex:=ListView1.ItemFocused.Index; // FocusboderÁ‚µ
+        ListView1.ItemIndex:=ListView1.ItemFocused.Index; // Focusboderæ¶ˆã—
         ListView1.ItemIndex:=ListView1.ItemFocused.Index-1;
         ListView1.Items[ListView1.ItemIndex].Selected:=True;
         ListView1.Items[ListView1.ItemIndex].Focused:=True;
@@ -4344,7 +4350,7 @@ begin
 
       end;
 
-      if JoyStatus<>jsUp then // ƒL[ƒŠƒs[ƒgŠJn
+      if JoyStatus<>jsUp then // ã‚­ãƒ¼ãƒªãƒ”ãƒ¼ãƒˆé–‹å§‹
       begin
         JoyStatus:=jsUp;
         JoyDelayTick:=GetTickCount;
@@ -4352,7 +4358,7 @@ begin
 
     end
     else
-    // ‰ºƒ{ƒ^ƒ“
+    // ä¸‹ãƒœã‚¿ãƒ³
     if (JoyInfo.wYpos > 45535) or ((UsePOV = true) and (JoyInfo.dwPOV = JOY_POVBACKWARD)) then
     begin
 
@@ -4362,7 +4368,7 @@ begin
       if (JoyDelayTick=0) or (JoyDelayTick + KeyBoardDelay < GetTickCount) then
       begin
 
-        ListView1.ItemIndex:=ListView1.ItemFocused.Index; // FocusboderÁ‚µ
+        ListView1.ItemIndex:=ListView1.ItemFocused.Index; // Focusboderæ¶ˆã—
         ListView1.ItemIndex:=ListView1.ItemFocused.Index+1;
         ListView1.Items[ListView1.ItemIndex].Selected:=True;
         ListView1.Items[ListView1.ItemIndex].Focused:=True;
@@ -4370,20 +4376,20 @@ begin
 
       end;
 
-      if JoyStatus<>jsDown then // ƒL[ƒŠƒs[ƒgŠJn
+      if JoyStatus<>jsDown then // ã‚­ãƒ¼ãƒªãƒ”ãƒ¼ãƒˆé–‹å§‹
       begin
         JoyStatus:=jsDown;
         JoyDelayTick:=GetTickCount;
       end;
 
     end
-    else // ‰Ÿ‚³‚ê‚Ä‚¢‚È‚¢‚Æ‚«
+    else // æŠ¼ã•ã‚Œã¦ã„ãªã„ã¨ã
     begin
       JoyStatus:=jsNone;
       JoyDelayTick:=0;
     end;
 
-    // ¶ƒ{ƒ^ƒ“
+    // å·¦ãƒœã‚¿ãƒ³
     if (JoyInfo.wXpos< 20000) or ((UsePOV = true) and (JoyInfo.dwPOV = JOY_POVLEFT))  then
     begin
       if ListView1.Focused then
@@ -4392,7 +4398,7 @@ begin
         ListView2.Scroll(-20,0);
     end
     else
-    // ‰Eƒ{ƒ^ƒ“
+    // å³ãƒœã‚¿ãƒ³
     if (JoyInfo.wXpos>45535) or ((UsePOV = true) and (JoyInfo.dwPOV = JOY_POVRIGHT)) then
     begin
       if ListView1.Focused then
@@ -4409,7 +4415,7 @@ procedure TForm1.Splitter1CanResize(Sender: TObject; var NewSize: Integer;
   var Accept: Boolean);
 begin
 
-  // ƒpƒlƒ‹©‘Ì‚ÌÅ‘åƒTƒCƒY
+  // ãƒ‘ãƒãƒ«è‡ªä½“ã®æœ€å¤§ã‚µã‚¤ã‚º
   if NewSize > Panel7.Constraints.MaxHeight then
   begin
     NewSize:=Panel7.Constraints.MaxHeight;
@@ -4421,8 +4427,8 @@ end;
 
 
 //------------------------------------------------------------------------------
-// ƒQ[ƒ€–¼•ÒWƒpƒlƒ‹
-// ‘S‘Ì‚ÌXV
+// ã‚²ãƒ¼ãƒ åç·¨é›†ãƒ‘ãƒãƒ«
+// å…¨ä½“ã®æ›´æ–°
 procedure TForm1.UpdateEditPanel(const idx: integer);
 begin
 
@@ -4430,15 +4436,15 @@ begin
   EditUpdating:=True;
   edtDescJ.Text:=PRecordSet(TLMaster[idx]).DescJ;
   edtKana.Text:=PRecordSet(TLMaster[idx]).Kana;
-  Edit1.Text:=PRecordSet(TLMaster[idx]).DescE; // Edit1‚ğÅŒã‚ÉXV
-  
-  ShowGameInfo(idx); // ‰E‘¤•”•ªXV
+  Edit1.Text:=PRecordSet(TLMaster[idx]).DescE; // Edit1ã‚’æœ€å¾Œã«æ›´æ–°
+
+  ShowGameInfo(idx); // å³å´éƒ¨åˆ†æ›´æ–°
 
   EditUpdating:=False;
 
 end;
 
-// ‰E‘¤‚ÌƒQ[ƒ€î•ñ•\¦
+// å³å´ã®ã‚²ãƒ¼ãƒ æƒ…å ±è¡¨ç¤º
 procedure TForm1.ShowGameInfo(const idx: integer);
 begin
 
@@ -4452,21 +4458,21 @@ begin
 
 end;
 
-// ƒIƒŠƒWƒiƒ‹–¼ƒ_ƒuƒ‹ƒNƒŠƒbƒN‚Å‘I‘ğ
+// ã‚ªãƒªã‚¸ãƒŠãƒ«åãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã§é¸æŠ
 procedure TForm1.Edit1DblClick(Sender: TObject);
 begin
   Edit1.SelStart:=0;
   Edit1.SelLength:=Length(Edit1.Text);
 end;
 
-// Undo—pƒf[ƒ^‚Ì•Û‚Æ–¢–ó‚Ì”»’f
+// Undoç”¨ãƒ‡ãƒ¼ã‚¿ã®ä¿æŒã¨æœªè¨³ã®åˆ¤æ–­
 procedure TForm1.Edit1Change(Sender: TObject);
 begin
   if Edit1.Text<>'' then
   begin
 
     if (edtDescJ.Text=Edit1.Text) and (edtKana.Text=Edit1.Text) then
-      StatusBar1.Panels[2].Text:='–¢–ó'
+      StatusBar1.Panels[2].Text:='æœªè¨³'
     else
       StatusBar1.Panels[2].Text:='';
 
@@ -4486,19 +4492,19 @@ begin
 
 end;
 
-// “ú–{Œê–¼editbox‚ÌŠeˆ—
+// æ—¥æœ¬èªåeditboxã®å„å‡¦ç†
 procedure TForm1.edtDescJChange(Sender: TObject);
 var i:integer;
 begin
 
-  // ŠO•”‚©‚ç‚ÌXV‚Å‚È‚¢‚Æ‚«
+  // å¤–éƒ¨ã‹ã‚‰ã®æ›´æ–°ã§ãªã„ã¨ã
   if (EditUpdating=False) and (Edit1.Text<>'') then
   begin
 
     PRecordset(TLMaster[EditingIndex]).DescJ:=edtDescJ.Text;
 
-    // ƒƒCƒ“ƒŠƒXƒg‚ÌXV
-    // •\¦—Ìˆæ“à‚É‚ ‚éê‡‚Ì‚İ
+    // ãƒ¡ã‚¤ãƒ³ãƒªã‚¹ãƒˆã®æ›´æ–°
+    // è¡¨ç¤ºé ˜åŸŸå†…ã«ã‚ã‚‹å ´åˆã®ã¿
     for i:=ListView1.TopItem.Index to
            ListView1.TopItem.Index+ ListView1.VisibleRowCount do
     begin
@@ -4511,17 +4517,17 @@ begin
       end;
     end;
 
-    // ƒTƒuƒŠƒXƒg‚ÌXV
+    // ã‚µãƒ–ãƒªã‚¹ãƒˆã®æ›´æ–°
     ListView2.ItemFocused.Caption:=edtDescJ.Text;
-    
+
     if (edtDescJ.Text=Edit1.Text) and (edtKana.Text=Edit1.Text) then
     begin
-      ListView2.ItemFocused.SubItems[5]:='~';
-      StatusBar1.Panels[2].Text:='–¢–ó'
+      ListView2.ItemFocused.SubItems[5]:='Ã—';
+      StatusBar1.Panels[2].Text:='æœªè¨³'
     end
     else
     begin
-      ListView2.ItemFocused.SubItems[5]:='›';
+      ListView2.ItemFocused.SubItems[5]:='â—‹';
       StatusBar1.Panels[2].Text:='';
     end;
 
@@ -4529,7 +4535,7 @@ begin
 
     //
     Edited:=True;
-    StatusBar1.Panels[1].Text:='•ÏX‚ ‚è';
+    StatusBar1.Panels[1].Text:='å¤‰æ›´ã‚ã‚Š';
 
   end;
 
@@ -4574,7 +4580,7 @@ begin
 
 end;
 
-// ‚æ‚İ‚ª‚ÈEditBox‚ÌŠeˆ—
+// ã‚ˆã¿ãŒãªEditBoxã®å„å‡¦ç†
 procedure TForm1.edtKanaDblClick(Sender: TObject);
 begin
   edtKana.SelectAll;
@@ -4624,25 +4630,25 @@ end;
 procedure TForm1.edtKanaChange(Sender: TObject);
 begin
 
-  // ŠO•”‚©‚ç‚ÌXV‚Å‚È‚¢‚Æ‚«
+  // å¤–éƒ¨ã‹ã‚‰ã®æ›´æ–°ã§ãªã„ã¨ã
   if (EditUpdating=False) and (Edit1.Text<>'') then
   begin
     PRecordset(TLMaster[EditingIndex]).Kana:=edtKana.Text;
 
     Edited:=True;
-    Form1.StatusBar1.Panels[1].Text:='•ÏX‚ ‚è';
+    Form1.StatusBar1.Panels[1].Text:='å¤‰æ›´ã‚ã‚Š';
 
 
-    // ƒTƒuƒŠƒXƒg‚ÌXV
-    
+    // ã‚µãƒ–ãƒªã‚¹ãƒˆã®æ›´æ–°
+
     if (edtDescJ.Text=Edit1.Text) and (edtKana.Text=Edit1.Text) then
     begin
-      ListView2.ItemFocused.SubItems[5]:='~';
-      StatusBar1.Panels[2].Text:='–¢–ó'
+      ListView2.ItemFocused.SubItems[5]:='Ã—';
+      StatusBar1.Panels[2].Text:='æœªè¨³'
     end
     else
     begin
-      ListView2.ItemFocused.SubItems[5]:='›';
+      ListView2.ItemFocused.SubItems[5]:='â—‹';
       StatusBar1.Panels[2].Text:='';
     end;
 
@@ -4680,11 +4686,11 @@ begin
   masterkana:=PRecordSet(TLMaster[SelMasterID]).Kana;
 
   if IDYES=MessageBox(Form1.Handle,
-                      PChar('ƒ}ƒXƒ^ƒZƒbƒg‚Ì“Ç‚İ‰¼–¼u'+masterkana+'v‚ğŒ³‚É©“®ˆ—‚µ‚Ü‚·B'),
+                      PChar('ãƒã‚¹ã‚¿ã‚»ãƒƒãƒˆã®èª­ã¿ä»®åã€Œ'+masterkana+'ã€ã‚’å…ƒã«è‡ªå‹•å‡¦ç†ã—ã¾ã™ã€‚'),
                       APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
 
-      // ƒNƒ[ƒ“ƒZƒbƒg
+      // ã‚¯ãƒ­ãƒ¼ãƒ³ã‚»ãƒƒãƒˆ
       for i:=0 to TLMaster.Count-1 do
       begin
         if (PRecordSet(TLMaster[i]).MasterID=SubListID) and
@@ -4698,7 +4704,7 @@ begin
 
   end;
 
-  // •ÒWƒEƒBƒ“ƒhƒE‚Éî•ñ•\¦
+  // ç·¨é›†ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«æƒ…å ±è¡¨ç¤º
   UpdateEditPanel(CurrentIndex);
 
 end;
@@ -4724,11 +4730,11 @@ begin
   masterkana:=PRecordSet(TLMaster[SelMasterID]).Kana;
 
   if IDYES=MessageBox(Form1.Handle,
-                      PChar('‚±‚ÌƒZƒbƒgƒtƒ@ƒ~ƒŠ‚ÌƒQ[ƒ€–¼‚ğƒŠƒZƒbƒg‚µ‚Ü‚·B'),
+                      PChar('ã“ã®ã‚»ãƒƒãƒˆãƒ•ã‚¡ãƒŸãƒªã®ã‚²ãƒ¼ãƒ åã‚’ãƒªã‚»ãƒƒãƒˆã—ã¾ã™ã€‚'),
                       APPNAME, MB_YESNO or MB_ICONQUESTION) then
   begin
 
-      // ƒNƒ[ƒ“ƒZƒbƒg
+      // ã‚¯ãƒ­ãƒ¼ãƒ³ã‚»ãƒƒãƒˆ
       for i:=0 to TLMaster.Count-1 do
       begin
         if (PRecordSet(TLMaster[i]).MasterID=SubListID) and
@@ -4740,7 +4746,7 @@ begin
         end;
       end;
 
-      // eƒZƒbƒg‚àˆ—‚·‚é
+      // è¦ªã‚»ãƒƒãƒˆã‚‚å‡¦ç†ã™ã‚‹
 
       PRecordSet(TLMaster[SelMasterID]).DescJ := PRecordSet(TLMaster[SelMasterID]).DescE;
 
@@ -4796,52 +4802,52 @@ procedure TForm1.ListView2SelectItem(Sender: TObject; Item: TListItem;
 
 begin
 
-  // ‘I‘ğ‚ÉXV‘O‚ÆXVŒã‚Ì2‰ñŒÄ‚Ño‚³‚ê‚é‚Ì‚Å‘O‚Ì•û‚ğ‚Í‚¶‚­
-  // XV‘O: Selected=False, Item.Index=•s’è
-  // XVŒã: Selected=True,  Item.Index=‚ ‚è
+  // é¸æŠæ™‚ã«æ›´æ–°å‰ã¨æ›´æ–°å¾Œã®2å›å‘¼ã³å‡ºã•ã‚Œã‚‹ã®ã§å‰ã®æ–¹ã‚’ã¯ã˜ã
+  // æ›´æ–°å‰: Selected=False, Item.Index=ä¸å®š
+  // æ›´æ–°å¾Œ: Selected=True,  Item.Index=ã‚ã‚Š
   if not Selected then exit;
 
-  // ŠO•”‚©‚çXV‚µ‚Ä‚¢‚éê‡‚Í”²‚¯‚é
+  // å¤–éƒ¨ã‹ã‚‰æ›´æ–°ã—ã¦ã„ã‚‹å ´åˆã¯æŠœã‘ã‚‹
   if DoNotUpdateSL then exit;
 
-  // ‘I‘ğ’†‚ÌƒCƒ“ƒfƒbƒNƒX
+  // é¸æŠä¸­ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
   EditingIndex:=StrtoInt(Item.SubItems[6]);
   CurrentIndex:=EditingIndex;
 
 
-  // ƒRƒ}ƒ“ƒhƒrƒ…[
+  // ã‚³ãƒãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼
   frmCommand.LoadCommand(
           PRecordSet(TLMaster[ CurrentIndex ]).ZipName,
           PRecordSet(TLMaster[ PRecordSet(TLMaster[CurrentIndex]).MasterID ]).ZipName );
 
 
-  // •ÒWƒEƒBƒ“ƒhƒE‚Éî•ñ•\¦
+  // ç·¨é›†ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«æƒ…å ±è¡¨ç¤º
   UpdateEditPanel(EditingIndex);
 
-  // ƒXƒe[ƒ^ƒXƒo[
+  // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼
   StatusBar1.Panels[3].Text:=PRecordSet(TLMaster[EditingIndex]).DescE;
 
-  // ƒQ[ƒ€ƒXƒe[ƒ^ƒXƒAƒCƒRƒ“•\¦
+  // ã‚²ãƒ¼ãƒ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚¢ã‚¤ã‚³ãƒ³è¡¨ç¤º
   UpdateStatus;
 
-  // ƒAƒNƒVƒ‡ƒ“
+  // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
   actROpenSrc.Hint:=PRecordSet(TLMaster[EditingIndex]).Source;
-  SelZip:=Item.SubItems[0]; // ‘I‘ğ’†‚ÌZip–¼
+  SelZip:=Item.SubItems[0]; // é¸æŠä¸­ã®Zipå
 
-  // ƒXƒiƒbƒvƒVƒ‡ƒbƒg
+  // ã‚¹ãƒŠãƒƒãƒ—ã‚·ãƒ§ãƒƒãƒˆ
   ShowSnapshot(EditingIndex);
 
   // dat
   FindDat(CurrentIndex);
 
-  // ƒ\ƒtƒgƒŠƒXƒg
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆ
   frmSoftwareList.setSoftlist(SelZip);
 
   actDelUpdate(nil);
 
 end;
 
-// EnterƒL[‚Å‹N“®
+// Enterã‚­ãƒ¼ã§èµ·å‹•
 procedure TForm1.ListView2KeyPress(Sender: TObject; var Key: Char);
 begin
 
@@ -4865,11 +4871,11 @@ begin
 end;
 
 
-// INP‹L˜^‹N“®
+// INPè¨˜éŒ²èµ·å‹•
 procedure TForm1.actFRecUpdate(Sender: TObject);
 begin
 
-  actPlayUpdate(nil);   // ƒpƒXŠÖŒW‚Ìƒ`ƒFƒbƒN
+  actPlayUpdate(nil);   // ãƒ‘ã‚¹é–¢ä¿‚ã®ãƒã‚§ãƒƒã‚¯
 
   actFRec.Enabled:= actPlay.Enabled;
 
@@ -4878,7 +4884,7 @@ end;
 
 procedure TForm1.actFArcadeDBExecute(Sender: TObject);
 begin
-  if (SelZip<>'') // ‘I‘ğ€–Ú
+  if (SelZip<>'') // é¸æŠé …ç›®
   then
     ShellExecute( Form1.Handle,
                   'open',
@@ -4890,16 +4896,16 @@ end;
 
 procedure TForm1.actFArcadeDBUpdate(Sender: TObject);
 begin
-  // ‘ÎÛ‚È‚µ
+  // å¯¾è±¡ãªã—
   if SelZip='' then
   begin
-    actFArcadeDB.Caption :='&ArcadeDB‚ÅŒŸõ...';
+    actFArcadeDB.Caption :='&ArcadeDBã§æ¤œç´¢...';
     actFArcadeDB.Enabled := False;
   end
   else
-  // ‚ ‚è
+  // ã‚ã‚Š
   begin
-    actFArcadeDB.Caption := 'u'+SelZip+'v‚ğ&ArcadeDB‚ÅŒŸõ...';
+    actFArcadeDB.Caption := 'ã€Œ'+SelZip+'ã€ã‚’&ArcadeDBã§æ¤œç´¢...';
     actFArcadeDB.Enabled := True;
   end;
 end;
@@ -4915,8 +4921,8 @@ procedure TForm1.actFRecExecute(Sender: TObject);
 var opt: string;
 begin
 
-  SaveDialog1.Filter:='ƒŠƒvƒŒƒCƒtƒ@ƒCƒ‹(*.inp, *.zip)|*.inp;*.zip';
-  SaveDialog1.Title:='‹L˜^‚·‚éinpƒtƒ@ƒCƒ‹–¼';
+  SaveDialog1.Filter:='ãƒªãƒ—ãƒ¬ã‚¤ãƒ•ã‚¡ã‚¤ãƒ«(*.inp, *.zip)|*.inp;*.zip';
+  SaveDialog1.Title:='è¨˜éŒ²ã™ã‚‹inpãƒ•ã‚¡ã‚¤ãƒ«å';
 
   if DirectoryExists(inpDir) then
     SaveDialog1.FileName:=inpDir+'\'+SelZip+'@'+MameExe[CurrentProfile].Title+'.inp'
@@ -4943,11 +4949,11 @@ begin
 
 end;
 
-// inpÄ¶
+// inpå†ç”Ÿ
 procedure TForm1.actFReplayUpdate(Sender: TObject);
 begin
 
-  actPlayUpdate(nil);   // ƒpƒXŠÖŒW‚Ìƒ`ƒFƒbƒN
+  actPlayUpdate(nil);   // ãƒ‘ã‚¹é–¢ä¿‚ã®ãƒã‚§ãƒƒã‚¯
   actFReplay.Enabled:= actPlay.Enabled;
 
 end;
@@ -4959,8 +4965,8 @@ var i, TempProfile: integer;
     zip: string;
 begin
 
-  OpenDialog1.Filter:='ƒŠƒvƒŒƒCƒtƒ@ƒCƒ‹(*.inp)|*.inp';
-  OpenDialog1.Title:='Ä¶‚·‚éinpƒtƒ@ƒCƒ‹‚ğ‘I‘ğ';
+  OpenDialog1.Filter:='ãƒªãƒ—ãƒ¬ã‚¤ãƒ•ã‚¡ã‚¤ãƒ«(*.inp)|*.inp';
+  OpenDialog1.Title:='å†ç”Ÿã™ã‚‹inpãƒ•ã‚¡ã‚¤ãƒ«ã‚’é¸æŠ';
 
   if DirectoryExists(inpDir) then
     OpenDialog1.InitialDir:=inpDir
@@ -4970,7 +4976,7 @@ begin
   if OpenDialog1.Execute then
   begin
 
-    // Àsƒtƒ@ƒCƒ‹‚ğ’T‚·
+    // å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ¢ã™
     TempProfile:=CurrentProfile;
     st:=ExtractFileName(OpenDialog1.FileName);
     st:=Copy(st,pos('@',st)+1,pos('.inp',st)-pos('@',st)-1);
@@ -4983,12 +4989,12 @@ begin
       end;
     end;
 
-    // ‹N“®‘ÎÛ‚ÌƒQ[ƒ€–¼‚ğæ“¾‚·‚é
+    // èµ·å‹•å¯¾è±¡ã®ã‚²ãƒ¼ãƒ åã‚’å–å¾—ã™ã‚‹
     zip:=GetInpGame(OpenDialog1.FileName);
 
     if zip='' then
     begin
-      Windows.MessageBox(Form1.Handle,'INPƒtƒ@ƒCƒ‹‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñB','ƒGƒ‰[', MB_ICONERROR);
+      Windows.MessageBox(Form1.Handle,'INPãƒ•ã‚¡ã‚¤ãƒ«ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚','ã‚¨ãƒ©ãƒ¼', MB_ICONERROR);
       exit;
     end;
 
@@ -5011,13 +5017,13 @@ var i,j,k:integer;
     result:integer;
 begin
   //
-  
+
   if Form2.ShowModal=mrCancel then
   begin
     exit;
   end;
 
-  // ROMƒXƒe[ƒ^ƒX‚Ìˆê‘Ò”ğ
+  // ROMã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã®ä¸€æ™‚å¾…é¿
   SetLength(ROMTemp,TLMaster.Count);
   for i:=0 to TLMaster.Count-1 do
   begin
@@ -5025,7 +5031,7 @@ begin
     ROMTemp[i].ROM:=PRecordset(TLMaster[i]).ROM;
   end;
 
-  // SampleƒXƒe[ƒ^ƒX‚Ìˆê‘Ò”ğ
+  // Sampleã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã®ä¸€æ™‚å¾…é¿
   SetLength(SampleTemp,TLMaster.Count);
   for i:=0 to TLMaster.Count-1 do
   begin
@@ -5040,8 +5046,8 @@ begin
     if FileExists(ExeDir+'listxml.tmp') then
       DeleteFile(ExeDir+'listxml.tmp');
 
-    Application.MessageBox('ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B'+CRLF+
-          '³‚µ‚¢MAME–{‘Ì‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢B',APPNAME, MB_ICONERROR + MB_OK);
+    Application.MessageBox('ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚'+CRLF+
+          'æ­£ã—ã„MAMEæœ¬ä½“ã‚’é¸æŠã—ã¦ãã ã•ã„ã€‚',APPNAME, MB_ICONERROR + MB_OK);
     Application.Terminate;
     Exit;
   end
@@ -5051,20 +5057,20 @@ begin
     if FileExists(ExeDir+'listxml.tmp') then
       DeleteFile(ExeDir+'listxml.tmp');
 
-    Application.MessageBox('ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B'+CRLF+
-          'MAME‘¤‚ÌLIST.XMLƒtƒH[ƒ}ƒbƒg‚ª•ÏX‚³‚ê‚½‰Â”\«‚ª‚ ‚è‚Ü‚·B',APPNAME, MB_ICONERROR + MB_OK);
+    Application.MessageBox('ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚'+CRLF+
+          'MAMEå´ã®LIST.XMLãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒå¤‰æ›´ã•ã‚ŒãŸå¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚',APPNAME, MB_ICONERROR + MB_OK);
     Application.Terminate;
     Exit;
   end;
 
-  CreateZipIndex; // ZIP–¼‚ÌƒCƒ“ƒfƒbƒNƒXì¬
+  CreateZipIndex; // ZIPåã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ä½œæˆ
 
   //
 
   if ReadMame32jlst=False then
     ReadLang;
 
-  // ROMƒXƒe[ƒ^ƒX•œ‹Œ
+  // ROMã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å¾©æ—§
   k:=0;
   for i:=0 to TLMaster.Count-1 do
   begin
@@ -5081,7 +5087,7 @@ begin
 
   Finalize( ROMTemp );
 
-  // SampleƒXƒe[ƒ^ƒX•œ‹Œ
+  // Sampleã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å¾©æ—§
   k:=0;
   for i:=0 to TLMaster.Count-1 do
   begin
@@ -5098,18 +5104,18 @@ begin
 
   Finalize( SampleTemp );
 
-  // Šeƒf[ƒ^‚ÌÄ“Ç‚İ‚İ
+  // å„ãƒ‡ãƒ¼ã‚¿ã®å†èª­ã¿è¾¼ã¿
   ReadHistoryDat;
   ReadMameInfoDat;
   SetVersionINI;
 
-  // Form TitleXV
+  // Form Titleæ›´æ–°
   SetFormTitle;
 
-  // i‚è‚İƒŠƒZƒbƒg
+  // çµã‚Šè¾¼ã¿ãƒªã‚»ãƒƒãƒˆ
   CurrentAssort:=0;
 
-  // ƒ\ƒtƒgƒŠƒXƒgÄ‰Šú‰»
+  // ã‚½ãƒ•ãƒˆãƒªã‚¹ãƒˆå†åˆæœŸåŒ–
   frmSoftwareList.setSoftlist('');
   actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
   frmSoftwareList.setSoftlist(SelZip, true);
@@ -5130,7 +5136,7 @@ begin
   actOUseAltExe.Checked:=UseAltExe;
 end;
 
-// ƒtƒH[ƒ€‚Ìƒ^ƒCƒgƒ‹İ’è
+// ãƒ•ã‚©ãƒ¼ãƒ ã®ã‚¿ã‚¤ãƒˆãƒ«è¨­å®š
 procedure TForm1.SetFormTitle;
 var st: string;
 begin
@@ -5143,16 +5149,16 @@ begin
 
     if ((MameExe[CurrentProfile].Option<>'') and (MameExe[CurrentProfile].OptEnbld)) then
     begin
-      st:=st+ ' '+MameExe[CurrentProfile].Option;      
+      st:=st+ ' '+MameExe[CurrentProfile].Option;
     end;
 
     st:=st+')';
-    
+
   end;
 
   if DatVersion<>'' then
     st:=st+' - '+DatVersion;
-    
+
   {
   if (MameExe[CurrentProfile].ExePath<>'') and
      (MameExe[CurrentProfile].Option<>'') then
@@ -5169,7 +5175,7 @@ begin
   if DatVersion<>'' then
     Form1.Caption:=Form1.Caption+' - '+DatVersion;
   }
-  
+
   Form1.Caption := st;
 
 end;
@@ -5207,13 +5213,13 @@ begin
 
   if (PRecordSet(TLFamily[i]).DescJ=PRecordSet(TLFamily[i]).DescE) and
     (PRecordSet(TLFamily[i]).Kana=PRecordSet(TLFamily[i]).DescE) then
-    Item.Subitems.Add('~')
+    Item.Subitems.Add('Ã—')
   else
-    Item.Subitems.Add('›');
+    Item.Subitems.Add('â—‹');
 
   Item.Subitems.Add(InttoStr(PRecordSet(TLFamily[i]).ID));
 
-  // ƒAƒCƒRƒ“
+  // ã‚¢ã‚¤ã‚³ãƒ³
   if PRecordSet(TLFamily[i]).Status then
     if PRecordSet(TLFamily[i]).Master then
       Item.ImageIndex:=0
@@ -5234,7 +5240,7 @@ procedure TForm1.ListView2Exit(Sender: TObject);
 begin
 
   actDelAllCfg.Enabled:=False;
-  
+
 end;
 
 procedure TForm1.Action1Execute(Sender: TObject);
@@ -5251,10 +5257,10 @@ begin
     memCPU.ScrollBars:=ssVertical
   else
     memCPU.ScrollBars:=ssNone;
-                             
+
 end;
 
-                             
+
 procedure TForm1.SpeedButton3Click(Sender: TObject);
 begin
 
@@ -5286,7 +5292,7 @@ begin
 
   UpdateStatus;
 
-  // ListView—pƒAƒCƒRƒ“‚Ì”wŒiF
+  // ListViewç”¨ã‚¢ã‚¤ã‚³ãƒ³ã®èƒŒæ™¯è‰²
   ImageList1.BkColor:=clBtnFace;
 
 end;
@@ -5352,7 +5358,7 @@ begin
   begin
     repeat
 
-      // ˆê”Ô‰º‚Ü‚Ås‚Á‚½‚çæ“ª‚©‚çŒŸõ‚ğ‘±‚¯‚é
+      // ä¸€ç•ªä¸‹ã¾ã§è¡Œã£ãŸã‚‰å…ˆé ­ã‹ã‚‰æ¤œç´¢ã‚’ç¶šã‘ã‚‹
       if (i = TLSub.Count) then
         if Wrap then i := 0 else Exit;
 
@@ -5392,7 +5398,7 @@ begin
 
 end;
 
-// ƒtƒHƒ‹ƒ_‚©‚çæ‚èo‚·
+// ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰å–ã‚Šå‡ºã™
 //
 procedure TForm1.actVTakeOutExecute(Sender: TObject);
 var
@@ -5416,7 +5422,7 @@ begin
       end;
 
     except
-      
+
     end;
 
 
@@ -5424,7 +5430,7 @@ begin
 
 end;
 
-// ‰pŒê‚ÌƒŠƒXƒgo—Í
+// è‹±èªã®ãƒªã‚¹ãƒˆå‡ºåŠ›
 procedure TForm1.Action2Execute(Sender: TObject);
 begin
   SaveMamelst;
@@ -5438,12 +5444,12 @@ var SelMasterID, count: integer;
 begin
 
   //
-  // "ƒQ[ƒ€–¼","ŠJ”­Œ³","”Ì”„Œ³","”N“x","ƒWƒƒƒ“ƒ‹",
-  // "ƒRƒ“ƒgƒ[ƒ‰","ƒVƒXƒeƒ€ƒ{[ƒh","CPU","ƒTƒEƒ“ƒh",
-  // "‰ğ‘œ“x","F”","","ƒTƒ|[ƒg","à–¾","ƒZƒbƒg1",
-  // "ƒZƒbƒg2","ƒZƒbƒg3","ƒZƒbƒg4","ƒZƒbƒg5","ƒZƒbƒg6",
-  // "ƒZƒbƒg7","ƒZƒbƒg8","ƒZƒbƒg9","ƒZƒbƒg10",
-  // "•ª—Ş1","•ª—Ş2","•ª—Ş3","•ª—Ş4","•ª—Ş5","•ª—Ş6","•ª—Ş7","•ª—Ş8","•ª—Ş9","•ª—Ş10"
+  // "ã‚²ãƒ¼ãƒ å","é–‹ç™ºå…ƒ","è²©å£²å…ƒ","å¹´åº¦","ã‚¸ãƒ£ãƒ³ãƒ«",
+  // "ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©","ã‚·ã‚¹ãƒ†ãƒ ãƒœãƒ¼ãƒ‰","CPU","ã‚µã‚¦ãƒ³ãƒ‰",
+  // "è§£åƒåº¦","è‰²æ•°","","ã‚µãƒãƒ¼ãƒˆ","èª¬æ˜","ã‚»ãƒƒãƒˆ1",
+  // "ã‚»ãƒƒãƒˆ2","ã‚»ãƒƒãƒˆ3","ã‚»ãƒƒãƒˆ4","ã‚»ãƒƒãƒˆ5","ã‚»ãƒƒãƒˆ6",
+  // "ã‚»ãƒƒãƒˆ7","ã‚»ãƒƒãƒˆ8","ã‚»ãƒƒãƒˆ9","ã‚»ãƒƒãƒˆ10",
+  // "åˆ†é¡1","åˆ†é¡2","åˆ†é¡3","åˆ†é¡4","åˆ†é¡5","åˆ†é¡6","åˆ†é¡7","åˆ†é¡8","åˆ†é¡9","åˆ†é¡10"
 
   output:='';
 
@@ -5471,34 +5477,34 @@ begin
 
     if (maker = 'Data East') then
     begin
-	    st:=st+#9+'ƒf[ƒ^ƒC[ƒXƒg';
-	    st:=st+#9+'ƒf[ƒ^ƒC[ƒXƒg';
+	    st:=st+#9+'ãƒ‡ãƒ¼ã‚¿ã‚¤ãƒ¼ã‚¹ãƒˆ';
+	    st:=st+#9+'ãƒ‡ãƒ¼ã‚¿ã‚¤ãƒ¼ã‚¹ãƒˆ';
     end
     else
     if (maker = 'Sega') then
     begin
-	    st:=st+#9+'ƒZƒK';
-	    st:=st+#9+'ƒZƒK';
+	    st:=st+#9+'ã‚»ã‚¬';
+	    st:=st+#9+'ã‚»ã‚¬';
     end
     else
     if (maker = 'Taito') then
     begin
-	    st:=st+#9+'ƒ^ƒCƒg[';
-	    st:=st+#9+'ƒ^ƒCƒg[';
+	    st:=st+#9+'ã‚¿ã‚¤ãƒˆãƒ¼';
+	    st:=st+#9+'ã‚¿ã‚¤ãƒˆãƒ¼';
     end
     else
     if (maker = 'Capcom') then
     begin
-	    st:=st+#9+'ƒJƒvƒRƒ“';
-	    st:=st+#9+'ƒJƒvƒRƒ“';
+	    st:=st+#9+'ã‚«ãƒ—ã‚³ãƒ³';
+	    st:=st+#9+'ã‚«ãƒ—ã‚³ãƒ³';
     end
     else
     begin
 
   	  if (maker = 'Unknown') then
-	      maker:= 'ƒ[ƒJ[•s–¾';
+	      maker:= 'ãƒ¡ãƒ¼ã‚«ãƒ¼ä¸æ˜';
 
-	    st:=st+#9+'¦ŠCŠO»•ii'+maker+'j';
+	    st:=st+#9+'â€»æµ·å¤–è£½å“ï¼ˆ'+maker+'ï¼‰';
 
       st:=st+#9+'';
 
@@ -5512,7 +5518,7 @@ begin
 	  st:=st+#9+PRecordSet(TLMaster[idx]).Year;
 
 	  // genre
-	  st:=st+#9+'¦ƒsƒ“ƒ{[ƒ‹';
+	  st:=st+#9+'â€»ãƒ”ãƒ³ãƒœãƒ¼ãƒ«';
 
 	  // genre2
 	  st:=st+#9+'';
@@ -5565,17 +5571,17 @@ begin
 	  st:=st+#9+ InttoStr(PRecordSet(TLMaster[idx]).Palettesize);
 
 	  //
-	  st:=st+#9+ 'œ';
+	  st:=st+#9+ 'â—';
 
 	  // ver
 	  //st:=st+#9+ 'v'+Copy(DatVersion, 1, Pos(' (',DatVersion)-1);
-	  st:=st+#9+ 'v'+DatVersion; // “ú•t‚Í–³‚­‚È‚Á‚½
+	  st:=st+#9+ 'v'+DatVersion; // æ—¥ä»˜ã¯ç„¡ããªã£ãŸ
 
 	  // desc
 	  st:=st+#9;
 
 
-	  // ‘SƒZƒbƒg’Ç‰Á
+	  // å…¨ã‚»ãƒƒãƒˆè¿½åŠ 
 	  count:=0;
 	  SelMasterID:=PRecordSet(TLMaster[idx]).MasterID;
 	  for i:=0 to TLMaster.Count-1 do
@@ -5632,14 +5638,14 @@ var i: Integer;
     zip,kind: String;
 begin
 
-  // ”ƒ`ƒFƒbƒN
+  // æ•°ãƒã‚§ãƒƒã‚¯
   if favorites2.Count >= MAXFAVORITES2 then
   begin
-    Application.MessageBox(PWideChar('‚¨‹C‚É“ü‚è‚ÌÅ‘å”‚Í '+InttoStr(MAXFAVORITES2)+' Œ‚Å‚·B'), APPNAME, MB_ICONSTOP );
+    Application.MessageBox(PWideChar('ãŠæ°—ã«å…¥ã‚Šã®æœ€å¤§æ•°ã¯ '+InttoStr(MAXFAVORITES2)+' ä»¶ã§ã™ã€‚'), APPNAME, MB_ICONSTOP );
     exit;
   end;
 
-  // d•¡ƒ`ƒFƒbƒN
+  // é‡è¤‡ãƒã‚§ãƒƒã‚¯
   for i := 0 to favorites2.Count - 1 do
   begin
 
@@ -5648,7 +5654,7 @@ begin
 
     if (kind<>'f') AND ( zip=SelZip ) then
     begin
-      Application.MessageBox( PWideChar(SelZip+' ‚Í‚¨‹C‚É“ü‚è‚É“o˜^Ï‚İ‚Å‚·B'), APPNAME, MB_ICONSTOP );
+      Application.MessageBox( PWideChar(SelZip+' ã¯ãŠæ°—ã«å…¥ã‚Šã«ç™»éŒ²æ¸ˆã¿ã§ã™ã€‚'), APPNAME, MB_ICONSTOP );
       exit;
     end;
 
@@ -5678,7 +5684,7 @@ end;
 
 procedure TForm1.actFEmmaExecute(Sender: TObject);
 begin
-  if (SelZip<>'') // ‘I‘ğ€–Ú
+  if (SelZip<>'') // é¸æŠé …ç›®
   then
     ShellExecute( Form1.Handle,
                   'open',
@@ -5690,28 +5696,28 @@ end;
 
 procedure TForm1.actFEmmaUpdate(Sender: TObject);
 begin
-  // ‘ÎÛ‚È‚µ
+  // å¯¾è±¡ãªã—
   if SelZip='' then
   begin
-    actFEmma.Caption :='&EMMA‚ÅŒŸõ...';
+    actFEmma.Caption :='&EMMAã§æ¤œç´¢...';
     actFEmma.Enabled := False;
   end
   else
-  // ‚ ‚è
+  // ã‚ã‚Š
   begin
-    actFEmma.Caption := 'u'+SelZip+'v‚ğ&EMMA‚ÅŒŸõ...';
+    actFEmma.Caption := 'ã€Œ'+SelZip+'ã€ã‚’&EMMAã§æ¤œç´¢...';
     actFEmma.Enabled := True;
   end;
 end;
 
-// ‚¨‹C‚É“ü‚è‚Ì‹N“®
+// ãŠæ°—ã«å…¥ã‚Šã®èµ·å‹•
 procedure TForm1.RunFavorite(Sender: TObject);
 begin
 
-  // ƒvƒƒtƒ@ƒCƒ‹–¢‘I‘ğ
+  // ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«æœªé¸æŠ
   if CurrentProfile=-1 then exit;
 
-  // Àsƒtƒ@ƒCƒ‹Šm”F
+  // å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ç¢ºèª
   if (FileExists(MameExe[CurrentProfile].ExePath)) and
      ((DirectoryExists(MameExe[CurrentProfile].WorkDir) or
       (MameExe[CurrentProfile].WorkDir='')))
@@ -5724,16 +5730,16 @@ begin
 
 end;
 
-// ‚¨‹C‚É“ü‚è‚Ì‹N“®VŒ^
+// ãŠæ°—ã«å…¥ã‚Šã®èµ·å‹•æ–°å‹
 procedure TForm1.RunFavorite2(Sender: TObject);
 var zip: String;
     tag: Integer;
 begin
 
-  // ƒvƒƒtƒ@ƒCƒ‹–¢‘I‘ğ
+  // ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«æœªé¸æŠ
   if CurrentProfile=-1 then exit;
 
-  // Àsƒtƒ@ƒCƒ‹Šm”F
+  // å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ç¢ºèª
   if (FileExists(MameExe[CurrentProfile].ExePath)) and
      ((DirectoryExists(MameExe[CurrentProfile].WorkDir) or
       (MameExe[CurrentProfile].WorkDir='')))
@@ -5751,8 +5757,8 @@ end;
 
 procedure TForm1.Dummy(Sender: TObject);
 begin
-  // ƒ_ƒ~[
-  // ƒAƒNƒVƒ‡ƒ“ƒƒjƒ…[“à‚ÌƒtƒHƒ‹ƒ_—p
+  // ãƒ€ãƒŸãƒ¼
+  // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼å†…ã®ãƒ•ã‚©ãƒ«ãƒ€ç”¨
 end;
 
 procedure TForm1.ActionMainMenuBar1Popup(Sender: TObject;
@@ -5769,7 +5775,7 @@ begin
 
   if (Item.Caption = ActionManager1.ActionBars[5].Items[3].caption) then begin
 
-    // ‚Ü‚¸Á‚·
+    // ã¾ãšæ¶ˆã™
     for i:=0 to Length(FavActions2)-1 do
     begin
       FavActions2[i].Free;
@@ -5780,11 +5786,11 @@ begin
       exit;
     end;
 
-    // ‚¨‹C‚É“ü‚è‚ª‚ ‚éƒƒjƒ…[ˆÊ’u
+    // ãŠæ°—ã«å…¥ã‚ŠãŒã‚ã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼ä½ç½®
     AC:= ActionManager1.ActionBars[5].Items[3];
 
     n := 0;
-    folderIdx := -1; //ƒtƒHƒ‹ƒ_–¢“o˜^
+    folderIdx := -1; //ãƒ•ã‚©ãƒ«ãƒ€æœªç™»éŒ²
 
     try
       for i:=0 to Favorites2.Count-1 do begin
@@ -5796,7 +5802,7 @@ begin
           kind := copy(Favorites2[i], 1, pos( #9, Favorites2[i] ) -1 );
           zip := copy(Favorites2[i], pos( #9, Favorites2[i] )+1, Favorites2[i].Length);
 
-          // ƒtƒHƒ‹ƒ_’Ç‰Á
+          // ãƒ•ã‚©ãƒ«ãƒ€è¿½åŠ 
           if ( kind = 'f' ) then begin
             if Length(zip)>40 then
             begin
@@ -5815,20 +5821,20 @@ begin
             AC.Items[0].CommandStyle := csMenu;
           end
           else
-          // ƒ^ƒCƒgƒ‹€–Ú
+          // ã‚¿ã‚¤ãƒˆãƒ«é …ç›®
           begin
 
-            // zip‚©‚çî•ñ‚ğæ“¾‚·‚é
+            // zipã‹ã‚‰æƒ…å ±ã‚’å–å¾—ã™ã‚‹
             idx:= FindIndex( zip );
 
-            /// •s–¾‚ÈƒQ[ƒ€
+            /// ä¸æ˜ãªã‚²ãƒ¼ãƒ 
             if idx=-1 then
             begin
-              st := zip + ' - <•s–¾‚ÈƒQ[ƒ€>';
+              st := zip + ' - <ä¸æ˜ãªã‚²ãƒ¼ãƒ >';
               icoidx := 8+39;
             end
             else
-            /// ‘¶İ‚·‚éƒQ[ƒ€
+            /// å­˜åœ¨ã™ã‚‹ã‚²ãƒ¼ãƒ 
             begin
               if En then
                 st := zip + ' - '+ PRecordSet(TLMaster[idx]).DescE
@@ -5841,7 +5847,7 @@ begin
               end;
 
 
-              // ƒAƒCƒRƒ“
+              // ã‚¢ã‚¤ã‚³ãƒ³
               if PRecordSet(TLMaster[idx]).Status then
               begin
                 if PRecordSet(TLMaster[idx]).Master then
@@ -5868,13 +5874,13 @@ begin
             FavActions2[n].tag := i;
             FavActions2[n].OnExecute := RunFavorite2;
 
-            // ƒ‹[ƒgŠK‘w‚Ìƒ^ƒCƒgƒ‹
+            // ãƒ«ãƒ¼ãƒˆéšå±¤ã®ã‚¿ã‚¤ãƒˆãƒ«
             if ( kind = '-1' ) then begin
               AC.Items.Add.Action := FavActions2[n];
               Inc(folderIdx);
             end
             else begin
-              // ‰ºŠK‘w‚Ìƒ^ƒCƒgƒ‹
+              // ä¸‹éšå±¤ã®ã‚¿ã‚¤ãƒˆãƒ«
               AC.Items[3+folderIdx].Items.Add.Action:=FavActions2[n];
             end;
 
@@ -5885,7 +5891,7 @@ begin
       end;
 
     except
-      Application.MessageBox(PWideChar('‚¨‹C‚É“ü‚è‚Ì“Ç‚İ‚İ‚ÉƒGƒ‰[‚ª‹N‚«‚Ü‚µ‚½B'+#13#10+'İ’èƒtƒ@ƒCƒ‹‚ğíœ‚µ‚Ä‚â‚è’¼‚µ‚Ä‚­‚¾‚³‚¢B'), APPNAME, MB_ICONSTOP );
+      Application.MessageBox(PWideChar('ãŠæ°—ã«å…¥ã‚Šã®èª­ã¿è¾¼ã¿æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒèµ·ãã¾ã—ãŸã€‚'+#13#10+'è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã—ã¦ã‚„ã‚Šç›´ã—ã¦ãã ã•ã„ã€‚'), APPNAME, MB_ICONSTOP );
       for i:=0 to Length(FavActions2)-1 do
       begin
         FavActions2[i].Free;
@@ -5905,10 +5911,10 @@ begin
 
     if ListView1.ItemIndex=-1 then exit;
 
-    // ƒXƒiƒbƒvƒVƒ‡ƒbƒg
+    // ã‚¹ãƒŠãƒƒãƒ—ã‚·ãƒ§ãƒƒãƒˆ
     ShowSnapshot(CurrentIndex);
 
-    // ƒAƒNƒVƒ‡ƒ“
+    // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
     //actDelScreenShot.Enabled:=(CurrentShot<>'');
     actRRefine.Hint:=PRecordSet(TLSub[ListView1.ItemIndex]).Source;
     actROpenSrc.Hint:=PRecordSet(TLSub[ListView1.ItemIndex]).Source;
@@ -5920,9 +5926,9 @@ begin
 
     if ListView2.ItemIndex=-1 then exit;
 
-    actDelUpdate(nil); // íœƒƒjƒ…[‚ÌXV
+    actDelUpdate(nil); // å‰Šé™¤ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®æ›´æ–°
 
-    // ƒXƒiƒbƒvƒVƒ‡ƒbƒg
+    // ã‚¹ãƒŠãƒƒãƒ—ã‚·ãƒ§ãƒƒãƒˆ
     ShowSnapshot(EditingIndex);
 
   end;
@@ -5932,16 +5938,16 @@ end;
 procedure TForm1.actOpenTestersUpdate(Sender: TObject);
 begin
 
-  // ‘ÎÛ‚È‚µ
+  // å¯¾è±¡ãªã—
   if SelDriver='' then
   begin
-    actOpenTesters.Caption :='&Testers‚ÅŒŸõ...';
+    actOpenTesters.Caption :='&Testersã§æ¤œç´¢...';
     actOpenTesters.Enabled := False;
   end
   else
-  // ‚ ‚è
+  // ã‚ã‚Š
   begin
-    actOpenTesters.Caption := 'u'+SelDriver+'v‚ğ&Testers‚ÅŒŸõ...';
+    actOpenTesters.Caption := 'ã€Œ'+SelDriver+'ã€ã‚’&Testersã§æ¤œç´¢...';
     actOpenTesters.Enabled := True;
   end;
 
@@ -5949,7 +5955,7 @@ end;
 
 procedure TForm1.actOpenTestersExecute(Sender: TObject);
 begin
-  if (SelDriver<>'') // ‘I‘ğ€–Ú
+  if (SelDriver<>'') // é¸æŠé …ç›®
   then
     ShellExecute( Form1.Handle,
                   'open',
@@ -5972,7 +5978,7 @@ begin
 
   Clipboard.AsText := FormatHistory(TLMaster[CurrentIndex]);
   beep;
-  
+
 end;
 
 procedure TForm1.ListView1DataFind(Sender: TObject; Find: TItemFind;
@@ -5985,12 +5991,12 @@ var
 begin
 
   i := StartIndex;
-  
+
   if (Find = ifExactString) or (Find = ifPartialString) then
   begin
     repeat
 
-      // ˆê”Ô‰º‚Ü‚Ås‚Á‚½‚çæ“ª‚©‚çŒŸõ‚ğ‘±‚¯‚é
+      // ä¸€ç•ªä¸‹ã¾ã§è¡Œã£ãŸã‚‰å…ˆé ­ã‹ã‚‰æ¤œç´¢ã‚’ç¶šã‘ã‚‹
       if (i = TLSub.Count) then
         if Wrap then i := 0 else Exit;
 
@@ -6016,8 +6022,8 @@ var SelMasterID, i, count: integer;
 begin
 
   //
-  // "ƒQ[ƒ€–¼","ŠJ”­Œ³","”Ì”„Œ³","”N“x","ƒWƒƒƒ“ƒ‹1","ƒWƒƒƒ“ƒ‹2","ƒRƒ“ƒgƒ[ƒ‰","ƒVƒXƒeƒ€ƒ{[ƒh","ŠCŠOƒtƒ‰ƒO","ƒTƒ|[ƒg","à–¾",
-  // "ƒZƒbƒg1","ƒZƒbƒg2","ƒZƒbƒg3","ƒZƒbƒg4","ƒZƒbƒg5","ƒZƒbƒg6","ƒZƒbƒg7","ƒZƒbƒg8","ƒZƒbƒg9","ƒZƒbƒg10","ƒZƒbƒg11","ƒZƒbƒg12",  .... "ƒZƒbƒg100"
+  // "ã‚²ãƒ¼ãƒ å","é–‹ç™ºå…ƒ","è²©å£²å…ƒ","å¹´åº¦","ã‚¸ãƒ£ãƒ³ãƒ«1","ã‚¸ãƒ£ãƒ³ãƒ«2","ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©","ã‚·ã‚¹ãƒ†ãƒ ãƒœãƒ¼ãƒ‰","æµ·å¤–ãƒ•ãƒ©ã‚°","ã‚µãƒãƒ¼ãƒˆ","èª¬æ˜",
+  // "ã‚»ãƒƒãƒˆ1","ã‚»ãƒƒãƒˆ2","ã‚»ãƒƒãƒˆ3","ã‚»ãƒƒãƒˆ4","ã‚»ãƒƒãƒˆ5","ã‚»ãƒƒãƒˆ6","ã‚»ãƒƒãƒˆ7","ã‚»ãƒƒãƒˆ8","ã‚»ãƒƒãƒˆ9","ã‚»ãƒƒãƒˆ10","ã‚»ãƒƒãƒˆ11","ã‚»ãƒƒãƒˆ12",  .... "ã‚»ãƒƒãƒˆ100"
 
   st:='';
   s:='';
@@ -6039,37 +6045,37 @@ begin
   // manu
   maker:=PRecordSet(Item).Maker;
   if (maker = '<unknown>') then
-    maker:= 'ƒ[ƒJ[•s–¾';
+    maker:= 'ãƒ¡ãƒ¼ã‚«ãƒ¼ä¸æ˜';
 
 
   if (maker = 'bootleg') then
   begin
-    st:=st+#9+'¦ŠC‘¯”Å';
-    st:=st+#9+'¦ŠC‘¯”Å';
+    st:=st+#9+'â€»æµ·è³Šç‰ˆ';
+    st:=st+#9+'â€»æµ·è³Šç‰ˆ';
   end
   else
   begin
-    st:=st+#9+'¦ŠCŠO»•ii'+maker+'j';
-    st:=st+#9+'¦‘“à”Ì”„‚È‚µ';
+    st:=st+#9+'â€»æµ·å¤–è£½å“ï¼ˆ'+maker+'ï¼‰';
+    st:=st+#9+'â€»å›½å†…è²©å£²ãªã—';
   end;
 
   // year
   st:=st+#9+PRecordSet(Item).Year;
 
   // genre
-  st:=st+#9+'¦–¢•ª—Ş';
+  st:=st+#9+'â€»æœªåˆ†é¡';
 
   // genre2
   st:=st+#9+'';
 
   // ctrler
-  st:=st+#9+'¦–¢•ª—Ş';
+  st:=st+#9+'â€»æœªåˆ†é¡';
 
   // sys
   st:=st+#9;
 
   //
-  st:=st+#9+ 'œ';
+  st:=st+#9+ 'â—';
 
   // ver
 //  st:=st+#9+ 'v'+Copy(DatVersion, 1, Pos(' (',DatVersion)-1);
@@ -6079,7 +6085,7 @@ begin
   st:=st+#9;
 
 
-  // ‘SƒZƒbƒg’Ç‰Á
+  // å…¨ã‚»ãƒƒãƒˆè¿½åŠ 
   count:=0;
 
   SelMasterID:=PRecordSet(TLMaster[PRecordset(Item).MasterID]).MasterID;
@@ -6106,15 +6112,15 @@ var SelMasterID, i, count: integer;
 begin
 
   //
-  // "ƒQ[ƒ€–¼","ŠJ”­Œ³","”Ì”„Œ³","”N“x","ƒWƒƒƒ“ƒ‹1","ƒWƒƒƒ“ƒ‹2","ƒRƒ“ƒgƒ[ƒ‰","ƒVƒXƒeƒ€ƒ{[ƒh","ŠCŠOƒtƒ‰ƒO","ƒTƒ|[ƒg","à–¾",
-  // "ƒZƒbƒg1","ƒZƒbƒg2","ƒZƒbƒg3","ƒZƒbƒg4","ƒZƒbƒg5","ƒZƒbƒg6","ƒZƒbƒg7","ƒZƒbƒg8","ƒZƒbƒg9","ƒZƒbƒg10","ƒZƒbƒg11","ƒZƒbƒg12",  .... "ƒZƒbƒg100"
+  // "ã‚²ãƒ¼ãƒ å","é–‹ç™ºå…ƒ","è²©å£²å…ƒ","å¹´åº¦","ã‚¸ãƒ£ãƒ³ãƒ«1","ã‚¸ãƒ£ãƒ³ãƒ«2","ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©","ã‚·ã‚¹ãƒ†ãƒ ãƒœãƒ¼ãƒ‰","æµ·å¤–ãƒ•ãƒ©ã‚°","ã‚µãƒãƒ¼ãƒˆ","èª¬æ˜",
+  // "ã‚»ãƒƒãƒˆ1","ã‚»ãƒƒãƒˆ2","ã‚»ãƒƒãƒˆ3","ã‚»ãƒƒãƒˆ4","ã‚»ãƒƒãƒˆ5","ã‚»ãƒƒãƒˆ6","ã‚»ãƒƒãƒˆ7","ã‚»ãƒƒãƒˆ8","ã‚»ãƒƒãƒˆ9","ã‚»ãƒƒãƒˆ10","ã‚»ãƒƒãƒˆ11","ã‚»ãƒƒãƒˆ12",  .... "ã‚»ãƒƒãƒˆ100"
 
   st:='';
   s:='';
   cpu:='';
   sound:='';
 
-  // ‘SƒZƒbƒg’Ç‰Á
+  // å…¨ã‚»ãƒƒãƒˆè¿½åŠ 
   count:=0;
 
   SelMasterID:=PRecordSet(TLMaster[PRecordset(Item).MasterID]).MasterID;
@@ -6135,4 +6141,5 @@ begin
 end;
 
 end.
+
 
