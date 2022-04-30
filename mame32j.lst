@@ -1793,6 +1793,7 @@ badgirlsg	Bad Girls (ドイツ版)	ばっどがーるず_g
 badlands	バッドランズ	ばっどらんずa
 badlandsb	バッドランズ (海賊版)	ばっどらんずa-b
 badlandsb2	バッドランズ (海賊版, alternate)	ばっどらんずa-b2
+badlandsm	バッドランズ (モジュラーシステム)	ばっどらんず
 bagman	バッグマン	ばっぐまん
 bagmanf	Le Bagnard (クレイジーコング基板, 海賊版)	るばなー-b
 bagmanj	バッグマン (Taito)	ばっぐまん
@@ -2358,11 +2359,12 @@ bloodbroja	ブラッドブラザーズ (日本版)	ぶらっどぶらざーず_
 bloodbrok	ブラッドブラザーズ (韓国版)	ぶらっどぶらざーず_k
 bloodbrom	ブラッドブラザーズ (Modular System)	ぶらっどぶらざーず-b
 bloodbrou	ブラッドブラザーズ (US)	ぶらっどぶらざーず_us
-bloodstm	Blood Storm (v2.22)	ぶらっどすとーむ_222
-bloodstm10	Blood Storm (v1.04)	ぶらっどすとーむ_104
-bloodstm11	Blood Storm (v1.10)	ぶらっどすとーむ_11
-bloodstm21	Blood Storm (v2.10)	ぶらっどすとーむ_21
-bloodstm22	Blood Storm (v2.20)	ぶらっどすとーむ_22
+bloodstm	Blood Storm (v2.22)	ぶらっどすとーむ_
+bloodstm104	Blood Storm (v1.04)	ぶらっどすとーむ_
+bloodstm110	Blood Storm (v1.10)	ぶらっどすとーむ_
+bloodstm210	Blood Storm (v2.10)	ぶらっどすとーむ_
+bloodstm220	Blood Storm (v2.20)	ぶらっどすとーむ_
+bloodstm221	Blood Storm (v2.21)	ぶらっどすとーむ_
 bloodwar	大江戸ファイト / Blood Warrior	おおえどふぁいと_b
 bloto	Blits Loto (Ukraine, V. 30.16)	びりっつろと_
 blotoa	Blits Loto (Ukraine, V. 30.08)	びりっつろと_
@@ -2494,6 +2496,7 @@ bombjackt	ボンジャック (Tecfri, スペイン版)	ぼんじゃっく_s
 bombkick	Bomb Kick (set 1)	ぼむきっく_1
 bombkicka	Bomb Kick (set 2)	ぼむきっく_2
 bomblord	Bomber Lord (海賊版)	ぼんばーろーど
+bombman	ボンブマン	ぼんぶまん
 bombrman	ボンバーマン (日本版)	ぼんばーまん
 bombsa	Bombs Away (プロトタイプ)	ぼむずあうぇい
 bonanza	Touchstar Bonanza (Revision 3)	たっちすたーぼなんざ_3
@@ -2572,6 +2575,7 @@ bowlroad	Bowling Road (Ver 1.5)	ぼうりんぐろーど
 bowlroad14	Bowling Road (Ver 1.4)	ぼうりんぐろーど
 bowlroad14n	Bowling Road (Ver 1.4, ND2001 hardware)	ぼうりんぐろーど
 bowltry	ボウリングトライ！	ぼうりんぐとらい
+bowmen	Bowmen	ばうめん
 boxer	Boxer (プロトタイプ)	ぼくさー
 boxingb	Boxing Bugs	ぼくしんぐばぐず
 boxingm	ボクシングマニア -あしたのジョー- (ver JAA)	ぼくしんぐまにあ
@@ -3212,8 +3216,8 @@ cecm	長安CEC-M (China Education Computer)	ちゃいなえでゅけーしょん
 cecmatch	ChuckECheese's Match Game	ちゃっきーちーぜずまっちげーむ
 cencourt	パッシングショット / Center Court (海外版, 4 Players, プロトタイプ) (MC-8123B)	ぱっしんぐしょっと-p
 centaur	Centaur	けんたうるす
-centauri	Centaur (Inder)	せんとー
-centauri2	Centaur (Inder, alternate set)	せんとー
+centauri	Centaur (Inder) (set 1)	せんとー
+centauri2	Centaur (Inder) (set 2)	せんとー
 centipdb	センチピード (海賊版, set 1)	せんちぴーど-b1
 centipdb2	センチピード (海賊版, set 2)	せんちぴーど-b2
 centipdd	Centipede Dux (hack)	せんちぴーどだっくす
@@ -3712,6 +3716,7 @@ comg157	Cal Omega - Game 15.7 (Double-Draw Poker)	かるおめがげーむ157
 comg159	Cal Omega - Game 15.9 (Wild Double-Up)	かるおめがげーむ159
 comg164	Cal Omega - Game 16.4 (Keno)	かるおめがげーむ164
 comg168	Cal Omega - Game 16.8 (Keno)	かるおめがげーむ168
+comg170	Cal Omega - Game 17.0 (Amusement Poker)	かるおめがげーむ170
 comg172	Cal Omega - Game 17.2 (Double Double Poker)	かるおめがげーむ172
 comg175	Cal Omega - Game 17.51 (Gaming Draw Poker)	かるおめがげーむ175
 comg176	Cal Omega - Game 17.6 (Nudge)	かるおめがげーむ176
@@ -4711,10 +4716,11 @@ demonwld1	ホラーストーリー / Demon's World (set 2)	ほらーすとーり
 demonwld2	ホラーストーリー / Demon's World (set 3)	ほらーすとーりー_3
 demonwld3	ホラーストーリー / Demon's World (set 4)	ほらーすとーりー_4
 demonwld4	ホラーストーリー / Demon's World (set 5)	ほらーすとーりー_5
-dendego	電車でGO！ (Ver 2.2 J)	でんしゃでごー1
+dendego	電車でGO！ (Ver 2.3 J)	でんしゃでごー1
 dendego2	電車でGO！2 -高速編- (Ver 2.5 J)	でんしゃでごー2
 dendego23k	電車でGO！2 -高速編3000番台- (Ver 2.20 J)	でんしゃでごー2_k
 dendego3	電車でGO！3 -通勤編- (V2.03J)	でんしゃでごー3
+dendegoa	電車でGO！ (Ver 2.2 J)	でんしゃでごー1
 dendegox	電車でGO！EX (Ver 2.4 J)	でんしゃでごー1_e
 dendy	Dendy Classic 1	でんでぃくらしっく1
 dendy2	Dendy Classic 2	でんでぃくらしっく2
@@ -5195,6 +5201,7 @@ drgneye	Dragon's Eye (0100521V, NSW/ACT)	どらごんずあい-c
 drgninja	ドラゴン忍者 (日本版 revision 1)	どらごんにんじゃ
 drgninjab	ドラゴン忍者 (海賊版)	どらごんにんじゃ-b
 drgninjab2	ドラゴン忍者 (海賊版 with 68705)	どらごんにんじゃ-b6
+drgninjam	ドラゴン忍者 (モジュラーシステム)	どらごんにんじゃ
 drgnlord	Dragon Lord (10173511, NSW/ACT)	どらごんろーど
 drgnmgic	Dragon Magic (2J015711, NSW/ACT)	どらごんまじっく
 drgnmst	Dragon Master (set 1)	どらごんますたー
@@ -7577,6 +7584,7 @@ finehour	ファイネストアワー (日本版)	ふぁいねすとあわー
 finfurl	ファイナルハロン (海外版, FF2 Ver. A)	ふぁいなるはろん1_w
 finfurl2	ファイナルハロン2 (海外版)	ふぁいなるはろん2_w
 finfurl2j	ファイナルハロン2 (日本版)	ふぁいなるはろん2
+finger	Finger (スティンガー海賊版)	ふぃんがー
 finlarch	ファイナルアーチ (J 950714 V1.001)	ふぁいなるあーち
 fireact	Fire Action	ふぁいああくしょん
 fireactd	Fire Action Deluxe	ふぁいああくしょんでらっくす
@@ -7686,6 +7694,7 @@ flyball	Flyball (rev 2)	ふらいぼーる_2
 flyball1	Flyball (rev 1)	ふらいぼーる_1
 flyboy	フライボーイ	ふらいぼーい
 flyboyb	フライボーイ (海賊版)	ふらいぼーい
+flyingf	Flying Fortress [TTL]	ふらいんぐふぉーとれす
 flytiger	Flying Tiger (set 1)	ふらいんぐたいがー_1
 flytigera	Flying Tiger (set 2)	ふらいんぐたいがー_2
 fm11	FM-11 EX	えふえむいれぶん_ex
@@ -8025,6 +8034,7 @@ galaktron	Galaktron (Petaco S.A.)	ぎゃらくとろん
 galap1	スペースインベーダーズ・ギャラクティカ (ギャラクシアン (Namco set 2) ハック版)	すぺーすいんべーだーずぎゃらくてぃか
 galap4	ギャラクシアンパートIV	ぎゃらくしあんぱーとふぉー
 galapx	ギャラクシアンパートX (ムーンエイリアンハック版)	ぎゃらくしあんぱーとてん
+galartic	ギャラクシアン (Artic System 海賊版)	ぎゃらくしあん-bas
 galastrm	ギャラクティックストーム (日本版)	ぎゃらくてぃっくすとーむ
 galaxbsf	ギャラクシアン (海賊版, set 1)	ぎゃらくしあん-b1
 galaxbsf2	ギャラクシアン (海賊版, set 3)	ぎゃらくしあん-b3
@@ -8100,8 +8110,8 @@ galpani4	ギャルズパニック4遊 (Euro版)	ぎゃるずぱにっく4ゆう_
 galpani4j	ギャルズパニック4遊 (日本版)	ぎゃるずぱにっく4ゆう
 galpani4k	ギャルズパニック4遊 (韓国版)	ぎゃるずぱにっく4ゆう_k
 galpanic	ギャルズパニック (プロテクト無し)	ぎゃるずぱにっく1_
-galpanica	ギャルズパニック (MCU Protected, set 1)	ぎゃるずぱにっく1_1
-galpanicb	ギャルズパニック (MCU Protected, set 2)	ぎゃるずぱにっく1_2
+galpanica	ギャルズパニック (ULA protected, set 1)	ぎゃるずぱにっく1_1
+galpanicb	ギャルズパニック (ULA protected, set 2)	ぎゃるずぱにっく1_2
 galpanicms	New Quiz (Modular System製ギャルズパニック海賊版)	にゅーくいず
 galpanidx	ギャルズパニック4遊 / Gals Panic DX (アジア版)	ぎゃるずぱにっく4ゆう_a
 galpaniex	ギャルズパニック4遊 / Gals Panic EX (韓国版)	ぎゃるずぱにっく4ゆう_k
@@ -8397,6 +8407,7 @@ gdarius	Gダライアス (Ver 2.01O)	じーだらいあす1_o
 gdarius2	Gダライアス Ver.2 (Ver 2.03J)	じーだらいあす2_203
 gdariusj	Gダライアス (Ver 2.01J)	じーだらいあす1_
 gdariusu	Gダライアス (Ver 2.02A)	じーだらいあす1_a
+gdefender	Defender (学研)	でぃふぇんだー_g
 gdfs	機動戦士ガンダム -ファイナルシューティング- (日本版)	きどうせんしがんだむふぁいなるしゅーてぃんぐ
 gdigdug	ディグダグ (学研)	でぃぐだぐ1--がっけん
 gdvsgd	機動戦士ガンダム ガンダムvs.ガンダム (GVS1 Ver. A)	きどうせんしがんだむがんだむばーさすがんだむ1
@@ -8472,6 +8483,7 @@ gforce2sd	ギャラクシーフォースII (スーパーデラックス筐体)	�
 ggate	Golden Gate (set 1) (Bingo)	ごーるでんげーと_1
 ggatea	Golden Gate (set 2) (Bingo)	ごーるでんげーと_2
 ggconnie	ゴー！ゴー！コニーちゃん！ジャカジャカジャンケン	ごーごーこにーちゃんじゃかじゃかじゃんけん
+ggdman	GoGo科学戦隊ダイナマン	ごーごーかがくせんたいだいなまん
 gghost	Goalie Ghost	ごーりーごーすと
 ggisuka	ギルティギア イスカ	ぎるてぃぎあいすか
 ggm	Great Game Machine	ぐれーとげーむましん
@@ -8816,7 +8828,10 @@ goldnaxejd	ゴールデンアックス (set 4, 日本版) (FD1094 317-0121 海�
 goldnaxeu	ゴールデンアックス (set 5, US版) (FD1094 317-0122)	ごーるでんあっくす1_5
 goldnaxeud	ゴールデンアックス (set 5, US版) (FD1094 317-0122 海賊版)	ごーるでんあっくす1-b5
 goldnpkb	Golden Poker Double Up (Mini Boy)	ごーるでんぽーかーだぶるあっぷ
-goldnpkc	Golden Poker Double Up (海賊版)	ごーるでんぽーかーだぶるあっぷ-b
+goldnpkc	Golden Poker Double Up (海賊版, set 1)	ごーるでんぽーかーだぶるあっぷ-b
+goldnpkd	Golden Poker Double Up (海賊版, set 2)	ごーるでんぽーかーだぶるあっぷ-b
+goldnpke	Golden Poker Double Up (海賊版, set 3)	ごーるでんぽーかーだぶるあっぷ-b
+goldnpkf	Golden Poker Double Up (海賊版, set 4)	ごーるでんぽーかーだぶるあっぷ-b
 goldnpkr	Golden Poker Double Up (Big Boy)	ごーるでんぽーかーだぶるあっぷ
 goldpym	Golden Pyramids Special Edition - Maximillions (10130811, NSW/ACT)	ごーるでんぴらみっずすぺしゃるえでぃしょん
 goldpyr	Golden Pyramids (AHG1205-03, US)	ごーるでんぴらみっず
@@ -9366,6 +9381,7 @@ harddrivb6	ハードドライビン (cockpit, UK版, rev 6)	はーどどらい�
 harddrivc	ハードドライビン (compact, rev 2)	はーどどらいびん-2
 harddrivc1	ハードドライビン (compact, rev 1)	はーどどらいびん-1
 harddrivcb	ハードドライビン (compact, UK版, rev 2)	はーどどらいびん-2u
+harddrivcbl	ハードドライビン (compact, rev 2 海賊版)	はーどどらいびん-b
 harddrivcg	ハードドライビン (compact, ドイツ版, rev 2)	はーどどらいびん-2g
 harddrivg	ハードドライビン (cockpit, ドイツ版, rev 7)	はーどどらいびん_c7g
 harddrivg4	ハードドライビン (cockpit, ドイツ版, rev 4)	はーどどらいびん_c4g
@@ -9791,6 +9807,7 @@ horekidb2	キッドのホレホレ大作戦 (海賊版 set 2)	きっどのほれ
 horizon	Horizon (Irem)	ほらいずん
 horocomp	Horoscope Computer	ほろすこーぷこんぴゅーた
 horseran	Thoroughbred Horse Race Analyzer	さらぶれっどほーすれーすあならいざー
+horses4c	Horses For Courses (NSW, Australia)	ほーせずふぉーこーせず
 horshoes	アメリカンホースシューズ (US版)	あめりかんほーすしゅーず
 hostinv	Host Invaders	ほすといんべーだーず
 hot304	HOT-304	えいちおーてぃー304
@@ -10121,6 +10138,7 @@ idhimitu	アイドルの秘密 [メダル] (日本版 890304)	あいどるのひ
 idolmj	アイドル麻雀放送局 (日本版)	あいどるまーじゃんほうそうきょく
 idsoccer	インドアサッカー (set 1)	いんどあさっかー_1
 idsoccera	インドアサッカー (set 2)	いんどあさっかー_2
+idsoccert	インドアサッカー (Tecfri license PCB)	いんどあさっかー_t
 ie15	15IE-00-013	ぴとぅなーつぁっちいーえー
 iemoto	家元 (日本版 871020)	いえもと
 iemotom	家元 [メダル] (日本版 871118)	いえもと
@@ -10312,7 +10330,7 @@ inufuku	クイズ＆バラエティ すくすく犬福 (日本版)	くいずあ�
 inunoos	犬のおさんぽ / Dog Walking (日本版, 輸出版, Rev A)	いぬのおさんぽ
 invad2ct	Space Invaders II (Midway, カクテル筐体)	すぺーすいんべーだー2
 invaddlx	スペースインベーダーデラックス	すぺーすいんべーだーでらっくす
-invader4	Space Invaders Part Four	すぺーすいんべーだーぱーと4
+invader4	Space Invaders Part Four (スペースアタックII海賊版)	すぺーすいんべーだーぱーと4
 invaderl	スペースインベーダー (Logitec)	すぺーすいんべーだー1_l
 invadernc	スペースインベーダー (Nas Corp 海賊版)	すぺーすいんべーだー1-bnas
 invaders	スペースインベーダー / Space Invaders M	すぺーすいんべーだー1
@@ -10408,6 +10426,7 @@ isa386u30	ISA-386U30 REV.2.2	あいえすえー386u
 isbc286	iSBC 286	あいえすびーしー286
 isbc2861	iSBC 286/10	あいえすびーしー286
 isbc28612	iSBC 286/12	あいえすびーしー286
+isbc660	iSBC 660	あいえすびーしー660
 isbc8010	iSBC 80/10	あいえすびーしー
 isbc8010a	iSBC 80/10A	あいえすびーしー
 isbc8010b	iSBC 80/10B	あいえすびーしー
@@ -12117,8 +12136,8 @@ jparkmb	ジュラシックパーク (メガドライブ版海賊版)	じゅら�
 jpcoin	Joker Poker (Coinmaster set 1)	じょーかーぽーかー_c
 jpcoin2	Joker Poker (Coinmaster, Amusement Only)	じょーかーぽーかー_c
 jpinball	Pin Ball	ぴんぼーる_j
-jplstw20	The Lost World: Jurassic Park (2.00)	ざろすとわーるどじゅらしっくぱーく-p200
-jplstw22	The Lost World: Jurassic Park (2.02)	ざろすとわーるどじゅらしっくぱーく-p202
+jplstw20	The Lost World: Jurassic Park (Pinball, 2.00)	ざろすとわーるどじゅらしっくぱーく-p200
+jplstw22	The Lost World: Jurassic Park (Pinball, 2.02)	ざろすとわーるどじゅらしっくぱーく-p202
 jpopira	PlugIt! ジャンピンポピラ (日本版)	ぷらぐいっとじゃんぴんぽぴら
 jpopnics	Jumping Pop (Nics, プランプポップ韓国ハック版)	じゃんぴんぐぽっぷ
 jppyex98	実況パワフルプロ野球EX'98 (GC811 VER. JAA)	じっきょうぱわふるぷろやきゅうex98
@@ -12731,6 +12750,7 @@ ktiger2	究極タイガーII (Ver 2.1J 1995/11/30)	きゅうきょくたいが�
 ktm3	KTM-3	けーてぃーえむ3
 ktmnt	Teenage Mutant Ninja Turtles (ハンドヘルド)	てぃーんえーじみゅーたんとにんじゃたーとるず
 ktopgun	トップガン (ハンドヘルド)	とっぷがんこなみ
+ktparman	きてよパーマン	きてよぱーまん
 ktx20t02	QTC-SXM KT X20T02/HI Rev.3	きゅーてぃーしーえすえっくすえむ
 kuhga	空牙 - Operation Code 'Vapor Trail' (日本版 revision 3)	くうが
 kungfu	Kung Fu (IGS, v202N)	くんふー_igs
@@ -12969,10 +12989,13 @@ lemrol	Let 'em Roll (0151115, US)	れってむろーる
 leonardo	Kasparov Leonardo (v1.4)	かすぱろふれおなるど
 leonardoa	Kasparov Leonardo (v1.2)	かすぱろふれおなるど
 leonardob	Kasparov Leonardo (v1.0)	かすぱろふれおなるど
+lependu	Le Pendu (Bilingue, Version 04)	るぺんでゅ
 leprechn	Leprechaun	れぷれこん
 leprechp	Leprechaun (Pacific)	れぷれこん
 leprgld	Leprechaun's Gold (Russian)	れぷりかーんずごーるど_
 leprglds	Leprechaun's Gold (Spanish)	れぷりかーんずごーるど_
+lespendu	Le Super Pendu (V1, words set #1)	るすーぱーぺんでゅ
+lespenduj	Le Super Pendu (V1, words set #2)	るすーぱーぺんでゅ
 lethalen	リーサルエンフォーサーズ (ver UAE, 11/19/92 15:04)	りーさるえんふぉーさーず1_uae
 lethaleneaa	リーサルエンフォーサーズ (ver EAA, 09/09/92 09:44)	りーさるえんふぉーさーず1_eaa
 lethaleneab	リーサルエンフォーサーズ (ver EAB, 10/14/92 19:53)	りーさるえんふぉーさーず1_eab
@@ -13030,6 +13053,7 @@ lhaunt_8	Lucky Haunter (070604 Russia)	らっきーはんたー_
 lhb	龍虎榜 (中華版, V035C)	ろんふーばん1_c035
 lhb2	龍虎榜 II (香港版, V185H)	るんふーばん2
 lhbv33c	龍虎榜 (中華版, V033C)	ろんふーばん1_c033
+lhtb	龍虎特別版 (V101CN)	ろんふーとぅーびえばん
 lhzb2	龙虎争霸2 (set 1)	ろんふーちぇんぱ2_1
 lhzb2a	龙虎争霸2 (VS221M)	ろんふーちぇんぱ2_2
 lhzb3	龍虎爭霸III	ろんふーちぇんぱ3
@@ -21136,6 +21160,7 @@ maxf_102	マキシマムフォース v1.02	まきしまむふぉーす_102
 maxf_ng	マキシマムフォース (No Gore version)	まきしまむふぉーす_ng
 maxidbl	Maxi Double Poker (Ver. 1.10)	まきしだぶるぽーかー_110
 maxideal	Maxi-Dealer	まきしでぃーらー
+maxidpkr	Maxi Double Poker (version 1.8)	まきしだぶるぽーかー
 maxrpm	Max RPM (ver 2)	まっくすあーるぴ-えむ
 maxspeed	マキシマムスピード	まきしまむすぴーど
 maxx5in1	Vs Maxx 5-in-1 Casino / Senario Card & Casino Games	ぶいえすまっくすふぁいぶいんわんかじの
@@ -22433,6 +22458,8 @@ multigmb	Multi Game (set 2)	まるちげーむ_sj1_2
 multigmt	Multi Game (Tung Sheng Electronics)	まるちげーむ_t
 multiped	Multipede (Centipede/Millipede multigame kit)	まるちぴーど-h
 multiwin	Multi Win (Ver.0167, encrypted)	まるちうぃん
+multiwina	Multi Win (Ver.0091, encrypted)	まるちうぃん
+multiwinb	Multi Win (EPM7032, encrypted)	まるちうぃん
 multmega	セガ・マルチメガ (ヨーロッパ版, PAL)	せがまるちめが
 multy	Multy	まるてぃ
 mundial	Mundial 90	むんでぃある90
@@ -22513,6 +22540,7 @@ mvscu	マーヴルVSカプコン -クラッシュ・オブ・スーパーヒー�
 mvscud	マーヴルVSカプコン -クラッシュ・オブ・スーパーヒーローズ- (US版 980123 Phoenix Edition) (海賊版)	まーぶるばーさすかぷこん1-b
 mvscur1	マーヴルVSカプコン -クラッシュ・オブ・スーパーヒーローズ- (US版 971222)	まーぶるばーさすかぷこん1_u971222
 mvstemp	MVS-TEMP 'サブシステム Ver1.4' (Nazca開発ボード)	えむぶいえすてんぷ
+mw4pole	MiniWorks 4-Pole	みにわーくすふぉーぽーる
 mwalk	マイケルジャクソンズ ムーンウォーカー (海外版) (FD1094/8751 317-0159)	まいけるじゃくそんずむーんうぉーかー_w
 mwalkbl	マイケルジャクソンズ ムーンウォーカー (海賊版)	まいけるじゃくそんずむーんうぉーかー-b
 mwalkd	マイケルジャクソンズ ムーンウォーカー (海外版) (FD1094/8751 317-0159 海賊版)	まいけるじゃくそんずむーんうぉーかー-bw
@@ -24642,12 +24670,17 @@ phoenixt	フェニックス (Taito)	ふぇにっくす_t
 phoenxp2	Phoenix Part 2	ふぇにっくすぱーと2
 photof	Photo Finish (海賊版?)	ふぉとふぃにっしゅ
 photoply2k	Photo Play 2000 (v2.01)	ふぉとぷれい2000
-photoply2k1it	Photo Play 2001 (Italian)	ふぉとぷれい2001
+photoply2k1it	Photo Play 2001 (Italy)	ふぉとぷれい2001
+photoply2k1mtnl	Photo Play Masters 2001 (Netherlands)	ふぉとぷれいますたーず2001
+photoply2k1nl	Photo Play 2001 (Netherlands)	ふぉとぷれい2001
 photoply2k1sp	Photo Play 2001 (Spanish)	ふぉとぷれい2001
+photoply2k2be	Photo Play 2002 (Belgium)	ふぉとぷれい2002
 photoply2k4	Photo Play 2004	ふぉとぷれい2004
-photoply2ksp	Photo Play 2000 (Spanish)	ふぉとぷれい2000
-photoply98sp	Photo Play 1998 (Spanish)	ふぉとぷれい1998
-photoply99sp	Photo Play 1999 (Spanish)	ふぉとぷれい1999
+photoply2knl	Photo Play 2000 (Netherlands)	ふぉとぷれい2000
+photoply2ksp	Photo Play 2000 (Spain)	ふぉとぷれい2000
+photoply98sp	Photo Play 1998 (Spain)	ふぉとぷれい1998
+photoply99nl	Photo Play 1999 (Netherlands)	ふぉとぷれい1999
+photoply99sp	Photo Play 1999 (Spain)	ふぉとぷれい1999
 photopsxsp	Photo Play Spirit Xtreme (Spanish)	ふぉとぷれいすぴりっとえくすとりーむ
 photopsxusp	Photo Play Spirit Xtreme (update, Spanish)	ふぉとぷれいすぴりっとえくすとりーむ
 photoy2k	リアルアンドフェイク フォトY2K / 超級比一比 / 大家来找碴 (ver. 105)	りあるあんどふぇいく_105
@@ -25547,6 +25580,7 @@ pubtimed2ch	Pub Time Darts II Plus 2 with Solo Challenger (Mar 24, 1992)	ぱぶ�
 puchicar	プチカラット -ジェムストーン王国の世界- (Ver 2.02O 1997/10/29)	ぷちからっと_o
 puchicarj	プチカラット -ジェムストーン王国の世界- (Ver 2.02J 1997/10/29)	ぷちからっと
 puchicaru	プチカラット -ジェムストーン王国の世界- (Ver 2.04A 1997/11/08)	ぷちからっと_a
+puckimon	Pucki & Monsters	ぷっきあんどもんすたーず
 puckman	パックマン (日本版 set 1)	ぱっくまん_j1
 puckmanb	パックマン (海賊版 set 1)	ぱっくまん-b1
 puckmanf	パックマン (スピードアップハック)	ぱっくまん-hs
@@ -26814,7 +26848,12 @@ rvrbt_p7	Riverboat Gambler (PA-7)	りばーぼーとぎゃんぶらー
 rvschool	私立ジャスティス学園 / Rival Schools: United By Fate (Euro版 971117)	しりつじゃすてぃすがくえん_e
 rvschoola	私立ジャスティス学園 / Rival Schools: United By Fate (アジア版 971117)	しりつじゃすてぃすがくえん_a
 rvschoolu	私立ジャスティス学園 / Rival Schools: United By Fate (US版 971117)	しりつじゃすてぃすがくえん_u
-rw18r	18R (Rockwell)	えいてぃーんあーる
+rw10r	10R (Rockwell)	てんあーる
+rw12r	12R: Square Root	とぅえるぶあーるすくえあるーと
+rw18r	18R: Memory	えいてぃーんあーるめもりー
+rw24k	24K (Rockwell)	とぅえんてぃふぉーけー
+rw30r	30R: Slide Rule Memory (B5500 version)	さーてぃあーるすらいどるーるめもりー
+rw31r	31R: Slide Rule Memory	さーてぃわんあーるすらいどるーるめもりー
 rwtrntcs	Rowtron Television Computer System	ろーとろんてれびじょん
 rx15	RX15 Digital Rhythm Programmer	あーるえっくす15
 rx78	RX-78ガンダム	あーるえっくすななじゅうはちがんだむ
@@ -32784,6 +32823,7 @@ sexperta2	Super Expert (version A, set 3)	すーぱーえきすぱーと_
 sexpertb	Super Expert (version B)	すーぱーえきすぱーと_
 sexpertc	Super Expert (version C, v3.6)	すーぱーえきすぱーと_
 sexpertc1	Super Expert (version C, v3.0)	すーぱーえきすぱーと_
+sexpertc2	Super Expert (version C, v1.2)	すーぱーえきすぱーと_
 sextriv	Sex Triv	せっくすとりぶ
 sextriv1	Sexual Trivia (Version 1.02SB, set 1)	せくしゃるとりびあ_1
 sextriv2	Sexual Trivia (Version 1.02SB, set 2)	せくしゃるとりびあ_2
@@ -32945,6 +32985,7 @@ sfight2a	Street Fighter II (rev.1)	すとりーとふぁいたー2-p1
 sfight2b	Street Fighter II (rev.2)	すとりーとふぁいたー2-p2
 sfiii	ストリートファイターIII -ニュージェネレーション- (Euro版 970204)	すとりーとふぁいたー31_eu
 sfiii2	ストリートファイターIII 2ndインパクト -ジャイアントアタック- (US版 970930)	すとりーとふぁいたー32_us
+sfiii2h	ストリートファイターIII 2ndインパクト -ジャイアントアタック- (Hispanic版 970930)	すとりーとふぁいたー32_hi
 sfiii2j	ストリートファイターIII 2ndインパクト -ジャイアントアタック- (日本版 970930)	すとりーとふぁいたー32_
 sfiii2n	ストリートファイターIII 2ndインパクト -ジャイアントアタック- (アジア版 970930, NO CD)	すとりーとふぁいたー32_a
 sfiii3	ストリートファイターIII 3rdストライク -ファイトフォーザフューチャー- (Euro版 990608)	すとりーとふぁいたー33_e608
@@ -33430,6 +33471,7 @@ slapfigha	スラップファイト (A76 set, GX-006-A PCB)	すらっぷふぁい
 slapfighb1	スラップファイト (海賊版 set 1)	すらっぷふぁいと-b1
 slapfighb2	スラップファイト (海賊版 set 2)	すらっぷふぁいと-b2
 slapfighb3	スラップファイト (海賊版 set 3)	すらっぷふぁいと-b3
+slapfighm	スラップファイト (モジュラーシステム)	すらっぷふぁいと-m
 slapshot	スラップショット (Ver 3.0 O)	すらっぷしょっと_w
 slapshotj	スラップショット (Ver 2.2 日本版)	すらっぷしょっと
 slapshtr	スラップシューター	すらっぷしゅーたー
@@ -33800,8 +33842,8 @@ spaceacea2	Space Ace (US版 Rev. A2)	すぺーすえーす_ua2
 spaceaceeuro	Space Ace (Euro版)	すぺーすえーす_e
 spaceat2	Space Attack II (スペースインベーダー海賊版)	すぺーすあたっく2
 spaceatt	Space Attack (スペースインベーダー海賊版)	すぺーすあたっく1
-spaceatt2k	Space Attack (2k roms)(スペースインベーダー海賊版)	すぺーすあたっく1
-spaceattbp	Space Attack (bproms)(スペースインベーダー海賊版)	すぺーすあたっく1
+spaceatt2k	Space Attack (スペースインベーダー海賊版, 2k roms)	すぺーすあたっく1
+spaceattbp	Space Attack (スペースインベーダー海賊版, bproms)	すぺーすあたっく1
 spacebrd	Space Bird (海賊版)	すぺーすばーど
 spacecho	スペースエコー (set 1)	すぺーすえこー_1
 spacecho2	スペースエコー (set 2)	すぺーすえこー_2
@@ -33916,6 +33958,7 @@ spctrain	Space Train (ピンボール)	すぺーすとれいん
 spctraino	Space Train (ピンボール, old hardware)	すぺーすとれいん
 spctrek	Space Trek (Video Game S.A., スクランブル海賊版スペイン製)	すぺーすとれっく
 spcwarp	Space Warp? (Cosmos conversion on Galaxian hardware)	すぺーすわーぷ
+spdamjes	Sport Damjes 1	すぽーとだむじぇず1
 spdball	Speed Ball - Contest at Neonworld (プロトタイプ)	すぴーどぼーる
 spdcoin	Speed Coin (プロトタイプ)	すぴーどこいん
 spdheat	スーパーデッドヒート (海外版)	すーぱーでっどひーと_w
@@ -35171,6 +35214,7 @@ super80m	Super-80 (with colour)	すーぱー80
 super80r	Super-80 (with VDUEB)	すーぱー80
 super80v	Super-80 (with enhanced VDUEB)	すーぱー80
 super9	Super Nove (Playmark)	すーぱーのぶ
+super97	Super 97 (Ver. 1.00)	すーぱーないんてぃせぶん
 super972	Super 97-2 (Witch Bonus)	すーぱー972
 super98	Super 98 (3-hands, ICP-1)	すーぱー98
 super9cc	Super "9" Sensory Chess Challenger	すーぱーないんせんさりーちぇすちゃれんじゃー
@@ -35876,6 +35920,7 @@ thepitm	ザ・ピット (海賊版, ムーンクエーサー基板)	ざぴっと
 thepitu1	ザ・ピット (US版 set 1)	ざぴっと_u1
 thepitu2	ザ・ピット (US版 set 2)	ざぴっと_u2
 theportr	The Porter (ポートマン海賊版)	ざぽーたー
+thequest	The Quest (NSW, Australia)	ざくえすと
 theraid	The Raid	ざれいど
 theraida	The Raid (alternate set)	ざれいど
 theroes	Thunder Heroes / 霹雳英雄	さんだーひーろーず
@@ -36103,6 +36148,7 @@ tkdenshoa	闘姫伝承 -エンジェルアイズ- (VER. 960427)	とうきでん�
 tking	Kasparov Turbo King (ver. D)	かすぱろふたーぼきんぐ
 tkinga	Kasparov Turbo King (ver. B, set 1)	かすぱろふたーぼきんぐ
 tkingb	Kasparov Turbo King (ver. B, set 2)	かすぱろふたーぼきんぐ
+tkjmaru	闘魂柔王丸	とうこんじゅうおうまる
 tkmag220	Mini Arcade Games Console (Family Sport 220-in-1)	みにあーけーどげーむずこんそーる
 tkmmpzdm	ときめきメモリアル対戦ぱずるだま (ver JAB)	ときめきめもりあるたいせんぱずるだま
 tknight	ワイルドファング / Tecmo Knight	わいるどふぁんぐ
@@ -36922,6 +36968,7 @@ unkch2	Super Cherry Gold (Super Cherry Master海賊版)	すーぱーちぇりー
 unkch3	New Cherry Gold '99 (Super Cherry Master海賊版) (set 2)	にゅーちぇりーごーるど99_2
 unkch4	Grand Cherry Master (Super Cherry Master海賊版)	ぐらんどちぇりーますたー
 unkct	unknown Cointek game	めいしょうふめい
+unkdarts	名称不明 (ダーツゲーム, 487 System I)	めいしょうふめい
 unkeinv	名称不明の電子インベーダーゲーム (patent)	めいしょうふめい
 unkfr004	名称不明 (FR004ハードゲーム) (set 1)	めいしょうふめい
 unkfr004a	名称不明 (FR004ハードゲーム) (set 2)	めいしょうふめい
@@ -37925,6 +37972,7 @@ wangmid2o	湾岸ミッドナイト マキシマムチューン2 (輸出版) (GDX
 wangmidj	湾岸ミッドナイト マキシマムチューン (日本版, Rev B) (GDX-0008B)	わんがんみっどないとまきしまむちゅーん1_
 wangpc	Wang Professional Computer	わんぷろふぇっしょなるこんぴゅーた
 wanted	Wanted	うぉんてっど
+wantgman	Wanted G-Man	うぉんてっどじーまん
 wantsega	ウォンテッドG7	うぉんてっどじーせぶん
 war3cb	War III Cherry Best	うぉーすりーちぇりーべすt
 warahana	笑いの華天使!! (日本版)	わらいのはなてんし
@@ -38590,7 +38638,7 @@ xmvsfar2	エックスメンVSストリートファイター (アジア版 960919
 xmvsfar3	エックスメンVSストリートファイター (アジア版 960910)	えっくすめんばーさすすとりーとふぁいたー_a960910
 xmvsfb	エックスメンVSストリートファイター (ブラジル版 961023)	えっくすめんばーさすすとりーとふぁいたー_b961023
 xmvsfh	エックスメンVSストリートファイター (Hispanic版 961004)	えっくすめんばーさすすとりーとふぁいたー_h961004
-xmvsfj	エックスメンVSストリートファイター (日本版 961004)	えっくすめんばーさすすとりーとふぁいたー_961004
+xmvsfj	エックスメンVSストリートファイター (日本版 961023)	えっくすめんばーさすすとりーとふぁいたー_961023
 xmvsfjr1	エックスメンVSストリートファイター (日本版 961004)	えっくすめんばーさすすとりーとふぁいたー_961004
 xmvsfjr2	エックスメンVSストリートファイター (日本版 960910)	えっくすめんばーさすすとりーとふぁいたー_960910
 xmvsfjr3	エックスメンVSストリートファイター (日本版 960909)	えっくすめんばーさすすとりーとふぁいたー_960909
