@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '266';
+  BUILDNO = '267';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -25,7 +25,7 @@ const
 
   CRLF   = #13#10;
   CRLF2  = #13#10#13#10;
-  MAKER  = 7; // メーカーリストの最低数
+  MAKER  = 10; // メーカーリストの最低数
 
   // ステータスアイコンの表示間隔
   SB_LRMARGIN     = 18;
@@ -270,14 +270,16 @@ var
   PrevDat       : string;  // 直前のdat
   HideMechanical: boolean; // メカニカルを隠す
   HideGambling  : boolean; // ギャンブルを隠す
+  HideMess      : boolean; // MESSを隠す
 
   UseAltExe     : boolean; // ShellExec
 
   // HTTPダウンロードデータ用
-  ETag_mame32j  : string;  // mame32j.lst ファイル用の Etag
-  ETag_version  : string;  // version.ini ファイル用の Etag
-  ETag_mameinfo : string;  // mameinfo ファイル用の Etag
-  ETag_history  : string;  // mameinfo ファイル用の Etag
+  ETag_mame32j  : string;  // mame32j.lst ファイルの Etag
+  ETag_version  : string;  // version.ini ファイルの Etag
+  ETag_mameinfo : string;  // mameinfo ファイルの Etag
+  ETag_history  : string;  // mameinfo ファイルの Etag
+  Etag_messflt  : string;  // mess.flt ファイルの Etag
 
 
   // コマンドビューア用
@@ -309,9 +311,15 @@ var
   TLSub         : TList;   // データソート検索用TList
   TLFamily      : TList;   // ファミリ保持用TList
   TLVersion     : TList;   // バージョン別サブセット
-  liNonMech     : TList;   // 非メカニカルマスタセット
-  liNonGambling : TList;   // 非ギャンブルマスタセット
-  liNonMechGamb : TList;   // 非メカ兼ギャンブルセット
+  liNonMech     : TList;   // 非メカニカル
+  liNonGambling : TList;   // 非ギャンブル
+  liNonMechGamb : TList;   // 非メカ兼ギャンブル
+
+  liNonMechMESS,
+  liNonGamblingMESS,
+  liNonMechGambMESS : TList;
+
+  liNonMESS     : TList;   // 非MESSセット
 
   TLManu        : array of TList; // 製造元検索結果キャッシュ
 
@@ -357,6 +365,14 @@ var
   // ウインドウエアロフレームサイズ
   Frame :TRect;
 
+  // MESS.flt のドライバリスト
+  MESSDrivers  : TStringList;
+
+  // ギャンブルドライバ保存用
+  GamblingDrivers: TStringList;
+
+
+
 procedure ReadHistoryDat;
 procedure ReadMameInfoDat;
 function  ReadMame32jlst: boolean;
@@ -366,6 +382,7 @@ procedure SaveMamelst;
 procedure SetVersionINI;
 procedure CreateZipIndex;
 function  FindIndex(const ZipName: String): Integer;
+function  ReadMESSflt: boolean;
 
 
 function  GetHistory(const ZipName: String): string;
@@ -382,10 +399,6 @@ function MoveThe(const Str: string):string;
 function NormalizeString(const Str: string):string;
 
 function LoadPNGFile(const filename: string; bitmap: TPngImage): boolean;
-//function LoadPNGFileFromSnapZip(const Zip: string; bitmap: TPngImage): boolean;
-
-//function SavePNGFile(const filename: string; bitmap32: TBitmap32): boolean;
-
 function SetCommand: Commd;
 function ExtractXML(const element: string; const xml:string):string;
 
@@ -399,9 +412,36 @@ function  RelToAbs(const RelPath, BasePath: string): string;
 
 procedure getFrameSize(frm: TForm);
 
+function isGamblingDriver(driver: string): boolean;
+
 implementation
 
 uses Unit1, unitCommandViewer, unitSoftwareList;
+
+//------------------------------------------------------------------------------
+// ギャンブルゲームのドライバか
+function isGamblingDriver(driver: string): boolean;
+var i: integer;
+begin
+
+  result := false;
+
+  if pos('poker', driver) > 0 then
+  begin
+    result := true;
+    exit;
+  end;
+
+  for i := 0 to GamblingDrivers.Count-1 do
+  begin
+    if AnsiStartsStr( GamblingDrivers[i], driver) then
+    begin
+      result := true;
+      break;
+    end;
+  end;
+
+end;
 
 //------------------------------------------------------------------------------
 // フォームフレームサイズ
@@ -492,11 +532,11 @@ begin
     begin
 
       Result:=i;
-      Exit;
-
+      break;
     end;
 
   end;
+
 
 end;
 
@@ -768,7 +808,6 @@ var
 
   // 新処理
   hisList: TStringList;
-  hisFlag: boolean;
 
   entryStarted: boolean;
   StrList: TStringList;
@@ -963,6 +1002,40 @@ begin
 
 end;
 
+// -----------------------------------------------------------------------------
+// mess.flt 読み込み
+//
+function ReadMESSflt: boolean;
+var
+  i :integer;
+begin
+  result:= false;
+
+  // ファイルがないとき
+  if not FileExists('.\mess.flt') then
+  begin
+    Form1.actVHideMESS.Enabled:=false;
+    MESSDrivers.Clear;
+    exit;
+  end;
+
+  MESSDrivers.Clear;
+  MESSDrivers.LoadFromFile( '.\mess.flt', TEncoding.UTF8 );
+  MESSDrivers.Sort;
+
+  // 整理
+  for i := MESSDrivers.Count-1 downto 0 do
+  begin
+    if pos('//', MESSDrivers[i]) = 1 then MESSDrivers.Delete(i) // コメント行
+    else if pos('.cpp', MESSDrivers[i]) < 2 then MESSDrivers.Delete(i) // ドライバ名じゃない行
+                                                   
+  end;
+
+  Form1.actVHideMESS.Enabled:=true;
+  result:= true;
+
+end;
+
 
 // -----------------------------------------------------------------------------
 // History検索
@@ -1012,7 +1085,7 @@ var St,S: String;
 begin
 
   if idx = -1 then Exit;
-  
+
   St:='';
   S:='';
 
@@ -1383,12 +1456,12 @@ end;
 procedure InitParams;
 begin
 
-  ListFont    := Form1.ListView1.Font;
-  HistoryFont := Form1.Memo1.Font;
-  ListColor   := clWindow;
-  KeepAspect  := True;  // アスペクト比保持
-  UseJoyStick := True;
-  UsePOV      := False;
+  ListFont      := Form1.ListView1.Font;
+  HistoryFont   := Form1.Memo1.Font;
+  ListColor     := clWindow;
+  KeepAspect    := True;  // アスペクト比保持
+  UseJoyStick   := True;
+  UsePOV        := False;
 
   SortHistory[0]:=1;
   SortHistory[1]:=2;
@@ -1397,29 +1470,29 @@ begin
   SortHistory[4]:=5;
   SortHistory[5]:=6;
 
-  En          := False;
-  Form1.Left  := 20;
-  Form1.Top   := 20;
-  Edited      := False;
-  samplePath  := 'samples';
-  cfgDir      := 'cfg';
-  nvramDir    := 'nvram';
-  staDir      := 'sta';
-  inpDir      := 'inp';
-  snapDir     := 'snap';
-  datDir      := 'dats';
-  langDir     := 'lang';
+  En            := False;
+  Form1.Left    := 20;
+  Form1.Top     := 20;
+  Edited        := False;
+  samplePath    := 'samples';
+  cfgDir        := 'cfg';
+  nvramDir      := 'nvram';
+  staDir        := 'sta';
+  inpDir        := 'inp';
+  snapDir       := 'snap';
+  datDir        := 'dats';
+  langDir       := 'lang';
   SetLength(RomDirs,1);
-  RomDirs[0]  := 'roms';
+  RomDirs[0]    := 'roms';
 
   SetLength(SoftDirs,1);
-  SoftDirs[0] := 'software';
+  SoftDirs[0]   := 'software';
 
-  versionDir  := 'folders';
+  versionDir    := 'folders';
 
-  SearchMode  := srcAll;
+  SearchMode    := srcAll;
 
-  CurrentFilter:= RF_CUBIC;
+  CurrentFilter := RF_CUBIC;
   CurrentProfile:= -1;
   Form1.Panel12.Visible:=False; // 検索パネル
   Form1.Panel3.Visible:=True; // 情報パネル
@@ -1450,6 +1523,14 @@ begin
 
   // ギャンブル隠す
   HideGambling:=False;
+
+  // MESSを隠す
+  HideMess:=False;
+
+  // MESSDriverリスト
+  MESSDrivers:=TStringList.Create;
+
+
 
   // 起動関数の種類
   UseAltExe := False;
@@ -1485,7 +1566,56 @@ begin
   ETag_version  := '';
   Etag_mameinfo := '';
   Etag_history  := '';
+  Etag_messflt  := '';
 
+
+  // ギャンブルドライバ
+  GamblingDrivers:=TStringList.Create;
+  GamblingDrivers.Sorted := true;
+
+  GamblingDrivers.Add('mpu2');
+  GamblingDrivers.Add('mpu3');
+  GamblingDrivers.Add('mpu4');
+  GamblingDrivers.Add('mpu5');
+  GamblingDrivers.Add('bfm');
+  GamblingDrivers.Add('jpm');
+  GamblingDrivers.Add('mayga');
+  GamblingDrivers.Add('ecoinf');
+  GamblingDrivers.Add('itgamb');
+  GamblingDrivers.Add('aristm');
+  GamblingDrivers.Add('magic');
+  GamblingDrivers.Add('procon');
+  GamblingDrivers.Add('astrafr');
+  GamblingDrivers.Add('pluto');
+  GamblingDrivers.Add('acesp');
+  GamblingDrivers.Add('bingo');
+  GamblingDrivers.Add('sumt');
+  GamblingDrivers.Add('astropc');
+  GamblingDrivers.Add('atronic');
+  GamblingDrivers.Add('cupi');
+  GamblingDrivers.Add('extre');
+  GamblingDrivers.Add('gamto');
+  GamblingDrivers.Add('wms');
+  GamblingDrivers.Add('konend');
+  GamblingDrivers.Add('belatr');
+  GamblingDrivers.Add('procon');
+  GamblingDrivers.Add('bingor');
+  GamblingDrivers.Add('calo');
+  GamblingDrivers.Add('funw');
+  GamblingDrivers.Add('global');
+  GamblingDrivers.Add('goldnp');
+  GamblingDrivers.Add('goldst');
+  GamblingDrivers.Add('norau');
+  GamblingDrivers.Add('peplus');
+  GamblingDrivers.Add('4ros');
+  GamblingDrivers.Add('5clo');
+  GamblingDrivers.Add('astrc');
+  GamblingDrivers.Add('chsup');
+  GamblingDrivers.Add('sigmab5');
+  GamblingDrivers.Add('adp');
+  GamblingDrivers.Add('statriv');
+  GamblingDrivers.Add('blitz68');
+  GamblingDrivers.Add('coinmst');
 end;
 
 
@@ -1678,6 +1808,10 @@ begin
   St:=BooltoStr(HideGambling);
   sltIni.Add('hide_gambling '+St);
 
+  // MESS隠す
+  St:=BooltoStr(HideMess);
+  sltIni.Add('hide_mess '+St);
+
   // ジョイスティック
   if UseJoyStick then St:='1' else St:='0';
   sltIni.Add('joystick_in_interface '+St);
@@ -1795,6 +1929,7 @@ begin
   sltIni.Add('ETag_version '+ ETag_version );
   sltIni.Add('ETag_mameinfo '+ ETag_mameinfo );
   sltIni.Add('ETag_history '+ ETag_history );
+  sltIni.Add('ETag_messflt '+ ETag_messflt );
 
 
   // 起動関数
@@ -2360,6 +2495,12 @@ begin
       HideGambling:=StrtoBool(St);
     end
     else
+    // MESS隠す
+    if AnsiStartsStr( 'hide_mess ', St ) then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      HideMess:=StrtoBool(St);
+    end    else
     // ソート履歴
     if AnsiStartsStr( 'sort_history ', St ) then
     begin
@@ -2540,6 +2681,11 @@ begin
     if AnsiStartsStr( 'ETag_history ', St ) then
     begin
       ETag_history := Copy(St,pos(' ',St)+1,Length(St));
+    end
+    else
+    if AnsiStartsStr( 'ETag_messflt ', St ) then
+    begin
+      ETag_messflt := Copy(St,pos(' ',St)+1,Length(St));
     end
     else
     // 起動関数

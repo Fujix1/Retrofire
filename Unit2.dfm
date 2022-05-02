@@ -4,7 +4,7 @@ object Form2: TForm2
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Retrofire - '#12466#12540#12512#24773#22577#21462#24471
-  ClientHeight = 200
+  ClientHeight = 198
   ClientWidth = 721
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
@@ -18,7 +18,7 @@ object Form2: TForm2
   OnShow = FormShow
   DesignSize = (
     721
-    200)
+    198)
   PixelsPerInch = 96
   TextHeight = 18
   object Label4: TLabel
@@ -36,10 +36,9 @@ object Form2: TForm2
   end
   object Label1: TLabel
     Left = 439
-    Top = 162
+    Top = 157
     Width = 4
     Height = 18
-    Anchors = [akLeft, akBottom]
     Caption = ' '
     Font.Charset = SHIFTJIS_CHARSET
     Font.Color = clWindowText
@@ -47,11 +46,10 @@ object Form2: TForm2
     Font.Name = #12513#12452#12522#12458
     Font.Style = []
     ParentFont = False
-    ExplicitTop = 157
   end
   object btnOK: TButton
     Left = 510
-    Top = 150
+    Top = 148
     Width = 92
     Height = 38
     Anchors = [akRight, akBottom]
@@ -60,10 +58,11 @@ object Form2: TForm2
     Enabled = False
     TabOrder = 0
     OnClick = btnOKClick
+    ExplicitTop = 150
   end
   object btnCancel: TButton
     Left = 608
-    Top = 150
+    Top = 148
     Width = 89
     Height = 38
     Anchors = [akRight, akBottom]
@@ -71,6 +70,7 @@ object Form2: TForm2
     Caption = #12461#12515#12531#12475#12523
     ModalResult = 2
     TabOrder = 1
+    ExplicitTop = 150
   end
   object GroupBox1: TGroupBox
     Left = 21

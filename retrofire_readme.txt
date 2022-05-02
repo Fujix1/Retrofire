@@ -1,292 +1,324 @@
 
-  é«˜é€ŸMAMEãƒ©ãƒ³ãƒãƒ£ãƒ¼ã€ŒRetrofireã€
-  ãƒ“ãƒ«ãƒ‰ No.261
+  ‚‘¬MAMEƒ‰ƒ“ƒ`ƒƒ[uRetrofirev
+  ƒrƒ‹ƒh No.267
 
-  Fujix (C) 2004 - 2020
-  http://www.e2j.net/
+  Fujix (C) 2004 - 2022
+  https://e2j.net/
 
   -------------------------------------------------
 
-  é«˜é€Ÿèµ·å‹•ã¨æ¤œç´¢ã‚’ç›®æŒ‡ã—ãŸè»½é‡MAMEãƒ©ãƒ³ãƒãƒ£ãƒ¼ã§ã™ã€‚
-  ä»¥ä¸‹ã®ã‚ˆã†ãªæ©Ÿèƒ½ãŒã‚ã‚Šã¾ã™:
+  ‚‘¬‹N“®‚ÆŒŸõ‚ð–ÚŽw‚µ‚½Œy—ÊMAMEƒ‰ƒ“ƒ`ƒƒ[‚Å‚·B
+  ˆÈ‰º‚Ì‚æ‚¤‚È‹@”\‚ª‚ ‚è‚Ü‚·:
 
 
-  â—† MAMEæœ¬ä½“ã‹ã‚‰ã‚²ãƒ¼ãƒ æƒ…å ±ã‚’å–ã‚Šè¾¼ã‚“ã§ä½¿ç”¨ã—ã¾ã™ã€‚
+  Ÿ MAME–{‘Ì‚©‚çƒQ[ƒ€î•ñ‚ðŽæ‚èž‚ñ‚ÅŽg—p‚µ‚Ü‚·B
 
-  â—† Backspaceã§æ¤œç´¢ãƒœãƒƒã‚¯ã‚¹ã¸ç§»å‹•ã€DELã‚­ãƒ¼ã§é¸æŠžä¸­ã®ã‚²ãƒ¼ãƒ ã®è¨­å®šã‚’å‰Šé™¤ã€‚
+  Ÿ Backspace‚ÅŒŸõƒ{ƒbƒNƒX‚ÖˆÚ“®ADELƒL[‚Å‘I‘ð’†‚ÌƒQ[ƒ€‚ÌÝ’è‚ðíœB
 
-  â—† å„ç¨®ãƒ•ã‚£ãƒ«ã‚¿ã€å¹´ä»£ã€è£½é€ å…ƒã€CPUã€éŸ³æºãƒãƒƒãƒ—ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã®çµžã‚Šè¾¼ã¿ã€‚
+  Ÿ ŠeŽíƒtƒBƒ‹ƒ^A”N‘ãA»‘¢Œ³ACPUA‰¹Œ¹ƒ`ƒbƒvAƒo[ƒWƒ‡ƒ“‚Å‚Ìi‚èž‚ÝB
 
-  â—† F12ã‚­ãƒ¼ã§æ—¥æœ¬èªžãƒ»è‹±èªžã®åˆ‡ã‚Šæ›¿ãˆã€‚
+  Ÿ F12ƒL[‚Å“ú–{ŒêE‰pŒê‚ÌØ‚è‘Ö‚¦B
 
-ã€€â—† å¤§é‡ã®é‚ªé­”ãªã‚®ãƒ£ãƒ³ãƒ–ãƒ«ã‚²ãƒ¼ãƒ ã‚„å‹•ã‹ãªã„ãƒ”ãƒ³ãƒœãƒ¼ãƒ«ã‚²ãƒ¼ãƒ ãªã©ã®éžè¡¨ç¤ºã€‚
+@Ÿ ‘å—Ê‚ÌŽ×–‚‚ÈƒMƒƒƒ“ƒuƒ‹ƒQ[ƒ€‚â“®‚©‚È‚¢ƒsƒ“ƒ{[ƒ‹ƒQ[ƒ€‚È‚Ç‚Ì”ñ•\Ž¦B
 
-  â—† ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã®ãƒ•ã‚£ãƒ«ã‚¿ä»˜ãè¡¨ç¤ºã€‚ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®å›ºå®šã€‚
-ã€€ã€€  ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆç”»åƒã®æ¤œç´¢ã¯ã€Œsnap\ã‚²ãƒ¼ãƒ å.pngã€â†’ã€Œsnap\ã‚²ãƒ¼ãƒ å\0000.pngã€ã®é †ã§ã™ã€‚
+  Ÿ ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ÌƒtƒBƒ‹ƒ^•t‚«•\Ž¦BƒAƒXƒyƒNƒg”ä‚ÌŒÅ’èB
+@@  ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‰æ‘œ‚ÌŒŸõ‚Íusnap\ƒQ[ƒ€–¼.pngv¨usnap\ƒQ[ƒ€–¼\0000.pngv‚Ì‡‚Å‚·B
 
-  â—† mameinfo.datã€history.datã€comman.datãƒ•ã‚¡ã‚¤ãƒ«ã®è¡¨ç¤ºã€‚
-      ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã€Œdatsã€ãƒ•ã‚©ãƒ«ãƒ€ã«é…ç½®ã—ã¾ã™ï¼ˆå¤‰æ›´å¯ï¼‰ã€‚
-      F8ã‚­ãƒ¼ã§ã‚³ãƒžãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢ã®è¡¨ç¤ºåˆ‡ã‚Šæ›¿ãˆã‚’ã—ã¾ã™ã€‚
+  Ÿ mameinfo.datAhistory.datAcomman.datƒtƒ@ƒCƒ‹‚Ì•\Ž¦B
+      ƒfƒtƒHƒ‹ƒg‚Å‚ÍudatsvƒtƒHƒ‹ƒ_‚É”z’u‚µ‚Ü‚·i•ÏX‰ÂjB
+      F8ƒL[‚ÅƒRƒ}ƒ“ƒhƒrƒ…[ƒA‚Ì•\Ž¦Ø‚è‘Ö‚¦‚ð‚µ‚Ü‚·B
 
-  â—† ç°¡æ˜“ROMæ¤œç´¢æ©Ÿèƒ½ã€‚zipã€7zã€chdãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ãƒã‚§ãƒƒã‚¯ã®ã¿ã§ä¸­èº«ã¯ç¢ºèªã—ã¾ã›ã‚“ã€‚
+  Ÿ ŠÈˆÕROMŒŸõ‹@”\BzipA7zAchdƒtƒ@ƒCƒ‹‚Ì‘¶Ýƒ`ƒFƒbƒN‚Ì‚Ý‚Å’†g‚ÍŠm”F‚µ‚Ü‚¹‚ñB
 
-  â—† ãŠæ°—ã«å…¥ã‚Šæ©Ÿèƒ½ã€‚
+  Ÿ ‚¨‹C‚É“ü‚è‹@”\B
 
-  â—† ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚¯ãƒªãƒ¼ãƒŠãƒ¼ã€‚zipåãŒå¤‰æ›´ã•ã‚Œå­¤ç«‹ã—ãŸç”»åƒã®å‰Šé™¤ã€ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå†…ã®ç”»åƒã‚’
-      zipå.pngã«æ”¹åã€ä¸è¦ãƒ•ã‚¡ã‚¤ãƒ«ã®æ•´ç†ãŒå¯èƒ½ã§ã™ã€‚
+  Ÿ ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒgƒNƒŠ[ƒi[Bzip–¼‚ª•ÏX‚³‚êŒÇ—§‚µ‚½‰æ‘œ‚ÌíœAƒTƒuƒfƒBƒŒƒNƒgƒŠ“à‚Ì‰æ‘œ‚ð
+      zip–¼.png‚É‰ü–¼A•s—vƒtƒ@ƒCƒ‹‚Ì®—‚ª‰Â”\‚Å‚·B
 
-  â—† ãƒãƒ¼ã‚¸ãƒ§ãƒ³æ¯Žã®ã‚µãƒãƒ¼ãƒˆã‚²ãƒ¼ãƒ ã‚’ã¾ã¨ã‚ãŸ version.iniãƒ•ã‚¡ã‚¤ãƒ«ã®ä½¿ç”¨ã€‚
-      ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã€Œfoldersã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«é…ç½®ã—ã¾ã™ï¼ˆå¤‰æ›´å¯èƒ½ï¼‰ã€‚
+  Ÿ ƒo[ƒWƒ‡ƒ“–ˆ‚ÌƒTƒ|[ƒgƒQ[ƒ€‚ð‚Ü‚Æ‚ß‚½ version.iniƒtƒ@ƒCƒ‹‚ÌŽg—pB
+      ƒfƒtƒHƒ‹ƒg‚Å‚ÍufoldersvƒfƒBƒŒƒNƒgƒŠ‚É”z’u‚µ‚Ü‚·i•ÏX‰Â”\jB
 
-  â—† ãƒ‰ãƒ©ã‚¤ãƒãƒ•ã‚¡ã‚¤ãƒ«ã®githubãƒšãƒ¼ã‚¸ä¸€ç™ºè¡¨ç¤ºã‚„ã€Testersã§ã®çµžã‚Šè¾¼ã¿ã€‚
+  Ÿ ƒhƒ‰ƒCƒoƒtƒ@ƒCƒ‹‚Ìgithubƒy[ƒWˆê”­•\Ž¦‚âATesters‚Å‚Ìi‚èž‚ÝB
 
-  â—† è¤‡æ•°ã®MAMEæœ¬ä½“ã‚’ç™»éŒ²ã€åˆ‡ã‚Šæ›¿ãˆèµ·å‹•ã€‚
+  Ÿ •¡”‚ÌMAME–{‘Ì‚ð“o˜^AØ‚è‘Ö‚¦‹N“®B
 
-  â—† ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ã§é¸æŠžãƒ»èµ·å‹•ã€‚
+  Ÿ ƒWƒ‡ƒCƒXƒeƒBƒbƒN‚Å‘I‘ðE‹N“®B
 
-  â—† æ—¥æœ¬èªžã‚²ãƒ¼ãƒ åã¨ã‚ˆã¿ãŒãªã®ç·¨é›†ãƒ»ä¿å­˜æ©Ÿèƒ½ã€‚
+  Ÿ “ú–{ŒêƒQ[ƒ€–¼‚Æ‚æ‚Ý‚ª‚È‚Ì•ÒWE•Û‘¶‹@”\B
+
+  - ƒrƒ‹ƒhNo.237‚©‚çŠCŠO”Åhistory.dat‚Ì‰üsŒ`Ž®‚É‡‚í‚¹‚Ü‚µ‚½B‰üs1‚Â‚ª•\Ž¦Žž‚É‚à‰üs
+    1‚Â‚É‚È‚è‚Ü‚·BˆÈ‘O‚Í‰üs2‚Â‚ª•\Ž¦Žž‚É‰üs1‚Â‚Æˆ—‚³‚ê‚Ä‚Ü‚µ‚½B
+
+  - ƒrƒ‹ƒhNo.238‚©‚çƒf[ƒ^ƒtƒ@ƒCƒ‹–¼‚ªretrofire.res‚©‚çretrofire.data‚É•ÏX‚³‚ê‚Ü‚µ‚½B
+    ‹N“®Žž‚ÉŽ©“®‚Å‰ü–¼‚µ‚Ü‚·iƒtƒ@ƒCƒ‹‚ª‚ ‚ê‚ÎjB
+    
+  - ƒrƒ‹ƒhNo.260‚©‚çƒlƒbƒgŒo—R‚Å‚ÌŠeŽíƒtƒ@ƒCƒ‹(“ú–{ŒêƒQ[ƒ€–¼Ahistory.datAmameinfo.dat)‚Ì
+    XV‚É‘Î‰ž‚µ‚Ü‚µ‚½B‚Ü‚½AV‚µ‚¢–{‘Ì‚ªo‚Ä‚¢‚é‚©‚Ìƒ`ƒFƒbƒN‚às‚¦‚Ü‚·B
+  
+  - ƒrƒ‹ƒhNo.265‚Åƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‚ðƒeƒXƒgƒTƒ|[ƒg‚µ‚Ü‚µ‚½Bƒ\ƒtƒgƒŠƒXƒg‹@”\‚ª•s—v‚Ì‚Æ‚«‚ÍA
+    softlistsƒtƒHƒ‹ƒ_‚ðíœ‚µ‚Ä‚©‚ç‹N“®‚µ‚Ä‚­‚¾‚³‚¢B
 
 
-  - ãƒ“ãƒ«ãƒ‰No.237ã‹ã‚‰æµ·å¤–ç‰ˆhistory.datã®æ”¹è¡Œå½¢å¼ã«åˆã‚ã›ã¾ã—ãŸã€‚æ”¹è¡Œ1ã¤ãŒè¡¨ç¤ºæ™‚ã«ã‚‚æ”¹è¡Œ
-    1ã¤ã«ãªã‚Šã¾ã™ã€‚ä»¥å‰ã¯æ”¹è¡Œ2ã¤ãŒè¡¨ç¤ºæ™‚ã«æ”¹è¡Œ1ã¤ã¨å‡¦ç†ã•ã‚Œã¦ã¾ã—ãŸã€‚
-
-  - ãƒ“ãƒ«ãƒ‰No.238ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«åãŒretrofire.resã‹ã‚‰retrofire.dataã«å¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚
-    èµ·å‹•æ™‚ã«è‡ªå‹•ã§æ”¹åã—ã¾ã™ï¼ˆãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ã‚Œã°ï¼‰ã€‚
-
-  - ãƒ“ãƒ«ãƒ‰No.247ã‹ã‚‰ãŠæ°—ã«å…¥ã‚Šæ©Ÿèƒ½ãŒå¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚
-
-
-
-â– ä½¿ã„æ–¹
+¡Žg‚¢•û
 --------
-  1) åˆå›žèµ·å‹•æ™‚ã«ã‚²ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿ã‚’MAMEæœ¬ä½“ã‹ã‚‰å–å¾—ã—ã¾ã™ã€‚å¯¾è±¡ã®MAMEæœ¬ä½“ã‚’æŒ‡å®šã—æ•°åˆ†å¾…ã¤ã¨
-     ãƒ¡ã‚¤ãƒ³ç”»é¢ãŒèµ·å‹•ã—ã¾ã™ï¼ˆã‚ªãƒ•ã‚£ã‚·ãƒ£ãƒ«MAMEä»¥å¤–ã¯ä¸å…·åˆãŒèµ·ã“ã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ï¼‰
+  1) ‰‰ñ‹N“®Žž‚ÉƒQ[ƒ€ƒf[ƒ^‚ðMAME–{‘Ì‚©‚çŽæ“¾‚µ‚Ü‚·B‘ÎÛ‚ÌMAME–{‘Ì‚ðŽw’è‚µ‚µ‚Î‚ç‚­‘Ò‚Â‚Æ
+     ƒƒCƒ“‰æ–Ê‚ª‹N“®‚µ‚Ü‚·iƒIƒtƒBƒVƒƒƒ‹MAMEˆÈŠO‚Í•s‹ï‡‚ª‹N‚±‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·j
 
-  2) ã€Œã‚ªãƒ—ã‚·ãƒ§ãƒ³ã€â†’ã€ŒMAMEå®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«è¨­å®šã€ã‚’é–‹ãã€èµ·å‹•ã™ã‚‹MAMEæœ¬ä½“ã‚’æŒ‡å®šã—ã¾ã™ã€‚
-     èµ·å‹•ãƒ•ã‚¡ã‚¤ãƒ«ã¨ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã®çµ„ã¿åˆã‚ã›ã¯åå‰ã‚’ã¤ã‘ã¦è¤‡æ•°ç™»éŒ²ã§ãã¾ã™ã€‚
+  2) uƒIƒvƒVƒ‡ƒ“v¨uMAMEŽÀsƒtƒ@ƒCƒ‹Ý’èv‚ðŠJ‚«A‹N“®‚·‚éMAME–{‘Ì‚ðŽw’è‚µ‚Ü‚·B
+     (‹N“®ƒtƒ@ƒCƒ‹‚ÆƒIƒvƒVƒ‡ƒ“‚Ì‘g‚Ý‡‚í‚¹‚Í–¼‘O‚ð‚Â‚¯‚Ä•¡”“o˜^‚Å‚«‚Ü‚·)
 
-  3) MAMEæœ¬ä½“ã¨Retrofireæœ¬ä½“ãŒé•ã†å ´æ‰€ã«ã‚ã‚‹ã¨ãã¯ã€ã€Œè¨­å®šã€â†’ã€Œãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã€ã§
-     å„ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’çµ¶å¯¾ãƒ‘ã‚¹ã§æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+  3) MAME –{‘Ì‚Æ Retrofire –{‘Ì‚ªˆá‚¤êŠ‚É‚ ‚é‚Æ‚«‚ÍAuÝ’èv¨uƒfƒBƒŒƒNƒgƒŠv‚Å
+     ŠeƒfƒBƒŒƒNƒgƒŠ‚ð•Ê“rŽw’è‚µ‚Ä‚­‚¾‚³‚¢B
 
-  4) ã€Œãƒ•ã‚¡ã‚¤ãƒ«ã€â†’ã€ŒROMã‚’å†æ¤œç´¢ã€ã§ã€ROMæ¤œç´¢ã—ã¾ã™ã€‚
+  4) uƒtƒ@ƒCƒ‹v¨uROM‚ðÄŒŸõv‚ÅAROMŒŸõ‚µ‚Ü‚·B
 
-  5) ã‚²ãƒ¼ãƒ åã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã‹ã€Enterã‚­ãƒ¼ã‹F9ã‚­ãƒ¼ã‚’æŠ¼ã™ã¨ã‚²ãƒ¼ãƒ ãŒèµ·å‹•ã—ã¾ã™ã€‚
+  5) ƒQ[ƒ€–¼‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒN‚·‚é‚©AEnterƒL[‚©F9ƒL[‚ð‰Ÿ‚·‚ÆƒQ[ƒ€‚ª‹N“®‚µ‚Ü‚·B
 
 
-â– ä¾¿åˆ©ãªæ©Ÿèƒ½
+¡•Ö—˜‚È‹@”\
 ------------
- - ç·¨é›†ãƒ‘ãƒãƒ«ã§mame32j.lstã‚’ç›´æŽ¥ç·¨é›†ã—ä¿å­˜ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
- - æ¡ä»¶ã§çµžã‚‹å ´åˆã¯å³ä¸Šã®ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—æ¤œç´¢ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
- - [è¡¨ç¤º]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚ˆã‚Šãƒ¡ã‚«ãƒ‹ã‚«ãƒ«ã‚²ãƒ¼ãƒ ã‚’éš ã™ã“ã¨ãŒã§ãã¾ã™(ãƒ”ãƒ³ãƒœãƒ¼ãƒ«ãªã©ã‚’éš ã™å ´åˆ)ã€‚
- - [è¡¨ç¤º]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚ˆã‚Šå‹•ä½œã—ãªã„ã‚®ãƒ£ãƒ³ãƒ–ãƒ«ã‚²ãƒ¼ãƒ ã®å¤§åŠã‚’éš ã™ã“ã¨ãŒã§ãã¾ã™ã€‚
- - [è¨­å®š]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚ˆã‚ŠMAMEã®çµ‚äº†æ™‚ã«ã‚³ãƒžãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’æ®‹ã™ã‹ã©ã†ã‹ã®æŒ‡å®šãŒã§ãã¾ã™ã€‚
+ - •ÒWƒpƒlƒ‹‚Åmame32j.lst‚ð’¼Ú•ÒW‚µ•Û‘¶‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ - ðŒ‚Åi‚éê‡‚Í‰Eã‚Ìƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µŒŸõƒpƒlƒ‹‚ð•\Ž¦‚µ‚Ü‚·B
+ - [•\Ž¦]ƒƒjƒ…[‚æ‚èƒƒJƒjƒJƒ‹ƒQ[ƒ€‚ð‰B‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·(ƒsƒ“ƒ{[ƒ‹‚È‚Ç‚ð‰B‚·ê‡)B
+ - [•\Ž¦]ƒƒjƒ…[‚æ‚è“®ì‚µ‚È‚¢ƒMƒƒƒ“ƒuƒ‹ƒQ[ƒ€‚Ì‘å”¼‚ð‰B‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ - [Ý’è]ƒƒjƒ…[‚æ‚èMAME‚ÌI—¹Žž‚ÉƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚ðŽc‚·‚©‚Ç‚¤‚©‚ÌŽw’è‚ª‚Å‚«‚Ü‚·B
 
 
-â– MAMEã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãŒä¸ŠãŒã£ãŸã¨ãã¯ï¼Ÿ
+¡‚±‚ñ‚È‚Æ‚«‚Í
+--------------
+  Q. MAME‚Ì–{‘Ì‚ðƒAƒbƒvƒf[ƒg‚µ‚½‚çƒQ[ƒ€î•ñ‚ª³‚µ‚­Žæ“¾‚Å‚«‚È‚­‚È‚Á‚½
+  A. MAME‚ªo—Í‚·‚éƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÌŒ`Ž®‚ª•ÏX‚³‚ê‚½‰Â”\«‚ª‚ ‚è‚Ü‚·B‚È‚é‚×‚­‘‚­‘Î‰ž‚·‚é‚Ì‚Å
+     ‘Ò‚Á‚Ä‚¢‚Ä‚­‚¾‚³‚¢B‚Ü‚½‚ÍAƒTƒCƒg‚Ì•û‚Å‹³‚¦‚Ä‚à‚ç‚¦‚é‚Æ•‚©‚è‚Ü‚·B
+     
+  Q. ***MAME‚©‚çƒf[ƒ^‚ðŽæ“¾‚µ‚½‚ç‚¤‚Ü‚­“®‚«‚Ü‚¹‚ñ
+  A. o—Í‚·‚éƒf[ƒ^ƒtƒ@ƒCƒ‹‚ªŒÃ‚¢‚©A‚½‚Ü‚½‚Ü“®‚©‚È‚¢‰Â”\«‚ª‚ ‚è‚Ü‚·B
+     retrofire.data ‚ðˆê’Uíœ‚µ‚ÄAÝ’è‚ð‚â‚è‚È‚¨‚·‚Æ“®‚­‚©‚à‚µ‚ê‚Ü‚¹‚ñB
+
+
+¡MAME‚Ìƒo[ƒWƒ‡ƒ“‚ªã‚ª‚Á‚½‚Æ‚«‚ÍH
 ------------------------------------
-  [ã‚ªãƒ—ã‚·ãƒ§ãƒ³]â†’[ã‚²ãƒ¼ãƒ ãƒªã‚¹ãƒˆã‚’æ›´æ–°]ã§ã‚²ãƒ¼ãƒ æƒ…å ±ã‚’å†å–å¾—ã—ã¾ã™ã€‚æœ€è¿‘ã¯æ™‚é–“ãŒã‹ã‹ã‚Šã¾ã™ã€‚
-  ã€æ³¨ã€‘ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ã«ä¼´ã„ã€æœ¬ä½“ã®ã‚²ãƒ¼ãƒ æƒ…å ±å‡ºåŠ›ãŒå¤‰æ›´ã•ã‚Œæ­£å¸¸ã«å–å¾—ã§ããªã„ã“ã¨
-        ãŒã‚ã‚‹ã®ã§ã€retrofire.datãƒ•ã‚¡ã‚¤ãƒ«ã¯äº‹å‰ã«ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã™ã‚‹ã®ã‚’ãŠã™ã™ã‚ã—ã¾ã™ã€‚
+  [ƒIƒvƒVƒ‡ƒ“]¨[ƒQ[ƒ€ƒŠƒXƒg‚ðXV]‚ÅƒQ[ƒ€î•ñ‚ðÄŽæ“¾‚µ‚Ü‚·B
+  y’zƒo[ƒWƒ‡ƒ“ƒAƒbƒv‚É”º‚¢A–{‘Ì‚ÌƒQ[ƒ€î•ño—Í‚ª•ÏX‚³‚ê³í‚ÉŽæ“¾‚Å‚«‚È‚¢‚±‚Æ
+        ‚ª‚ ‚é‚Ì‚ÅAretrofire.dataƒtƒ@ƒCƒ‹‚ÍŽ–‘O‚ÉƒoƒbƒNƒAƒbƒv‚·‚é‚Ì‚ð‚¨‚·‚·‚ß‚µ‚Ü‚·B
 
 
-â– æ—¥æœ¬èªžã‚²ãƒ¼ãƒ åãƒ•ã‚¡ã‚¤ãƒ«ã«ã¤ã„ã¦
+¡“ú–{ŒêƒQ[ƒ€–¼ƒtƒ@ƒCƒ‹‚É‚Â‚¢‚Ä
 --------------------------------
-  åŒæ¢±ã®mame32j.lstã‹mame32jp.lstã®ã©ã¡ã‚‰ã‹ã‚’æœ¬ä½“ã¨åŒã˜å ´æ‰€ã«è¨­ç½®ã™ã‚Œã°ã‚²ãƒ¼ãƒ åã‚’æ—¥æœ¬
-  èªžè¡¨ç¤ºã—ã¾ã™ã€‚
+  “¯«‚Ìmame32j.lst‚©mame32jp.lst‚Ì‚Ç‚¿‚ç‚©‚ð–{‘Ì‚Æ“¯‚¶êŠ‚ÉÝ’u‚·‚ê‚ÎƒQ[ƒ€–¼‚ð“ú–{
+  Œê•\Ž¦‚µ‚Ü‚·B
 
 
-â– command.datãƒ•ã‚¡ã‚¤ãƒ«ã«ã¤ã„ã¦
+¡command.datƒtƒ@ƒCƒ‹‚É‚Â‚¢‚Ä
 -----------------------------
-  ã‚³ãƒžãƒ³ãƒ‰ä¸€è¦§ãƒ•ã‚¡ã‚¤ãƒ«command.datã®è¡¨ç¤ºã«å¯¾å¿œã—ã¦ã„ã¾ã™ã€‚command.datãƒ•ã‚¡ã‚¤ãƒ«ã‚’æœ¬ä½“ã¨åŒã˜
-  å ´æ‰€ã«é…ç½®ã—ã¦èµ·å‹•ã™ã‚‹ã¨è‡ªå‹•ã§èª­ã¿è¾¼ã¾ã‚Œã¾ã™ã€‚F8ã‚­ãƒ¼ã§è¡¨ç¤ºåˆ‡ã‚Šæ›¿ãˆå¯èƒ½ã€‚
-  ã€æ³¨ã€‘ç¾çŠ¶ã®command.datå†…ã§ä½¿ã‚ã‚Œã¦ã„ãªã„æ–‡å­—ã®ä¸€éƒ¨ã‚’ã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã›ã‚“ã€‚
+  ƒRƒ}ƒ“ƒhˆê——ƒtƒ@ƒCƒ‹command.dat‚Ì•\Ž¦‚É‘Î‰ž‚µ‚Ä‚¢‚Ü‚·Bcommand.datƒtƒ@ƒCƒ‹‚ð–{‘Ì‚Æ“¯‚¶
+  êŠ‚É”z’u‚µ‚Ä‹N“®‚·‚é‚ÆŽ©“®‚Å“Ç‚Ýž‚Ü‚ê‚Ü‚·BF8ƒL[‚Å•\Ž¦Ø‚è‘Ö‚¦‰Â”\B
+  y’zŒ»ó‚Ìcommand.dat“à‚ÅŽg‚í‚ê‚Ä‚¢‚È‚¢•¶Žš‚Ìˆê•”‚ðƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚¹‚ñB
 
 
-â– ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ä¸€è¦§
+¡ƒVƒ‡[ƒgƒJƒbƒgƒL[ˆê——
 ------------------------
-  BackSpace, Ctrl+F â€¦ æ¤œç´¢ãƒœãƒƒã‚¯ã‚¹ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ç§»å‹•
-  ESC    â€¦ æ¤œç´¢ã‚’ãƒªã‚»ãƒƒãƒˆ
-  Ctrl+E â€¦ ç·¨é›†ãƒ‘ãƒãƒ«ã‚’è¡¨ç¤º/éš ã™
-  Ctrl+H â€¦ æ¤œç´¢ãƒãƒ¼ã‚’éš ã™/è¡¨ç¤ºã™ã‚‹
-  Ctrl+Q â€¦ çµ‚äº†
-  Ctrl+W â€¦ æœ€å°åŒ–
-  F4     â€¦ é¸æŠžä¸­ã‚²ãƒ¼ãƒ ã®ãƒ‰ãƒ©ã‚¤ãƒãƒ•ã‚¡ã‚¤ãƒ«ã‚’GitHubã§é–‹ã
-  F6     â€¦ Command.datãƒ“ãƒ¥ãƒ¼ã‚¢ã®è¡¨ç¤ºãƒ»éžè¡¨ç¤ºåˆ‡ã‚Šæ›¿ãˆ
-  F5,F9  â€¦ èµ·å‹•
-  F12    â€¦ ã‚²ãƒ¼ãƒ åã®æ—¥/è‹±è¡¨ç¤ºåˆ‡æ›¿
-  F7     â€¦ é¸æŠžä¸­ã®ã‚²ãƒ¼ãƒ ã®ãƒ‰ãƒ©ã‚¤ãƒåã§MAMETestersã‚’æ¤œç´¢
-  F8     â€¦ é¸æŠžä¸­ã®ã‚²ãƒ¼ãƒ ã‚’EMMAã§è¡¨ç¤º
-  Ctrl+D â€¦ é¸æŠžä¸­ã®ã‚²ãƒ¼ãƒ ã‚’ãŠæ°—ã«å…¥ã‚Šã«è¿½åŠ 
+  BackSpace, Ctrl+F c ŒŸõƒ{ƒbƒNƒX‚ÉƒtƒH[ƒJƒXˆÚ“®
+  ESC    c ŒŸõ‚ðƒŠƒZƒbƒg
+  Ctrl+E c •ÒWƒpƒlƒ‹‚ð•\Ž¦/‰B‚·
+  Ctrl+H c ŒŸõƒo[‚ð‰B‚·/•\Ž¦‚·‚é
+  Ctrl+Q c I—¹
+  Ctrl+W c Å¬‰»
+  F4     c ‘I‘ð’†ƒQ[ƒ€‚Ìƒhƒ‰ƒCƒoƒtƒ@ƒCƒ‹‚ðGitHub‚ÅŠJ‚­
+  F6     c Command.datƒrƒ…[ƒA‚Ì•\Ž¦E”ñ•\Ž¦Ø‚è‘Ö‚¦
+  F5,F9  c ‹N“®
+  F12    c ƒQ[ƒ€–¼‚Ì“ú/‰p•\Ž¦Ø‘Ö
+  F7     c ‘I‘ð’†‚ÌƒQ[ƒ€‚Ìƒhƒ‰ƒCƒo–¼‚ÅMAMETesters‚ðŒŸõ
+  F8     c ‘I‘ð’†‚ÌƒQ[ƒ€‚ðEMMA‚Å•\Ž¦
+  Ctrl+D c ‘I‘ð’†‚ÌƒQ[ƒ€‚ð‚¨‹C‚É“ü‚è‚É’Ç‰Á
   DEL
-         â€¦ é¸æŠžä¸­ã®ã‚²ãƒ¼ãƒ ã®å„ç¨®è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«(cfgã€nvã€ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–)ã‚’å‰Šé™¤ã—ã¦åˆæœŸçŠ¶æ…‹
-            ã«æˆ»ã™
-  Shift+ Enterï¼ˆã‚ˆã¿ãŒãªã®å ´æ‰€ã§ï¼‰
-         â€¦ æ¬¡ã®ã‚²ãƒ¼ãƒ ã‚’é¸ã¶ã€‚å¤§é‡ã®ã‚²ãƒ¼ãƒ ã«ã‚ˆã¿ãŒãªã‚’ä»˜ã‘ã‚‹ä½œæ¥­ã‚’åŠ¹çŽ‡åŒ–ã™ã‚‹ãŸã‚
+         c ‘I‘ð’†‚ÌƒQ[ƒ€‚ÌŠeŽíÝ’èƒtƒ@ƒCƒ‹(cfgAnvAƒI[ƒgƒZ[ƒu)‚ðíœ‚µ‚Ä‰Šúó‘Ô
+            ‚É–ß‚·
+  Shift+ Enteri‚æ‚Ý‚ª‚È‚ÌêŠ‚Åj
+         c ŽŸ‚ÌƒQ[ƒ€‚ð‘I‚ÔB‘å—Ê‚ÌƒQ[ƒ€‚É‚æ‚Ý‚ª‚È‚ð•t‚¯‚éì‹Æ‚ðŒø—¦‰»‚·‚é‚½‚ß
 
 
-â– inpå†ç”Ÿ
+¡inpÄ¶
 ---------
-  å†ç”Ÿã•ã›ãŸã„inpãƒ•ã‚¡ã‚¤ãƒ«ã‚’é¸æŠžã™ã‚‹ã ã‘ã§å†ç”ŸãŒå§‹ã¾ã‚Šã¾ã™ã€‚å¯¾è±¡ã®ã‚²ãƒ¼ãƒ ã‚’é¸æŠžã™ã‚‹å¿…è¦
-  ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
-  inpãƒ•ã‚¡ã‚¤ãƒ«åãŒã€Œ******@ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«å.inpã€ã®å ´åˆã€ãã®ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ã§å†ç”Ÿã—ã¾ã™ã€‚
-  ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€ã¾ãŸã¯æŒ‡å®šã•ã‚Œã¦ã„ãªã„å ´åˆã¯ç¾åœ¨é¸æŠžä¸­ã®ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ã§
-  å†ç”Ÿã—ã¾ã™ã€‚
+  Ä¶‚³‚¹‚½‚¢inpƒtƒ@ƒCƒ‹‚ð‘I‘ð‚·‚é‚¾‚¯‚ÅÄ¶‚ªŽn‚Ü‚è‚Ü‚·B‘ÎÛ‚ÌƒQ[ƒ€‚ð‘I‘ð‚·‚é•K—v
+  ‚Í‚ ‚è‚Ü‚¹‚ñB
+  inpƒtƒ@ƒCƒ‹–¼‚ªu******@ƒvƒƒtƒ@ƒCƒ‹–¼.inpv‚Ìê‡A‚»‚Ìƒvƒƒtƒ@ƒCƒ‹‚ÅÄ¶‚µ‚Ü‚·B
+  ƒvƒƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚ç‚È‚¢A‚Ü‚½‚ÍŽw’è‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍŒ»Ý‘I‘ð’†‚Ìƒvƒƒtƒ@ƒCƒ‹‚Å
+  Ä¶‚µ‚Ü‚·B
 
 
-â– ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã®ãƒ•ã‚£ãƒ«ã‚¿
+¡ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ÌƒtƒBƒ‹ƒ^
 ------------------------------
-  ãªã—(Nearest Neighbor)    â€¦ è¶…é«˜é€Ÿãƒ»æœ€ä½Žå“è³ª
-  ãƒã‚¤ãƒªãƒ‹ã‚¢(Bilinear)      â€¦ é«˜é€Ÿãƒ»ä¸­å“è³ª
-  ãƒã‚¤ã‚­ãƒ¥ãƒ¼ãƒ“ãƒƒã‚¯(Bicubic) â€¦ ä¸­é€Ÿãƒ»é«˜å“è³ª
-  ãƒ©ãƒ³ãƒãƒ§ã‚¹(Lanczos3)      â€¦ ä½Žé€Ÿãƒ»æœ€é«˜å“è³ª
+  ‚È‚µ(Nearest Neighbor)    c ’´‚‘¬EÅ’á•iŽ¿
+  ƒoƒCƒŠƒjƒA(Bilinear)      c ‚‘¬E’†•iŽ¿
+  ƒoƒCƒLƒ…[ƒrƒbƒN(Bicubic) c ’†‘¬E‚•iŽ¿
+  ƒ‰ƒ“ƒ`ƒ‡ƒX(Lanczos3)      c ’á‘¬EÅ‚•iŽ¿
 
 
-â– ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã®ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰ã®å–ã‚Šå‡ºã—
+¡ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ÌƒtƒHƒ‹ƒ_‚©‚ç‚ÌŽæ‚èo‚µ
 --------------------------------------------
-  ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆç”»åƒã‚’ã®å³ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨åˆ©ç”¨ã§ãã¾ã™ã€‚
-  ã€Œzipå\0000.pngã€ã¨ã—ã¦ä¿å­˜ã•ã‚Œã¦ã„ã‚‹ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚’ã€Œzipå.pngã€ã«æ”¹åã—ã¦ã€
-  ä¸€ã¤ä¸Šã®ãƒ•ã‚©ãƒ«ãƒ€ã¸ç§»å‹•ã—ã¾ã™ã€‚æ®‹ã£ãŸzipåãƒ•ã‚©ãƒ«ãƒ€ã¯ç©ºã®å ´åˆå‰Šé™¤ã•ã‚Œã¾ã™ã€‚
+  ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‰æ‘œ‚ð‚Ì‰EƒNƒŠƒbƒN‚·‚é‚Æ—˜—p‚Å‚«‚Ü‚·B
+  uzip–¼\0000.pngv‚Æ‚µ‚Ä•Û‘¶‚³‚ê‚Ä‚¢‚éƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ðuzip–¼.pngv‚É‰ü–¼‚µ‚ÄA
+  ˆê‚Âã‚ÌƒtƒHƒ‹ƒ_‚ÖˆÚ“®‚µ‚Ü‚·BŽc‚Á‚½zip–¼ƒtƒHƒ‹ƒ_‚Í‹ó‚Ìê‡íœ‚³‚ê‚Ü‚·B
 
 
-â– ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚¯ãƒªãƒ¼ãƒŠãƒ¼æ©Ÿèƒ½
+¡ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒgƒNƒŠ[ƒi[‹@”\
 ----------------------------------
-  ZIPåãŒå¤‰æ›´ã•ã‚Œã¦ç„¡åŠ¹ãªã‚·ãƒ§ãƒƒãƒˆã‚„ã€ãƒ•ã‚©ãƒ«ãƒ€å†…ã«æ®‹ã£ã¦ã„ã‚‹ã‚‚ã®ã€ä¸è¦ãªãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸€æ‹¬
-  ã—ã¦å‰Šé™¤ã‚„æ”¹åã™ã‚‹ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚ãƒ•ã‚¡ã‚¤ãƒ«ãƒ¡ãƒ‹ãƒ¥ãƒ¼å†…ã«ã‚ã‚Šã¾ã™ã€‚å‰Šé™¤å…ˆã¯ã‚´ãƒŸç®±ãªã®ã§ã„
-  ã–ã¨ã„ã†ã¨ãã¯å…ƒã«æˆ»ã™ã“ã¨ãŒå¯èƒ½ã§ã™ã€‚
+  ZIP–¼‚ª•ÏX‚³‚ê‚Ä–³Œø‚ÈƒVƒ‡ƒbƒg‚âAƒtƒHƒ‹ƒ_“à‚ÉŽc‚Á‚Ä‚¢‚é‚à‚ÌA•s—v‚Èƒtƒ@ƒCƒ‹‚ðˆêŠ‡
+  ‚µ‚Äíœ‚â‰ü–¼‚·‚éƒc[ƒ‹‚Å‚·Bƒtƒ@ƒCƒ‹ƒƒjƒ…[“à‚É‚ ‚è‚Ü‚·Bíœæ‚ÍƒSƒ~” ‚È‚Ì‚Å‚¢
+  ‚´‚Æ‚¢‚¤‚Æ‚«‚ÍŒ³‚É–ß‚·‚±‚Æ‚ª‰Â”\‚Å‚·B
 
 
-â– å¯¾å¿œäºˆå®šã®ãªã„æ©Ÿèƒ½
+¡‘Î‰ž—\’è‚Ì‚È‚¢‹@”\
 --------------------
-  - snapä»¥å¤–ã®ç”»åƒè¡¨ç¤ºï¼ˆFlyer, Marqueeï¼Œä»–ï¼‰
-  - ã‚«ã‚¹ã‚¿ãƒ ã‚¢ã‚¤ã‚³ãƒ³
-  - ROMç®¡ç†ï¼ˆé«˜æ©Ÿèƒ½ãªROMãƒžãƒãƒ¼ã‚¸ãƒ£ãŒã‚‚ã†ã‚ã‚‹ã®ã§ï¼‰
-  - mame.iniã®è¨­å®šæ©Ÿèƒ½ï¼ˆé »ç¹ã«æ›´æ–°ã•ã‚Œã‚‹ã®ã§ï¼‰
+  - snapˆÈŠO‚Ì‰æ‘œ•\Ž¦iFlyer, MarqueeC‘¼j
+  - ƒJƒXƒ^ƒ€ƒAƒCƒRƒ“
+  - ROMŠÇ—i‚‹@”\‚ÈROMƒ}ƒl[ƒWƒƒ‚ª‚à‚¤‚ ‚é‚Ì‚Åj
+  - mame.ini‚ÌÝ’è‹@”\i•p”É‚ÉXV‚³‚ê‚é‚Ì‚Åj
 
 
-â– ä½¿ç”¨ä¸Šã®æ³¨æ„ã¨å…è²¬äº‹é …
+¡Žg—pã‚Ì’ˆÓ‚Æ–ÆÓŽ–€
 ------------------------
-  ã“ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ãƒ•ãƒªãƒ¼ã‚¦ã‚§ã‚¢ã§ã™ã€‚å•†ç”¨ç›®çš„ã®è²©å£²ã€é…å¸ƒã€æ·»ä»˜ã¯ã§ãã¾ã›ã‚“ã€‚
-  å•†ç”¨åˆ©ç”¨ã‚’ç™ºè¦‹ã—ãŸæ®µéšŽã§ä¸€èˆ¬å…¬é–‹ã‚’çµ‚äº†ã—ã¾ã™ã€‚
-ã€€ã“ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ä½¿ç”¨è€…ã®å…¨è²¬ä»»ã«ãŠã„ã¦ä½¿ç”¨ã•ã‚Œã€ãã‚Œã«ã‚ˆã‚Šç”Ÿã˜ãŸç›´æŽ¥çš„ã¾ãŸã¯
-  é–“æŽ¥çš„ãªå…¨ã¦ã®çµæžœã«ã¤ã„ã¦ã€ä½œè€…ã¯è²¬ä»»ã‚’è² ã‚ãšã€ã¾ãŸä¿è¨¼ã‚‚ã—ã¾ã›ã‚“ã€‚
+  ‚±‚Ìƒ\ƒtƒgƒEƒFƒA‚ÍƒtƒŠ[ƒEƒFƒA‚Å‚·B¤—p–Ú“I‚Ì”Ì”„A”z•zA“Y•t‚Í‚Å‚«‚Ü‚¹‚ñB
+  ¤—p—˜—p‚ð”­Œ©‚µ‚½’iŠK‚Åˆê”ÊŒöŠJ‚ðI—¹‚µ‚Ü‚·B
+@‚±‚Ìƒ\ƒtƒgƒEƒFƒA‚ÍŽg—pŽÒ‚Ì‘SÓ”C‚É‚¨‚¢‚ÄŽg—p‚³‚êA‚»‚ê‚É‚æ‚è¶‚¶‚½’¼Ú“I‚Ü‚½‚Í
+  ŠÔÚ“I‚È‘S‚Ä‚ÌŒ‹‰Ê‚É‚Â‚¢‚ÄAìŽÒ‚ÍÓ”C‚ð•‰‚í‚¸A‚Ü‚½•ÛØ‚à‚µ‚Ü‚¹‚ñB
 
-  Graphics32 (C) 2000-2020 Alex A. Denisov and contributers
+  Graphics32 (C) 2000-2022 Alex A. Denisov and contributers
 
 
-â– è¬è¾ž
+¡ŽÓŽ«
 ------
-  ãƒ†ã‚¹ãƒˆåŠã³ã„ã‚ã„ã‚ãªã‚¢ã‚¤ãƒ‡ã‚£ã‚¢ã‚’é ‚ã„ãŸSæ°
-  åŒã˜ãã‚‚ã†ä¸€äººã®Sæ°
-  ãƒã‚°å‡ºã—ã—ã¦é ‚ã„ãŸYæ°
-  ãƒã‚§ãƒƒã‚¯ãªã©ã®å”åŠ›ã‚’é ‚ã„ãŸFæ°
-  åˆ¶ä½œã®ãã£ã‹ã‘ã¨ãªã£ãŸMANE32ãƒ©ãƒ³ãƒãƒ£ãƒ¼ã®ä½œè€…ã•ã‚“
+  ƒeƒXƒg‹y‚Ñ‚¢‚ë‚¢‚ë‚ÈƒAƒCƒfƒBƒA‚ð’¸‚¢‚½SŽ
+  “¯‚¶‚­‚à‚¤ˆêl‚ÌSŽ
+  ƒoƒOo‚µ‚µ‚Ä’¸‚¢‚½YŽ
+  ƒ`ƒFƒbƒN‚È‚Ç‚Ì‹¦—Í‚ð’¸‚¢‚½FŽ
+  §ì‚Ì‚«‚Á‚©‚¯‚Æ‚È‚Á‚½MANE32ƒ‰ƒ“ƒ`ƒƒ[‚ÌìŽÒ‚³‚ñ
 
 
-â– æœ€è¿‘ã®ãƒ’ã‚¹ãƒˆãƒª
+¡Å‹ß‚ÌƒqƒXƒgƒŠ
 ----------------
-build 261:
- - ã‚¯ãƒ©ã‚¦ãƒ‰ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å…ˆã®ãƒ•ã‚¡ã‚¤ãƒ«ãŒç„¡ã„å ´åˆã¯ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã™ã‚ˆã†ã«ä¿®æ­£ã€‚
- - ArcadeDB ã§ã®æ¤œç´¢æ©Ÿèƒ½ã‚’è¿½åŠ ã€‚ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ã‚’F8ã«è¨­å®šã€‚
+build 267:
+ - ŒöŽ®ƒ\[ƒX‚Ì mess.flt ‚ðŽæ“¾‚µ‚Ä MESS ƒhƒ‰ƒCƒo‚ð”ñ•\Ž¦‚É‚·‚é‹@”\’Ç‰ÁiƒeƒXƒg”ÅjB
+ - ƒQ[ƒ€‚ÌƒtƒBƒ‹ƒ^ƒŠƒ“ƒO•”•ª‚ð‚©‚È‚è‘‚«’¼‚µB
 
-build 260: 20200314
- - ã‚¯ãƒ©ã‚¦ãƒ‰ã‹ã‚‰ mameinfo.dat ã¨ history.dat ã‚’å–å¾—ã€è§£å‡ã€ä¿å­˜ã™ã‚‹æ©Ÿèƒ½ã®ãƒ†ã‚¹ãƒˆç‰ˆè¿½åŠ ã€‚
- - ä¿å­˜å…ˆã®æŒ‡å®šãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒå­˜åœ¨ã—ãªã„ã¨ãã¯ã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œã£ã¦ã‹ã‚‰ä¿å­˜ã™ã‚‹ã‚ˆã†ä¿®æ­£ã€‚
+build 266: 
+ - ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‚ÌƒEƒBƒ“ƒhƒE‚ðƒƒCƒ“ƒEƒCƒ“ƒhƒE‚ÉƒXƒiƒbƒv‚·‚é‹@”\’Ç‰ÁB
+
+build 265: 
+ - ƒ\ƒtƒgƒEƒFƒAƒŠƒXƒg‚ÌƒeƒXƒgƒTƒ|[ƒgB“®ì‚ª•sˆÀ’è‚È‰Â”\«‚ª‚ ‚è‚Ü‚·B‹@”\‚ðƒIƒt‚É‚·‚é‚É‚Í
+   softlists ƒtƒHƒ‹ƒ_‚ðíœ‚µ‚Ä‚©‚ç‹N“®‚µ‚Ä‚­‚¾‚³‚¢B
+
+build 264: 20210404
+ - ƒIƒvƒVƒ‡ƒ“‚âƒpƒX‚ÌÅ‘å•¶Žš”‘‰ÁB
+
+build 263: 20210320
+ - EMMAƒTƒCƒg‚ª404‚È‚Ì‚ÅƒTƒ|[ƒg‚ðíœB
+
+build 262: 20201013
+ - ƒCƒ“ƒfƒbƒNƒX‚ÌƒGƒ‰[‚ª‹N‚±‚é‚Ì‚ðC³B
+
+build 261: 20200517
+ - –{‘Ì‚ÌXV‚ª‚ ‚é‚©‚Ç‚¤‚©‚ðŠm”F‚µ‚Äƒ_ƒEƒ“ƒ[ƒhƒy[ƒW‚É”ò‚Ô‹@”\’Ç‰ÁB
+
+build 260: 20200317
+ - ƒNƒ‰ƒEƒh‚©‚ç mameinfo.dat ‚ðŽæ“¾A‰ð“€A•Û‘¶‚·‚é‹@”\‚ÌƒeƒXƒg”Å’Ç‰ÁB
+ - •Û‘¶æ‚ÌŽw’èƒfƒBƒŒƒNƒgƒŠ‚ª‘¶Ý‚µ‚È‚¢‚Æ‚«‚ÍAƒfƒBƒŒƒNƒgƒŠ‚ðì‚Á‚Ä‚©‚ç•Û‘¶‚·‚é‚æ‚¤C³B
 
 build 259: 20200305
- - ã‚¯ãƒ©ã‚¦ãƒ‰ã‹ã‚‰ mame32j.lst ã¨ version.ini ã‚’æ›´æ–°ã™ã‚‹æ©Ÿèƒ½ã®ãƒ†ã‚¹ãƒˆç‰ˆè¿½åŠ ã€‚
+ - ƒNƒ‰ƒEƒh‚©‚ç mame32j.lst ‚Æ version.ini ‚ðXV‚·‚é‹@”\‚ÌƒeƒXƒg”Å’Ç‰ÁB
 
 build 258: 20191220
- - 257ã§ã®èµ·å‹•ä¸å…·åˆã‚’ä¿®æ­£ã€‚
+ - 257‚Å‚Ì‹N“®•s‹ï‡‚ðC³B
 
 build 257: 20191219
- - ã‚³ãƒžãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’æ®‹ã—ã¦èµ·å‹•ã™ã‚‹å ´åˆã«ç›¸å¯¾ãƒ‘ã‚¹ã§ã‚‚å‹•ä½œã™ã‚‹ã‚ˆã†æ”¹è‰¯ã€‚
+ - ƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚ðŽc‚µ‚Ä‹N“®‚·‚éê‡‚É‘Š‘ÎƒpƒX‚Å‚à“®ì‚·‚é‚æ‚¤‰ü—ÇB
 
 build 256: 20191204
- - ã‚²ãƒ¼ãƒ ãƒªã‚¹ãƒˆæ›´æ–°æ™‚ã«çµžã‚Šè¾¼ã¿ãŒãƒªã‚»ãƒƒãƒˆã•ã‚Œãªã„ã®ã‚’ä¿®æ­£ã€‚
+ - ƒQ[ƒ€ƒŠƒXƒgXVŽž‚Éi‚èž‚Ý‚ªƒŠƒZƒbƒg‚³‚ê‚È‚¢‚Ì‚ðC³B
 
 build 255: 20191031
- - è¨€èªžåˆ‡æ›¿æ™‚ã«ã‚µãƒ–ãƒªã‚¹ãƒˆãŒæ›´æ–°ã•ã‚Œãªã„ã®ã‚’ä¿®æ­£ã€‚
+ - Œ¾ŒêØ‘ÖŽž‚ÉƒTƒuƒŠƒXƒg‚ªXV‚³‚ê‚È‚¢‚Ì‚ðC³B
 
 build 254: 20190929
- - ã‚¯ãƒ­ãƒ¼ãƒ³ã‚»ãƒƒãƒˆãŒå¤§é‡ã«ã‚ã‚‹å ´åˆã€ã‚µãƒ–ãƒªã‚¹ãƒˆã®æ›´æ–°ãŒé…ããªã‚‹ã®ã§ã€ã‚µãƒ–ãƒªã‚¹ãƒˆã‚’ä»®æƒ³ãƒªã‚¹ãƒˆãƒ“ãƒ¥ãƒ¼åŒ–ã€‚
+ - ƒNƒ[ƒ“ƒZƒbƒg‚ª‘å—Ê‚É‚ ‚éê‡AƒTƒuƒŠƒXƒg‚ÌXV‚ª’x‚­‚È‚é‚Ì‚ÅAƒTƒuƒŠƒXƒg‚ð‰¼‘zƒŠƒXƒgƒrƒ…[‰»B
 
 build 253:
- - ãƒã‚°ä¿®æ­£ã€‚
+ - ƒoƒOC³B
 
 build 252: 20190305
- - ã‚³ãƒ³ãƒ‘ã‚¤ãƒ©ã‚’æ›´æ–°ã€‚
- - ç´°ã‹ã„ä¿®æ­£ã€‚
+ - ƒRƒ“ƒpƒCƒ‰‚ðXVB
+ - ×‚©‚¢C³B
 
 build 251: 20180831
- - èµ·å‹•å‡¦ç†ã®é«˜é€ŸåŒ–ï¼ˆ0.3ç§’ãã‚‰ã„ï¼‰ã€‚
- - EMMAæ¤œç´¢ã§é–‹ããƒšãƒ¼ã‚¸ã‚’å¤‰æ›´ã€‚
+ - ‹N“®ˆ—‚Ì‚‘¬‰»i0.3•b‚­‚ç‚¢jB
+ - EMMAŒŸõ‚ÅŠJ‚­ƒy[ƒW‚ð•ÏXB
 
 build 250: 20180725
- - EMMAã§æ¤œç´¢ã™ã‚‹æ©Ÿèƒ½è¿½åŠ ã€‚
+ - EMMA‚ÅŒŸõ‚·‚é‹@”\’Ç‰ÁB
 
 build 249: 20180708
- - ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªè¨­å®šãŒåæ˜ ã•ã‚Œãªã„ä¸å…·åˆä¿®æ­£ã€‚
+ - ƒfƒBƒŒƒNƒgƒŠÝ’è‚ª”½‰f‚³‚ê‚È‚¢•s‹ï‡C³B
 
 build 248: 20180608
- - ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰ã§äºŒé‡èµ·å‹•ã™ã‚‹ã“ã¨ãŒã‚ã‚‹ï¼ˆã‚‰ã—ã„ï¼‰ã®ã§ã€ä¸€å›žèµ·å‹•å¾Œ0.5ç§’ã¯ãƒœã‚¿ãƒ³å…¥åŠ›ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
-   ã†ã¾ãã„ãã‹ã¯ä¸æ˜Žã€‚
+ - ƒWƒ‡ƒCƒpƒbƒh‚Å“ñd‹N“®‚·‚é‚±‚Æ‚ª‚ ‚éi‚ç‚µ‚¢j‚Ì‚ÅAˆê‰ñ‹N“®Œã0.5•b‚Íƒ{ƒ^ƒ““ü—Í‚ð–³Œø‰»‚·‚é‚æ‚¤‚É•ÏXB
+   ‚¤‚Ü‚­‚¢‚­‚©‚Í•s–¾B
 
 build 247: 20180606
- - æ–°åž‹ãŠæ°—ã«å…¥ã‚Šæ©Ÿèƒ½ã®ãƒ†ã‚¹ãƒˆå®Ÿè£…ã€‚
-   - ãŠæ°—ã«å…¥ã‚Šã¯ favorites.ini ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜ï¼ˆä»Šå¾Œ retrofire.ini ã«çµ±åˆã™ã‚‹ã‹ã‚‚ï¼‰ã€‚
-   - ãƒ•ã‚©ãƒ«ãƒ€ã¯1éšŽå±¤ã®ã¿ã€‚ãƒ•ã‚©ãƒ«ãƒ€åã®å¤‰æ›´ã¯ãƒ•ã‚©ãƒ«ãƒ€ã‚’ã‚·ãƒ³ã‚°ãƒ«ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã€‚
-   - ä¸¦ã¹æ›¿ãˆã¯ãƒ‰ãƒ©ãƒƒã‚°ã§è¡Œã†ã€‚æ¡ä»¶ã«ã‚ˆã£ã¦ã¯ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰ã‚²ãƒ¼ãƒ ã‚’å‡ºã›ãªããªã‚‹å ´åˆãŒã‚ã‚‹ã®ã§ã€ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰å‡ºã™ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã€‚
-   - å¤§é‡ã®é …ç›®ã‚’å‡¦ç†ã™ã‚‹ã‚ˆã†ã«ã¯ã§ãã¦ã„ãªã„ã®ã§ã€ãã†ã„ã†ã®ãŒã»ã—ã„ãªã‚‰è‡ªåˆ†ã§ä½œã‚Œã€‚
- - history.datã€mameinfo.datã®èª­ã¿è¾¼ã¿æ™‚ã€ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰ã‚’ UTF-8 ã«æ±ºã‚æ‰“ã¡ã€‚
+ - VŒ^‚¨‹C‚É“ü‚è‹@”\‚ÌƒeƒXƒgŽÀ‘•B
+   - ‚¨‹C‚É“ü‚è‚Í favorites.ini ƒtƒ@ƒCƒ‹‚É•Û‘¶i¡Œã retrofire.ini ‚É“‡‚·‚é‚©‚àjB
+   - ƒtƒHƒ‹ƒ_‚Í1ŠK‘w‚Ì‚ÝBƒtƒHƒ‹ƒ_–¼‚Ì•ÏX‚ÍƒtƒHƒ‹ƒ_‚ðƒVƒ“ƒOƒ‹ƒNƒŠƒbƒN‚·‚éB
+   - •À‚×‘Ö‚¦‚Íƒhƒ‰ƒbƒO‚Ås‚¤BðŒ‚É‚æ‚Á‚Ä‚ÍƒtƒHƒ‹ƒ_‚©‚çƒQ[ƒ€‚ðo‚¹‚È‚­‚È‚éê‡‚ª‚ ‚é‚Ì‚ÅAƒtƒHƒ‹ƒ_‚©‚ço‚·ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒNB
+   - ‘å—Ê‚Ì€–Ú‚ðˆ—‚·‚é‚æ‚¤‚É‚Í‚Å‚«‚Ä‚¢‚È‚¢‚Ì‚ÅA‚»‚¤‚¢‚¤‚Ì‚ª‚Ù‚µ‚¢‚È‚çŽ©•ª‚Åì‚êB
+ - history.datAmameinfo.dat‚Ì“Ç‚Ýž‚ÝŽžAƒGƒ“ƒR[ƒh‚ð UTF-8 ‚ÉŒˆ‚ß‘Å‚¿B
 
 build 246: 20180317
- - list.xmlã®æ–°ã—ã„å‹•ä½œã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹å‡ºåŠ›ã«å¯¾å¿œï¼ˆã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯è¡¨ç¤ºã€ãƒ‘ãƒ¬ãƒƒãƒˆã€ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆã€ç”»é¢åè»¢ã®å¯¾å¿œçŠ¶æ³è¡¨ç¤ºï¼‰ã€‚
- - CPUã¨ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒƒãƒ—ã®æ–‡å­—åˆ—ã®HTMLã‚¨ã‚¹ã‚±ãƒ¼ãƒ—æ–‡å­—ã‚’æ­£ã—ãå‡¦ç†ã€‚
+ - list.xml‚ÌV‚µ‚¢“®ìƒXƒe[ƒ^ƒXo—Í‚É‘Î‰žiƒOƒ‰ƒtƒBƒbƒN•\Ž¦AƒpƒŒƒbƒgAƒvƒƒeƒNƒgA‰æ–Ê”½“]‚Ì‘Î‰žó‹µ•\Ž¦jB
+ - CPU‚ÆƒTƒEƒ“ƒhƒ`ƒbƒv‚Ì•¶Žš—ñ‚ÌHTMLƒGƒXƒP[ƒv•¶Žš‚ð³‚µ‚­ˆ—B
   
 build 245: 20180129
- - å¹´åº¦æƒ…å ±ã‚’ä¸Šæ›¸ãã™ã‚‹year.datã®ã‚µãƒãƒ¼ãƒˆçµ‚äº†ã€‚
- - 0.194ã®æƒ…å ±ã«æ›´æ–°ã€‚
+ - ”N“xî•ñ‚ðã‘‚«‚·‚éyear.dat‚ÌƒTƒ|[ƒgI—¹B
+ - 0.194‚Ìî•ñ‚ÉXVB
 
 build 244: 20170902
- - ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ç’°å¢ƒã‚’æœ€æ–°ç‰ˆã«å…¥ã‚Œæ›¿ãˆã€‚ãã‚Œã«ä¼´ã†èª¿æ•´ã„ã‚ã„ã‚ã€‚
- - æ¨ª2ç”»é¢ã‚²ãƒ¼ãƒ ã¨ãƒ”ãƒ³ãƒœãƒ¼ãƒ«ã®ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆãŒæ­£ã—ã„æ¯”çŽ‡ã§è¡¨ç¤ºã•ã‚Œã‚‹ã‚ˆã†ã«è¨­å®šã€‚
- - 0.189ã®æƒ…å ±ã«æ›´æ–°ã€‚
+ - ƒRƒ“ƒpƒCƒ‹ŠÂ‹«‚ðÅV”Å‚É“ü‚ê‘Ö‚¦B‚»‚ê‚É”º‚¤’²®‚¢‚ë‚¢‚ëB
+ - ‰¡2‰æ–ÊƒQ[ƒ€‚Æƒsƒ“ƒ{[ƒ‹‚ÌƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ª³‚µ‚¢”ä—¦‚Å•\Ž¦‚³‚ê‚é‚æ‚¤‚ÉÝ’èB
+ - 0.189‚Ìî•ñ‚ÉXVB
 
 build 243: 20170630
- - ã‚¯ãƒ­ãƒ¼ãƒ³ã‚»ãƒƒãƒˆã‚’é¸æŠžã—ãŸã¨ãã€è¦ªã‚»ãƒƒãƒˆã®mameinfoæƒ…å ±ãŒè¡¨ç¤ºã•ã‚Œãªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
+ - ƒNƒ[ƒ“ƒZƒbƒg‚ð‘I‘ð‚µ‚½‚Æ‚«AeƒZƒbƒg‚Ìmameinfoî•ñ‚ª•\Ž¦‚³‚ê‚È‚©‚Á‚½‚Ì‚ðC³B
 
 build 242: 20170518
- - ãƒ’ã‚¹ãƒˆãƒªãƒ¼æ¬„ã®ç¸¦ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼è¡¨ç¤ºåˆ‡ã‚Šæ›¿ãˆãŒã†ã¾ãè¡Œã£ã¦ãªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
- - ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã®ç¸¦ã‚µã‚¤ã‚ºã‚’è‡ªç”±ã«å¤‰æ›´ã§ãã‚‹ã‚ˆã†ã«æ”¹è‰¯(ç”»åƒæ¬„ã®ä¸‹éƒ¨åˆ†ã‚’ã‚¹ãƒ©ã‚¤ãƒ‰ã™ã‚‹)ã€‚
+ - ƒqƒXƒgƒŠ[—“‚ÌcƒXƒNƒ[ƒ‹ƒo[•\Ž¦Ø‚è‘Ö‚¦‚ª‚¤‚Ü‚­s‚Á‚Ä‚È‚©‚Á‚½‚Ì‚ðC³B
+ - ƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ÌcƒTƒCƒY‚ðŽ©—R‚É•ÏX‚Å‚«‚é‚æ‚¤‚É‰ü—Ç(‰æ‘œ—“‚Ì‰º•”•ª‚ðƒXƒ‰ƒCƒh‚·‚é)B
 
 build 241: 20170210
- - ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯é¸æŠžã§POV(ãƒãƒƒãƒˆã‚¹ã‚¤ãƒƒãƒ)ã®å…¥åŠ›ã‚‚ä½¿ç”¨ã™ã‚‹ã‹ã®é¸æŠžã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¿½åŠ ã€‚
-   POVãªã—ã®ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰ãªã©ã§å¸¸æ™‚POVãŒæŠ¼ã—ã£ã±ãªã—ã«ãªã‚‹ã‚‚ã®ãŒã‚ã‚‹ãŸã‚ã€‚
+ - ƒWƒ‡ƒCƒXƒeƒBƒbƒN‘I‘ð‚ÅPOV(ƒnƒbƒgƒXƒCƒbƒ`)‚Ì“ü—Í‚àŽg—p‚·‚é‚©‚Ì‘I‘ðƒIƒvƒVƒ‡ƒ“‚ð’Ç‰ÁB
+   POV‚È‚µ‚ÌƒWƒ‡ƒCƒpƒbƒh‚È‚Ç‚ÅíŽžPOV‚ª‰Ÿ‚µ‚Á‚Ï‚È‚µ‚É‚È‚é‚à‚Ì‚ª‚ ‚é‚½‚ßB
 
 build 240: 20161105
- - listxmlã‚’å‡ºåŠ›ã—ã¦æƒ…å ±ã‚’å–å¾—ã™ã‚‹ã¨ãã€æœ¬ä½“ã®ãƒ‘ã‚¹ã«ç©ºç™½æ–‡å­—ãŒã‚ã‚‹ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã®ã‚’ä¿®æ­£ã€‚
+ - listxml‚ðo—Í‚µ‚Äî•ñ‚ðŽæ“¾‚·‚é‚Æ‚«A–{‘Ì‚ÌƒpƒX‚É‹ó”’•¶Žš‚ª‚ ‚é‚ÆƒGƒ‰[‚É‚È‚é‚Ì‚ðC³B
 
 build 239: 20161104
- - datãƒ•ã‚©ãƒ«ãƒ€è¨­å®šã‚’command.datã€year.datã«ã‚‚é©ç”¨ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚’ã€Œdatsã€ãƒ•ã‚©ãƒ«ãƒ€ã«å¤‰æ›´ã€‚
-   (è¨­å®šã®å¤‰æ›´æ–¹æ³•: [è¨­å®š]â†’[ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªè¨­å®š...]â†’ã€Œdatãƒ•ã‚¡ã‚¤ãƒ«ã€)
-   ã“ã‚Œã¾ã§ã¯history.datã¨mameinfo.datã®ã¿ã®è¨­å®šã§ã€command.datã¨year.datã¯æœ¬ä½“ã¨åŒã˜å ´æ‰€ã®ã¿ã ã£ãŸã€‚
+ - datƒtƒHƒ‹ƒ_Ý’è‚ðcommand.datAyear.dat‚É‚à“K—pBƒfƒtƒHƒ‹ƒg‚ðudatsvƒtƒHƒ‹ƒ_‚É•ÏXB
+   (Ý’è‚Ì•ÏX•û–@: [Ý’è]¨[ƒfƒBƒŒƒNƒgƒŠÝ’è...]¨udatƒtƒ@ƒCƒ‹v)
+   ‚±‚ê‚Ü‚Å‚Íhistory.dat‚Æmameinfo.dat‚Ì‚Ý‚ÌÝ’è‚ÅAcommand.dat‚Æyear.dat‚Í–{‘Ì‚Æ“¯‚¶êŠ‚Ì‚Ý‚¾‚Á‚½B
 
 build 238: 20161017
- - èµ·å‹•ã‚’30%é«˜é€ŸåŒ–ï¼ˆ2.4ç§’ã‹ã‚‰1.6ç§’ï¼‰ã€‚
- - ã‚²ãƒ¼ãƒ é¸æŠžæ™‚ã®æƒ…å ±è¡¨ç¤ºã‚’é«˜é€ŸåŒ–ï¼ˆã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹ã¨ã‚ã‹ã‚‹ï¼‰ã€‚
- - ã‚²ãƒ¼ãƒ æƒ…å ±ãªã©ã‚’ä¿æŒã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«åã‚’retrofire.resã‹ã‚‰retorfire.dataã«å¤‰æ›´ã€‚
-   èµ·å‹•æ™‚ã«retrofire.resãŒã‚ã‚Œã°è‡ªå‹•ã§æ”¹åã—ã¾ã™ã€‚
- - ROMå­˜åœ¨æƒ…å ±ã®ä¿å­˜å½¢å¼ã‚’å¤‰æ›´ã—ãŸã®ã§å†ã‚¹ã‚­ãƒ£ãƒ³ã—ã¦ãã ã•ã„ã€‚
- - version.iniã«v0.1ï½žv0.37b16ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±ã‚’è¿½åŠ ã€‚
+ - ‹N“®‚ð30%‚‘¬‰»i2.4•b‚©‚ç1.6•bjB
+ - ƒQ[ƒ€‘I‘ðŽž‚Ìî•ñ•\Ž¦‚ð‚‘¬‰»iƒXƒNƒ[ƒ‹‚·‚é‚Æ‚í‚©‚éjB
+ - ƒQ[ƒ€î•ñ‚È‚Ç‚ð•ÛŽ‚·‚éƒtƒ@ƒCƒ‹–¼‚ðretrofire.res‚©‚çretorfire.data‚É•ÏXB
+   ‹N“®Žž‚Éretrofire.res‚ª‚ ‚ê‚ÎŽ©“®‚Å‰ü–¼‚µ‚Ü‚·B
+ - ROM‘¶Ýî•ñ‚Ì•Û‘¶Œ`Ž®‚ð•ÏX‚µ‚½‚Ì‚ÅÄƒXƒLƒƒƒ“‚µ‚Ä‚­‚¾‚³‚¢B
+ - version.ini‚Év0.1`v0.37b16‚Ìƒo[ƒWƒ‡ƒ“î•ñ‚ð’Ç‰ÁB
 
 build 237: 
- - ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯é¸æŠžã«POVã‚¹ã‚¤ãƒƒãƒä¸Šä¸‹ã‚‚å¯¾å¿œã€‚
- - æƒ…å ±ãƒ‘ãƒãƒ«ã®è¡¨ç¤ºãƒ»éžè¡¨ç¤ºæ©Ÿèƒ½è¿½åŠ ã€‚
+ - ƒWƒ‡ƒCƒXƒeƒBƒbƒN‘I‘ð‚ÉPOVƒXƒCƒbƒ`ã‰º‚à‘Î‰žB
+ - î•ñƒpƒlƒ‹‚Ì•\Ž¦E”ñ•\Ž¦‹@”\’Ç‰ÁB
 
-Build 236: 0.177ã§ã®ä¸å…·åˆã«å¯¾å¿œã€‚0.177ã®æƒ…å ±ã«æ›´æ–°ã€‚
-Build 235: 0.176å¯¾å¿œã€‚æœ¬ä½“ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·ã®å–å¾—ã‚’æ”¹è‰¯ã€‚
-Build 234: MAMEçµ‚äº†æ™‚ã«ã‚³ãƒžãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆãŒé–‰ã˜ãªã„ã‚ˆã†ãªèµ·å‹•ã‚ªãƒ—ã‚·ãƒ§ãƒ³è¿½åŠ ã€‚
-Build 233: ã‚³ãƒžãƒ³ãƒ‰ãƒ“ãƒ¥ãƒ¼ã‚¢ã®ã‚µã‚¤ã‚ºã‚’å›ºå®šã€‚0.174ã®ãƒ‡ãƒ¼ã‚¿ã«å¯¾å¿œã€‚
-Build 232: command.datã®è¡¨ç¤ºã‚’ã‚µãƒãƒ¼ãƒˆï¼ˆãƒ™ãƒ¼ã‚¿ç‰ˆï¼‰ã€‚
-Build 231: F4ã‚­ãƒ¼ã§ã‚½ãƒ¼ã‚¹ã®Githubãƒšãƒ¼ã‚¸è¡¨ç¤ºã€‚7zæ‹¡å¼µå­å¯¾å¿œã€‚ä¸å…·åˆå¯¾ç­–å°‘ã—ã€‚0.173ã®ã‚²ãƒ¼ãƒ åã¨version.iniã«å¯¾å¿œã€‚ã‚®ãƒ£ãƒ³ãƒ–ãƒ«ã‚²ãƒ¼ãƒ ãƒ•ã‚£ãƒ«ã‚¿å¼·åŒ–ã€‚
-Build 230: 0.162ã®æ–°ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã«ã¨ã‚Šã‚ãˆãšå¯¾å¿œï¼ˆæ—§ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã§ã‚‚å‹•ä½œå¯ï¼‰ã€‚
+Build 236: 0.177‚Å‚Ì•s‹ï‡‚É‘Î‰žB0.177‚Ìî•ñ‚ÉXVB
+Build 235: 0.176‘Î‰žB–{‘Ìƒo[ƒWƒ‡ƒ“”Ô†‚ÌŽæ“¾‚ð‰ü—ÇB
+Build 234: MAMEI—¹Žž‚ÉƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚ª•Â‚¶‚È‚¢‚æ‚¤‚È‹N“®ƒIƒvƒVƒ‡ƒ“’Ç‰ÁB
+Build 233: ƒRƒ}ƒ“ƒhƒrƒ…[ƒA‚ÌƒTƒCƒY‚ðŒÅ’èB0.174‚Ìƒf[ƒ^‚É‘Î‰žB
+Build 232: command.dat‚Ì•\Ž¦‚ðƒTƒ|[ƒgiƒx[ƒ^”ÅjB
+Build 231: F4ƒL[‚Åƒ\[ƒX‚ÌGithubƒy[ƒW•\Ž¦B7zŠg’£Žq‘Î‰žB•s‹ï‡‘Îô­‚µB0.173‚ÌƒQ[ƒ€–¼‚Æversion.ini‚É‘Î‰žBƒMƒƒƒ“ƒuƒ‹ƒQ[ƒ€ƒtƒBƒ‹ƒ^‹­‰»B
+Build 230: 0.162‚ÌVƒtƒH[ƒ}ƒbƒg‚É‚Æ‚è‚ ‚¦‚¸‘Î‰ži‹ŒƒtƒH[ƒ}ƒbƒg‚Å‚à“®ì‰ÂjB

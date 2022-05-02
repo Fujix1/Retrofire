@@ -1399,12 +1399,12 @@ begin
   for i:=0 to ListInfo.Count-1 do
   begin
 
+    // licensed froméÊÇÈ
+    St:=AnsiReplaceStr(St,'licensed from ','');
     // licenseéÊÇÈ
     St:=AnsiReplaceStr(PListInfo(ListInfo[i]).Maker,' license','');
     // licenceéÊÇÈ
     St:=AnsiReplaceStr(St,' licence','');
-    // licensed froméÊÇÈ
-    St:=AnsiReplaceStr(St,'licensed from ','');
     // ?ÇéÊÇÈ
     St:=AnsiReplaceStr(St,'?','');
     // , supported by
@@ -1474,10 +1474,13 @@ begin
   end;
 
   // èÙÇ›çûÇ›
+  //Form2.memo1.Lines.Clear;
   for i:=0 to Length(MakerList)-1 do
   begin
     if MakerList[i].Clone=False then
     begin
+      //Form2.Memo1.Lines.Add(MakerList[i].Maker);
+      //Application.ProcessMessages;
       for j:=0 to Length(MakerList)-1 do
       begin
         if (i<>j) and
@@ -1502,7 +1505,8 @@ begin
       if MakerList[i].Maker='zzz<unknown>' then
         MakerList[i].Maker:='<unknown>';
 
-      St:=St+MakerList[i].Maker+#9;
+      if MakerList[i].Maker.Length>1 then
+        St:=St+MakerList[i].Maker+#9;
     end;
   end;
 

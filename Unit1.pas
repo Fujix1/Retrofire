@@ -249,6 +249,7 @@ type
     ArcadeDB1: TMenuItem;
     actVSoftwarelist: TAction;
     N15: TMenuItem;
+    actVHideMESS: TAction;
 
 
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
@@ -417,6 +418,8 @@ type
     procedure actVHideGamblingExecute(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+
+
     procedure Action4Execute(Sender: TObject);
     procedure actVCommandExecute(Sender: TObject);
     procedure actVCommandUpdate(Sender: TObject);
@@ -442,6 +445,8 @@ type
     procedure actFArcadeDBExecute(Sender: TObject);
     procedure actVSoftwarelistUpdate(Sender: TObject);
     procedure actVSoftwarelistExecute(Sender: TObject);
+    procedure actVHideMESSUpdate(Sender: TObject);
+    procedure actVHideMESSExecute(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -484,6 +489,7 @@ type
     function  FormatSets( Item: PRecordSet ) : String;
     procedure ExecuteMAME(const ZipName:String;const ExePath:String;
               const WorkDir:String; const Option:String);
+    procedure FilterCache;
 
 
     procedure WMSizing(var MSG: Tmessage); message WM_Sizing;
@@ -1036,6 +1042,7 @@ var i,idx: integer;
     Version: Integer;
     SW: String;
     j: integer;
+    hideflag: boolean;
 
 begin
 
@@ -1045,32 +1052,32 @@ begin
 
   LVUpdating:=True;
 
-  SW      := WideLowerCase(Trim(edtSearch.Text));
+  SW      := WideLowerCase(Trim(edtSearch.Text)); // 検索文字列
   Maker   := cmbMaker.Text;
   Year    := cmbYear.Text;
   Sound   := cmbSound.Text;
   CPU     := cmbCPU.Text;
   Version := cmbVersion.ItemIndex;
 
-  // バージョンは常に逆
+  // バージョンは常に逆順
   if Version<>0 then
   begin
     Version:=cmbVersion.Items.Count-Version;
   end;
 
-
   if Maker = TEXT_MAKER_ALL then Maker:='';
-  if Year  = TEXT_YEAR_ALL then Year:='';
+  if Year  = TEXT_YEAR_ALL  then Year:='';
   if Sound = TEXT_SOUND_ALL then Sound:='';
-  if CPU   = TEXT_CPU_ALL then CPU:='';
+  if CPU   = TEXT_CPU_ALL   then CPU:='';
+
+
+  TLSub.Clear;
+  TLSub.Capacity:=TLMaster.Count;
+
 
   // テキスト検索が無いとき
   if SW='' then
   begin
-
-    TLSub.Clear;
-    TLSub.Capacity:=TLMaster.Count;
-
 
     // 条件0
     // バージョン別
@@ -1086,37 +1093,38 @@ begin
         if idx<>-1 then
         begin
 
+          hideflag := false;
+
+          // ギャンブル隠すかチェック
+          if HideGambling and isGamblingDriver(PRecordset(TLMaster[idx]).Source) then
+            hideFlag := true;
+
+
+          // メカニカル隠すかチェック
+          if hideFlag=False then
+          begin
+            if HideMechanical and PRecordset(TLMaster[idx]).isMechanical then
+              hideFlag := true;
+          end;
+
+          // MESS隠すかチェック
+          if hideFlag=False then
+          begin
+            if HideMESS and (MESSDrivers.indexOf(PRecordSet(TLMaster[idx]).Source) <> -1) then
+              hideFlag := true;
+          end;
+
+
+          //
+          if hideFlag=False then
+            TLVersion.Add(TLMaster[idx]);
+                                      {
+
           // ギャンブル隠す場合
-          if HideGambling then
+          if HideGambling AND NOT isGamblingDriver(PRecordset(TLMaster[idx]).Source) then
           begin
 
-            if (Copy( PRecordSet(TLMaster[idx]).Source, 0, 4) <>'mpu2') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 4) <>'mpu3') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 4) <>'mpu4') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 4) <>'mpu5') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 3) <>'bfm') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 3) <>'jpm') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 6) <>'maygay') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 6) <>'ecoinf') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 6) <>'aristm') and
-               (Copy( PRecordSet(TLMaster[idx]).Source, 0, 6) <>'spoker') and
-               (PRecordSet(TLMaster[idx]).Source<>'proconn.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'astrafr.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'pluto5.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'acesp.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'bingo.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'sumt8035.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'astropc.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'atronic.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'cupidon.cpp') and
-               (PRecordSet(TLMaster[idx]).Source<>'extrema.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'gamtor.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'wms.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'konendev.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'belatra.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'kongambl.c') and
-               (PRecordSet(TLMaster[idx]).Source<>'highvdeo.cpp')
-            then
+            if NOT isGamblingDriver(PRecordset(TLMaster[idx]).Source) then
             begin
 
                 // メカニカルも隠す場合
@@ -1138,25 +1146,36 @@ begin
               TLVersion.Add(TLMaster[idx]);
 
           end
-          else
+          else // どちらも隠さない場合
             TLVersion.Add(TLMaster[idx]);
-
+                                       }
         end;
 
       end;
+
     end
     else   // バージョン別じゃないとき
     begin
 
-      // メカニカルとギャンブル隠すときの場合分け
-      if HideMechanical and HideGambling then
+      // 検索ベースになるもの
+      // メカニカル、ギャンブル、MESS隠すときの場合分け
+      if HideMechanical and HideGambling and HideMESS then
+        TLVersion.Assign(liNonMechGambMESS)
+      else if HideMechanical and HideMESS then
+        TLVersion.Assign(liNonMechMESS)
+      else if HideGambling and HideMESS then
+        TLVersion.Assign(liNonGamblingMESS)
+      else if HideMechanical and HideGambling then
         TLVersion.Assign(liNonMechGamb)
       else if HideMechanical then
         TLVersion.Assign(liNonMech)
       else if HideGambling then
         TLVersion.Assign(liNonGambling)
+      else if HideMESS then
+        TLVersion.Assign(liNonMESS)
       else
         TLVersion.Assign(TLMaster);
+
     end;
 
     /// 条件１
@@ -1335,18 +1354,25 @@ begin
   // テキスト検索のとき
   begin
 
-    TLSub.Clear;
-    TLSub.Capacity:=TLMaster.Count;
 
     TLVersion.Clear;// 一時用
 
-    // メカニカルとギャンブル隠すときの場合分け
-    if HideMechanical and HideGambling then
+    // 検索ベース
+    // メカニカル、ギャンブル、MESS隠すときの場合分け
+    if HideMechanical and HideGambling and HideMESS then
+      TLVersion.Assign(liNonMechGambMESS)
+    else if HideMechanical and HideMESS then
+      TLVersion.Assign(liNonMechMESS)
+    else if HideGambling and HideMESS then
+      TLVersion.Assign(liNonGamblingMESS)
+    else if HideMechanical and HideGambling then
       TLVersion.Assign(liNonMechGamb)
     else if HideMechanical then
       TLVersion.Assign(liNonMech)
     else if HideGambling then
       TLVersion.Assign(liNonGambling)
+    else if HideMESS then
+      TLVersion.Assign(liNonMESS)
     else
       TLVersion.Assign(TLMaster);
 
@@ -1530,10 +1556,8 @@ begin
 //
 
   Result:=0;
+
   TLMaster.Clear;     // レコードのリセット
-  liNonMech.Clear;    // 非メカニカルのリセット
-  liNonGambling.Clear;
-  liNonMechGamb.Clear;
 
   Error := false; // エラーフラグ
 
@@ -1707,79 +1731,71 @@ begin
     FreeAndNil(ResList);
   end;
 
+  // 先にフィルタする
+  FilterCache;
 
-  // 非メカニカルセットの抽出
+//showmessage(inttostr(GetTickCount-ms));
+end;
+
+// -----------------------------------------------------------------------------
+// 事前フィルタ
+// 非ギャンブル, 非メカニカル, 非MESS
+procedure TForm1.FilterCache;
+var i: integer;
+begin
+
+  liNonMech.Clear;          // 非メカ
+  liNonGambling.Clear;      // 非ギャンブル
+  liNonMESS.Clear;          // 非MESS
+
+  liNonMechGamb.Clear;      // 非メカ＋非ギャンブル
+  liNonMechMESS.Clear;      // 非メカ＋非MESS
+  liNonGamblingMESS.Clear;  // 非ギャンブル＋非MESS
+
+  liNonMechGambMESS.Clear;  // 非メカ非ギャンブル非MESS
+
+
   for i := 0 to TLMaster.Count - 1 do
   begin
 
-    if not PRecordSet(TLMaster[i]).isMechanical then
+    if NOT PRecordSet(TLMaster[i]).isMechanical then   // 非メカニカルセットの抽出
+    begin
       liNonMech.Add(TLMaster[i]);
+      // 非メカニカル ＋ 非ギャンブル
+      if NOT isGamblingDriver(PRecordSet(TLMaster[i]).Source) then
+      begin
+        liNonMechGamb.Add(TLMaster[i]);
 
-  end;
+        // 非メカ＋非ギャンブル＋非MESS
+        if MESSDrivers.indexOf(PRecordSet(TLMaster[i]).Source) = -1 then
+          liNonMechGambMESS.Add(TLMaster[i]);
 
-  // 非ギャンブルセットの抽出
-  for i := 0 to TLMaster.Count - 1 do
-  begin
+      end;
 
-    if
-       ( AnsiStartsStr( 'mpu2', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'mpu3', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'mpu4', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'mpu5', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'bfm', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'jpm', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'mayga', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'ecoinf', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'itgamb', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'aristm', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'magic', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'procon', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'astrafr', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'pluto', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'acesp', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'bingo', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'sumt', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'astropc', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'atronic', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'cupi', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'extre', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'gamto', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'wms', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'konend', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'belatr', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'procon', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'bingor', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'calo', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'funw', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'global', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'goldnp', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'goldst', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'norau', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'peplus', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( '4ros', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( '5clo', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'astrc', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'chsup', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'sigmab5', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'adp', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'statriv', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'blitz68', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       ( AnsiStartsStr( 'coinmst', PRecordSet(TLMaster[i]).Source ) <> TRUE ) and
-       (Pos('poker',PRecordSet(TLMaster[i]).Source)=0)
+    end;
 
-    then
+    if MESSDrivers.indexOf(PRecordSet(TLMaster[i]).Source) = -1 then  // 非MESS
+    begin
+      liNonMESS.Add(TLMaster[i]);
+      // 非MESS ＋ 非メカ
+      if NOT PRecordSet(TLMaster[i]).isMechanical then
+        liNonMechMESS.Add(TLMaster[i]);
+
+    end;
+
+    if NOT isGamblingDriver(PRecordSet(TLMaster[i]).Source) then   // 非ギャンブルセットの抽出
+    begin
       liNonGambling.Add(TLMaster[i]);
 
+      // 非ギャンブル ＋ 非MESS
+      if MESSDrivers.IndexOf(PRecordSet(TLMaster[i]).Source) = -1 then
+        liNonGamblingMESS.Add(TLMaster[i]);
+
+
+    end;
+
   end;
 
-  // 非ギャンブル＋非メカニカルセットの抽出
-  for i := 0 to liNonGambling.Count - 1 do
-  begin
-
-    if not PRecordSet(liNonGambling[i]).isMechanical then
-      liNonMechGamb.Add(liNonGambling[i]);
-  end;
-//showmessage(inttostr(GetTickCount-ms));
 end;
 
 
@@ -2114,6 +2130,13 @@ begin
   liNonGambling:=TList.Create;
   liNonMechGamb:=TList.Create;
 
+  liNonMESS:=TList.Create;
+
+  liNonMechMESS:=TList.Create;
+  liNonGamblingMESS:=TList.Create;
+  liNonMechGambMESS:=TList.Create;
+
+
 
   // サブリストに表示中のROMセット
   SubListID:=-1;
@@ -2141,6 +2164,9 @@ begin
   // 最初にフォームがSHOWした後をActiveで確認するためのフラグ
   bFormActivated := False;
 
+  // mess.flt読み込み
+
+
 end;
 
 //-----------------------------------------------------------------------
@@ -2160,6 +2186,12 @@ begin
   FreeAndNil(liNonMech);
   FreeAndNil(liNonGambling);
   FreeAndNil(liNonMechGamb);
+
+  FreeAndNil(liNonMechMESS);
+  FreeAndNil(liNonGamblingMESS);
+  FreeAndNil(liNonMechGambMESS);
+
+  FreeAndNil(MESSDrivers);
 
 end;
 
@@ -2474,6 +2506,11 @@ begin
 
   end;
 
+
+  // mess.flt読み込み
+  ReadMESSflt;
+
+  // RESファイル読み込み
   result:= LoadResource;
 
   // リソース読み込み
@@ -3693,6 +3730,17 @@ begin
     actVHideMechanical.Checked:=HideMechanical;
 end;
 
+procedure TForm1.actVHideMESSExecute(Sender: TObject);
+begin
+  HideMess:=(not HideMess);
+  UpdateListView;
+end;
+
+procedure TForm1.actVHideMESSUpdate(Sender: TObject);
+begin
+    actVHideMESS.Checked:=HideMess;
+end;
+
 procedure TForm1.actVInfoPaneExecute(Sender: TObject);
 begin
 
@@ -4087,6 +4135,7 @@ end;
 // クラウド更新
 procedure TForm1.actFHttpExecute(Sender: TObject);
 var response: integer;
+    Save_Cursor: TCursor;
 begin
 
   response := frmHttp.ShowModal;
@@ -4094,12 +4143,26 @@ begin
   // 更新結果が mrOK なら
   if response=mrOK then
   begin
-    ReadMame32jlst;
-    SetVersionINI;
-    ReadMameInfoDat;
-    UpdateListView;
-    ReadHistoryDat;
-    FindDat(CurrentIndex);
+    Save_Cursor := Screen.Cursor;
+    Screen.Cursor := crHourGlass;    // Show hourglass cursor
+    try
+      ReadMame32jlst;
+      SetVersionINI;
+      ReadMameInfoDat;
+
+      if frmHttp.wasMESSFltUpdated then // mess.fltが更新されたときはフィルタ更新
+      begin
+        ReadMESSflt;
+        FilterCache;
+      end;
+
+      UpdateListView;
+      ReadHistoryDat;
+      FindDat(CurrentIndex);
+
+    finally
+      Screen.Cursor := Save_Cursor;
+    end;
   end;
 
 end;
@@ -5015,6 +5078,7 @@ end;
 procedure TForm1.actOUpdateResExecute(Sender: TObject);
 var i,j,k:integer;
     result:integer;
+    Save_Cursor: TCursor;
 begin
   //
 
@@ -5023,104 +5087,117 @@ begin
     exit;
   end;
 
-  // ROMステータスの一時待避
-  SetLength(ROMTemp,TLMaster.Count);
-  for i:=0 to TLMaster.Count-1 do
-  begin
-    ROMTemp[i].Zip:=PRecordset(TLMaster[i]).ZipName;
-    ROMTemp[i].ROM:=PRecordset(TLMaster[i]).ROM;
-  end;
+  Save_Cursor := Screen.Cursor;
+  Screen.Cursor := crHourGlass;    // Show hourglass cursor
 
-  // Sampleステータスの一時待避
-  SetLength(SampleTemp,TLMaster.Count);
-  for i:=0 to TLMaster.Count-1 do
-  begin
-    SampleTemp[i].Zip:=PRecordset(TLMaster[i]).ZipName;
-    SampleTemp[i].Sample:=PRecordset(TLMaster[i]).Sample;
-  end;
-
-  result:= LoadResource;
-
-  if result=1 then
-  begin
-    if FileExists(ExeDir+'listxml.tmp') then
-      DeleteFile(ExeDir+'listxml.tmp');
-
-    Application.MessageBox('データファイルの読み込みに失敗しました。'+CRLF+
-          '正しいMAME本体を選択してください。',APPNAME, MB_ICONERROR + MB_OK);
-    Application.Terminate;
-    Exit;
-  end
-  else
-  if result=2 then
-  begin
-    if FileExists(ExeDir+'listxml.tmp') then
-      DeleteFile(ExeDir+'listxml.tmp');
-
-    Application.MessageBox('データファイルの読み込みに失敗しました。'+CRLF+
-          'MAME側のLIST.XMLフォーマットが変更された可能性があります。',APPNAME, MB_ICONERROR + MB_OK);
-    Application.Terminate;
-    Exit;
-  end;
-
-  CreateZipIndex; // ZIP名のインデックス作成
-
-  //
-
-  if ReadMame32jlst=False then
-    ReadLang;
-
-  // ROMステータス復旧
-  k:=0;
-  for i:=0 to TLMaster.Count-1 do
-  begin
-    for j:=k to Length(ROMTemp)-1 do
+  try
+    // ROMステータスの一時待避
+    SetLength(ROMTemp,TLMaster.Count);
+    for i:=0 to TLMaster.Count-1 do
     begin
-      if PRecordset(TLMaster[i]).ZipName=ROMTemp[j].Zip then
+      ROMTemp[i].Zip:=PRecordset(TLMaster[i]).ZipName;
+      ROMTemp[i].ROM:=PRecordset(TLMaster[i]).ROM;
+    end;
+
+    // Sampleステータスの一時待避
+    SetLength(SampleTemp,TLMaster.Count);
+    for i:=0 to TLMaster.Count-1 do
+    begin
+      SampleTemp[i].Zip:=PRecordset(TLMaster[i]).ZipName;
+      SampleTemp[i].Sample:=PRecordset(TLMaster[i]).Sample;
+    end;
+
+    result:= LoadResource;
+
+    if result=1 then
+    begin
+      if FileExists(ExeDir+'listxml.tmp') then
+        DeleteFile(ExeDir+'listxml.tmp');
+
+      Application.MessageBox('データファイルの読み込みに失敗しました。'+CRLF+
+            '正しいMAME本体を選択してください。',APPNAME, MB_ICONERROR + MB_OK);
+      Application.Terminate;
+      Exit;
+    end
+    else
+    if result=2 then
+    begin
+      if FileExists(ExeDir+'listxml.tmp') then
+        DeleteFile(ExeDir+'listxml.tmp');
+
+      Application.MessageBox('データファイルの読み込みに失敗しました。'+CRLF+
+            'MAME側のLIST.XMLフォーマットが変更された可能性があります。',APPNAME, MB_ICONERROR + MB_OK);
+      Application.Terminate;
+      Exit;
+    end;
+
+    CreateZipIndex; // ZIP名のインデックス作成
+
+    //
+
+    if ReadMame32jlst=False then
+      ReadLang;
+
+    // ROMステータス復旧
+    k:=0;
+    for i:=0 to TLMaster.Count-1 do
+    begin
+      for j:=k to Length(ROMTemp)-1 do
       begin
-        PRecordset(TLMaster[i]).ROM:=ROMTemp[j].ROM;
-        k:=j+1;
-        break;
+        if PRecordset(TLMaster[i]).ZipName=ROMTemp[j].Zip then
+        begin
+          PRecordset(TLMaster[i]).ROM:=ROMTemp[j].ROM;
+          k:=j+1;
+          break;
+        end;
       end;
     end;
-  end;
 
-  Finalize( ROMTemp );
+    Finalize( ROMTemp );
 
-  // Sampleステータス復旧
-  k:=0;
-  for i:=0 to TLMaster.Count-1 do
-  begin
-    for j:=k to Length(SampleTemp)-1 do
+    // Sampleステータス復旧
+    k:=0;
+    for i:=0 to TLMaster.Count-1 do
     begin
-      if PRecordset(TLMaster[i]).ZipName=SampleTemp[j].Zip then
+      for j:=k to Length(SampleTemp)-1 do
       begin
-        PRecordset(TLMaster[i]).Sample:=SampleTemp[j].Sample;
-        k:=j+1;
-        break;
+        if PRecordset(TLMaster[i]).ZipName=SampleTemp[j].Zip then
+        begin
+          PRecordset(TLMaster[i]).Sample:=SampleTemp[j].Sample;
+          k:=j+1;
+          break;
+        end;
       end;
     end;
+
+    Finalize( SampleTemp );
+
+    // 各データの再読み込み
+    ReadHistoryDat;
+    ReadMameInfoDat;
+    SetVersionINI;
+
+    // Form Title更新
+    SetFormTitle;
+
+    // 絞り込みリセット
+    CurrentAssort:=0;
+
+    // ソフトリスト再初期化
+    frmSoftwareList.setSoftlist('');
+    actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
+    frmSoftwareList.setSoftlist(SelZip, true);
+
+    // mess.fltリセット
+    ReadMESSflt;
+    FilterCache;
+
+    UpdateListView;
+
+  finally
+    Screen.Cursor := Save_Cursor;
   end;
 
-  Finalize( SampleTemp );
-
-  // 各データの再読み込み
-  ReadHistoryDat;
-  ReadMameInfoDat;
-  SetVersionINI;
-
-  // Form Title更新
-  SetFormTitle;
-
-  // 絞り込みリセット
-  CurrentAssort:=0;
-
-  // ソフトリスト再初期化
-  frmSoftwareList.setSoftlist('');
-  actVSoftwarelist.Enabled := frmSoftwareList.init(ExeDir);
-  frmSoftwareList.setSoftlist(SelZip, true);
-
-  UpdateListView;
 
 end;
 

@@ -20,25 +20,25 @@
 4dmshl3g	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 4dmuhl3s	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 4nd04a	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-a1000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_a1000
-a1000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_a1000
-a1200	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a1200n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
+a1000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amiga_a1000
+a1000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amiga_a1000
+a1200	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a1200n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
 a1200xl	a800_flop	a800	a800_cass	xegs
 a130xe	a800_flop	a800	a800_cass	xegs
-a2000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop
-a2000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop
+a2000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos
+a2000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos
 a2600	a2600	a2600_cass
 a2600p	a2600	a2600_cass
-a3000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_a3000	amigaecs_flop
-a3000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_a3000	amigaecs_flop
+a3000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amiga_a3000	amigaecs_flop
+a3000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amiga_a3000	amigaecs_flop
 a400	a800_flop	a800	a800_cass	xegs
-a4000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a400030	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a400030n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a4000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a4000t	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
-a4000tn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaaga_flop	amigaecs_flop	amiga_hdd
+a4000	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a400030	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a400030n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a4000n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a4000t	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
+a4000tn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaaga_flop	amigaecs_flop	amiga_hdd
 a400pal	a800_flop	a800	a800_cass	xegs
 a433cc	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 a486ap4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -49,13 +49,13 @@ a486sp3g	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 a486sv1	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 a486sv2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 a486sv2g	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-a500	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop
-a500n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop
-a500p	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaecs_flop
-a500pn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaecs_flop
+a500	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos
+a500n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos
+a500p	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaecs_flop
+a500pn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaecs_flop
 a5200	a5200
-a600	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaecs_flop	amiga_hdd
-a600n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amigaecs_flop	amiga_hdd
+a600	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaecs_flop	amiga_hdd
+a600n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	amigaecs_flop	amiga_hdd
 a600xl	a800_flop	a800	a800_cass	xegs
 a65xe	a800_flop	a800	a800_cass	xegs
 a65xea	a800_flop	a800	a800_cass	xegs
@@ -66,28 +66,31 @@ a800pal	a800_flop	a800	a800_cass	xegs
 a800xe	a800_flop	a800	a800_cass	xegs
 a800xl	a800_flop	a800	a800_cass	xegs
 a800xlp	a800_flop	a800	a800_cass	xegs
-aa3000	archimedes
-aa3010	archimedes
-aa3020	archimedes
-aa305	archimedes
-aa310	archimedes
-aa4	archimedes
-aa4000	archimedes
-aa4101	archimedes
-aa4201	archimedes
-aa440	archimedes
-aa4401	archimedes
+aa3000	archimedes	archimedes_hdd	archimedes_rom
+aa3010	archimedes	archimedes_hdd	archimedes_rom
+aa3020	archimedes	archimedes_hdd	archimedes_rom
+aa305	archimedes	archimedes_hdd	archimedes_rom
+aa310	archimedes	archimedes_hdd	archimedes_rom
+aa4	archimedes	archimedes_hdd	archimedes_rom
+aa4000	archimedes	archimedes_hdd	archimedes_rom
+aa4101	archimedes	archimedes_hdd	archimedes_rom
+aa4201	archimedes	archimedes_hdd	archimedes_rom
+aa440	archimedes	archimedes_hdd	archimedes_rom
+aa4401	archimedes	archimedes_hdd	archimedes_rom
 aa486s	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-aa5000	archimedes
-aa5000a	archimedes
-aa540	archimedes
+aa500	archimedes	archimedes_hdd	archimedes_rom
+aa5000	archimedes	archimedes_hdd	archimedes_rom
+aa5000a	archimedes	archimedes_hdd	archimedes_rom
+aa500d	archimedes	archimedes_hdd	archimedes_rom
+aa540	archimedes	archimedes_hdd	archimedes_rom
+aa680	archimedes	archimedes_hdd	archimedes_rom
 abae4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 abah4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 abav4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 abax4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 abc110	bbc_cass	bbc_rom	bbc_flop_z80	bbcb_flop	bbcb_flop_orig	bbc_hdd
 abc1600	abc1600_flop
-abc310	bbc_cass	bbc_rom	bbc_flop_80186	bbcb_flop	bbcb_flop_orig	bbc_hdd
+abc310	bbc_cass	bbc_rom	bbc_flop_80186	ibm5150	bbcb_flop	bbcb_flop_orig	bbc_hdd
 abc80	abc80_cass	abc80_flop
 abc800c	abc800	abc800_hdd
 abc800m	abc800	abc800_hdd
@@ -100,6 +103,8 @@ abpv4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 abpw4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ace100	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 ace1000	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
+ace2200	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+ace500	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 acrnsys2	acrnsys_flop	acrnsys_rom
 acrnsys3	acrnsys_flop	acrnsys_rom
 acrnsys3_6809	acrnsys_flop
@@ -135,6 +140,7 @@ alphatron	alphatro_flop	alphatro_cass	alphatro_cart
 altos5	altos5
 altos8600	altos8600
 am100	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
+am4	archimedes	archimedes_hdd	archimedes_rom
 am64	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 amibaby	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 amient2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -173,12 +179,12 @@ apple2ees	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 apple2eeuk	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 apple2ep	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 apple2euk	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gs	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gsr0	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gsr0p	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gsr0p2	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gsr1	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
-apple2gsr3p	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gs	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gsr0	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gsr0p	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gsr0p2	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gsr1	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
+apple2gsr3p	apple2gs_flop_clcracked	apple2gs_flop_orig	apple2gs_flop_misc	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 apple2jp	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 apple2p	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 apple3	apple3
@@ -197,6 +203,9 @@ apxlsam	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 aquarius	aquarius_cart	aquarius_cass
 aquarius2	aquarius_cart	aquarius_cass
 aquariusp	aquarius_cart	aquarius_cass
+ar140	archimedes	archimedes_hdd	archimedes_rom
+ar225	archimedes	archimedes_hdd	archimedes_rom	bbc_rom
+ar260	archimedes	archimedes_hdd	archimedes_rom
 ar4glx3	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 arb	arb
 arcadia	arcadia
@@ -249,12 +258,13 @@ bay1000c	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 bbca	bbc_cass	bbc_rom
 bbcb	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
 bbcb_de	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
+bbcb_no	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
 bbcb_us	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd	bbcb_flop_us
 bbcbc	bbcbc
 bbcbp	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
 bbcbp128	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
 bbcm	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
-bbcm512	bbc_flop_80186	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
+bbcm512	bbc_flop_80186	ibm5150	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
 bbcmaiv	bbc_flop_6502	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
 bbcmarm	bbc_flop_arm	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
 bbcmc	bbcm_flop	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd	bbcmc_flop	pro128s_flop
@@ -368,16 +378,16 @@ cbm8296ed	pet_cass	pet_flop	pet_hdd	pet_quik	pet_rom	cbm8296_flop
 cbm8296gd	pet_cass	pet_flop	pet_hdd	pet_quik	pet_rom	cbm8296_flop
 cc40	cc40_cart
 cc40p	cc40_cart
-cd32	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	cd32
-cd32n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	cd32
+cd32	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	cd32	cdtv
+cd32n	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	cd32	cdtv
 cd6809	coco_cart	coco_flop	dragon_cart
 cdi490a	cdi
 cdi910	cdi
 cdimono1	cdi
 cdimono2	cdi
 cdtekg2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-cdtv	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	cdtv
-cdtvn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	cdtv
+cdtv	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	cdtv
+cdtvn	amiga_workbench	amiga_hardware	amiga_apps	amiga_flop	amigaocs_flop	amiga_demos	cdtv
 cdx	segacd
 cec2000	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	cecflop
 cece	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	cecflop
@@ -503,8 +513,8 @@ dceu	dc
 dcjp	dc
 dctream	dc
 ddrfammt	ekara_japan_p
-dendy	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
-dendy2	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
+dendy	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
+dendy2	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
 dfi386	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 dfi386sx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 dgama87	spectrum_cass
@@ -520,6 +530,7 @@ didakm93	spectrum_cass
 didakt90	spectrum_cass
 didaktk	spectrum_cass
 didj	leapfrog_didj_cart
+digilog320	digilog320
 dim68k	dim68k
 dina	coleco
 discmate	bbcm_cart	bbc_rom	bbc_hdd
@@ -542,7 +553,7 @@ dragon200e	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
 dragon32	dragon_cart	dragon_cass	dragon_flop	coco_cart
 dragon64	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
 dragon64h	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
-drpcjr	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_flop	famicom_cass
+drpcjr	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_flop	famicom_cass
 dsp3000	apollo_ctape
 dsp3500	apollo_ctape
 dsp5500	apollo_ctape
@@ -562,6 +573,7 @@ ec1840	ec1841
 ec1841	ec1841
 ec1842	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ec1845	ec1841
+ec1847	ibm5150
 ec1849	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ec4913	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ec4915aio	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -632,10 +644,10 @@ f1392	vc4000
 f4dxluc4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 falcon30	st_flop
 falcon40	st_flop
-famicom	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_flop	famicom_cass
-famitwin	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_flop	famicom_cass
+famicom	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_flop	famicom_cass
+famitwin	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_flop	famicom_cass
 fdpc200	msx1_cass	msx1_cart
-fds	famicom_flop
+fds	famibox	famicom_flop
 feag	fidel_scc
 feag2100	fidel_scc
 feag2100a	fidel_scc
@@ -668,10 +680,11 @@ ficpio2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ficvipio	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ficvipio2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ficvt503	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-fm7	fm7_cass	fm7_disk
-fm7740sx	fm7_cass	fm77av	fm7_disk
-fm77av	fm7_cass	fm77av	fm7_disk
-fmnew7	fm7_cass	fm7_disk
+fm7	fm7_cass	fm8_cass	fm7_disk
+fm7740sx	fm7_cass	fm8_cass	fm77av	fm7_disk
+fm77av	fm7_cass	fm8_cass	fm77av	fm7_disk
+fm8	fm8_cass
+fmnew7	fm7_cass	fm8_cass	fm7_disk
 fmtmarty	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
 fmtmarty2	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
 fmtowns	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
@@ -687,6 +700,7 @@ fpc500	msx1_cass	msx1_cart
 fpc900	msx2_cass	msx1_cass	msx2_flop	msx1_flop	msx2_cart	msx1_cart
 fpres	fidel_scc
 fpresbu	fidel_scc
+fpresgla	fidel_scc
 frx386c	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 frxc402	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 fs1300	msx1_cass	msx1_cart
@@ -740,7 +754,7 @@ gbcolor	gbcolor	gameboy
 gbpocket	gameboy	gbcolor
 gbs5505x	pc1000
 gc10a	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-gchinatv	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
+gchinatv	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
 gcslottv	gcslottv
 gen_nomd	megadriv
 genesis	megadriv
@@ -973,8 +987,8 @@ ip6800	interpro
 iq128	iq128
 iq128_fr	iq128
 iq151	iq151_cart	iq151_flop
-iq501	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
-iq502	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
+iq501	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
+iq502	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
 iq7000	wizard_cart
 iqtv512	iq128
 iquest	leapfrog_iquest_cart
@@ -1118,8 +1132,8 @@ m5	m5_cart	m5_cass
 m55hipl	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 m5p	m5_cart	m5_cass
 m5p_brno	m5_cart	m5_cass	m5_flop
-m82	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach
-m82p	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach
+m82	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox
+m82p	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox
 m86rk	mikrosha_cass	mikrosha_cart
 mac128k	mac_flop	mac_hdd
 mac2fdhd	mac_hdd	mac_flop	mac_hdflop
@@ -1321,6 +1335,7 @@ ms4134	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4138	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4144	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4145	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+msm3	coco_cart	coco_flop
 mt65	mt65_rom	mt65_cass	mt65_snap
 mtc9016	studio2
 mtx500	mtx_cass	mtx_flop	mtx_cart	mtx_rom
@@ -1363,8 +1378,8 @@ neiva	korvet_flop
 neocd	neocd
 neocdz	neocd
 neocdzj	neocd
-nes	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach
-nespal	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach
+nes	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox
+nespal	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox
 next	next_cdrom	next_hdd
 nextc	next_cdrom	next_hdd
 nextct	next_cdrom	next_hdd	next
@@ -1472,15 +1487,20 @@ pc1640	pc1640_flop	pc1640_hdd
 pc1640dd	pc1640_flop	pc1640_hdd
 pc1640hd20	pc1640_flop	pc1640_hdd
 pc1640hd30	pc1640_flop	pc1640_hdd
+pc20	pc200
+pc200	pc200
 pc2000	pc1000
 pc2000s	pc1000
+pc2086	pc200
 pc2386	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pc3086	pc200
 pc30iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc386m	pc98	pc98_cd
 pc40iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc45iii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc486mu	pc98	pc98_cd
 pc486se	pc98	pc98_cd
+pc5086	pc200
 pc50ii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pc6001	pc6001_cart
 pc6001a	pc6001_cart
@@ -1501,7 +1521,7 @@ pc8801	pc8801_cass	pc8801_flop	pc8001_flop
 pc8801fa	pc8801_cass	pc8801_flop	pc8001_flop
 pc8801ma	pc8801_cass	pc8801_flop	pc8001_flop
 pc8801ma2	pc8801_cass	pc8801_flop	pc8001_flop
-pc8801mc	pc8801_cass	pc8801_flop	pc8001_flop
+pc8801mc	pc8801_cass	pc8801_flop	pc8001_flop	pc8801_cdrom
 pc8801mh	pc8801_cass	pc8801_flop	pc8001_flop
 pc8801mk2	pc8801_cass	pc8801_flop	pc8001_flop
 pc8801mk2fr	pc8801_cass	pc8801_flop	pc8001_flop
@@ -1632,6 +1652,7 @@ pitagor	gln
 pk6128c	vector06_flop	vector06_cart
 pk88	mc1502_flop
 pkm0038s	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+playmaker	playmaker
 plldium	arcadia
 plus4	plus4_cart	plus4_cass	plus4_flop
 plus4p	plus4_cart	plus4_cass	plus4_flop
@@ -1657,6 +1678,8 @@ poppympt	arcadia
 pow3000	zx81_cass
 pp1292	vc4000
 pp1392	vc4000
+ppc512	pc200
+ppc640	pc200
 ppm3333p	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 prav82	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 prav8c	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
@@ -1729,6 +1752,9 @@ quizwizc	quizwiz
 quorum	spectrum_cass
 quorum48	spectrum_cass
 qx10	qx10_flop
+r8	r8_card
+r8m	r8_card
+r8mk2	r8_card
 r9751	r9751
 radio16	radio86_cass
 radio4k	radio86_cass
@@ -1745,6 +1771,7 @@ reutapm	bbc_rom	bbc_hdd
 ringo470	zx81_cass
 rk7007	radio86_cass
 rk700716	radio86_cass
+rlndtnsc1	roland_tnsc1
 robie	kaypro
 rowtrn2k	arcadia
 rs128	mtx_cass	mtx_flop	mtx_cart	mtx_rom
@@ -1764,7 +1791,7 @@ saturneu	saturn	sat_cart
 saturnjp	saturn	sat_cart
 saturnkr	saturn	sat_cart
 sawatte	sawatte
-sb486	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famicom_cass
+sb486	nes	nes_ade	nes_ntbrom	nes_kstudio	nes_datach	famibox	famicom_cass
 sbrain	sbrain
 sc3000	sc3000_cart	sc3000_cass	sg1000
 sc3000h	sc3000_cart	sc3000_cass	sg1000
@@ -1792,6 +1819,7 @@ sintez2	spectrum_cass
 sis85c471	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 sis85c496	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 sisrabb	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+sist1	bbc_cass	bbc_rom	bbcb_flop	bbcb_flop_orig	bbc_hdd
 sitcom	sitcom
 sitcomtmr	sitcom
 sm38640f	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -2043,6 +2071,7 @@ ts1000	zx81_cass
 ts1500	zx81_cass
 ts2068	spectrum_cass	timex_dock	timex_cass
 ts34t25	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+tsconf	spectrum_cass
 tstar432	saitek_kso
 tt030	st_flop
 tt030_de	st_flop
@@ -2135,6 +2164,7 @@ videopacp	videopac
 vii	vii
 vip	chip8_quik	vip
 vip64	vic10	c64_cart	c64_cass	c64_flop_orig	c64_flop_misc
+vis	vis
 visicom	visicom
 vixen	vixen
 vlsi5	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -2212,6 +2242,7 @@ z1013a2	z1013_cass	z1013_snap
 z1013k69	z1013_cass	z1013_snap
 z1013k76	z1013_cass	z1013_snap
 z1013s60	z1013_cass	z1013_snap
+z80clock	z80clock
 z80net	z80ne_cass
 z80netf	z80ne_cass	z80ne_flop
 z88	z88_cart

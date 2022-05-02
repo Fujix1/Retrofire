@@ -9,12 +9,12 @@ uses
   Vcl.ComCtrls, System.Zip, System.IOUtils, ShellAPI;
 
 const
-  URL_MAME32J = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/mame32j.lst'; // mame32j.lst の取得元
-  URL_VERSION = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/folders/Version.ini'; // version.ini の取得元
-  URL_MAMEINFO = 'http://www.e2j.net/files/mameinfo_utf8.zip'; // mameinfo.dat の取得元
-  URL_HISTORY = 'http://e2j.net/files/history+u.zip'; // history.dat の取得元
-
+  URL_MAME32J   = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/mame32j.lst'; // mame32j.lst の取得元
+  URL_VERSION   = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/folders/Version.ini'; // version.ini の取得元
+  URL_MAMEINFO  = 'http://www.e2j.net/files/mameinfo_utf8.zip'; // mameinfo.dat の取得元
+  URL_HISTORY   = 'http://e2j.net/files/history+u.zip'; // history.dat の取得元
   URL_RETROFIRE = 'https://raw.githubusercontent.com/Fujix1/Retrofire/master/version.txt'; // retrofireのバージョン番号の取得元
+  URL_MESSFLT   = 'https://raw.githubusercontent.com/mamedev/mame/master/src/mame/mess.flt'; // mess.flt の取得元
 
 
 const
@@ -38,6 +38,7 @@ type
     ProgressBar1: TProgressBar;
     NetHTTPRequest5: TNetHTTPRequest;
     NetHTTPRequest6: TNetHTTPRequest;
+    NetHTTPRequest7: TNetHTTPRequest;
 
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -63,8 +64,12 @@ type
       const AError: string);
     procedure NetHTTPRequest5RequestCompleted(const Sender: TObject;
       const AResponse: IHTTPResponse);
+    procedure NetHTTPRequest7RequestError(const Sender: TObject;
+      const AError: string);
     procedure NetHTTPRequest6RequestError(const Sender: TObject;
       const AError: string);
+    procedure NetHTTPRequest7RequestCompleted(const Sender: TObject;
+      const AResponse: IHTTPResponse);
 
   private
     { Private 宣言 }
@@ -75,6 +80,7 @@ type
 
   public
     { Public 宣言 }
+    var wasMESSFltUpdated: boolean;
   end;
 
 var
@@ -94,6 +100,9 @@ var
 
   target_ETag_history: string; // ダウンロード対象の Etag
   target_size_history: integer; // 対象の Content-Length
+
+  target_ETag_messflt: string; // ダウンロード対象の Etag
+  target_size_messflt: integer;  // 対象の Content-Length
 
   isDownloadable: boolean; // ダウンロード可能か
   numChecked: integer; // ダウンロードチェック完了数
@@ -148,12 +157,16 @@ begin
   target_size_history := 0;
   target_ETag_history := '';
 
+  target_size_messflt := 0;
+  target_ETag_messflt := '';
 
   // フォームshowのあとに処理をする
   // https://stackoverflow.com/questions/14318807/what-is-the-best-way-to-autostart-an-action-after-onshow-event
   PostMessage(Handle, WM_STARTUP, 0, 0);
 
   //OnShow := nil;//only ever post the message once
+
+  wasMESSFltUpdated := false; // MESSフィルタ更新されたか
 
 end;
 
@@ -196,6 +209,12 @@ begin
   // 更新ファイルがあるか確認
   if HttpError=false then
     NetHTTPRequest5.Head(URL_HISTORY);
+
+  Application.ProcessMessages;
+
+  // 更新ファイルがあるか確認
+  if HttpError=false then
+    NetHTTPRequest7.Head(URL_MESSFLT);
 
   Application.ProcessMessages;
 
@@ -273,6 +292,10 @@ begin
       target_ETag_mame32j := AResponse.Headers[i].Value;
     end;
   end;
+
+  // ファイル無いとき
+  if not FileExists(IncludeTrailingPathDelimiter(GetCurrentDir)+'\mame32j.lst') then
+    ETag_mame32j:='';
 
   // 更新あるか判定
   if (target_ETag_mame32j <> ETag_mame32j) and ( target_size_mame32j > 0) then
@@ -396,6 +419,8 @@ begin
     end;
   end;
 
+
+
   // 更新あるか判定
   if (target_ETag_history <> ETag_history) and ( target_size_history > 0) then
   begin
@@ -414,6 +439,47 @@ begin
   checkIfDownloadable();  // ダウンロードボタンの有効化
 end;
 
+procedure TfrmHttp.NetHTTPRequest7RequestCompleted(const Sender: TObject;
+  const AResponse: IHTTPResponse);
+  var i: integer;
+begin
+  inc(numChecked);
+
+  for i := Low(AResponse.Headers) to High(AResponse.Headers) do
+  begin
+    //Memo1.Lines.Add( AResponse.Headers[i].Name + ': ' +  AResponse.Headers[i].Value );
+    if AResponse.Headers[i].Name = 'Content-Length' then
+    begin
+      target_size_messflt := strtoint(AResponse.Headers[i].Value);
+    end
+    else
+    if AResponse.Headers[i].Name = 'ETag' then
+    begin
+      target_ETag_messflt := AResponse.Headers[i].Value;
+    end;
+  end;
+
+  // 更新あるか判定
+  if not FileExists(IncludeTrailingPathDelimiter(GetCurrentDir)+'\mess.flt') then
+    ETag_messflt:=''; // ファイル無いとき
+
+  if ((target_ETag_messflt <> ETag_messflt)) and
+     ( target_size_messflt > 0) then
+  begin
+    Memo1.Lines.Add('mess.flt: 更新あり ('+inttostr(target_size_messflt)+' Bytes)');
+    isDownloadable := true;
+  end
+  else if( target_size_mameinfo = 0 ) then
+  begin
+    Memo1.Lines.Add('mess.flt: ファイル情報取得失敗');
+  end
+  else
+  begin
+    Memo1.Lines.Add('mess.flt: 最新版');
+  end;
+
+  checkIfDownloadable();  // ダウンロードボタンの有効化
+end;
 
 procedure TfrmHttp.NetHTTPRequest1RequestError(const Sender: TObject;
   const AError: string);
@@ -449,6 +515,16 @@ begin
   lblStatus.Caption:='接続中にエラーが起きました。';
   Memo1.Lines.Add( AError );
 end;
+
+
+
+procedure TfrmHttp.NetHTTPRequest7RequestError(const Sender: TObject;
+  const AError: string);
+begin
+  lblStatus.Caption:='接続中にエラーが起きました。';
+  Memo1.Lines.Add( AError );
+end;
+
 
 procedure TfrmHttp.NetHTTPRequest2ReceiveData(const Sender: TObject;
   AContentLength, AReadCount: Int64; var Abort: Boolean);
@@ -723,7 +799,53 @@ begin
     finally
       ResponseContent.Free;
     end;
+  end;
 
+
+  // mess.flt
+  if ( target_size_messflt > 0) and (target_ETag_messflt <> ETag_messflt) then
+  begin
+
+    Memo1.Lines.Add('mess.flt をダウンロード中...');
+    Application.ProcessMessages;
+
+    //取得したデータを格納するStream
+    ResponseContent := TMemoryStream.Create;
+
+    try
+      NetHTTPRequest7.Get(URL_MESSFLT, ResponseContent);
+
+      if ResponseContent.Size = target_size_messflt then // ダウンロードサイズ確認
+      begin
+        try
+          ResponseContent.SaveToFile( IncludeTrailingPathDelimiter(GetCurrentDir)+'\mess.flt');
+          beep;
+
+          Memo1.Lines.Add('mess.flt を保存。');
+
+          ETag_messflt := target_ETag_messflt;
+          btnCancel.ModalResult := mrOK;
+          wasMESSFltUpdated := true;
+        except
+          on e:exception do
+          begin
+            lblStatus.Caption:='ファイルの保存に失敗しました。';
+            Memo1.Lines.Add(e.Message);
+            btnCancel.ModalResult := mrClose;
+          end;
+        end;
+      end
+      else
+      begin
+
+        Memo1.Lines.Add('mess.flt のダウンロードに失敗しました。');
+        lblStatus.Caption := 'mess.flt ファイルのダウンロードに失敗しました。';
+        btnCancel.ModalResult := mrClose;
+      end;
+
+    finally
+      ResponseContent.Free;
+    end;
   end;
 
   lblStatus.Caption:='処理完了';
@@ -733,7 +855,7 @@ end;
 procedure TfrmHttp.checkIfDownloadable;
 begin
 
-  if numChecked <> 4 then Exit;
+  if numChecked <> 5 then Exit;
 
   if isDownloadable then
   begin

@@ -13,7 +13,6 @@ type
     Label7: TLabel;
     Label1: TLabel;
     Label2: TLabel;
-    Image1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

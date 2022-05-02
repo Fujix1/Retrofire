@@ -3,7 +3,7 @@ object frmHttp: TfrmHttp
   Top = 0
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsDialog
-  Caption = #12463#12521#12454#12489#12501#12449#12452#12523#26356#26032#65288#12486#12473#12488#29256#65289
+  Caption = #12463#12521#12454#12489#12501#12449#12452#12523#26356#26032
   ClientHeight = 334
   ClientWidth = 629
   Color = clBtnFace
@@ -32,16 +32,22 @@ object frmHttp: TfrmHttp
   object lblStatus: TLabel
     Left = 24
     Top = 24
-    Width = 35
+    Width = 40
     Height = 13
     Caption = 'Status.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label1: TLabel
     Left = 24
     Top = 53
-    Width = 51
+    Width = 67
     Height = 13
-    Caption = #12513#12483#12475#12540#12472#65306
+    Caption = #12525#12464#12513#12483#12475#12540#12472':'
   end
   object btnCancel: TButton
     Left = 475
@@ -107,72 +113,72 @@ object frmHttp: TfrmHttp
     end
   end
   object NetHTTPClient1: TNetHTTPClient
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
-    HandleRedirects = True
-    AllowCookies = True
     UserAgent = 'Embarcadero URI Client/1.0'
     Left = 56
     Top = 104
   end
   object NetHTTPRequest1: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest1RequestCompleted
     OnRequestError = NetHTTPRequest1RequestError
-    Left = 144
-    Top = 16
+    Left = 104
+    Top = 24
   end
   object NetHTTPRequest2: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestError = NetHTTPRequest2RequestError
     OnReceiveData = NetHTTPRequest2ReceiveData
-    Left = 253
-    Top = 16
+    Left = 197
+    Top = 24
   end
   object NetHTTPRequest3: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest3RequestCompleted
     OnRequestError = NetHTTPRequest3RequestError
-    Left = 240
-    Top = 104
+    Left = 296
+    Top = 24
   end
   object NetHTTPRequest4: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest4RequestCompleted
     OnRequestError = NetHTTPRequest4RequestError
-    Left = 368
-    Top = 104
+    Left = 392
+    Top = 24
   end
   object NetHTTPRequest5: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestCompleted = NetHTTPRequest5RequestCompleted
     OnRequestError = NetHTTPRequest5RequestError
-    Left = 480
-    Top = 104
+    Left = 488
+    Top = 24
   end
   object NetHTTPRequest6: TNetHTTPRequest
-    Asynchronous = False
     ConnectionTimeout = 100000
     ResponseTimeout = 10000
     Client = NetHTTPClient1
     OnRequestError = NetHTTPRequest6RequestError
     Left = 32
+    Top = 288
+  end
+  object NetHTTPRequest7: TNetHTTPRequest
+    ConnectionTimeout = 100000
+    ResponseTimeout = 10000
+    Client = NetHTTPClient1
+    OnRequestCompleted = NetHTTPRequest7RequestCompleted
+    OnRequestError = NetHTTPRequest7RequestError
+    Left = 136
     Top = 288
   end
 end
