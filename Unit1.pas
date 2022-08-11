@@ -3064,7 +3064,24 @@ begin
     end;
 
   end
+  else if DirectoryExists(nvramDir+'\'+SelZip+'_9') then
+  begin
 
+    if IDYES=MessageBox(Form1.Handle,
+             PChar('以下のnvramフォルダを削除しますか？   '+CRLF2+
+             nvramDir+'\'+SelZip+'\'+'    '),
+             APPNAME, MB_YESNO or MB_ICONQUESTION) then
+    begin
+      try
+        DeleteDirectory(nvramDir+'\'+SelZip+'_9');
+      except
+        MessageBox(Form1.Handle,
+               PChar('削除できませんでした。   '),
+               APPNAME, MB_OK or MB_ICONERROR);
+      end;
+    end;
+
+  end
   else
   begin
 
@@ -3137,6 +3154,11 @@ begin
   if DirectoryExists(nvramDir+'\'+SelZip) then
     St:=St+nvramDir+'\'+SelZip+'\' +CRLF;
 
+  // フォルダ入りnvファイル
+  if DirectoryExists(nvramDir+'\'+SelZip+'_9') then
+    St:=St+nvramDir+'\'+SelZip+'_9\' +CRLF;
+
+
   if FileExists(staDir+'\'+SelZip+'\auto.sta') then
     St:=St+staDir+'\'+SelZip+'\auto.sta';
 
@@ -3157,6 +3179,10 @@ begin
       // フォルダ入りnvファイル
       if DirectoryExists(nvramDir+'\'+SelZip) then
         DeleteDirectory(nvramDir+'\'+SelZip);
+
+      // フォルダ入りnvファイル
+      if DirectoryExists(nvramDir+'\'+SelZip+'_9') then
+        DeleteDirectory(nvramDir+'\'+SelZip+'_9');
 
       if FileExists(staDir+'\'+SelZip+'\auto.sta') then
       begin
@@ -3349,7 +3375,7 @@ begin
 
   ShellExecute( Form1.Handle,
                 'open',
-                PChar('https://github.com/mamedev/mame/blob/master/src/mame/drivers/'+St),
+                PChar('https://github.com/mamedev/mame/blob/master/src/mame/'+St),
                 nil,
                 nil,
                 SW_SHOW);
