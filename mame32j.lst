@@ -1122,10 +1122,10 @@ aplsbon	Apricot LS Pro (Bonsai Motherboard)	あぷりこっとえるえすぷろ
 aplscar	Apricot LS Pro (Caracal Motherboard)	あぷりこっとえるえすぷろ
 apocof	Apollo Coffee (0151105, US)	あぽろこーひー
 apogee	Апогей БК-01	あぽげいびーけー01
-apollo13	Apollo 13 (5.01)	あぽろさーてぃーん_
-apollo13_10	Apollo 13 (1.00)	あぽろさーてぃーん_
-apollo13_20	Apollo 13 (2.03)	あぽろさーてぃーん_
-apollo13_d4	Apollo 13 (5.01, Display 4.01)	あぽろさーてぃーん_
+apollo13	Apollo 13 (CPU 5.01, display A5.00)	あぽろさーてぃーん_
+apollo13_10	Apollo 13 (CPU 1.00, display A1.00)	あぽろさーてぃーん_
+apollo13_20	Apollo 13 (CPU 2.03, display A2.01)	あぽろさーてぃーん_
+apollo13_d4	Apollo 13 (CPU 5.01, display A4.01)	あぽろさーてぃーん_
 apollo80	Apollo 80 (Germany)	あぽろ80
 aponow	Apocaljpse Now (Rescue海賊版)	あぽかりぷすなう
 apparel	アパレルナイト (日本版 860929)	あぱれるないと
@@ -1261,6 +1261,7 @@ arkretrnu	アルカノイドリターンズ (Ver 2.02A 1997/02/10)	あるかの�
 arktayt2	アルカノイド (Tayto 海賊版, harder)	あるかのいど-bth
 arlingtn	Arlington Horse Racing (v1.40-D)	あーりんとんほーすれーしんぐ
 arlingtna	Arlington Horse Racing (v1.21-D)	あーりんとんほーすれーしんぐ
+armchamp	アームチャンプ (日本版)	あーむちゃんぷ1
 armchmp2	アームチャンプII (ver 2.7)	あーむちゃんぷ2
 armchmp2o	アームチャンプII (ver 1.7)	あーむちゃんぷ2
 armchmp2o2	アームチャンプII (ver 2.6)	あーむちゃんぷ2
@@ -1617,6 +1618,7 @@ atleta	Atleta	あとれた
 atm	ATM	えーてぃーえむ
 atm18mcc	ATM18 Mini Chess Computer (English)	えーてぃーえむ18みにちぇすこんぴゅーた
 atmtb2	ATM-turbo2	えーてぃーえむたーぼ2
+atmtb2plus	ATM-Turbo 2+	えーてぃーえむたーぼ2
 atom	Atom	あとむ
 atombb	Atom with BBC Basic	あとむ
 atombjt	Atom (ボンジャックツイン海賊版)	あとむ
@@ -1662,14 +1664,14 @@ aurailjd	オーライル (set 1, 日本版, FD1089A 317-0167 海賊版)	おー�
 ausfache	アカツキ電光戦記 Ausf.Achse (日本版)	あかつきでんこうせんき
 auslalom	Автослалом	おーとすらろーむ
 aussieby	Aussie Byte II	おーじーばいと2
-aust201	Austin Powers (2.01)	おーすてぃんぱわーず_201
-aust300	Austin Powers (3.00)	おーすてぃんぱわーず_300
-aust301	Austin Powers (3.01)	おーすてぃんぱわーず_301
-austin	Austin Powers (3.02)	おーすてぃんぱわーず_302
-austinf	Austin Powers (フランス版)	おーすてぃんぱわーず_f
-austing	Austin Powers (ドイツ版)	おーすてぃんぱわーず_g
-austini	Austin Powers (イタリア版)	おーすてぃんぱわーず_i
-austnew	Austin Powers (ARM7 Sound Board)	おーすてぃんぱわーず_a
+aust201	Austin Powers (CPU 2.01, display A2.00)	おーすてぃんぱわーず_201
+aust300	Austin Powers (CPU 3.00, display A3.00)	おーすてぃんぱわーず_300
+aust301	Austin Powers (CPU 3.01, display A3.00)	おーすてぃんぱわーず_301
+austin	Austin Powers (CPU 3.02, display A3.00)	おーすてぃんぱわーず_302
+austinf	Austin Powers (CPU 3.02, display F3.00, France)	おーすてぃんぱわーず_f
+austing	Austin Powers (CPU 3.02, display G3.00, Germany)	おーすてぃんぱわーず_g
+austini	Austin Powers (CPU 3.02, display I3.00, Italy)	おーすてぃんぱわーず_i
+austnew	Austin Powers (CPU 3.02, display A3.00, ARM7 sound board)	おーすてぃんぱわーず_a
 autmoon	Autumn Moon (1VXFC5488, New Zealand)	おーたむむーん
 autoc15	Autocue 1500 Teleprompter	おーときゅー1500
 automat	Automat (ロボコップ海賊版)	おーとまっと
@@ -2147,7 +2149,8 @@ bi025c	BI-025C HT-12 286 (HT12/A chipset)	びーあい025しー
 biathlon	Биатлон	びあとろん
 big10	Big 10	びっぐてん
 bigappg	The Big Apple (2131-13, U5-0)	ざびっぐあっぷる
-bigbang	サンダードラゴン2 / Big Bang (9th Nov. 1993)	さんだーどらごん2_w
+bigbang	サンダードラゴン2 / Big Bang (9th Nov. 1993, set 1)	さんだーどらごん2_w
+bigbanga	サンダードラゴン2 / Big Bang (9th Nov. 1993, set 2)	さんだーどらごん2_w
 bigbat	Big Bat (Bat game)	びっぐばっと
 bigben	Big Ben (30126911, NSW/ACT)	びっぐべん
 bigbena	Big Ben (20126911, NSW/ACT)	びっぐべん
@@ -2208,7 +2211,7 @@ bingogal	ビンゴギャラクシー (main)	びんごぎゃらくしー
 bingogals	ビンゴギャラクシー (satellite)	びんごぎゃらくしー
 bingoman	Bingo Mania (P03-P07-P14)	びんごまにあ
 bingomana	Bingo Mania (A03)	びんごまにあ
-bingopd	Paradise (Industrias Brasilerias, Version 1.04)	ぱらだいす
+bingopd	Paradise (Industrias Brasileiras, Version 1.04)	ぱらだいす
 bingor1	Bingo Roll / Bell Star? (set 1)	びんごろーる_1
 bingor2	Bingo Roll / Bell Star? (set 2)	びんごろーる_2
 bingor3	Bingo Roll / Bell Star? (set 3)	びんごろーる_3
@@ -2424,7 +2427,8 @@ bm36th	ビートマニア III アペンド6thミックス	びーとまにあ3あ
 bm37th	ビートマニア III アペンド7thミックス	びーとまにあ3あぺんど7
 bm3core	ビートマニア III アペンドコアリミックス	びーとまにあ3あぺんどこあみっくす
 bm3final	ビートマニア III ザ・ファイナル	びーとまにあ3ざふぁいなる
-bm3rdmix	ビートマニア 3rd MIX (ver JA-B)	びーとまにあ1_3b
+bm3rdeaa	ビートマニア 3rd MIX (ver EA-A)	びーとまにあ1_3w
+bm3rdmix	ビートマニア 3rd MIX (ver JA-B)	びーとまにあ1_3
 bm4thmix	ビートマニア 4th MIX -the beat goes on- (ver JA-A)	びーとまにあ1_4
 bm5thmix	ビートマニア 5th MIX -time to get down- (ver JA-A)	びーとまにあ1_5
 bm6thmix	ビートマニア 6th MIX -the UK underground music- (ver JA-A)	びーとまにあ1_6
@@ -2565,11 +2569,12 @@ borisa	Boris (rev. 00)	ぼりす
 borisdpl	Boris Diplomat	ぼりすでぃぷろまっと
 borntofi	Born To Fight	ぼーんとぅふぁいと
 borntofiv	Born To Fight (Vifico license)	ぼーんとぅふぁいと
-bosco	ボスコニアン (new version)	ぼすこにあん_0
-boscomd	ボスコニアン (Midway, new version)	ぼすこにあん_3
-boscomdo	ボスコニアン (Midway, old version)	ぼすこにあん_4
-boscoo	ボスコニアン (old version)	ぼすこにあん_1
-boscoo2	ボスコニアン (older version)	ぼすこにあん_2
+bosco	ボスコニアン (version 5)	ぼすこにあん_
+bosco1	ボスコニアン (version 1, newer)	ぼすこにあん_
+bosco1o	ボスコニアン (version 1, older)	ぼすこにあん_
+bosco3	ボスコニアン (version 3)	ぼすこにあん_
+boscomd	ボスコニアン (Midway, new version)	ぼすこにあん_
+boscomdo	ボスコニアン (Midway, old version)	ぼすこにあん_
 bossa85	Olympia BOSS A 8085	おりんぴあぼすa
 bossb85	Olympia BOSS B 8085	おりんぴあぼすb
 botanic	Botanic (英語 / スペイン語)	ぼたにっく
@@ -3191,6 +3196,7 @@ ccfboxa	CHIHIRO, コンパクトフラッシュボックス用ファームウェ
 cchance	Cherry Chance	ちぇりーちゃんす
 cchasm	Cosmic Chasm (set 1)	こずみっくかずむ_1
 cchasm1	Cosmic Chasm (set 2)	こずみっくかずむ_2
+cchime	Chroma-Chime	くろまちゃいむ
 cclimber	クレイジークライマー (US版 set 1)	くれいじーくらいまー1_u1
 cclimbera	クレイジークライマー (US版 set 2)	くれいじーくらいまー1_u2
 cclimberj	クレイジークライマー (日本版)	くれいじーくらいまー1_
@@ -3574,6 +3580,7 @@ clubkcyc	クラブカート for CYCRAFT (Rev A) (GDS-0029A)	くらぶかーと�
 clubkcyco	クラブカート for CYCRAFT (GDS-0029)	くらぶかーとふぉーさいくらふと
 clubkprz	クラブカート (日本版, 輸出版, Rev A)	くらぶかーとぷらいず
 clubkpzb	クラブカート Ver. B (日本版, 輸出版)	くらぶかーとぷらいず_b
+clubkpzbp	クラブカート Ver. B (プロトタイプ)	くらぶかーとぷらいず_b
 clubkrt	クラブカート -ヨーロピアンセッション- (Rev D)	くらぶかーとよーろぴあんせっしょん_d
 clubkrta	クラブカート -ヨーロピアンセッション- (Rev A)	くらぶかーとよーろぴあんせっしょん_a
 clubkrtc	クラブカート -ヨーロピアンセッション- (Rev C)	くらぶかーとよーろぴあんせっしょん_c
@@ -3699,6 +3706,7 @@ code1d	緊急車両24時 -コードワンディスパッチ- (ver D)	きんき�
 code1da	緊急車両24時 -コードワンディスパッチ- (ver UAA)	きんきゅうしゃりょう24じ_u
 code1db	緊急車両24時 -コードワンディスパッチ- (ver B)	きんきゅうしゃりょう24じ_b
 coleco	ColecoVision (NTSC)	これこびじょん_ntsc
+colecofl	Colecovision Flashback	これこびじょんふらっしゅばっく
 colecop	ColecoVision (PAL)	これこびじょん_pal
 colmns97	コラムス'97 (JET 961209 V1.000)	こらむす97
 colony7	Colony 7 (set 1)	ころにーせぶん_1
@@ -4216,13 +4224,14 @@ ct486	PC/AT 486 with CS4031 chipset	ぴーしーえーてぃーよんはちろ�
 ctainv	CTAインベーダー	しーてぃーえーいんべーだー
 ctcc386mx	C386MX	しーさんはちろくえむえっくす
 ctcheese	Cut The Cheese (Redemption)	かっとざちーず
-ctchzdlx	Cut The Cheese Deluxe (Redemption)	かっとざちーずでらっくす
+ctchzdlx	Cut The Cheese Deluxe (redemption, CPU 1.00, display A1.00)	かっとざちーずでらっくす
 cterrani	テラニアン (デコカセ) (US版)	てらにあん
 cthd2003	臥虎藏龍 2003 / Crouching Tiger Hidden Dragon 2003 (ザ・キング・オブ・ファイターズ2001 海賊版)	くらうちんぐたいがーひどんどらごん2003
 ctisland	トレジャーアイランド (デコカセ) (US版) (set 1)	とれじゃーあいらんど_1
 ctisland2	トレジャーアイランド (デコカセ) (US版) (set 2)	とれじゃーあいらんど_2
 ctisland3	トレジャーアイランド (デコカセ) (欧州版?)	とれじゃーあいらんど_3
 ctk2100	CTK-2100	しーてぃーけー2100
+ctk530	CTK-530	しーてぃーけー530
 ctk551	CTK-551	しーてぃーけー551
 ctk601	CTK-601	しーてぃーけー601
 ctntune	Name That Tune (Castle Toy)	ねーむざっとちゅーん_ct
@@ -4413,7 +4422,7 @@ daitorida	大牌砦 ＜だいとりで＞ (YMF278B version)	だいとりで_y
 daiyogen	麻雀大予言 -このギャル占い師につき- (日本版)	まーじゃんだいよげん
 dakar	Dakar	だかーる
 dakkochn	脱子ちゃん雀荘 (MC-8123B, 317-5014)	だっこちゃんはうす
-dalejr	Dale Jr. (5.00)	でいるじゅにあ
+dalejr	Dale Jr. (CPU 5.00, display J5.00)	でいるじゅにあ
 dallas16	Mephisto Dallas 68000	めふぃすとだらす
 dallas16a	Mephisto Dallas 68000 (Glasgow hardware)	めふぃすとだらす
 dallas32	Mephisto Dallas 68020	めふぃすとだらす
@@ -5466,6 +5475,7 @@ dynablst	ボンバーマン / Dynablaster	ぼんばーまん_w
 dynablstb	ボンバーマン / Dynablaster (海賊版, set 1)	ぼんばーまん-b1
 dynablstb2	ボンバーマン / Dynablaster (海賊版, set 2)	ぼんばーまん-b2
 dynablstb3	ボンバーマン / Dynablaster (海賊版, set 3)	ぼんばーまん-b3
+dynablstb4	ボンバーマン / Dynablaster (海賊版, set 4)	ぼんばーまん-b4
 dynabomb	Dynamite Bomber (韓国版, Rev 1.5)	だいなまいとぼんばー
 dynadice	Dynamic Dice	だいなみっくだいす
 dynagear	ダイナギア	だいなぎあ
@@ -6147,26 +6157,26 @@ elvact2u	エレベーターアクションリターンズ / Elevator Action II (
 elvactr	エレベーターアクションリターンズ (Ver 2.2O 1995/02/20)	えれべーたーあくしょんりたーんず_w
 elvactrj	エレベーターアクションリターンズ (Ver 2.2J 1995/02/20)	えれべーたーあくしょんりたーんず_j
 elvis	Elvis?	えるびす
-elvisf	Elvis (5.00 フランス版)	えるびす_500f
-elvisf302	Elvis (3.02 フランス版)	えるびす_302f
-elvisf303	Elvis (3.03 フランス版)	えるびす_303f
-elvisf4	Elvis (4.00 フランス版)	えるびす_400f
-elvisg	Elvis (5.00 ドイツ版)	えるびす_500g
-elvisg302	Elvis (3.02 ドイツ版)	えるびす_320g
-elvisg303	Elvis (3.03 ドイツ版)	えるびす_303g
-elvisg4	Elvis (4.00 ドイツ版)	えるびす_400g
-elvisi	Elvis (5.00 イタリア版)	えるびす_500i
-elvisi302	Elvis (3.02 イタリア版)	えるびす_302i
-elvisi303	Elvis (3.03 イタリア版)	えるびす_303i
-elvisi4	Elvis (4.00 イタリア版)	えるびす_400i
-elvisl	Elvis (5.00 スペイン版)	えるびす_500s
-elvisl302	Elvis (3.02 スペイン版)	えるびす_302s
-elvisl303	Elvis (3.03 スペイン版)	えるびす_303s
-elvisl4	Elvis (4.00 スペイン版)	えるびす_400s
-elvisp	Elvis (5.00)	えるびす_500
-elvisp302	Elvis (3.02)	えるびす_302
-elvisp303	Elvis (3.03)	えるびす_303
-elvisp4	Elvis (4.00)	えるびす_400
+elvisf	Elvis (CPU 5.00, display F5.00, France)	えるびす_500f
+elvisf302	Elvis (CPU 3.02, display F3.02, France)	えるびす_302f
+elvisf303	Elvis (CPU 3.03, display F3.02, France)	えるびす_303f
+elvisf4	Elvis (CPU 4.00, display F4.01, France)	えるびす_400f
+elvisg	Elvis (CPU 5.00, display G5.00, Germany)	えるびす_500g
+elvisg302	Elvis (CPU 3.02, display G3.02, Germany)	えるびす_320g
+elvisg303	Elvis (CPU 3.03, display G3.02, Germany)	えるびす_303g
+elvisg4	Elvis (CPU 4.00, display G4.01, Germany)	えるびす_400g
+elvisi	Elvis (CPU 5.00, display I5.00, Italy)	えるびす_500i
+elvisi302	Elvis (CPU 3.02, display I3.02, Italy)	えるびす_302i
+elvisi303	Elvis (CPU 3.03, display I3.02, Italy)	えるびす_303i
+elvisi4	Elvis (CPU 4.00, display I4.01, Italy)	えるびす_400i
+elvisl	Elvis (CPU 5.00, display L5.00, Spain)	えるびす_500s
+elvisl302	Elvis (CPU 3.02, display L3.02, Spain)	えるびす_302s
+elvisl303	Elvis (CPU 3.03, display L3.02, Spain)	えるびす_303s
+elvisl4	Elvis (CPU 4.00, display L4.01, Spain)	えるびす_400s
+elvisp	Elvis (CPU 5.00, display A5.00)	えるびす_500
+elvisp302	Elvis (CPU 3.02, display A3.02)	えるびす_302
+elvisp303	Elvis (CPU 3.03, display A3.02)	えるびす_303
+elvisp4	Elvis (CPU 4.00, display A4.01)	えるびす_400
 elwro800	800-3 Junior	えいとはんどれっどすりーじゅにあ
 elzet80k	Elzet/K 80	えるつぇっと
 elzet80p	Elzet/P 80	えるつぇっと
@@ -7484,7 +7494,8 @@ fctitler	ファミコンタイトラー / 編集ファミコン	ふぁみこん�
 fdes2000	Designer 2000	でざいなー2000
 fdes2000d	Designer 2000 Display	でざいなー2000でぃすぷれい
 fdes2100	Designer 2100	でざいなー2100
-fdes2100d	Designer 2100 Display	でざいなー2100でぃすぷれい
+fdes2100d	Designer 2100 Display (set 1)	でざいなー2100でぃすぷれい
+fdes2100da	Designer 2100 Display (set 2)	でざいなー2100でぃすぷれい
 fdes2265	Designer Mach III Master 2265 (set 1)	でざいなーまっち3
 fdes2265a	Designer Mach III Master 2265 (set 2)	でざいなーまっち3
 fdes2325	Designer Mach IV 68020 Master 2325	でざいなーまっち4
@@ -8696,8 +8707,8 @@ gldgong	The Golden Gong (0152558, US)	ざごーるでんごんぐ1
 gldgongq	The Golden Gong (10217411, Queensland)	ざごーるでんごんぐ1
 gldncrwn	Golden Crown (オランダ版, Game Card 95-752-011)	ごーるでんくらうん
 gldncrwnhop	Golden Crown Hopper (Dutch, Game Card)	ごーるでんくらうんほっぱー
-gldneye	Goldeneye (4.04)	ごーるでんあい
-gldneye_402	Goldeneye (4.02)	ごーるでんあい
+gldneye	Goldeneye (CPU 4.04, display A4.00)	ごーるでんあい
+gldneye_402	Goldeneye (CPU 4.02, display A4.00)	ごーるでんあい
 gldnflc	The Golden Fleece (10158311, NSW/ACT)	ざごーるでんふりーす
 gldnpkr	Golden Poker (8VXEC037, New Zealand)	ごーるでんぽーかー
 glfgreat	ゴルフィンググレイツ (海外版, version L)	ごるふぃんぐぐれいつ1_w
@@ -8868,9 +8879,9 @@ goape	Go Ape (10006211, NSW/ACT)	ごーえいぷ
 gobyrc	RCでGo! / Go By RC (V2.03O 1999/05/25 13:31)	あーるしーでごー_o
 gocowboy	ゴーゴーカウボーイ (英語, prize)	ごーごーかうぼーい_e
 godzilla	ゴジラ (日本版)	ごじら
-godzillp	Godzilla (ピンボール, 2.05)	ごじら-p
-godzillp_090	Godzilla (ピンボール, 0.90)	ごじら-p
-godzillp_100	Godzilla (ピンボール, 1.00)	ごじら-p
+godzillp	Godzilla (ピンボール, CPU 2.05, display A2.00)	ごじら-p
+godzillp_090	Godzilla (ピンボール, CPU 0.90, display A0.991)	ごじら-p
+godzillp_100	Godzilla (ピンボール, CPU 1.00, display A1.00)	ごじら-p
 gogold	ゴーフォーザゴールド (日本版)	ごーふぉーざごーるど
 gogomile	ススメ！マイルスマイル / Go Go! Mile Smile (newer)	すすめまいるすまいる
 gogomileo	ススメ！マイルスマイル / Go Go! Mile Smile (older)	すすめまいるすまいる
@@ -8889,7 +8900,7 @@ goldball	Gold Ball (set 1)	ごーるどぼーる_1
 goldballn	Gold Ball (Field Service Upgrade)	ごーるどぼーる_2
 goldbug	Gold Bug	ごーるどばぐ
 goldcity	Gold City (Russia) (Atronic)	ごーるどしてぃ
-goldcue	Golden Cue	ごーるでんきゅー
+goldcue	Golden Cue (CPU 0.04, display 0.10)	ごーるでんきゅー
 goldenc	Golden Canaries (1VXFC5462, New Zealand)	ごーるでんきゃなりーず
 goldenra	Golden Ra (0101164V, NSW/ACT)	ごーるでんら
 goldfish	Gold Fish (020903, prototype)	ごーるどふぃっしゅ
@@ -8976,36 +8987,36 @@ gpriderjs	GPライダー (日本版, FD1094 317-0161)	じーぴーらいだー_
 gpriders	GPライダー (海外版, FD1094 317-0163)	じーぴーらいだー_w
 gprideru	GPライダー (US版, FD1094 317-0162) (ツイン筐体)	じーぴーらいだー_ut
 gpriderus	GPライダー (US版, FD1094 317-0162)	じーぴーらいだー_u
-gprix	Grand Prix (4.50)	ぐらんぷり_450
-gprixf	Grand Prix (4.50 フランス版)	ぐらんぷり_450f
-gprixf_301	Grand Prix (3.01 フランス版)	ぐらんぷり_301f
-gprixf_340	Grand Prix (3.40 フランス版)	ぐらんぷり_340f
-gprixf_350	Grand Prix (3.50 フランス版)	ぐらんぷり_350f
-gprixf_352	Grand Prix (3.52 フランス版)	ぐらんぷり_352f
-gprixf_400	Grand Prix (4.00 フランス版)	ぐらんぷり_400f
-gprixg	Grand Prix (4.50 ドイツ版)	ぐらんぷり_450g
-gprixg_301	Grand Prix (3.01 ドイツ版)	ぐらんぷり_301g
-gprixg_340	Grand Prix (3.40 ドイツ版)	ぐらんぷり_340g
-gprixg_350	Grand Prix (3.50 ドイツ版)	ぐらんぷり_350g
-gprixg_352	Grand Prix (3.52 ドイツ版)	ぐらんぷり_352g
-gprixg_400	Grand Prix (4.00 ドイツ版)	ぐらんぷり_400g
-gprixi	Grand Prix (4.50 イタリア版)	ぐらんぷり_450i
-gprixi_301	Grand Prix (3.01 イタリア版)	ぐらんぷり_301i
-gprixi_340	Grand Prix (3.40 イタリア版)	ぐらんぷり_340i
-gprixi_350	Grand Prix (3.50 イタリア版)	ぐらんぷり_350i
-gprixi_352	Grand Prix (3.52 イタリア版)	ぐらんぷり_352i
-gprixi_400	Grand Prix (4.00 イタリア版)	ぐらんぷり_400i
-gprixl	Grand Prix (4.50 スペイン版)	ぐらんぷり_450s
-gprixl_301	Grand Prix (3.01 スペイン版)	ぐらんぷり_301s
-gprixl_340	Grand Prix (3.40 スペイン版)	ぐらんぷり_340s
-gprixl_350	Grand Prix (3.50 スペイン版)	ぐらんぷり_350s
-gprixl_352	Grand Prix (3.52 スペイン版)	ぐらんぷり_352s
-gprixl_400	Grand Prix (4.00 スペイン版)	ぐらんぷり_400s
-gprix_301	Grand Prix (3.01)	ぐらんぷり_301
-gprix_340	Grand Prix (3.40)	ぐらんぷり_340
-gprix_350	Grand Prix (3.50)	ぐらんぷり_350
-gprix_352	Grand Prix (3.52)	ぐらんぷり_352
-gprix_400	Grand Prix (4.00)	ぐらんぷり_400
+gprix	Grand Prix (CPU 4.50, display A4.00)	ぐらんぷり_450
+gprixf	Grand Prix (CPU 4.50, display F4.00, France)	ぐらんぷり_450f
+gprixf_301	Grand Prix (CPU 3.01, display F3.01, France)	ぐらんぷり_301f
+gprixf_340	Grand Prix (CPU 3.40, display F3.03, France)	ぐらんぷり_340f
+gprixf_350	Grand Prix (CPU 3.50, display F3.03, France)	ぐらんぷり_350f
+gprixf_352	Grand Prix (CPU 3.52, display F3.03, France)	ぐらんぷり_352f
+gprixf_400	Grand Prix (CPU 4.00, display F4.00, France)	ぐらんぷり_400f
+gprixg	Grand Prix (CPU 4.50, display G4.00, Germany)	ぐらんぷり_450g
+gprixg_301	Grand Prix (CPU 3.01, display G3.01, Germany)	ぐらんぷり_301g
+gprixg_340	Grand Prix (CPU 3.40, display G3.03, Germany)	ぐらんぷり_340g
+gprixg_350	Grand Prix (CPU 3.50, display G3.03, Germany)	ぐらんぷり_350g
+gprixg_352	Grand Prix (CPU 3.52, display G3.03, Germany)	ぐらんぷり_352g
+gprixg_400	Grand Prix (CPU 4.00, display G4.00, Germany)	ぐらんぷり_400g
+gprixi	Grand Prix (CPU 4.50, display I4.00, Italy)	ぐらんぷり_450i
+gprixi_301	Grand Prix (CPU 3.01, display I3.01, Italy)	ぐらんぷり_301i
+gprixi_340	Grand Prix (CPU 3.40, display I3.03, Italy)	ぐらんぷり_340i
+gprixi_350	Grand Prix (CPU 3.50, display I3.03, Italy)	ぐらんぷり_350i
+gprixi_352	Grand Prix (CPU 3.52, display I3.03, Italy)	ぐらんぷり_352i
+gprixi_400	Grand Prix (CPU 4.00, display I4.00, Italy)	ぐらんぷり_400i
+gprixl	Grand Prix (CPU 4.50, display L4.00, Spain)	ぐらんぷり_450s
+gprixl_301	Grand Prix (CPU 3.01, display L3.01, Spain)	ぐらんぷり_301s
+gprixl_340	Grand Prix (CPU 3.40, display L3.03, Spain)	ぐらんぷり_340s
+gprixl_350	Grand Prix (CPU 3.50, display L3.03, Spain)	ぐらんぷり_350s
+gprixl_352	Grand Prix (CPU 3.52, display L3.03, Spain)	ぐらんぷり_352s
+gprixl_400	Grand Prix (CPU 4.00, display L4.00, Spain)	ぐらんぷり_400s
+gprix_301	Grand Prix (CPU 3.01, display A3.01)	ぐらんぷり_301
+gprix_340	Grand Prix (CPU 3.40, display A3.03)	ぐらんぷり_340
+gprix_350	Grand Prix (CPU 3.50, display A3.03)	ぐらんぷり_350
+gprix_352	Grand Prix (CPU 3.52, display A3.03)	ぐらんぷり_352
+gprix_400	Grand Prix (CPU 4.00, display A4.00)	ぐらんぷり_400
 gprnrs1	Game Prince RS-1	げーむぷりんすrs1
 gprnrs16	Game Prince ES-16	げーむぷりんすes16
 gpworld	GPワールド	じーぴーわーるど
@@ -9113,6 +9124,7 @@ gsfc80u	FC-80U (MSX1)	えふしー80u
 gslgr94j	グレートスラッガーズ'94 (日本版)	ぐれーとすらっがーず94
 gslgr94u	グレートスラッガーズ'94 (US版)	ぐれーとすらっがーず94_u
 gslugrsj	グレートスラッガーズ (日本版)	ぐれーとすらっがーず93
+gsp5	GSP 5 Guitar Effects Processor/Preamp	じーえすぴーふぁいぶぎたーえふぇくつぷろせっさ
 gsspade	Spade	すぺーど
 gssytts	Guitar Super Star: You Take The Stage	ぎたーすーぱーすたーゆーていくざすてーじ
 gstream	Gストリーム -G2020-	じーすとりーむ
@@ -9236,7 +9248,7 @@ gtrfrk5m	ギターフリークス 5th MIX (G*A26 VER. JAA)	ぎたーふりーく
 gtrfrk5ma	ギターフリークス 5th MIX (G*A26 VER. AAA)	ぎたーふりーくす05_a
 gtrfrk6m	ギターフリークス 6th MIX (G*B06 VER. JAA)	ぎたーふりーくす06
 gtrfrk7m	ギターフリークス 7th MIX (G*B17 VER. JAA)	ぎたーふりーくす07
-gtrfrk8m	ギターフリークス 8th MIX power-up ver. (G*C08 VER. JBA)	ぎたーふりーくす08p_jaa
+gtrfrk8m	ギターフリークス 8th MIX パワーアップ Ver. (G*C08 VER. JBA)	ぎたーふりーくす08p_jaa
 gtrfrk8ma	ギターフリークス 8th MIX (G*C08 VER. JAA)	ぎたーふりーくす08_jaa
 gtrfrk9m	ギターフリークス 9th MIX (G*C39 VER. JAA)	ぎたーふりーくす09
 gtrfrks	ギターフリークス (Ver 1.01, GQ886 VER. EAD)	ぎたーふりーくす01_e
@@ -9331,7 +9343,8 @@ gundcb83a	機動戦士ガンダム0083カードビルダー チェックディ�
 gundcb83b	機動戦士ガンダム0083カードビルダー両雄激突 (CDV-10037B)	きどうせんしがんだむ0083_2
 gundealr	ガンディーラー	がんでぃーらー
 gundealra	ガンディーラー (alt card set)	がんでぃーらー_a
-gundealrbl	ガンディーラー (Yam! Yam!?基板)	がんでぃーらー-b
+gundealrbl	ガンディーラー (Yam! Yam!?基板, set 1)	がんでぃーらー-b
+gundealrbl2	ガンディーラー (Yam! Yam!?基板, set 2)	がんでぃーらー-b
 gundealrt	ガンディーラー (韓国版)	がんでぃーらー_k
 gundhara	銃弾嵐 ＜ガンダーラ＞	がんだーら
 gundharac	銃弾嵐 ＜ガンダーラ＞ (中華版, 海賊版?)	がんだーら-bc
@@ -9516,28 +9529,28 @@ harem	Harem	はーれむ
 haremchl	Harem Challenge	はーれむちゃれんじ
 harley	ハーレーダビッドソン＆L.A.ライダーズ (Revision B)	はーれーだびっどそんあんどえるえーらいだーず_b
 harleya	ハーレーダビッドソン＆L.A.ライダーズ (Revision A)	はーれーだびっどそんあんどえるえーらいだーず_a
-harl_a10	Harley Davidson (1.03 Display rev. 1.00)	はーれーだびっどそん_103d
-harl_a13	Harley Davidson (1.03)	はーれーだびっどそん_103
+harl_a10	Harley Davidson (Sega, CPU 1.03, display A1.00)	はーれーだびっどそん_103d
+harl_a13	Harley Davidson (Sega, CPU 1.03, display A1.04)	はーれーだびっどそん_103
 harl_a18	Harley Davidson (1.08)	はーれーだびっどそん_108
 harl_a30	Harley Davidson (3.00)	はーれーだびっどそん_300
 harl_a40	Harley Davidson (4.00)	はーれーだびっどそん_400
-harl_f13	Harley Davidson (1.03 フランス版)	はーれーだびっどそん_103f
+harl_f13	Harley Davidson (Sega, CPU 1.03, display F1.04, France)	はーれーだびっどそん_103f
 harl_f18	Harley Davidson (1.08 フランス版)	はーれーだびっどそん_108f
 harl_f30	Harley Davidson (3.00 フランス版)	はーれーだびっどそん_300f
 harl_f40	Harley Davidson (4.00 フランス版)	はーれーだびっどそん_400f
-harl_g13	Harley Davidson (1.03 ドイツ版)	はーれーだびっどそん_103g
+harl_g13	Harley Davidson (Sega, CPU 1.03, display G1.04, Germany)	はーれーだびっどそん_103g
 harl_g18	Harley Davidson (1.08 ドイツ版)	はーれーだびっどそん_108g
 harl_g30	Harley Davidson (3.00 ドイツ版)	はーれーだびっどそん_300g
 harl_g40	Harley Davidson (4.00 ドイツ版)	はーれーだびっどそん_400g
-harl_i13	Harley Davidson (1.03 イタリア版)	はーれーだびっどそん_103i
+harl_i13	Harley Davidson (Sega, CPU 1.03, display I1.04, Italy)	はーれーだびっどそん_103i
 harl_i18	Harley Davidson (1.08 イタリア版)	はーれーだびっどそん_108i
 harl_i30	Harley Davidson (3.00 イタリア版)	はーれーだびっどそん_300i
 harl_i40	Harley Davidson (4.00 イタリア版)	はーれーだびっどそん_400i
-harl_l13	Harley Davidson (1.03 スペイン版)	はーれーだびっどそん_103s
+harl_l13	Harley Davidson (Sega, CPU 1.03, display L1.04, Spain)	はーれーだびっどそん_103s
 harl_l18	Harley Davidson (1.08 スペイン版)	はーれーだびっどそん_108s
 harl_l30	Harley Davidson (3.00 スペイン版)	はーれーだびっどそん_300s
 harl_l40	Harley Davidson (4.00 スペイン版)	はーれーだびっどそん_400s
-harl_u13	Harley Davidson (1.03 UK版)	はーれーだびっどそん_103uk
+harl_u13	Harley Davidson (Sega, CPU 1.03, display A1.04, UK)	はーれーだびっどそん_103uk
 harriet	Harriet	はりえっと
 hasamu	覇沙夢 (日本版)	はさむ
 has_wamg	TV Wild Adventure Mini Golf (NTSC)	てぃーびーわいるどあどべんちゃーみにごるふ
@@ -9815,14 +9828,14 @@ hipai	Hi★Paiパラダイス	はいぱいぱらだいす1
 hipai2	Hi★Paiパラダイス2 -温泉に行こうよ！-	はいぱいぱらだいす2
 hipoly	Hipoly (ハイパーオリンピック海賊版)	ひぽりー
 hippodrm	ファイティングファンタジー / Hippodrome (US版)	ふぁいてぃんぐふぁんたじー_u
-hirolcas	High Roller Casino (3.00)	はいろーらーかじの_300
-hirolcas_210	High Roller Casino (2.10)	はいろーらーかじの_210
-hirolcat	High Roller Casino (3.00) TEST	はいろーらーかじの_300t
-hirol_fr	High Roller Casino (3.00 フランス版)	はいろーらーかじの_300f
-hirol_gr	High Roller Casino (3.00 ドイツ版)	はいろーらーかじの_300g
-hirol_gr_210	High Roller Casino (2.10 ドイツ版)	はいろーらーかじの_210g
-hirol_it	High Roller Casino (3.00 イタリア版)	はいろーらーかじの_300i
-hironew	High Roller Casino (ARM7 Sound Board)	はいろーらーかじの_a
+hirolcas	High Roller Casino (CPU 3.00, display A3.00)	はいろーらーかじの_300
+hirolcas_210	High Roller Casino (CPU 2.10, diaplay A2.00)	はいろーらーかじの_210
+hirolcat	High Roller Casino (CPU 2.90, display A2.99)	はいろーらーかじの_300t
+hirol_fr	High Roller Casino (CPU 3.00, display F3.00, France)	はいろーらーかじの_300f
+hirol_gr	High Roller Casino (CPU 3.00, display G3.00, Germany)	はいろーらーかじの_300g
+hirol_gr_210	High Roller Casino (CPU 2.10, display G2.01, Germany)	はいろーらーかじの_210g
+hirol_it	High Roller Casino (CPU 3.00, display I3.00, Italy)	はいろーらーかじの_300i
+hironew	High Roller Casino (CPU 3.00, display A3.00, ARM7 sound board)	はいろーらーかじの_a
 hiryuken	北派少林 飛龍の拳	ほくはしょうりんひりゅうのけん
 hisaturn	ハイサターン	はいさーん
 hishouza	飛翔鮫 (日本版)	ひしょうざめ_j
@@ -10250,10 +10263,10 @@ ichirjbl	イチダントアール (日本版) (海賊版)	いちだんとあー�
 ichirk	イチダントアール (韓国版)	いちだんとあーる_k
 icldrsm40	DRS M40	でぃーあーるえすm40
 ics8080	ICS8080	あいしーえす8080
-id4	Independence Day (v2.02)	いんでぺんでんすでい-p
-id4f	Independence Day (v2.02 France)	いんでぺんでんすでい-p
-id4f_201	Independence Day (v2.01 France)	いんでぺんでんすでい-p
-id4_201	Independence Day (v2.01)	いんでぺんでんすでい-p
+id4	Independence Day (CPU 2.02, display A2.00)	いんでぺんでんすでい-p
+id4f	Independence Day (CPU 2.02, display F2.00, France)	いんでぺんでんすでい-p
+id4f_201	Independence Day (CPU 2.01, display F2.00, France)	いんでぺんでんすでい-p
+id4_201	Independence Day (CPU 2.01, display A2.00)	いんでぺんでんすでい-p
 idhimitu	アイドルの秘密 [メダル] (日本版 890304)	あいどるのひみつ
 idolmj	アイドル麻雀放送局 (日本版)	あいどるまーじゃんほうそうきょく
 idsoccer	インドアサッカー (set 1)	いんどあさっかー_1
@@ -12257,8 +12270,9 @@ jparkmb	ジュラシックパーク (メガドライブ版海賊版)	じゅら�
 jpcoin	Joker Poker (Coinmaster set 1)	じょーかーぽーかー_c
 jpcoin2	Joker Poker (Coinmaster, Amusement Only)	じょーかーぽーかー_c
 jpinball	Pin Ball	ぴんぼーる_j
-jplstw20	The Lost World: Jurassic Park (Pinball, 2.00)	ざろすとわーるどじゅらしっくぱーく-p200
-jplstw22	The Lost World: Jurassic Park (Pinball, 2.02)	ざろすとわーるどじゅらしっくぱーく-p202
+jpjcoin	Jackpot Joker Poker (Version 88V 01)	じゃっくぽっとじょーかーぽーかー
+jplstw20	The Lost World: Jurassic Park (pinball, CPU 2.00, display A2.01)	ざろすとわーるどじゅらしっくぱーく-p200
+jplstw22	The Lost World: Jurassic Park (pinball, CPU 2.02, display A2.01)	ざろすとわーるどじゅらしっくぱーく-p202
 jpopira	ジャンピンポピラ (日本版)	じゃんぴんぽぴら
 jpopnics	Jumping Pop (Nics, プランプポップ韓国ハック版)	じゃんぴんぐぽっぷ
 jppyex98	実況パワフルプロ野球EX'98 (GC811 VER. JAA)	じっきょうぱわふるぷろやきゅうex98
@@ -12890,8 +12904,9 @@ ksayakyu	エキサイティング草野球	えきさいてぃんぐくさやき�
 ksp10	KSP10 Digital Piano	けーえすぴー10
 kt216wb5	KT216WB5-HI Rev.2	けーてぃー216
 kt76	KT-76	けーてぃー76
-ktiger	究極タイガー (日本版)	きゅうきょくたいがー1
+ktiger	究極タイガー (日本版, 2プレイヤー同時プレイ)	きゅうきょくたいがー1
 ktiger2	究極タイガーII (Ver 2.1J 1995/11/30)	きゅうきょくたいがー2
+ktigera	究極タイガー (日本版, 2プレイヤー交互プレイ)	きゅうきょくたいがー1
 ktm3	KTM-3	けーてぃーえむ3
 ktmnt	Teenage Mutant Ninja Turtles (ハンドヘルド)	てぃーんえーじみゅーたんとにんじゃたーとるず
 ktopgun	トップガン (ハンドヘルド)	とっぷがんこなみ
@@ -13312,10 +13327,10 @@ lordofkb	ザ・ロードオブキング (海賊版, not protected)	ざろーど�
 lordofkbp	ザ・ロードオブキング (海賊版, protected)	ざろーどおぶきんぐ-b
 lortium	Lortium	ろーとりあむ
 lostreas	Lost Treasure - The Electronic Deep-Sea Diving Game (Electronic Dive-Control Center)	ろすととれじゃー_
-lostspc	Lost in Space (1.01)	ろすといんすぺーす
-lostspcf	Lost in Space (1.01 France)	ろすといんすぺーす
-lostspcg	Lost in Space (1.01 Germany)	ろすといんすぺーす
-lostspc_d1	Lost in Space (1.01, Display 1.01)	ろすといんすぺーす
+lostspc	Lost in Space (CPU 1.01, display A1.02)	ろすといんすぺーす
+lostspcf	Lost in Space (CPU 1.01, display F1.02, France)	ろすといんすぺーす
+lostspcg	Lost in Space (CPU 1.01, display G1.02, Germany)	ろすといんすぺーす
+lostspc_d1	Lost in Space (CPU 1.01, display A1.01)	ろすといんすぺーす
 losttomb	Lost Tomb (easy)	ろすととぅーむ
 losttombh	Lost Tomb (hard)	ろすととぅーむ
 lostwrld	ロストワールド (日本版)	ろすとわーるど_j
@@ -13324,52 +13339,52 @@ lostwrlp	Lost World	ろすとわーるど
 lostwsga	ロストワールド・ジュラシックパーク (日本版, Revision A)	ろすとわーるどじゅらしっくぱーく
 lostwsgp	ロストワールド・ジュラシックパーク (ロケーションテスト版)	ろすとわーるどじゅらしっくぱっく
 lotlot	ロットロット	ろっとろっと
-lotr	The Lord Of The Rings (10.00)	ろーどおぶざりんぐ_
-lotr3	The Lord Of The Rings (3.00)	ろーどおぶざりんぐ_
-lotr401	The Lord Of The Rings (4.01)	ろーどおぶざりんぐ_
-lotr410	The Lord Of The Rings (4.10)	ろーどおぶざりんぐ_
-lotr5	The Lord Of The Rings (5.00)	ろーどおぶざりんぐ_
-lotr501	The Lord Of The Rings (5.01)	ろーどおぶざりんぐ_
-lotr6	The Lord Of The Rings (6.00)	ろーどおぶざりんぐ_
-lotr7	The Lord Of The Rings (7.00)	ろーどおぶざりんぐ_
-lotr8	The Lord Of The Rings (8.00)	ろーどおぶざりんぐ_
-lotr9	The Lord Of The Rings (9.00)	ろーどおぶざりんぐ_
-lotr_fr	The Lord Of The Rings (10.00 フランス版)	ろーどおぶざりんぐ_f1000
-lotr_fr401	The Lord Of The Rings (4.01 フランス版)	ろーどおぶざりんぐ_f0401
-lotr_fr410	The Lord Of The Rings (4.10 フランス版)	ろーどおぶざりんぐ_f0410
-lotr_fr5	The Lord Of The Rings (5.0 フランス版)	ろーどおぶざりんぐ_f0500
-lotr_fr501	The Lord Of The Rings (5.01 フランス版)	ろーどおぶざりんぐ_f0501
-lotr_fr6	The Lord Of The Rings (6.0 フランス版)	ろーどおぶざりんぐ_f0600
-lotr_fr7	The Lord Of The Rings (7.0 フランス版)	ろーどおぶざりんぐ_f0700
-lotr_fr8	The Lord Of The Rings (8.0 フランス版)	ろーどおぶざりんぐ_f0800
-lotr_fr9	The Lord Of The Rings (9.0 フランス版)	ろーどおぶざりんぐ_f0900
-lotr_gr	The Lord Of The Rings (10.00 ドイツ版)	ろーどおぶざりんぐ_g1000
-lotr_gr401	The Lord Of The Rings (4.01 ドイツ版)	ろーどおぶざりんぐ_g0401
-lotr_gr410	The Lord Of The Rings (4.10 ドイツ版)	ろーどおぶざりんぐ_g0410
-lotr_gr5	The Lord Of The Rings (5.0 ドイツ版)	ろーどおぶざりんぐ_g0500
-lotr_gr501	The Lord Of The Rings (5.01 ドイツ版)	ろーどおぶざりんぐ_g0501
-lotr_gr6	The Lord Of The Rings (6.0 ドイツ版)	ろーどおぶざりんぐ_g0600
-lotr_gr7	The Lord Of The Rings (7.0 ドイツ版)	ろーどおぶざりんぐ_g0700
-lotr_gr8	The Lord Of The Rings (8.0 ドイツ版)	ろーどおぶざりんぐ_g0800
-lotr_gr9	The Lord Of The Rings (9.0 ドイツ版)	ろーどおぶざりんぐ_g0900
-lotr_it	The Lord Of The Rings (10.00 イタリア版)	ろーどおぶざりんぐ_i1000
-lotr_it401	The Lord Of The Rings (4.01 イタリア版)	ろーどおぶざりんぐ_i0401
-lotr_it410	The Lord Of The Rings (4.10 イタリア版)	ろーどおぶざりんぐ_i0410
-lotr_it5	The Lord Of The Rings (5.0 イタリア版)	ろーどおぶざりんぐ_i0500
-lotr_it501	The Lord Of The Rings (5.01 イタリア版)	ろーどおぶざりんぐ_i0501
-lotr_it6	The Lord Of The Rings (6.0 イタリア版)	ろーどおぶざりんぐ_i0600
-lotr_it7	The Lord Of The Rings (7.0 イタリア版)	ろーどおぶざりんぐ_i0700
-lotr_it8	The Lord Of The Rings (8.0 イタリア版)	ろーどおぶざりんぐ_i0800
-lotr_it9	The Lord Of The Rings (9.0 イタリア版)	ろーどおぶざりんぐ_i0900
-lotr_le	The Lord Of The Rings (10.02 Limited Edition)	ろーどおぶざりんぐ_
-lotr_sp	The Lord Of The Rings (10.00 スペイン版)	ろーどおぶざりんぐ_s1000
-lotr_sp401	The Lord Of The Rings (4.01 スペイン版)	ろーどおぶざりんぐ_s0401
-lotr_sp5	The Lord Of The Rings (5.0 スペイン版)	ろーどおぶざりんぐ_s0500
-lotr_sp501	The Lord Of The Rings (5.01 スペイン版)	ろーどおぶざりんぐ_s0501
-lotr_sp6	The Lord Of The Rings (6.0 スペイン版)	ろーどおぶざりんぐ_s0600
-lotr_sp7	The Lord Of The Rings (7.0 スペイン版)	ろーどおぶざりんぐ_s0700
-lotr_sp8	The Lord Of The Rings (8.0 スペイン版)	ろーどおぶざりんぐ_s0800
-lotr_sp9	The Lord Of The Rings (9.0 スペイン版)	ろーどおぶざりんぐ_s0900
+lotr	The Lord Of The Rings (CPU 10.00, display A10.00)	ろーどおぶざりんぐ_
+lotr3	The Lord Of The Rings (CPU 3.00, display A3.00)	ろーどおぶざりんぐ_
+lotr401	The Lord Of The Rings (CPU 4.01, display A4.03)	ろーどおぶざりんぐ_
+lotr410	The Lord Of The Rings (CPU 4.10, display A4.04)	ろーどおぶざりんぐ_
+lotr5	The Lord Of The Rings (CPU 5.00, display A5.00)	ろーどおぶざりんぐ_
+lotr501	The Lord Of The Rings (CPU 5.01, display A5.01)	ろーどおぶざりんぐ_
+lotr6	The Lord Of The Rings (CPU 6.00, display A6.00)	ろーどおぶざりんぐ_
+lotr7	The Lord Of The Rings (CPU 7.00, display A7.00)	ろーどおぶざりんぐ_
+lotr8	The Lord Of The Rings (CPU 8.00, display A8.00)	ろーどおぶざりんぐ_
+lotr9	The Lord Of The Rings (CPU 9.00, display A9.00)	ろーどおぶざりんぐ_
+lotr_fr	The Lord Of The Rings (CPU 10.00, display F10.00, France)	ろーどおぶざりんぐ_f1000
+lotr_fr401	The Lord Of The Rings (CPU 4.01, display F4.03, France)	ろーどおぶざりんぐ_f0401
+lotr_fr410	The Lord Of The Rings (CPU 4.10, display F4.04, France)	ろーどおぶざりんぐ_f0410
+lotr_fr5	The Lord Of The Rings (CPU 5.00, display F5.00, France)	ろーどおぶざりんぐ_f0500
+lotr_fr501	The Lord Of The Rings (CPU 5.01, display F5.01, France)	ろーどおぶざりんぐ_f0501
+lotr_fr6	The Lord Of The Rings (CPU 6.00, display F6.00, France)	ろーどおぶざりんぐ_f0600
+lotr_fr7	The Lord Of The Rings (CPU 7.00, display F7.00, France)	ろーどおぶざりんぐ_f0700
+lotr_fr8	The Lord Of The Rings (CPU 8.00, display F8.00, France)	ろーどおぶざりんぐ_f0800
+lotr_fr9	The Lord Of The Rings (CPU 9.00, display F9.00, France)	ろーどおぶざりんぐ_f0900
+lotr_gr	The Lord Of The Rings (CPU 10.00, display G10.00, Germany)	ろーどおぶざりんぐ_g1000
+lotr_gr401	The Lord Of The Rings (CPU 4.01, display G4.03, Germany)	ろーどおぶざりんぐ_g0401
+lotr_gr410	The Lord Of The Rings (CPU 4.10, display G4.04, Germany)	ろーどおぶざりんぐ_g0410
+lotr_gr5	The Lord Of The Rings (CPU 5.00, display G5.00, Germany)	ろーどおぶざりんぐ_g0500
+lotr_gr501	The Lord Of The Rings (CPU 5.01, display G5.01, Germany)	ろーどおぶざりんぐ_g0501
+lotr_gr6	The Lord Of The Rings (CPU 6.00, display G6.00, Germany)	ろーどおぶざりんぐ_g0600
+lotr_gr7	The Lord Of The Rings (CPU 7.00, display G7.00, Germany)	ろーどおぶざりんぐ_g0700
+lotr_gr8	The Lord Of The Rings (CPU 8.00, display G8.00, Germany)	ろーどおぶざりんぐ_g0800
+lotr_gr9	The Lord Of The Rings (CPU 9.00, display G9.00, Germany)	ろーどおぶざりんぐ_g0900
+lotr_it	The Lord Of The Rings (CPU 10.00, display I10.00, Italy)	ろーどおぶざりんぐ_i1000
+lotr_it401	The Lord Of The Rings (CPU 4.01, display I4.03, Italy)	ろーどおぶざりんぐ_i0401
+lotr_it410	The Lord Of The Rings (CPU 4.10, display I4.04, Italy)	ろーどおぶざりんぐ_i0410
+lotr_it5	The Lord Of The Rings (CPU 5.00, display I5.00, Italy)	ろーどおぶざりんぐ_i0500
+lotr_it501	The Lord Of The Rings (CPU 5.01, display I5.01, Italy)	ろーどおぶざりんぐ_i0501
+lotr_it6	The Lord Of The Rings (CPU 6.00, display I6.00, Italy)	ろーどおぶざりんぐ_i0600
+lotr_it7	The Lord Of The Rings (CPU 7.00, display I7.00, Italy)	ろーどおぶざりんぐ_i0700
+lotr_it8	The Lord Of The Rings (CPU 8.00, display I8.00, Italy)	ろーどおぶざりんぐ_i0800
+lotr_it9	The Lord Of The Rings (CPU 9.00, display I9.00, Italy)	ろーどおぶざりんぐ_i0900
+lotr_le	The Lord Of The Rings (CPU 10.02, display A10.00, Limited Edition)	ろーどおぶざりんぐ_
+lotr_sp	The Lord Of The Rings (CPU 10.00, display L10.00, Spain)	ろーどおぶざりんぐ_s1000
+lotr_sp401	The Lord Of The Rings (CPU 4.01, display L4.03, Spain)	ろーどおぶざりんぐ_s0401
+lotr_sp5	The Lord Of The Rings (CPU 5.00, display L5.00, Spain)	ろーどおぶざりんぐ_s0500
+lotr_sp501	The Lord Of The Rings (CPU 5.01, display L5.01, Spain)	ろーどおぶざりんぐ_s0501
+lotr_sp6	The Lord Of The Rings (CPU 6.00, display L6.00, Spain)	ろーどおぶざりんぐ_s0600
+lotr_sp7	The Lord Of The Rings (CPU 7.00, display L7.00, Spain)	ろーどおぶざりんぐ_s0700
+lotr_sp8	The Lord Of The Rings (CPU 8.00, display L8.00, Spain)	ろーどおぶざりんぐ_s0800
+lotr_sp9	The Lord Of The Rings (CPU 9.00, display L9.00, Spain)	ろーどおぶざりんぐ_s0900
 lottof2	Lotto Fun 2	ろっとふぁん2
 lottofun	Lotto Fun	ろっとふぁん
 lougcm	Louie's Gold - Mr. Cashman (20006911, NSW/ACT)	るいすごーるどみすたーきゃっしゅまん
@@ -17494,7 +17509,7 @@ m4luckwb	Lucky Wild Boar (MPU4) (set 1)	らっきーわいるどぼあbm4
 m4luckwba	Lucky Wild Boar (MPU4) (set 2)	らっきーわいるどぼあbm4
 m4luckwbb	Lucky Wild Boar (MPU4) (set 3)	らっきーわいるどぼあbm4
 m4luckwbc	Lucky Wild Boar (MPU4) (set 4)	らっきーわいるどぼあbm4
-m4luckwbd	Lucky Wild Boar (MPU4) (set 5)	らっきーわいるどぼあbm4
+m4luckwbd	Lucky Wild Boar (MPU4) (set 5, unprotected)	らっきーわいるどぼあbm4
 m4luckwbe	Lucky Wild Boar (MPU4) (set 6)	らっきーわいるどぼあbm4
 m4luckwbf	Lucky Wild Boar (MPU4) (set 7)	らっきーわいるどぼあbm4
 m4luxor	Luxor (Barcrest) (MPU4) (LUX 0.6)	るくそーるbm4
@@ -21042,6 +21057,7 @@ madgearj	マッドギア (日本版)	まっどぎあ
 madmotor	マッドモーター (プロトタイプ)	まっどもーたー
 madrace	Mad Race	まっどれーす
 madshark	マッドシャーク	まっどしゃーく
+madsharkbl	マッドシャーク (海賊版)	まっどしゃーく
 madzoo	Mad Zoo (version U450C)	まっどずー
 mag10	Magic 10 Nevada (Pool 10海賊版)	まじっくてんねばだ
 magb233	Magitronic B233	まじとろにっくb233
@@ -21059,6 +21075,7 @@ magibombc	Magic Bomb (Ver. AB4.2, 11/10/01)	まじっくぼむ
 magibombd	Magic Bomb (Ver. AA.72D, 14/11/05)	まじっくぼむ
 magibombe	Magic Bomb (Ver. A3.1A)	まじっくぼむ
 magibombf	Magic Bomb (Ver. NB4.5 061402)	まじっくぼむ
+magibombg	Magic Bomb (Ver. NB6.1, 26/04/04)	まじっくぼむ
 magic	Magic	まじっく
 magic10	Magic's 10 (ver. 16.55)	まじっくすてん1_1655
 magic102	Magic's 10 2 (ver. 1.1)	まじっくすてん2
@@ -21123,7 +21140,7 @@ magspot2	マジカルスポットPART II	まじかるすぽっと2
 magtcha5	Magic Touch (0300455V, NSW/ACT)	まじっくたっち
 magtcha5a	Magic Touch (0200455V, NSW/ACT)	まじっくたっち
 magtouch	Magical Touch	まじかるたっち
-magtruck	マジカルトロッコアドベンチャー (日本版)	まじかるとろっこあどべんちゃー
+magtruck	マジカルトロッコアドベンチャー (輸出版)	まじかるとろっこあどべんちゃー_w
 maguila	Up Maguila (ドンキーコングJr.海賊版)	あっぷまぐいら
 magworm	Magic Worm (センチピード海賊版, set 1)	まじっくわーむ_1
 magworma	Magic Worm (センチピード海賊版, set 2)	まじっくわーむ_2
@@ -21806,6 +21823,7 @@ mineswpr	Minesweeper	まいんすいーぱー
 mineswpr4	Minesweeper (4-Player)	まいんすいーぱー_4p
 minferno	Inferno (Meadows)	いんふぇるの
 mini2440	Mini2440	みに2440
+mini5sx	文豪 mini 5SX	ぶんごうみに5sx
 miniboy7	Mini-Boy 7 (set 1)	みにぼーい7_1
 miniboy7a	Mini-Boy 7 (set 2)	みにぼーい7_2
 minicom	Minicom IV (1997-08-11)	みにこむ4
@@ -22158,23 +22176,23 @@ monmouse	Money Mouse (0400469V, NSW/ACT)	まねーまうす
 monmousea	Money Mouse (0300469V, NSW/ACT)	まねーまうす
 monomach	Monomachine SFX6 MK2	ものましんsfx6mk2
 mononcol	Monon Color	ものんからー
-mononew	Monopoly (ARM7 Sound Board)	ものぽりー_a
+mononew	Monopoly (CPU 3.20, display A3.01, ARM7 sound board)	ものぽりー_a
 mononuxt	NuXT	なくすと1
 mononuxt2	NuXT v2	なくすと2
-monop233	Monopoly (2.33)	ものぽりー_233
-monop251	Monopoly (2.51)	ものぽりー_251
-monop301	Monopoly (3.01)	ものぽりー_301
-monop303	Monopoly (3.03)	ものぽりー_303
+monop233	Monopoly (CPU 2.33, display A2.03)	ものぽりー_233
+monop251	Monopoly (CPU 2.51, display A2.06)	ものぽりー_251
+monop301	Monopoly (CPU 3.01, display A3.01)	ものぽりー_301
+monop303	Monopoly (CPU 3.03, display A3.01)	ものぽりー_303
 monoplcl	Monopoly Classic (JPM) (Version 5) (SYSTEM5 VIDEO)	ものぽりーくらしっく
 monoplcld	Monopoly Classic (JPM) (Version 5, Protocol) (SYSTEM5 VIDEO)	ものぽりーくらしっく
 monopldx	Monopoly Deluxe (JPM) (Version 6) (SYSTEM5 VIDEO)	ものぽりーでらっくす
 monopldx1	Monopoly Deluxe (JPM) (Version 1) (SYSTEM5 VIDEO)	ものぽりーでらっくす
 monopldxd	Monopoly Deluxe (JPM) (Version 6, Protocol) (SYSTEM5 VIDEO)	ものぽりーでらっくす
-monopolf	Monopoly (フランス版)	ものぽりー_f
-monopolg	Monopoly (ドイツ版)	ものぽりー_g
-monopoli	Monopoly (イタリア版)	ものぽりー_i
-monopoll	Monopoly (スペイン版)	ものぽりー_s
-monopolp	Monopoly (3.20)	ものぽりー_320
+monopolf	Monopoly (CPU 3.20, display F3.01, France)	ものぽりー_f
+monopolg	Monopoly (CPU 3.20, display G3.01, Germany)	ものぽりー_g
+monopoli	Monopoly (CPU 3.20, display I3.01, Italy)	ものぽりー_i
+monopoll	Monopoly (CPU 3.20, display L3.01, Spain)	ものぽりー_s
+monopolp	Monopoly (CPU 3.20, display A3.01)	ものぽりー_320
 monopoly	Monopoly (JPM) (Version 4H) (SYSTEM5 VIDEO)	ものぽりー_1
 monopoly3	Monopoly (JPM) (Version 3) (SYSTEM5 VIDEO)	ものぽりー_1
 monopoly4	Monopoly (JPM) (Version 4) (SYSTEM5 VIDEO)	ものぽりー_1
@@ -22638,6 +22656,7 @@ murogem	Muroge Monaco (set 1)	むろげもなこ_1
 murogema	Muroge Monaco (set 2)	むろげもなこ_2
 murogemb	Muroge Monaco (set 3)	むろげもなこ_3
 murogmbl	Muroge Monaco (海賊版?)	むろげもなこ-b
+musclem	マッスルマスター	まっするますたー
 musclhit	筋肉番付 スプレーヒッター	きんにくばんづけすぷれーひった
 mushi2eo	甲虫王者ムシキング -ポポの冒険編- / Mushiking The King Of Beetles - Mushiking II / III / III+ (Ver. 1.001) (海外版)	こうちゅうおうじゃむしきんぐぽぽのだいぼうけん_w
 mushi2k4	甲虫王者ムシキング 2004セカンド (日本版)	こうちゅうおうじゃむしきんぐ2004_2
@@ -22823,18 +22842,18 @@ narc2	ナーク (rev 2.00)	なーく_
 narc3	ナーク (rev 3.20)	なーく_
 narc4	ナーク (rev 4.00)	なーく_
 narc6	ナーク (rev 6.00)	なーく_
-nascar	Nascar (4.50)	なすかー_450
-nascarl	Nascar (4.50 スペイン版)	なすかー_450s
-nascarl_301	Nascar (3.01 スペイン版)	なすかー_301s
-nascarl_340	Nascar (3.40 スペイン版)	なすかー_340s
-nascarl_350	Nascar (3.50 スペイン版)	なすかー_350s
-nascarl_352	Nascar (3.52 スペイン版)	なすかー_352s
-nascarl_400	Nascar (4.00 スペイン版)	なすかー_400s
-nascar_301	Nascar (3.01)	なすかー_301
-nascar_340	Nascar (3.40)	なすかー_340
-nascar_350	Nascar (3.50)	なすかー_350
-nascar_352	Nascar (3.52)	なすかー_352
-nascar_400	Nascar (4.00)	なすかー_400
+nascar	Nascar (CPU 4.50, display A4.00)	なすかー_450
+nascarl	Nascar (CPU 4.50, display L4.00, Spain)	なすかー_450s
+nascarl_301	Nascar (CPU 3.01, display L3.01, Spain)	なすかー_301s
+nascarl_340	Nascar (CPU 3.40, display L3.03, Spain)	なすかー_340s
+nascarl_350	Nascar (CPU 3.50, display L3.03, Spain)	なすかー_350s
+nascarl_352	Nascar (CPU 3.52, display L3.03, Spain)	なすかー_352s
+nascarl_400	Nascar (CPU 4.00, display L4.00, Spain)	なすかー_400s
+nascar_301	Nascar (CPU 3.01, display A3.01)	なすかー_301
+nascar_340	Nascar (CPU 3.40, display A3.03)	なすかー_340
+nascar_350	Nascar (CPU 3.50, display A3.03)	なすかー_350
+nascar_352	Nascar (CPU 3.52, display A3.03)	なすかー_352
+nascar_400	Nascar (CPU 4.00, display A4.00)	なすかー_400
 nascom1	Nascom 1	なすこむ1
 nascom2	Nascom 2	なすこむ2
 nascom2c	Nascom 2 (CP/M)	なすこむ2
@@ -23039,7 +23058,7 @@ nfb96sea	New Fruit Bonus '96 Special Edition (海賊版 set 2, v97-3.3c English)
 nfb96seb	New Fruit Bonus '96 Special Edition (海賊版 set 3, v97-3.3c Portuguese)	にゅーふるーつぼーなす96すぺしゃるえでぃしょん-b3
 nfb96sec	New Fruit Bonus '96 Special Edition (海賊版 set 4, v97-3.3c English)	にゅーふるーつぼーなす96すぺしゃるえでぃしょん-b4
 nfb96txt	New Fruit Bonus '96 Special Edition (v1.22 Texas XT, C2 PCB)	にゅーふるーつぼーなす96すぺしゃるえでぃしょん_
-nfl	NFL	えぬえふえる
+nfl	NFL (CPU 1.01, display A1.02)	えぬえふえる
 nflclsfb	NFL Classic Football (US版, NCF3 Ver.A.)	えぬえふえるくらしっくふっとぼーる
 nflfoot	NFL Football	えぬえふえるふっとぼーる
 nfm	New Fruit Machine (Ming-Yang Electronic, vFB02-07A)	にゅーふるーつましーん
@@ -23375,7 +23394,7 @@ olds100a	西游釈厄伝 Super / Oriental Legend Super (ver. 100, set 2)	おり�
 olds103t	西游釈厄伝 Super / Oriental Legend Super (ver. 103, 中華版, Tencent) (プロテクト無し)	おりえんたるれじぇんど1すーぱー_103c
 oldsplus	西游釈厄伝 Super Plus (海外, 中華, 日本, 香港, 台湾) / Oriental Legend 2 (韓国) (ver. 205) [Oriental Ex]	おりえんたるれじぇんどすーぱーぷらす
 oldsplus203	西游釈厄伝 Super Plus (海外, 中華, 日本, 香港, 台湾) / Oriental Legend 2 (韓国) (ver. 203) [Oriental Ex]	おりえんたるれじぇんどすーぱーぷらす
-olibochu	パンチングキッド / Oli-Boo-Chu	ぱんちんぐきっど
+olibochu	パンチングキッド / Oli-Boo-Chu (US版)	ぱんちんぐきっど_u
 olibug	Oli Bug (ジャンプバグ海賊版)	おりばぐ
 oligam	Olympian Games (Russia)	おりんぴあんげーむず
 olihockey	Olimpic Hockey (EM Bubble Hockey, set 1)	おりんぴっくほっけー
@@ -23866,6 +23885,7 @@ pc2000	PreComputer 2000	ぷれこんぴゅーた2000
 pc2000s	PreComputer 2000 (Spain)	ぷれこんぴゅーた2000
 pc2086	Amstrad PC2086	あむすとらっどぴーしー2086
 pc2386	PC2386	ぴーしー2386
+pc286vs	PC-286VS	ぴーしー286vs
 pc3086	Amstrad PC3086	あむすとらっどぴーしー3086
 pc30iii	PC 30-III	ぴーしー30
 pc386m	PC-386M	ぴーしーさんはちろくえむ
@@ -23911,8 +23931,11 @@ pc8801mk2sr	PC-8801mkIISR	ぴーしー8801_mk2sr
 pc88va	PC-88VA	ぴーしー88va_1
 pc88va2	PC-88VA2	ぴーしー88va_2
 pc9486	PC9486	ぴーしー9486
+pc9801	PC-9801	ぴーしー9801_
 pc9801bx2	PC-9801BX2/U2 (98 FELLOW)	ぴーしー9801_bx2
+pc9801dx	PC-9801DX	ぴーしー9801_dx
 pc9801f	PC-9801F	ぴーしー9801_f1
+pc9801fs	PC-9801FS	ぴーしー9801_fs
 pc9801rs	PC-9801RS	ぴーしー9801_rs
 pc9801rx	PC-9801RX	ぴーしー9801_rx
 pc9801us	PC-9801US	ぴーしー9801_us
@@ -24227,6 +24250,7 @@ penta	ペンタ	ぺんた
 pentacup	Pentacup (rev. 1)	ぺんたかっぷ_1
 pentacup2	Pentacup (rev. 2)	ぺんたかっぷ_2
 pentagon	Pentagon 128K	ぺんたごん128
+pentevo	ZX Evolution: BASECONF	ぜっとえっくすえぼりゅーしょん
 pepk0719	Player's Edge (PK0719-PC092) Standard Draw Poker (El Cortez)	ぷれいやーずえっじ_すたんだーどどろーぽーかー_
 pepk0719a	Player's Edge (PK0719-PC041) Standard Draw Poker	ぷれいやーずえっじ_すたんだーどどろーぽーかー_
 pepk0719b	Player's Edge (PK0719-PC011) Standard Draw Poker	ぷれいやーずえっじ_すたんだーどどろーぽーかー_
@@ -25032,9 +25056,10 @@ pitboss03a	The Pit Boss (2214-03, U5-1C)	ざぴっとぼす_
 pitboss03b	The Pit Boss (M4A4)	ざぴっとぼす_
 pitboss04	The Pit Boss (2214-04)	ざぴっとぼす_
 pitboss2	Pitboss II	ぴっとぼす2
-pitbossm	Pit Boss Megastar (9244-00-01)	ぴっとぼすめがすたー_9244
+pitbossm	Pit Boss Megastar (9244-00-01 R0B)	ぴっとぼすめがすたー_9244
 pitbossm4	The Pit Boss (M4A1)	ざぴっとぼす_
-pitbossma	Pit Boss Megastar (9243-00-01)	ぴっとぼすめがすたー_9243
+pitbossma	Pit Boss Megastar (9244-00-01 R0)	ぴっとぼすめがすたー_9243
+pitbossmb	Pit Boss Megastar (9243-00-01 R0)	ぴっとぼすめがすたー_9243
 pitbossps	The Pit Boss (PSB1)	ざぴっとぼす_
 pitbosss	Pit Boss Superstar (9221-10-00B)	ぴっとぼすすーぱーすたー
 pitbosssa	Pit Boss Superstar (9221-10-00A)	ぴっとぼすすーぱーすたー
@@ -25087,45 +25112,46 @@ pktgaldxa	ポケットギャルデラックス (アジア版 v3.00)	ぽけっと
 pktgaldxb	ポケットギャルデラックス (Euro版 v3.00, 海賊版)	ぽけっとぎゃるでらっくす-b
 pktgaldxj	ポケットギャルデラックス (日本版 v3.00)	ぽけっとぎゃるでらっくす
 pkunwar	ぺんぎんくんウォーズ (US版)	ぺんぎんくんうぉーず_u
-pkunwarj	ぺんぎんくんウォーズ (日本版)	ぺんぎんくんうぉーず
+pkunwarj	ぺんぎんくんウォーズ (日本版, set 1)	ぺんぎんくんうぉーず
+pkunwarja	ぺんぎんくんウォーズ (日本版, set 2)	ぺんぎんくんうぉーず
 plan80	Plan-80	ぷらん80
 play2000	Play 2000 (Super Slot & Gran Tesoro) (v7.0i) (Italy)	ぷれい2000
 play2000_40i	Play 2000 (Super Slot & Gran Tesoro) (v4.0i) (Italy)	ぷれい2000
 play2000_50i	Play 2000 (Super Slot & Gran Tesoro) (v5.0i) (Italy)	ぷれい2000
 playball	PlayBall! (プロトタイプ)	ぷれいぼーる
 playboy	Playboy	ぷれいぽーい1978
-playboyf	Playboy (5.00 フランス版)	ぷれいぽーい2002_500f
-playboyf_203	Playboy (2.03 フランス版)	ぷれいぽーい2002_203f
-playboyf_300	Playboy (3.00 フランス版)	ぷれいぽーい2002_300f
-playboyf_302	Playboy (3.02 フランス版)	ぷれいぽーい2002_302f
-playboyf_303	Playboy (3.03 フランス版)	ぷれいぽーい2002_303f
-playboyf_401	Playboy (4.01 フランス版)	ぷれいぽーい2002_401f
-playboyg	Playboy (5.00 ドイツ版)	ぷれいぽーい2002_500g
-playboyg_203	Playboy (2.03 ドイツ版)	ぷれいぽーい2002_203g
-playboyg_300	Playboy (3.00 ドイツ版)	ぷれいぽーい2002_300g
-playboyg_302	Playboy (3.02 ドイツ版)	ぷれいぽーい2002_302g
-playboyg_303	Playboy (3.03 ドイツ版)	ぷれいぽーい2002_303g
-playboyg_401	Playboy (4.01 ドイツ版)	ぷれいぽーい2002_401g
-playboyi	Playboy (5.00 イタリア版)	ぷれいぽーい2002_500i
-playboyi_203	Playboy (2.03 イタリア版)	ぷれいぽーい2002_203i
-playboyi_300	Playboy (3.00 イタリア版)	ぷれいぽーい2002_300i
-playboyi_302	Playboy (3.02 イタリア版)	ぷれいぽーい2002_302i
-playboyi_303	Playboy (3.03 イタリア版)	ぷれいぽーい2002_303i
-playboyi_401	Playboy (4.01 イタリア版)	ぷれいぽーい2002_401i
-playboyl	Playboy (5.00 スペイン版)	ぷれいぽーい2002_500s
-playboyl_203	Playboy (2.03 スペイン版)	ぷれいぽーい2002_203s
-playboyl_300	Playboy (3.00 スペイン版)	ぷれいぽーい2002_300s
-playboyl_302	Playboy (3.02 スペイン版)	ぷれいぽーい2002_302s
-playboyl_303	Playboy (3.03 スペイン版)	ぷれいぽーい2002_303s
-playboyl_401	Playboy (4.01 スペイン版)	ぷれいぽーい2002_401s
-playboys	Playboy (5.00)	ぷれいぽーい2002_500
-playboys_203	Playboy (2.03)	ぷれいぽーい2002_203
-playboys_300	Playboy (3.00)	ぷれいぽーい2002_300
-playboys_302	Playboy (3.02)	ぷれいぽーい2002_302
-playboys_303	Playboy (3.03)	ぷれいぽーい2002_303
-playboys_401	Playboy (4.01)	ぷれいぽーい2002_401
+playboyf	Playboy (CPU 5.00, display F5.00, France)	ぷれいぽーい2002_500f
+playboyf_203	Playboy (CPU 2.03, display F2.01, France)	ぷれいぽーい2002_203f
+playboyf_300	Playboy (CPU 3.00, display F3.00, France)	ぷれいぽーい2002_300f
+playboyf_302	Playboy (CPU 3.02, display F3.00, France)	ぷれいぽーい2002_302f
+playboyf_303	Playboy (CPU 3.03, display F3.00, France)	ぷれいぽーい2002_303f
+playboyf_401	Playboy (CPU 4.01, display F4.00, France)	ぷれいぽーい2002_401f
+playboyg	Playboy (CPU 5.00, display G5.00, Germany)	ぷれいぽーい2002_500g
+playboyg_203	Playboy (CPU 2.03, display G2.01, Germany)	ぷれいぽーい2002_203g
+playboyg_300	Playboy (CPU 3.00, display G3.00, Germany)	ぷれいぽーい2002_300g
+playboyg_302	Playboy (CPU 3.02, display G3.00, Germany)	ぷれいぽーい2002_302g
+playboyg_303	Playboy (CPU 3.03, display G3.00, Germany)	ぷれいぽーい2002_303g
+playboyg_401	Playboy (CPU 4.01, display G4.00, Germany)	ぷれいぽーい2002_401g
+playboyi	Playboy (CPU 5.00, display I5.00, Italy)	ぷれいぽーい2002_500i
+playboyi_203	Playboy (CPU 2.03, display I2.01, Italy)	ぷれいぽーい2002_203i
+playboyi_300	Playboy (CPU 3.00, display I3.00, Italy)	ぷれいぽーい2002_300i
+playboyi_302	Playboy (CPU 3.02, display I3.00, Italy)	ぷれいぽーい2002_302i
+playboyi_303	Playboy (CPU 3.03, display I3.00, Italy)	ぷれいぽーい2002_303i
+playboyi_401	Playboy (CPU 4.01, display I4.00, Italy)	ぷれいぽーい2002_401i
+playboyl	Playboy (CPU 5.00, display L5.00, Spain)	ぷれいぽーい2002_500s
+playboyl_203	Playboy (CPU 2.03, display L2.01, Spain)	ぷれいぽーい2002_203s
+playboyl_300	Playboy (CPU 3.00, display L3.00, Spain)	ぷれいぽーい2002_300s
+playboyl_302	Playboy (CPU 3.02, display L3.00, Spain)	ぷれいぽーい2002_302s
+playboyl_303	Playboy (CPU 3.03, display L3.00, Spain)	ぷれいぽーい2002_303s
+playboyl_401	Playboy (CPU 4.01, display L4.00, Spain)	ぷれいぽーい2002_401s
+playboys	Playboy (CPU 5.00, display A5.00)	ぷれいぽーい2002_500
+playboys_203	Playboy (CPU 2.03, display A2.01)	ぷれいぽーい2002_203
+playboys_300	Playboy (CPU 3.00, display A3.00)	ぷれいぽーい2002_300
+playboys_302	Playboy (CPU 3.02, display A3.00)	ぷれいぽーい2002_302
+playboys_303	Playboy (CPU 3.03, display A3.00)	ぷれいぽーい2002_303
+playboys_401	Playboy (CPU 4.01, display A4.00)	ぷれいぽーい2002_401
 playmaker	Playmaker: Hockey, Soccer, Basketball	ぷれいめーかー
-playnew	Playboy (ARM7 Sound Board)	ぷれいぽーい2002_arm
+playnew	Playboy (CPU 5.00, display A5.00, ARM7 sound board)	ぷれいぽーい2002_arm
 play_a24	Playboy 35th Anniversary (2.4)	ぷれいぼーいさーてぃふぃふすあにばーさりー
 plegends	豪血寺外伝 -最強伝説- / Gogetsuji Legends (US版, Ver. 95.06.20)	ごうげつじがいでんさいきょうでんせつ
 plegendsj	豪血寺外伝 -最強伝説- (日本版, Ver. 95.06.20)	ごうげつじがいでんさいきょうでんせつ
@@ -25497,8 +25523,9 @@ primob48	Primo B-48	ぷりもb48
 primob64	Primo B-64	ぷりもn64
 primoc64	Primo C-64	ぷりもc64
 primrag2	Primal Rage 2 (Ver 0.36a)	ぷらいまるれいじ2
-primrage	プライマルレイジ (version 2.3)	ぷらいまるれいじ1_23
-primrage20	プライマルレイジ (version 2.0)	ぷらいまるれいじ1_20
+primrage	プライマルレイジ (version 2.3, newer build)	ぷらいまるれいじ1_
+primrage20	プライマルレイジ (version 2.0)	ぷらいまるれいじ1_
+primrageo	プライマルレイジ (version 2.3, older build)	ぷらいまるれいじ1_
 princ	ジョイ・ホビー・コンピューター Prin-C	じょいほびーこんぴゅーたぷりんしー
 princess	Cosmic Princess	こずみっくぷりんせす
 prmrsocr	プレミアサッカー (ver EAB)	ぷれみあさっかー
@@ -25508,6 +25535,7 @@ prmtmfgto	トップランキングスターズ / Prime Time Fighter (Ver 2.1A 19
 pro128	Prodest PC 128	ぷろですとぴーしー
 pro128s	Prodest PC 128S	ぷろですとぴーしー128
 pro80	Pro-80	ぷろ80
+probowl2	プロボウル2	ぷろぼうる2
 procuss	E-mu Pro/Cussion Maximum Percussion Module	いーみゅーぷろかっしょん
 prodigy	Destiny Prodigy	ですてぃにーぽろでぃじー
 prof180x	PROF-180X	ぷろふ180
@@ -25722,6 +25750,7 @@ psr500	ポータトーン PSR-500	ぽーたとーんpsr500
 psr60	ポータトーン PSR-60	ぽーたとーんpsr60
 psr70	ポータトーン PSR-70	ぽーたとーんpsr70
 psrockmn	パニックショット！ロックマン	ぱにっくしょっとろっくまん
+pss480	ポータサウンド PSS-480 / PSS-580	ぽーたさうんどpss480
 pss61	スーパーマリオカート / スーパーマリオコレクション / スターフォックス (スーパーファミコンボックス)	すーぱーまりおかーと
 pss62	ワイアラエの奇蹟 / スーパー麻雀2 (スーパーファミコンボックス)	わいあらえのきせき
 pss63	スーパードンキーコング / スーパーテトリス2 + ボンブリス (スーパーファミコンボックス)	すーぱーどんきーこんぐ
@@ -26427,26 +26456,26 @@ rclimb_7	Rock Climber (090716 Entertainment)	ろっくくらいまー_
 rclimb_8	Rock Climber (100331 Entertainment X)	ろっくくらいまー_
 rclimb_9	Rock Climber (101209 Entertainment N)	ろっくくらいまー_
 rcorsair	Red Corsair	れっどこるせあ
-rctnew	RollerCoaster Tycoon (ARM7 Sound Board)	ろーらーこーすたーたいくーん_arm
-rctycn	RollerCoaster Tycoon (7.02)	ろーらーこーすたーたいくーん_702
-rctycnf	RollerCoaster Tycoon (7.02 フランス版)	ろーらーこーすたーたいくーん_702f
-rctycnf_400	RollerCoaster Tycoon (4.00 フランス版)	ろーらーこーすたーたいくーん_400f
-rctycnf_600	RollerCoaster Tycoon (6.00 フランス版)	ろーらーこーすたーたいくーん_600f
-rctycnf_701	RollerCoaster Tycoon (7.01 フランス版)	ろーらーこーすたーたいくーん_701f
-rctycng	RollerCoaster Tycoon (7.02 ドイツ版)	ろーらーこーすたーたいくーん_702g
-rctycng_400	RollerCoaster Tycoon (4.00 ドイツ版)	ろーらーこーすたーたいくーん_400g
-rctycng_701	RollerCoaster Tycoon (7.01 ドイツ版)	ろーらーこーすたーたいくーん_701g
-rctycni	RollerCoaster Tycoon (7.02 イタリア版)	ろーらーこーすたーたいくーん_702i
-rctycni_400	RollerCoaster Tycoon (4.00 イタリア版)	ろーらーこーすたーたいくーん_400i
-rctycni_600	RollerCoaster Tycoon (6.00 イタリア版)	ろーらーこーすたーたいくーん_600i
-rctycni_701	RollerCoaster Tycoon (7.01 イタリア版)	ろーらーこーすたーたいくーん_701i
-rctycnl	RollerCoaster Tycoon (7.02 スペイン版)	ろーらーこーすたーたいくーん_702s
-rctycnl_400	RollerCoaster Tycoon (4.00 スペイン版)	ろーらーこーすたーたいくーん_400s
-rctycnl_600	RollerCoaster Tycoon (6.00 スペイン版)	ろーらーこーすたーたいくーん_600s
-rctycnl_701	RollerCoaster Tycoon (7.01 スペイン版)	ろーらーこーすたーたいくーん_701s
-rctycn_400	RollerCoaster Tycoon (4.00)	ろーらーこーすたーたいくーん_400
-rctycn_600	RollerCoaster Tycoon (6.00)	ろーらーこーすたーたいくーん_600
-rctycn_701	RollerCoaster Tycoon (7.01)	ろーらーこーすたーたいくーん_701
+rctnew	RollerCoaster Tycoon (CPU 7.02, display A7.01, ARM7 sound board)	ろーらーこーすたーたいくーん_arm
+rctycn	RollerCoaster Tycoon (CPU 7.02, display A7.01)	ろーらーこーすたーたいくーん_702
+rctycnf	RollerCoaster Tycoon (CPU 7.02, display F7.01, France)	ろーらーこーすたーたいくーん_702f
+rctycnf_400	RollerCoaster Tycoon (CPU 4.00, display F4.00, France)	ろーらーこーすたーたいくーん_400f
+rctycnf_600	RollerCoaster Tycoon (CPU 6.00, display F6.00, France)	ろーらーこーすたーたいくーん_600f
+rctycnf_701	RollerCoaster Tycoon (CPU 7.01, display F7.00, France)	ろーらーこーすたーたいくーん_701f
+rctycng	RollerCoaster Tycoon (CPU 7.02, display G7.01, Germany)	ろーらーこーすたーたいくーん_702g
+rctycng_400	RollerCoaster Tycoon (CPU 4.00, display G4.00, Germany)	ろーらーこーすたーたいくーん_400g
+rctycng_701	RollerCoaster Tycoon (CPU 7.01, display G7.00, Germany)	ろーらーこーすたーたいくーん_701g
+rctycni	RollerCoaster Tycoon (CPU 7.02, display I7.01, Italy)	ろーらーこーすたーたいくーん_702i
+rctycni_400	RollerCoaster Tycoon (CPU 4.00, display I4.00, Italy)	ろーらーこーすたーたいくーん_400i
+rctycni_600	RollerCoaster Tycoon (CPU 6.00, display I6.00, Italy)	ろーらーこーすたーたいくーん_600i
+rctycni_701	RollerCoaster Tycoon (CPU 7.01, display I7.00, Italy)	ろーらーこーすたーたいくーん_701i
+rctycnl	RollerCoaster Tycoon (CPU 7.02, display L7.01, Spain)	ろーらーこーすたーたいくーん_702s
+rctycnl_400	RollerCoaster Tycoon (CPU 4.00, display L4.00, Spain)	ろーらーこーすたーたいくーん_400s
+rctycnl_600	RollerCoaster Tycoon (CPU 6.00, display L6.00, Spain)	ろーらーこーすたーたいくーん_600s
+rctycnl_701	RollerCoaster Tycoon (CPU 7.01, display L7.00, Spain)	ろーらーこーすたーたいくーん_701s
+rctycn_400	RollerCoaster Tycoon (CPU 4.00, display A4.00)	ろーらーこーすたーたいくーん_400
+rctycn_600	RollerCoaster Tycoon (CPU 6.00, display A6.00)	ろーらーこーすたーたいくーん_600
+rctycn_701	RollerCoaster Tycoon (CPU 7.01, display A7.01)	ろーらーこーすたーたいくーん_701
 rd100	RD100	あーるでぃー100
 rd5_240	Mini Arcade Machine 240-in-1 (Red5)	みにあーけーどましん
 rdaction	忍者くん 阿修羅の章 / Rad Action	にんじゃくん2_w
@@ -26685,32 +26714,32 @@ rio	Rio	りお
 riot	雷軋斗 ＜ライアット＞	らいおっと
 riotcity	ライオットシティ (日本版)	らいおっとしてぃ
 riotw	雷軋斗 ＜ライアット＞ (Woong Bi license)	らいおっと_w
-rip300	Ripley's Believe It or Not! (3.00)	りぷれいずびりーぶいっとおあのっと_300
-rip301	Ripley's Believe It or Not! (3.01)	りぷれいずびりーぶいっとおあのっと_301
-rip302	Ripley's Believe It or Not! (3.02)	りぷれいずびりーぶいっとおあのっと_302
-rip310	Ripley's Believe It or Not! (3.10)	りぷれいずびりーぶいっとおあのっと_310
+rip300	Ripley's Believe It or Not! (CPU 3.00, display A3.00)	りぷれいずびりーぶいっとおあのっと_300
+rip301	Ripley's Believe It or Not! (CPU 3.01, display A3.20)	りぷれいずびりーぶいっとおあのっと_301
+rip302	Ripley's Believe It or Not! (CPU 3.02, display A3.20)	りぷれいずびりーぶいっとおあのっと_302
+rip310	Ripley's Believe It or Not! (CPU 3.10, display A3.20)	りぷれいずびりーぶいっとおあのっと_310
 ripcord	Rip Cord	りっぷこーど
-ripf300	Ripley's Believe It or Not! (3.00 フランス版)	りぷれいずびりーぶいっとおあのっと_300f
-ripf301	Ripley's Believe It or Not! (3.01 フランス版)	りぷれいずびりーぶいっとおあのっと_301f
-ripf302	Ripley's Believe It or Not! (3.02 フランス版)	りぷれいずびりーぶいっとおあのっと_302f
-ripf310	Ripley's Believe It or Not! (3.10 フランス版)	りぷれいずびりーぶいっとおあのっと_310f
-ripg300	Ripley's Believe It or Not! (3.00 ドイツ版)	りぷれいずびりーぶいっとおあのっと_300g
-ripg301	Ripley's Believe It or Not! (3.01 ドイツ版)	りぷれいずびりーぶいっとおあのっと_301g
-ripg302	Ripley's Believe It or Not! (3.02 ドイツ版)	りぷれいずびりーぶいっとおあのっと_302g
-ripg310	Ripley's Believe It or Not! (3.10 ドイツ版)	りぷれいずびりーぶいっとおあのっと_310g
-ripi300	Ripley's Believe It or Not! (3.00 イタリア版)	りぷれいずびりーぶいっとおあのっと_300i
-ripi301	Ripley's Believe It or Not! (3.01 イタリア版)	りぷれいずびりーぶいっとおあのっと_301i
-ripi302	Ripley's Believe It or Not! (3.02 イタリア版)	りぷれいずびりーぶいっとおあのっと_302i
-ripi310	Ripley's Believe It or Not! (3.10 イタリア版)	りぷれいずびりーぶいっとおあのっと_310i
-ripl300	Ripley's Believe It or Not! (3.00 スペイン版)	りぷれいずびりーぶいっとおあのっと_300s
-ripl301	Ripley's Believe It or Not! (3.01 スペイン版)	りぷれいずびりーぶいっとおあのっと_301s
-ripl302	Ripley's Believe It or Not! (3.02 スペイン版)	りぷれいずびりーぶいっとおあのっと_302s
-ripl310	Ripley's Believe It or Not! (3.10 スペイン版)	りぷれいずびりーぶいっとおあのっと_310s
-ripleys	Ripley's Believe It or Not! (3.20)	りぷれいずびりーぶいっとおあのっと_320
-ripleysf	Ripley's Believe It or Not! (3.20 フランス版)	りぷれいずびりーぶいっとおあのっと_320f
-ripleysg	Ripley's Believe It or Not! (3.20 ドイツ版)	りぷれいずびりーぶいっとおあのっと_320g
-ripleysi	Ripley's Believe It or Not! (3.20 イタリア版)	りぷれいずびりーぶいっとおあのっと_320i
-ripleysl	Ripley's Believe It or Not! (3.20 スペイン版)	りぷれいずびりーぶいっとおあのっと_320s
+ripf300	Ripley's Believe It or Not! (CPU 3.00, display F3.00, France)	りぷれいずびりーぶいっとおあのっと_300f
+ripf301	Ripley's Believe It or Not! (CPU 3.01, display F3.01, France)	りぷれいずびりーぶいっとおあのっと_301f
+ripf302	Ripley's Believe It or Not! (CPU 3.02, display F3.01, France)	りぷれいずびりーぶいっとおあのっと_302f
+ripf310	Ripley's Believe It or Not! (CPU 3.10, display F3.01, France)	りぷれいずびりーぶいっとおあのっと_310f
+ripg300	Ripley's Believe It or Not! (CPU 3.00, display G3.00, Germany)	りぷれいずびりーぶいっとおあのっと_300g
+ripg301	Ripley's Believe It or Not! (CPU 3.01, display G3.00, Germany)	りぷれいずびりーぶいっとおあのっと_301g
+ripg302	Ripley's Believe It or Not! (CPU 3.02, display G3.00, Germany)	りぷれいずびりーぶいっとおあのっと_302g
+ripg310	Ripley's Believe It or Not! (CPU 3.10, display G3.00, Germany)	りぷれいずびりーぶいっとおあのっと_310g
+ripi300	Ripley's Believe It or Not! (CPU 3.00, display I3.00, Italy)	りぷれいずびりーぶいっとおあのっと_300i
+ripi301	Ripley's Believe It or Not! (CPU 3.01, display I3.00, Italy)	りぷれいずびりーぶいっとおあのっと_301i
+ripi302	Ripley's Believe It or Not! (CPU 3.02, display I3.00, Italy)	りぷれいずびりーぶいっとおあのっと_302i
+ripi310	Ripley's Believe It or Not! (CPU 3.10, display I3.00, Italy)	りぷれいずびりーぶいっとおあのっと_310i
+ripl300	Ripley's Believe It or Not! (CPU 3.00, display L3.00, Spain)	りぷれいずびりーぶいっとおあのっと_300s
+ripl301	Ripley's Believe It or Not! (CPU 3.01, display L3.01, Spain)	りぷれいずびりーぶいっとおあのっと_301s
+ripl302	Ripley's Believe It or Not! (CPU 3.02, display L3.01, Spain)	りぷれいずびりーぶいっとおあのっと_302s
+ripl310	Ripley's Believe It or Not! (CPU 3.10, display L3.01, Spain)	りぷれいずびりーぶいっとおあのっと_310s
+ripleys	Ripley's Believe It or Not! (CPU 3.20, display A3.20)	りぷれいずびりーぶいっとおあのっと_320
+ripleysf	Ripley's Believe It or Not! (CPU 3.20, display F3.01, France)	りぷれいずびりーぶいっとおあのっと_320f
+ripleysg	Ripley's Believe It or Not! (CPU 3.20, display G3.00, Germany)	りぷれいずびりーぶいっとおあのっと_320g
+ripleysi	Ripley's Believe It or Not! (CPU 3.20, display I3.00, Italy)	りぷれいずびりーぶいっとおあのっと_320i
+ripleysl	Ripley's Believe It or Not! (CPU 3.20, display L3.01, Spain)	りぷれいずびりーぶいっとおあのっと_320s
 ripoff	リップオフ	りっぷおふ
 ripribit	Ripper Ribbit (Version 3.5)	りっぱーりびっと_35
 ripribita	Ripper Ribbit (Version 2.8.4)	りっぱーりびっと_28
@@ -32917,6 +32946,7 @@ scuddx	スカッドレース (DX筐体) (Revision A)	すかっどれーす_
 scudhamm	スカッドハンマー	すかっどはんまー
 scudplus	スカッドレースプラス(ツイン筐体/DX筐体, Revision A)	すかっどれーすぷらす_a
 scudplusa	スカッドレースプラス (ツイン筐体/DX筐体)	すかっどれーすぷらす
+scumimon	スロッターズクラブ 海物語	すろったーずくらぶうみものがたり
 scv	スーパーカセットビジョン	すーぱーかせっとびじょん
 scv_pal	スーパーカセットビジョン (PAL)	すーぱーかせっとびじょん
 scyclone	スペースサイクロン	すぺーすさいくろん
@@ -33139,7 +33169,8 @@ sf2rb	ストリートファイターII' レインボー (海賊版, set 1)	す�
 sf2rb2	ストリートファイターII' レインボー (海賊版, set 2)	すとりーとふぁいたー2だっしゅ-br2
 sf2rb3	ストリートファイターII' レインボー (海賊版, set 3)	すとりーとふぁいたー2だっしゅ-br3
 sf2re	ストリートファイターII' -チャンピオンエディション- (RE, 海賊版)	すとりーとふぁいたー2だっしゅ-br
-sf2red	ストリートファイターII’ レッドウェーブ (海賊版)	すとりーとふぁいたー2だっしゅ-brw1
+sf2red	ストリートファイターII’ レッドウェーブ (海賊版, set 1)	すとりーとふぁいたー2だっしゅ-brw1
+sf2reda	ストリートファイターII’ レッドウェーブ (海賊版, set 2)	すとりーとふぁいたー2だっしゅ-brw2
 sf2redp2	ストリートファイターII’ レッドウェーブパートII (海賊版)	すとりーとふぁいたー2だっしゅ-brw2
 sf2rk	ストリートファイターII -ザ・ワールドウォリアー- (RK, 海賊版)	すとりーとふぁいたー2-br
 sf2rules	ストリートファイターII -ザ・ワールドウォリアー- (ルール画面つき海賊版)	すとりーとふぁいたー2-br
@@ -33480,15 +33511,15 @@ shpeng	Sea Hunter Pengiun	しーはんたーぺんぎん
 shpinxii	Sphinx II (Russia) (Atronic)	すふぃんくす2
 shredmjr	Shredmaster Jr (NTSC)	しゅれっどますたーじゅにあ
 shrike	Shrike Avenger (プロトタイプ)	しゅらいくあべんじゃー
-shrknew	Sharkey's Shootout (ARM7 Sound Board)	しゃーきーずしゅーとあうと_a
-shrkyfr	Sharkey's Shootout (2.11 フランス版)	しゃーきーずしゅーとあうと_211f
-shrkyfr_207	Sharkey's Shootout (2.07 フランス版)	しゃーきーずしゅーとあうと_207f
-shrkygr	Sharkey's Shootout (2.11 ドイツ版)	しゃーきーずしゅーとあうと_211g
-shrkygr_207	Sharkey's Shootout (2.07 ドイツ版)	しゃーきーずしゅーとあうと_207g
-shrkyit	Sharkey's Shootout (2.11 イタリア版)	しゃーきーずしゅーとあうと_211i
-shrkyit_207	Sharkey's Shootout (2.07 イタリア版)	しゃーきーずしゅーとあうと_207i
-shrkysht	Sharkey's Shootout (2.11)	しゃーきーずしゅーとあうと_211
-shrky_207	Sharkey's Shootout (2.07)	しゃーきーずしゅーとあうと_207
+shrknew	Sharkey's Shootout (CPU 2.11, display A2.01, ARM7 sound board)	しゃーきーずしゅーとあうと_a
+shrkyfr	Sharkey's Shootout (CPU 2.11, display F2.01, France)	しゃーきーずしゅーとあうと_211f
+shrkyfr_207	Sharkey's Shootout (CPU 2.07, display F2.01, France)	しゃーきーずしゅーとあうと_207f
+shrkygr	Sharkey's Shootout (CPU 2.11, display G2.01, Germany)	しゃーきーずしゅーとあうと_211g
+shrkygr_207	Sharkey's Shootout (CPU 2.07, display G2.01, Germany)	しゃーきーずしゅーとあうと_207g
+shrkyit	Sharkey's Shootout (CPU 2.11, display I2.01, Italy)	しゃーきーずしゅーとあうと_211i
+shrkyit_207	Sharkey's Shootout (CPU 2.07, display I2.01, Italy)	しゃーきーずしゅーとあうと_207i
+shrkysht	Sharkey's Shootout (CPU 2.11, display A2.01)	しゃーきーずしゅーとあうと_211
+shrky_207	Sharkey's Shootout (CPU 2.07, display A2.01)	しゃーきーずしゅーとあうと_207
 sht3do	Shootout at Old Tucson (3DO hardware)	しゅーとあうとあっとおーるどつーそん
 shtngmst	シューティングマスター (8751 315-5159a)	しゅーてぃんぐますたー_1
 shtrider	ショットライダー	しょっとらいだー
@@ -33558,25 +33589,25 @@ simldv1000	Pioneer LDV-1000 Simulator	ぱいおにあldv1000
 simon	Simon (Rev A)	さいもん
 simonf	Simon (Rev F)	さいもん
 simpbowl	The Simpsons Bowling (GQ829 UAA)	ざしんぷそんずぼうりんぐ
-simpnew	The Simpsons Pinball Party (ARM7 Sound Board)	ざしんぷそんずぴんぼーるぱーてぃ_arm
-simpprtf	The Simpsons Pinball Party (5.00 フランス版)	ざしんぷそんずぴんぼーるぱーてぃ_500f
-simpprtf_204	The Simpsons Pinball Party (2.04 フランス版)	ざしんぷそんずぴんぼーるぱーてぃ_204f
-simpprtf_300	The Simpsons Pinball Party (3.00 フランス版)	ざしんぷそんずぴんぼーるぱーてぃ_300f
-simpprtf_400	The Simpsons Pinball Party (4.00 フランス版)	ざしんぷそんずぴんぼーるぱーてぃ_400f
-simpprtg	The Simpsons Pinball Party (5.00 ドイツ版)	ざしんぷそんずぴんぼーるぱーてぃ_500g
-simpprtg_400	The Simpsons Pinball Party (4.00 ドイツ版)	ざしんぷそんずぴんぼーるぱーてぃ_400g
-simpprti	The Simpsons Pinball Party (5.00 イタリア版)	ざしんぷそんずぴんぼーるぱーてぃ_500i
-simpprti_204	The Simpsons Pinball Party (2.04 イタリア版)	ざしんぷそんずぴんぼーるぱーてぃ_204i
-simpprti_300	The Simpsons Pinball Party (3.00 イタリア版)	ざしんぷそんずぴんぼーるぱーてぃ_300i
-simpprti_400	The Simpsons Pinball Party (4.00 イタリア版)	ざしんぷそんずぴんぼーるぱーてぃ_400i
-simpprtl	The Simpsons Pinball Party (5.00 スペイン版)	ざしんぷそんずぴんぼーるぱーてぃ_500s
-simpprtl_204	The Simpsons Pinball Party (2.04 スペイン版)	ざしんぷそんずぴんぼーるぱーてぃ_204s
-simpprtl_300	The Simpsons Pinball Party (3.00 スペイン版)	ざしんぷそんずぴんぼーるぱーてぃ_300s
-simpprtl_400	The Simpsons Pinball Party (4.00 スペイン版)	ざしんぷそんずぴんぼーるぱーてぃ_400s
-simpprty	The Simpsons Pinball Party (5.00)	ざしんぷそんずぴんぼーるぱーてぃ_500
-simpprty_204	The Simpsons Pinball Party (2.04)	ざしんぷそんずぴんぼーるぱーてぃ_204
-simpprty_300	The Simpsons Pinball Party (3.00)	ざしんぷそんずぴんぼーるぱーてぃ_300
-simpprty_400	The Simpsons Pinball Party (4.00)	ざしんぷそんずぴんぼーるぱーてぃ_400
+simpnew	The Simpsons Pinball Party (CPU 5.00, display A5.00, ARM7 sound board)	ざしんぷそんずぴんぼーるぱーてぃ_arm
+simpprtf	The Simpsons Pinball Party (CPU 5.00, display F5.00, France)	ざしんぷそんずぴんぼーるぱーてぃ_500f
+simpprtf_204	The Simpsons Pinball Party (CPU 2.04, display F2.01, France)	ざしんぷそんずぴんぼーるぱーてぃ_204f
+simpprtf_300	The Simpsons Pinball Party (CPU 3.00, display F3.00, France)	ざしんぷそんずぴんぼーるぱーてぃ_300f
+simpprtf_400	The Simpsons Pinball Party (CPU 4.00, display F4.00, France)	ざしんぷそんずぴんぼーるぱーてぃ_400f
+simpprtg	The Simpsons Pinball Party (CPU 5.00, display G5.00, Germany)	ざしんぷそんずぴんぼーるぱーてぃ_500g
+simpprtg_400	The Simpsons Pinball Party (CPU 4.00, display G4.00, Germany)	ざしんぷそんずぴんぼーるぱーてぃ_400g
+simpprti	The Simpsons Pinball Party (CPU 5.00, display I5.00, Italy)	ざしんぷそんずぴんぼーるぱーてぃ_500i
+simpprti_204	The Simpsons Pinball Party (CPU 2.04, display I2.01, Italy)	ざしんぷそんずぴんぼーるぱーてぃ_204i
+simpprti_300	The Simpsons Pinball Party (CPU 3.00, display I3.00, Italy)	ざしんぷそんずぴんぼーるぱーてぃ_300i
+simpprti_400	The Simpsons Pinball Party (CPU 4.00, display I4.00, Italy)	ざしんぷそんずぴんぼーるぱーてぃ_400i
+simpprtl	The Simpsons Pinball Party (CPU 5.00, display L5.00, Spain)	ざしんぷそんずぴんぼーるぱーてぃ_500s
+simpprtl_204	The Simpsons Pinball Party (CPU 2.04, display L2.01, Spain)	ざしんぷそんずぴんぼーるぱーてぃ_204s
+simpprtl_300	The Simpsons Pinball Party (CPU 3.00, display L3.00, Spain)	ざしんぷそんずぴんぼーるぱーてぃ_300s
+simpprtl_400	The Simpsons Pinball Party (CPU 4.00, display L4.00, Spain)	ざしんぷそんずぴんぼーるぱーてぃ_400s
+simpprty	The Simpsons Pinball Party (CPU 5.00, display A5.00)	ざしんぷそんずぴんぼーるぱーてぃ_500
+simpprty_204	The Simpsons Pinball Party (CPU 2.04, display A2.01)	ざしんぷそんずぴんぼーるぱーてぃ_204
+simpprty_300	The Simpsons Pinball Party (CPU 3.00, display A3.00)	ざしんぷそんずぴんぼーるぱーてぃ_300
+simpprty_400	The Simpsons Pinball Party (CPU 4.00, display A4.00)	ざしんぷそんずぴんぼーるぱーてぃ_400
 simpr8210	Pioneer PR-8210 Simulator	ぱいおにあpr8210
 simpsonjr	Simpson Junior (J.J.スコーカーズ海賊版)	しんぷそんじゅにあ
 simpsons	ザ・シンプソンズ (4 Players, 海外版, set 1)	ざしんぷそんず_w4p1
@@ -33999,26 +34030,26 @@ sonson	ソンソン	そんそん1_w
 sonsonj	ソンソン (日本版)	そんそん1
 sonstwar	Star Wars (Sonic, set 1)	すたーうぉーず-ps1
 sonstwr2	Star Wars (Sonic, set 2)	すたーうぉーず-ps2
-sopranof	The Sopranos (5.00 フランス版)	ざそぷらのず_500f
-sopranof_107	The Sopranos (1.07 フランス版)	ざそぷらのず_107f
-sopranof_300	The Sopranos (3.00 フランス版)	ざそぷらのず_300f
-sopranof_400	The Sopranos (4.00 フランス版)	ざそぷらのず_400f
-sopranog	The Sopranos (5.00 ドイツ版)	ざそぷらのず_500g
-sopranog_107	The Sopranos (1.07 ドイツ版)	ざそぷらのず_107g
-sopranog_300	The Sopranos (3.00 ドイツ版)	ざそぷらのず_300g
-sopranog_400	The Sopranos (4.00 ドイツ版)	ざそぷらのず_400g
-sopranoi	The Sopranos (5.00 イタリア版)	ざそぷらのず_500i
-sopranoi_107	The Sopranos (1.07 イタリア版)	ざそぷらのず_107i
-sopranoi_300	The Sopranos (3.00 イタリア版)	ざそぷらのず_300i
-sopranoi_400	The Sopranos (4.00 イタリア版)	ざそぷらのず_400i
-sopranol	The Sopranos (5.00 スペイン版)	ざそぷらのず_500s
-sopranol_107	The Sopranos (1.07 スペイン版)	ざそぷらのず_107s
-sopranol_300	The Sopranos (3.00 スペイン版)	ざそぷらのず_300s
-sopranol_400	The Sopranos (4.00 スペイン版)	ざそぷらのず_400s
-sopranos	The Sopranos (5.00)	ざそぷらのず_500
-sopranos_204	The Sopranos (2.04)	ざそぷらのず_204
-sopranos_300	The Sopranos (3.00)	ざそぷらのず_300
-sopranos_400	The Sopranos (4.00)	ざそぷらのず_400
+sopranof	The Sopranos (CPU 5.00, display F5.00, France)	ざそぷらのず_500f
+sopranof_107	The Sopranos (CPU 1.07, display F1.00, France)	ざそぷらのず_107f
+sopranof_300	The Sopranos (CPU 3.00, display F3.00, France)	ざそぷらのず_300f
+sopranof_400	The Sopranos (CPU 4.00, display F4.00, France)	ざそぷらのず_400f
+sopranog	The Sopranos (CPU 5.00, display G5.00, Germany)	ざそぷらのず_500g
+sopranog_107	The Sopranos (CPU 1.07, display G1.00, Germany)	ざそぷらのず_107g
+sopranog_300	The Sopranos (CPU 3.00, display G3.00, Germany)	ざそぷらのず_300g
+sopranog_400	The Sopranos (CPU 4.00, display G4.00, Germany)	ざそぷらのず_400g
+sopranoi	The Sopranos (CPU 5.00, display I5.00, Italy)	ざそぷらのず_500i
+sopranoi_107	The Sopranos (CPU 1.07, display I1.00, Italy)	ざそぷらのず_107i
+sopranoi_300	The Sopranos (CPU 3.00, display I3.00, Italy)	ざそぷらのず_300i
+sopranoi_400	The Sopranos (CPU 4.00, display I4.00, Italy)	ざそぷらのず_400i
+sopranol	The Sopranos (CPU 5.00, display L5.00, Spain)	ざそぷらのず_500s
+sopranol_107	The Sopranos (CPU 1.07, display L1.00, Spain)	ざそぷらのず_107s
+sopranol_300	The Sopranos (CPU 3.00, display L3.00, Spain)	ざそぷらのず_300s
+sopranol_400	The Sopranos (CPU 4.00, display L4.00, Spain)	ざそぷらのず_400s
+sopranos	The Sopranos (CPU 5.00, display A5.00)	ざそぷらのず_500
+sopranos_204	The Sopranos (CPU 2.04, display A2.00)	ざそぷらのず_204
+sopranos_300	The Sopranos (CPU 3.00, display A3.00)	ざそぷらのず_300
+sopranos_400	The Sopranos (CPU 4.00, display A4.00)	ざそぷらのず_400
 sorbit	Super Orbit	すーぱーおーびっと
 sorcerer	Sorcerer	そーさらー1
 sorcerer2	Sorcerer 2	そーさらー2
@@ -34105,11 +34136,11 @@ spacehaw	Space Hawks	すぺーすほーくす
 spaceint	スペースイントルーダー	すぺーすいんとるーだー
 spaceintj	スペースイントルーダー (日本版)	すぺーすいんとるーだー
 spaceinv	Space Invaders	すぺーすいんべーだーず-p
-spacejam	Space Jam (3.00)	すぺーすじゃむ
-spacejam_200	Space Jam (2.00)	すぺーすじゃむ
-spacejmf	Space Jam (3.00 フランス版)	すぺーすじゃむ_f
-spacejmg	Space Jam (3.00 ドイツ版)	すぺーすじゃむ_g
-spacejmi	Space Jam (3.00 イタリア版)	すぺーすじゃむ_i
+spacejam	Space Jam (CPU 3.00, display A3.00)	すぺーすじゃむ
+spacejam_200	Space Jam (CPU 2.00, display A2.00)	すぺーすじゃむ
+spacejmf	Space Jam (CPU 3.00, display F3.00, France)	すぺーすじゃむ_f
+spacejmg	Space Jam (CPU 3.00, display G3.00, Germany)	すぺーすじゃむ_g
+spacejmi	Space Jam (CPU 3.00, display I3.00, Italy)	すぺーすじゃむ_i
 spacelnc	スペースランチャー	すぺーすらんちゃー
 spacempr	Space Empire (海賊版)	すぺーすえんぱいあ
 spaceod	スペースオデッセイ (version 2)	すぺーすおでっせい_2
@@ -34364,9 +34395,9 @@ sprint4	スプリント4 (set 1)	すぷりんと4_1
 sprint4a	スプリント4 (set 2)	すぷりんと4_2
 sprint8	スプリント8	すぷりんと8
 sprint8a	スプリント8 (play tag & chase)	すぷりんと8
-sprk_090	South Park (0.90)	さうすぱーく_090
-sprk_096	South Park (0.96)	さうすぱーく_096
-sprk_103	South Park (1.03)	さうすぱーく_103
+sprk_090	South Park (CPU 0.90, display A0.90)	さうすぱーく_090
+sprk_096	South Park (CPU 0.96, display A1.01)	さうすぱーく_096
+sprk_103	South Park (CPU 1.03, display A1.01)	さうすぱーく_103
 sprpuzzle	Super Puzzle (Sang Ho Soft)	すーぱーぱずる
 sprtauth	Sports Authority	すぽーつおーそりてぃ
 sprtdart	Sport Darts T.V.	すぽーとだーとてぃーびー
@@ -35171,8 +35202,8 @@ startrgn	スタートリゴン (日本版, STT1 Ver.A)	すたーとりごん
 startrip	Star Trip	すたーとりっぷ
 startrkd	Star Trek (ディフェンダー海賊版)	すたーとれっく
 startrks	Star Trek (ヘッドオン基板)	すたーとれっく-bh
-startrp	Starship Troopers (2.01)	すたーしっぷとぅるーぱーず
-startrp2	Starship Troopers (2.00)	すたーしっぷとぅるーぱーず
+startrp	Starship Troopers (CPU 2.01, display A2.00)	すたーしっぷとぅるーぱーず
+startrp2	Starship Troopers (CPU 2.00, display A2.00)	すたーしっぷとぅるーぱーず
 starw	Star Wars (ギャラクシーウォーズ海賊版, set 1)	すたーうぉーず-b1
 starw1	Star Wars (ギャラクシーウォーズ海賊版, set 2)	すたーうぉーず-b2
 starwarr	Star Warrior	すたーうぉーりあー
@@ -35298,8 +35329,8 @@ striderua	ストライダー飛竜 / Strider (US版, B-Board 89624B-3)	すとら
 strideruc	ストライダー飛竜 / Strider (US版, B-Board 90629B-3, ストリートファイターII改造版)	すとらいだーひりゅう1-b
 strike	Strike	すとらいく
 striker	Striker (Pinball)	すとらいかー
-strikext	Striker Xtreme (1.02)	すとらいかーえくすとりーむ_102
-strikext_100	Striker Xtreme (1.00)	すとらいかーえくすとりーむ_100
+strikext	Striker Xtreme (CPU 1.02, display A1.03)	すとらいかーえくすとりーむ_102
+strikext_100	Striker Xtreme (CPU 1.00, display A1.03)	すとらいかーえくすとりーむ_100
 strik_l4	Strike Master (L-4) (Shuffle)	すとらいくますたー
 striv	Super Triv	すーぱーとりぶ1
 strivf	Super Triv (French questions)	すーぱーとりぶ1
@@ -35307,7 +35338,7 @@ strker	Striker	すとらいかー
 strkfgtr	ストライクファイター (海外版)	すとらいくふぁいたー_w
 strkfgtrj	ストライクファイター (日本版)	すとらいくふぁいたー
 strkforc	Strike Force (rev 1 02/25/91)	すとらいくふぉーす
-strknew	Striker Xtreme (ARM7 Sound Board)	すとらいかーえくすとりーむ_arm7
+strknew	Striker Xtreme (CPU 1.02, display A1.03, ARM7 sound board)	すとらいかーえくすとりーむ_arm7
 strkzn	Strike Zone (Purple Star)	すとらいくぞーん-p
 strkzone	Strike Zone Baseball	すとらいくぞーんべーすぼーる
 strlink	Strong Link (Ukraine, V. 43.48)	すとろんぐりんく
@@ -35324,12 +35355,12 @@ strtdriv	Street Drivin' (プロトタイプ)	すとりーとどらいびん
 strtheat	Street Heat (set 1, newer?)	すとりーとひーと
 strtheata	Street Heat (set 2, older?)	すとりーとひーと
 strvmstr	Super Trivia Master	すーぱーとりびあますたー
-strxt_fr	Striker Xtreme (1.02 フランス版)	すとらいかーえくすとりーむ_102f
-strxt_gr	Striker Xtreme (1.03 ドイツ版)	すとらいかーえくすとりーむ_103g
-strxt_it	Striker Xtreme (1.02 イタリア版)	すとらいかーえくすとりーむ_102i
-strxt_it_101	Striker Xtreme (1.01 イタリア版)	すとらいかーえくすとりーむ_101i
-strxt_sp	Striker Xtreme (1.02 スペイン版)	すとらいかーえくすとりーむ_102s
-strxt_uk	Striker Xtreme (1.01 UK版)	すとらいかーえくすとりーむ_101u
+strxt_fr	Striker Xtreme (CPU 1.02, display F1.03, France)	すとらいかーえくすとりーむ_102f
+strxt_gr	Striker Xtreme (CPU 1.03, display G1.03, Germany)	すとらいかーえくすとりーむ_103g
+strxt_it	Striker Xtreme (CPU 1.02, display I1.03, Italy)	すとらいかーえくすとりーむ_102i
+strxt_it_101	Striker Xtreme (CPU 1.01, display I1.03, Italy)	すとらいかーえくすとりーむ_101i
+strxt_sp	Striker Xtreme (CPU 1.02, display L1.03, Spain)	すとらいかーえくすとりーむ_102s
+strxt_uk	Striker Xtreme (CPU 1.01, display A1.03, UK)	すとらいかーえくすとりーむ_101u
 sttng_g7	Star Trek: The Next Generation (LG-7)	すたーとれっくざねくすとじぇねれーしょん_lg7
 sttng_l1	Star Trek: The Next Generation (LX-1)	すたーとれっくざねくすとじぇねれーしょん_lx1
 sttng_l2	Star Trek: The Next Generation (LX-2)	すたーとれっくざねくすとじぇねれーしょん_lx2
@@ -35669,8 +35700,9 @@ swtpc09o	swtpc S/09 OS9	えすだぶりゅーてぃーぴーしー
 swtpc09u	swtpc S/09 UNIBug + DMAF2	えすだぶりゅーてぃーぴーしー
 swtpc8212	SWTPC 8212 Video Terminal	えすだぶりゅーてぃーぴーしー8212
 swtpcm	SWTPC 6800 Computer System (with MIKBUG)	えすだぶりゅーてぃーぴーしー6800
-swtril41	Star Wars Trilogy (4.01)	すたーうぉーずとりろじー-p401
-swtril43	Star Wars Trilogy (4.03)	すたーうぉーずとりろじー-p403
+swtril30	Star Wars Trilogy (CPU 3.00, display A3.00)	すたーうぉーずとりろじー-
+swtril41	Star Wars Trilogy (CPU 4.01, display A4.00)	すたーうぉーずとりろじー-
+swtril43	Star Wars Trilogy (CPU 4.03, display A4.00)	すたーうぉーずとりろじー-
 swtrilgy	スターウォーズ トリロジーアーケード (輸出版, Revision A)	すたーうぉーずとりろじーあーけーど_a
 swtrilgya	スターウォーズ トリロジーアーケード (輸出版)	すたーうぉーずとりろじーあーけーど
 swtrilgyp	スターウォーズ トリロジーアーケード (ロケーションテスト, 16.09.98)	すたーうぉーずとりろじーあーけーど-l
@@ -35723,7 +35755,7 @@ t2_l8	Terminator 2: Judgment Day (L-8)	たーみねーたー2-pl8
 t2_p2f	Terminator 2: Judgment Day (P-2F) Profanity	たーみねーたー2-pp2f
 t3210	Bitel T3210	ばいてるt3210
 t3in1sa	3 in 1 Sports Arena	すりーいんわんすぽーつありーな
-t3new	Terminator 3: Rise of the Machines (ARM7 Sound Board)	たーみねーたー3_arm
+t3new	Terminator 3: Rise of the Machines (CPU 4.00, display A4.00, ARM7 sound board)	たーみねーたー3_arm
 t4426	Terco 4426 CNC Programming station	てるこ4426
 t4490	Terco 4490 Mill CNC Control	たーこ4490みる
 t7in1ss	7 in 1 Sports Stadium	せぶんいんわんすぽーつすたじあむ
@@ -36032,20 +36064,20 @@ term2la2	ターミネーター2 (rev LA2 12/09/91)	たーみねーたー2_2
 term2la3	ターミネーター2 (rev LA3 03/27/92)	たーみねーたー2_3
 term2lg1	ターミネーター2 (ドイツ版, rev LG1 11/04/91)	たーみねーたー2_d
 term2pa2	ターミネーター2 (プロトタイプ, rev PA2 10/18/91)	たーみねーたー2-p
-term3	Terminator 3: Rise of the Machines (4.00)	たーみねーたー3_400
-term3f	Terminator 3: Rise of the Machines (4.00 フランス版)	たーみねーたー3_400f
-term3f_205	Terminator 3: Rise of the Machines (2.05 フランス版)	たーみねーたー3_205f
-term3f_301	Terminator 3: Rise of the Machines (3.01 フランス版)	たーみねーたー3_301f
-term3g	Terminator 3: Rise of the Machines (4.00 ドイツ版)	たーみねーたー3_400g
-term3g_301	Terminator 3: Rise of the Machines (3.01 ドイツ版)	たーみねーたー3_301g
-term3i	Terminator 3: Rise of the Machines (4.00 イタリア版)	たーみねーたー3_400i
-term3i_205	Terminator 3: Rise of the Machines (2.05 イタリア版)	たーみねーたー3_205i
-term3i_301	Terminator 3: Rise of the Machines (3.01 イタリア版)	たーみねーたー3_301i
-term3l	Terminator 3: Rise of the Machines (4.00 スペイン版)	たーみねーたー3_400s
-term3l_205	Terminator 3: Rise of the Machines (2.05 スペイン版)	たーみねーたー3_205s
-term3l_301	Terminator 3: Rise of the Machines (3.01 スペイン版)	たーみねーたー3_301s
-term3_205	Terminator 3: Rise of the Machines (2.05)	たーみねーたー3_205
-term3_301	Terminator 3: Rise of the Machines (3.01)	たーみねーたー3_301
+term3	Terminator 3: Rise of the Machines (CPU 4.00, display A4.00)	たーみねーたー3_400
+term3f	Terminator 3: Rise of the Machines (CPU 4.00, display F4.00, France)	たーみねーたー3_400f
+term3f_205	Terminator 3: Rise of the Machines (CPU 2.05, display F2.01, France)	たーみねーたー3_205f
+term3f_301	Terminator 3: Rise of the Machines (CPU 3.01, display F3.00, France)	たーみねーたー3_301f
+term3g	Terminator 3: Rise of the Machines (CPU 4.00, display G4.00, Germany)	たーみねーたー3_400g
+term3g_301	Terminator 3: Rise of the Machines (CPU 3.01, display G3.00, Germany)	たーみねーたー3_301g
+term3i	Terminator 3: Rise of the Machines (CPU 4.00, display I4.00, Italy)	たーみねーたー3_400i
+term3i_205	Terminator 3: Rise of the Machines (CPU 2.05, display I2.01, Italy)	たーみねーたー3_205i
+term3i_301	Terminator 3: Rise of the Machines (CPU 3.01, display I3.00, Italy)	たーみねーたー3_301i
+term3l	Terminator 3: Rise of the Machines (CPU 4.00, display L4.00, Spain)	たーみねーたー3_400s
+term3l_205	Terminator 3: Rise of the Machines (CPU 2.05, display L2.01, Spain)	たーみねーたー3_205s
+term3l_301	Terminator 3: Rise of the Machines (CPU 3.01, display L3.00, Spain)	たーみねーたー3_301s
+term3_205	Terminator 3: Rise of the Machines (CPU 2.05, display A2.01)	たーみねーたー3_205
+term3_301	Terminator 3: Rise of the Machines (CPU 3.01, display A3.00)	たーみねーたー3_301
 terracre	テラクレスタ (YM3526 set 1)	てらくれすた_1
 terracrea	テラクレスタ (YM3526 set 3)	てらくれすた_3
 terracren	テラクレスタ (YM2203)	てらくれすた
@@ -36136,9 +36168,10 @@ theend	ジ・エンド	じえんど
 theends	ジ・エンド (Stern Electronics)	じえんど_s
 theendss	ジ・エンド (SegaSA / Sonic)	じえんど-b
 thegames	The Games	ざげーむず
-theglad	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V101) (ARM label V107, ROM 06/06/03 SHEN JIAN V107)	とうげんきょう_107
+theglad	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V101) (ARM label V107, ROM 06/06/03 SHEN JIAN V107)	とうげんきょう_
 theglad100	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V100, ROM 01/16/03 SHEN JIAN)	とうげんきょう_100
-theglad101	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V101, ROM 03/13/03 SHEN JIAN)	とうげんきょう_101
+theglad101	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V101, ROM 03/13/03 SHEN JIAN)	とうげんきょう_
+theglad104	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V104, ROM 04/02/03 SHEN JIAN V104)	とうげんきょう_
 thegladpcb	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V101, ROM 03/13/03 SHEN JIAN) (日本版, JAMMA PCB)	とうげんきょう_
 thegladpcba	闘幻狂 / The Gladiator - Road of the Sword / 神剑伏魔录 / 神劍風雲 (M68k label V100) (ARM label V100, ROM 02/25/03 SHEN JIAN) (日本版, JAMMA PCB)	とうげんきょう_
 theglob	The Glob	ざぐろぶ
@@ -36369,7 +36402,7 @@ tisuba	Treasure Island (Subsino, set 2)	とれじゃーあいらんど_s
 tisubb	Treasure Island (American Alpha, v3.0N)	とれじゃーあいらんど_s
 titan	Titan (set 1)	たいたん_1
 titan1	Titan (set 2)	たいたん_2
-titanic	Titanic (Coin dropper)	たいたにっく
+titanic	Titanic (coin dropper, CPU 1.01, display A1.01)	たいたにっく
 titanpac	Titan (パックマンハック)	たいたん-p
 tithermos	Electronic Digital Thermostat	えれくとろにっくでじたるさーもすたっと
 titlef	タイトルファイト (海外版)	たいとるふぁいと_w
@@ -36908,7 +36941,7 @@ tsamuraih	侍日本一 (海賊版, harder)	さむらいにほんいち-b
 tsarevna	Tsarevna (v1.29)	つぁれぶな
 tsarevnaa	Tsarevna (v1.31)	つぁれぶな
 tsclass	Trap Shoot Classic (v1.0 21-mar-1997)	とらっぷしゅーとくらしっく
-tsconf	ZX Evolution TS-Configuration	ぜっとえっくすえぼりゅーしょん
+tsconf	ZX Evolution: TS-Configuration	ぜっとえっくすえぼりゅーしょん
 tsddragon	Super Double Dragon (Tiger)	すーぱーだぶるどらごん
 tsf2010	Street Fighter 2010 - The Final Fight (Tiger)	すとりーとふぁいたー2010
 tsfight2	ストリートファイターII (Tiger)	すとりーとふぁいたー2-h
@@ -37105,9 +37138,9 @@ twotigerc	Two Tigers (トロン基板)	つーたいがーず
 twrshaft	タワー＆シャフト	たわーあんどしゃふと
 twsoc96	テクモワールドサッカー'96	てくもわーるどさっかー96
 twsoc98	テクモワールドカップ'98 / Tecmo World Soccer '98 (JUET 980410 V1.000)	てくもわーるどかっぷ98
-twst_300	Twister (3.00)	ついすたー_300
-twst_404	Twister (4.04)	ついすたー_404
-twst_405	Twister (4.05)	ついすたー_405
+twst_300	Twister (CPU 3.00, display A3.01)	ついすたー_300
+twst_404	Twister (CPU 4.04, display A4.00)	ついすたー_404
+twst_405	Twister (CPU 4.05, display A4.00)	ついすたー_405
 twworld	Wayne's World (Tiger)	うぇいんずわーるど
 tx0_64kw	TX-0 original demonstrator (64 kWords of RAM)	てぃーえっくすぜろおりじなる
 tx0_8kw	TX-0 upgraded system (8 kWords of RAM, new order code)	てぃーえっくすぜろあっぷぐれーど
@@ -37992,8 +38025,8 @@ viprp1s	バイパーフェイズ1 (New Version, スイス版)	ばいぱーふぇ
 viprp1t	バイパーフェイズ1 (New Version, ドイツ版)	ばいぱーふぇいず1_g
 viprp1u	バイパーフェイズ1 (New Version, US版 set 1)	ばいぱーふぇいず1_u1
 viprp1ua	バイパーフェイズ1 (New Version, US版 set 2)	ばいぱーふぇいず1_u2
-viprsega	Viper Night Drivin' (2.01)	ばいぱーないとどらいびん
-viprsega_102	Viper Night Drivin' (1.02)	ばいぱーないとどらいびん
+viprsega	Viper Night Drivin' (CPU 2.01, display A2.01)	ばいぱーないとどらいびん
+viprsega_102	Viper Night Drivin' (CPU 1.02, display A1.00)	ばいぱーないとどらいびん
 virnba	バーチャNBA (US版)	ばーちゃえぬびーえー_us
 virnbao	バーチャNBA	ばーちゃえぬびーえー
 virnbap	バーチャNBA (プロトタイプ)	ばーちゃえぬびーえー-p
@@ -38206,7 +38239,7 @@ vz2000	VZ 2000 (Oceania)	ぶいぜっと2000
 vz200de	VZ-200 (Germany & Netherlands)	ぶいぜっと200_g
 vz300	VZ-300 (Oceania)	ぶいぜっと300
 w30	ローランド ミュージックワークステーションW-30	ろーらんどみゅーじっくわーくすてーしょんw30
-wackadoo	Wack-A-Doodle-Doo (Redemption)	わっかどぅーるどぅー
+wackadoo	Wack-A-Doodle-Doo (redemption, CPU 1.00, display A1.01)	わっかどぅーるどぅー
 wacko	Wacko	わっこー
 wackygtr	ワニワニパニック / Wacky Gator (US版)	わにわにぱにっく_u
 wafricau	Wild Africa (AHG1535, US)	わいるどあふりか
@@ -38780,6 +38813,7 @@ wwfwfestu1	WWFレッスルフェスト (US版)	だぶりゅーだぶりゅーえ
 wwfwfestub	WWFレッスルフェスト (US版, 海賊版)	だぶりゅーだぶりゅーえふれっするふぇすと-b
 wwjgtin	わい・ワイジョッキー ゲート・イン！	わいわいじょっきーげーといん
 wwmarine	わくわくまりん -うみのぼうけん-	わくわくまりん
+wwmspot	ウィナーズホイール マジカルスポット	うぃなーずほいーるまじかるすぽっと
 ww_l2	White Water (L-2)	ほわいとうぉーたー_l2
 ww_l3	White Water (L-3)	ほわいとうぉーたー_l3
 ww_l4	White Water (L-4)	ほわいとうぉーたー_l4
@@ -38857,11 +38891,11 @@ xexexa	ゼクセクス (ver AAA)	ぜくせくす_a
 xexexj	ゼクセクス (ver JAA)	ぜくせくす
 xeye	ワンダーメガ / X'eye (US版, NTSC)	わんだーめが1_us
 xfiles	The X-Files	じえっくすふぁいるず
-xfiles2	X-Files (2.04)	えっくすふぁいる
-xfiles20	X-Files (2.00)	えっくすふぁいる
+xfiles2	X-Files (CPU 2.04, display A2.01)	えっくすふぁいる
+xfiles20	X-Files (CPU 2.00, display A2.00)	えっくすふぁいる
 xfilesk	The X-Files (Censored, 韓国版)	じえっくすふぁいるず_k
-xfilesp	X-Files (3.03)	えっくすふぁいる
-xfilespf	X-Files (3.03 France)	えっくすふぁいる
+xfilesp	X-Files (CPU 3.03, display A3.00)	えっくすふぁいる
+xfilespf	X-Files (CPU 3.03, display F3.00, France)	えっくすふぁいる
 xforce	X Force	えっくすふぉーす
 xiistag	XII STAG ＜トゥエルブスタッグ＞ (V2.01J 2002/6/26 22:27)	とぅえるぶすたっぐ
 xing48	Xing Wireless Interactive TV Game 'Wi TV Zone' 48-in-1 (Europe, PAL)	しんわいやれすいんたらくてぃぶてぃーびーげーむ
@@ -38891,6 +38925,7 @@ xmen6p	X-MEN (6 Players ver ECB)	えっくすめん_
 xmen6pu	X-MEN (6 Players ver UCB)	えっくすめん_
 xmena	X-MEN (4 Players ver AEA)	えっくすめん_
 xmenaa	X-MEN (4 Players ver ADA)	えっくすめん_
+xmenabl	X-MEN (4 Players ver AEA, 海賊版)	えっくすめん-b
 xmenj	X-MEN (4 Players ver JBA)	えっくすめん
 xmenja	X-MEN (4 Players ver JEA)	えっくすめん
 xmenu	X-MEN (4 Players ver UBB)	えっくすめん_
