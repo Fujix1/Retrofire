@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '268';
+  BUILDNO = '269';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -215,7 +215,7 @@ var
   // ini設定
   ListFont      : TFont;   // リストのフォント
   HistoryFont   : TFont;   // ヒストリーのフォント
-  ListColor     : TColor;  // リスト背景色
+  //ListColor     : TColor;  // リスト背景色
   KeepAspect    : boolean; // ショットのアスペクト比保持
   SelZip        : String;  // 選択中のzip名
   SelDriver     : String;  // 選択中のドライバ名
@@ -1458,7 +1458,7 @@ begin
 
   ListFont      := Form1.ListView1.Font;
   HistoryFont   := Form1.Memo1.Font;
-  ListColor     := clWindow;
+  //ListColor     := clWindow;
   KeepAspect    := True;  // アスペクト比保持
   UseJoyStick   := True;
   UsePOV        := False;
@@ -1855,10 +1855,11 @@ begin
 
 
   // リスト背景色
-  if ListColor<>clWindow then
+  {if ListColor<>clWindow then
   begin
     sltIni.Add( 'list_color '+InttoStr(ListColor));
   end;
+  }
 
   // ヒストリーフォント
   St:='"'+InttoStr(HistoryFont.Charset)+','+
@@ -2548,7 +2549,7 @@ begin
     end
     else
     // リストフォント
-    if AnsiStartsStr( 'list_color ', St ) then
+    {if AnsiStartsStr( 'list_color ', St ) then
     begin
       St:=Copy(St,pos(' ',St)+1,Length(St));
       ListColor:=StrtoInt(St);
@@ -2556,6 +2557,7 @@ begin
       Form1.ListView2.Color:=ListColor;
     end
     else
+    }
     // リストフォント
     if AnsiStartsStr( 'list_font ', St ) then
     begin

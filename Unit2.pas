@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, StrUtils, Variants, Classes, Graphics, Controls,
-  Forms, Dialogs, StdCtrls, Common, ExtCtrls;
+  Forms, Dialogs, StdCtrls, Common, ExtCtrls, RegularExpressions ;
 
 type
   TForm2 = class(TForm)
@@ -319,6 +319,8 @@ var
   version: string;
   p1,p2: integer;
 
+  Match: TMatch;
+  RegExp: TRegEx;
 
   function AscSort(Item1, Item2: Pointer): Integer;
   begin
@@ -441,6 +443,9 @@ begin
 
   allcatalog := TStringList.Create;
 
+
+  RegExp := TRegEx.Create('(\(.*\))$');
+
   try
 
     ReadLn(F1, St);
@@ -509,6 +514,13 @@ begin
             ReadLn(F1, St);
           end;
 
+          // ì˙ñ{åÍñºÇ…äáå à⁄êA
+          if NewSoftware.alt <>'' then
+          begin
+            Match := RegExp.Match(NewSoftware.desc);
+            if Match.Value<>'' then
+              NewSoftware.alt:=NewSoftware.alt+' '+Match.Value;
+          end;
 
           softlist.Add(NewSoftware);
           ReadLn(F1, St);

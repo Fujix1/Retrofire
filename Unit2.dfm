@@ -58,7 +58,6 @@ object Form2: TForm2
     Enabled = False
     TabOrder = 0
     OnClick = btnOKClick
-    ExplicitTop = 150
   end
   object btnCancel: TButton
     Left = 608
@@ -70,7 +69,6 @@ object Form2: TForm2
     Caption = #12461#12515#12531#12475#12523
     ModalResult = 2
     TabOrder = 1
-    ExplicitTop = 150
   end
   object GroupBox1: TGroupBox
     Left = 21
@@ -113,13 +111,15 @@ object Form2: TForm2
       Top = 80
       Width = 369
       Height = 17
-      Caption = #12477#12501#12488#12454#12455#12450#12522#12473#12488#12398#24773#22577#12418#21462#24471#12377#12427#65288#12486#12473#12488#29256#65289
+      Caption = #12477#12501#12488#12454#12455#12450#12522#12473#12488#12398#24773#22577#12418#21462#24471#12377#12427
+      Checked = True
       Font.Charset = SHIFTJIS_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
       Font.Name = #12513#12452#12522#12458
       Font.Style = []
       ParentFont = False
+      State = cbChecked
       TabOrder = 2
     end
   end

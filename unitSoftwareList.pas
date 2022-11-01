@@ -780,7 +780,11 @@ begin
   i:=Item.Index;
 
   if lang='ja' then
-    Item.Caption := PSoftware(SubList[i]).alt
+  begin
+
+    Item.Caption := PSoftware(SubList[i]).alt;
+
+  end
   else
     Item.Caption := PSoftware(SubList[i]).desc;
 

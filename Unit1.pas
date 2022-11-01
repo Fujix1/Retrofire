@@ -16,6 +16,8 @@ uses
 const
   WM_SHOWED = WM_USER + 1;
 
+
+
 type
   TForm1 = class(TForm)
 
@@ -252,6 +254,7 @@ type
     actVHideMESS: TAction;
 
 
+
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
       Selected: Boolean);
     procedure ListView1ColumnClick(Sender: TObject; Column: TListColumn);
@@ -447,6 +450,7 @@ type
     procedure actVSoftwarelistExecute(Sender: TObject);
     procedure actVHideMESSUpdate(Sender: TObject);
     procedure actVHideMESSExecute(Sender: TObject);
+    procedure memCPUClick(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -2893,7 +2897,7 @@ end;
 
 procedure TForm1.actListColorExecute(Sender: TObject);
 begin
-
+  {
   ColorDialog1.Color:=ListColor;
 
   if ColorDialog1.Execute then
@@ -2902,6 +2906,7 @@ begin
     ListView1.Color:=ListColor;
     ListView2.Color:=ListColor;
   end;
+   }
 
 end;
 
@@ -5364,6 +5369,15 @@ begin
 end;
 
 
+procedure TForm1.memCPUClick(Sender: TObject);
+var hogehoge: integer;
+begin
+  //memCPU.Lines.Clear;
+  //memCPU.Lines.Add(inttostr(GetDpiForWindow(Form1.Handle))+' dpi');
+
+
+end;
+
 procedure TForm1.SpeedButton3Click(Sender: TObject);
 begin
 
@@ -5371,7 +5385,8 @@ begin
   begin
     InfoPanel:=False;
     Bevel5.Visible:=False;
-    Panel9.Height:=25;
+    //Panel9.Height:=25;
+    Panel9.Height:=trunc(edtZipName.Height*1.5);
     SpeedButton3.Glyph:=nil;
     ImageList2.GetBitmap(32,SpeedButton3.Glyph);
     Memo1Change(Nil);
@@ -6245,4 +6260,6 @@ end;
 
 end.
 
-
+// Workaround for Windows 22H2 crash
+initialization
+  FSetExceptMask(femALLEXCEPT);
