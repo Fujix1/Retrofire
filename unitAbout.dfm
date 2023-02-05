@@ -5,7 +5,7 @@ object Form5: TForm5
   BorderStyle = bsDialog
   Caption = #12371#12398#12477#12501#12488#12395#12388#12356#12390
   ClientHeight = 389
-  ClientWidth = 660
+  ClientWidth = 400
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,7 +25,7 @@ object Form5: TForm5
     Top = 299
     Width = 95
     Height = 15
-    Caption = '2004-2022 '#169' Fujix'
+    Caption = '2004-2023 '#169' Fujix'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack

@@ -252,6 +252,7 @@ type
     actVSoftwarelist: TAction;
     N15: TMenuItem;
     actVHideMESS: TAction;
+    actCopyZipName: TAction;
 
 
 
@@ -451,6 +452,9 @@ type
     procedure actVHideMESSUpdate(Sender: TObject);
     procedure actVHideMESSExecute(Sender: TObject);
     procedure memCPUClick(Sender: TObject);
+    procedure actCopyZipNameExecute(Sender: TObject);
+    procedure ListView1Enter(Sender: TObject);
+    procedure ListView2Enter(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -2734,6 +2738,7 @@ begin
   Memo1Change(Nil);
 end;
 
+
 //------------------------------------------------------------------------------
 // ポップアップ時のプロファイル追加
 procedure TForm1.PopupActionBar1Popup(Sender: TObject);
@@ -3137,6 +3142,18 @@ end;
 procedure TForm1.actBranchExecute(Sender: TObject);
 begin
   // ダミー
+end;
+
+procedure TForm1.actCopyZipNameExecute(Sender: TObject);
+begin
+
+  if SelZip<>'' then
+  begin
+    ClipBrd.Clipboard.AsText := SelZip;
+  end;
+
+  //
+
 end;
 
 procedure TForm1.actDelAllCfgExecute(Sender: TObject);
@@ -5289,10 +5306,16 @@ begin
 end;
 
 
+procedure TForm1.ListView1Enter(Sender: TObject);
+begin
+  actCopyZipName.Enabled:=True;
+end;
+
 procedure TForm1.ListView1Exit(Sender: TObject);
 begin
 
   actDelAllCfg.Enabled:=False;
+  actCopyZipName.Enabled:=False;
 
 end;
 
@@ -5344,10 +5367,16 @@ begin
 
 end;
 
+procedure TForm1.ListView2Enter(Sender: TObject);
+begin
+  actCopyZipName.Enabled:=True;
+end;
+
 procedure TForm1.ListView2Exit(Sender: TObject);
 begin
 
   actDelAllCfg.Enabled:=False;
+  actCopyZipName.Enabled:=False;
 
 end;
 
@@ -5370,12 +5399,9 @@ end;
 
 
 procedure TForm1.memCPUClick(Sender: TObject);
-var hogehoge: integer;
 begin
   //memCPU.Lines.Clear;
   //memCPU.Lines.Add(inttostr(GetDpiForWindow(Form1.Handle))+' dpi');
-
-
 end;
 
 procedure TForm1.SpeedButton3Click(Sender: TObject);
@@ -6260,6 +6286,3 @@ end;
 
 end.
 
-// Workaround for Windows 22H2 crash
-initialization
-  FSetExceptMask(femALLEXCEPT);

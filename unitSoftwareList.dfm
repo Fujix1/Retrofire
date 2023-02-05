@@ -117,6 +117,7 @@ object frmSoftwareList: TfrmSoftwareList
       RowSelect = True
       ParentDoubleBuffered = False
       ParentFont = False
+      PopupMenu = PopupMenu1
       TabOrder = 0
       ViewStyle = vsReport
       OnAdvancedCustomDrawItem = ListView1AdvancedCustomDrawItem
@@ -171,5 +172,22 @@ object frmSoftwareList: TfrmSoftwareList
     OnTimer = Timer1Timer
     Left = 392
     Top = 81
+  end
+  object ActionList1: TActionList
+    Left = 440
+    Top = 81
+    object actCopyZipName: TAction
+      Caption = 'ZIP'#21517#12434#12467#12500#12540#12377#12427
+      ShortCut = 16451
+      OnExecute = actCopyZipNameExecute
+      OnUpdate = actCopyZipNameUpdate
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 480
+    Top = 81
+    object ZIP1: TMenuItem
+      Action = actCopyZipName
+    end
   end
 end

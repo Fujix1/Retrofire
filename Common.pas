@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '269';
+  BUILDNO = '270';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -370,6 +370,9 @@ var
 
   // ギャンブルドライバ保存用
   GamblingDrivers: TStringList;
+
+  // 検索履歴
+  SearchHistory: TStringList;
 
 
 
@@ -1530,6 +1533,8 @@ begin
   // MESSDriverリスト
   MESSDrivers:=TStringList.Create;
 
+  // 検索履歴
+  SearchHistory := TStringList.Create;
 
 
   // 起動関数の種類
@@ -1758,7 +1763,6 @@ begin
 	begin
 		sltIni.Add('search_ver '+ Form1.cmbVersion.Text);
 	end;
-
 
   // ソートヒストリー
   St:=InttoStr(SortHistory[0]);

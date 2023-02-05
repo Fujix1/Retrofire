@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, System.Generics.Collections,
-  Vcl.WinXCtrls, Vcl.ComCtrls, Generics.Collections, Common, Diagnostics,CommCtrl, DWMAPI;
+  Vcl.WinXCtrls, Vcl.ComCtrls, Generics.Collections, Common, Diagnostics,CommCtrl, DWMAPI,
+  System.Actions, Vcl.ActnList, Vcl.Menus, clipbrd;
 
 type
   TfrmSoftwareList = class(TForm)
@@ -19,6 +20,10 @@ type
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     SearchBox1: TSearchBox;
+    ActionList1: TActionList;
+    actCopyZipName: TAction;
+    PopupMenu1: TPopupMenu;
+    ZIP1: TMenuItem;
 
     procedure chkAlwaysOnTopClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -45,6 +50,8 @@ type
     procedure SearchBox1Exit(Sender: TObject);
     procedure SearchBox1KeyPress(Sender: TObject; var Key: Char);
     procedure FormDestroy(Sender: TObject);
+    procedure actCopyZipNameUpdate(Sender: TObject);
+    procedure actCopyZipNameExecute(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -57,7 +64,6 @@ type
 
       currentSoftMasterIndex: integer;
       currentSoftlistName: string;
-
       currentSoftlistIndex: integer; //
 
       lang: string;
@@ -1005,6 +1011,16 @@ procedure TfrmSoftwareList.Timer1Timer(Sender: TObject);
 begin
   Timer1.Enabled := false;
   UpdateListView;
+end;
+
+procedure TfrmSoftwareList.actCopyZipNameExecute(Sender: TObject);
+begin
+  ClipBrd.Clipboard.AsText := selectedSoftName;
+end;
+
+procedure TfrmSoftwareList.actCopyZipNameUpdate(Sender: TObject);
+begin
+  self.Enabled := (selectedSoftName<>'');
 end;
 
 procedure TfrmSoftwareList.chkAlwaysOnTopClick(Sender: TObject);
