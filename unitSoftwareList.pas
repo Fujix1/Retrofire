@@ -1020,7 +1020,7 @@ end;
 
 procedure TfrmSoftwareList.actCopyZipNameUpdate(Sender: TObject);
 begin
-  self.Enabled := (selectedSoftName<>'');
+  actCopyZipName.Enabled := (selectedSoftName<>'');
 end;
 
 procedure TfrmSoftwareList.chkAlwaysOnTopClick(Sender: TObject);
