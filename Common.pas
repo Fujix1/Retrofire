@@ -751,6 +751,7 @@ var
 
   //
   m32List: TStringList;
+  st: String;
 
 begin
 
@@ -776,10 +777,12 @@ begin
       begin
         if (PRecordset(TLMaster[i]).DescE<>PRecordset(TLMaster[i]).Kana) then
         begin
+          st :=  PRecordset(TLMaster[i]).Kana;
+          st := AnsiReplaceStr(st, '-', '~');
 
           m32List.Add( PRecordset(TLMaster[i]).ZipName + #9 +
                        PRecordset(TLMaster[i]).DescJ + #9 +
-                       PRecordset(TLMaster[i]).Kana );
+                       st );
         end;
       end;
 
