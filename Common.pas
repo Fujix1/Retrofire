@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '270';
+  BUILDNO = '271';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;

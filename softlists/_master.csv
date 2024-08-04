@@ -66,6 +66,7 @@ a800xl	a800_flop	a800_cass	a800	xegs
 a800xlp	a800_flop	a800_cass	a800	xegs
 aa3000	archimedes	archimedes_hdd	archimedes_rom
 aa3010	archimedes	archimedes_hdd	archimedes_rom
+aa3010_de	archimedes	archimedes_hdd	archimedes_rom
 aa3020	archimedes	archimedes_hdd	archimedes_rom
 aa305	archimedes	archimedes_hdd	archimedes_rom
 aa310	archimedes	archimedes_hdd	archimedes_rom
@@ -105,7 +106,7 @@ acrnsys3_6809	acrnsys_flop
 acrnsys4	acrnsys_flop	acrnsys_rom
 acrnsys5	acrnsys_flop	acrnsys_rom
 acw443	bbc_cass	bbc_rom	bbc_flop_32016	bbcb_flop	bbcb_flop_orig	bbc_hdd	bbc_flop_32016
-adam	coleco	adam_cart	adam_cass	adam_flop
+adam	coleco	coleco_homebrew	adam_cart	adam_cass	adam_flop
 advision	advision
 advsnha	arcadia
 aes	neogeo
@@ -195,6 +196,7 @@ apxenls3	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 apxenp2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 apxlsam	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 aquarius	aquarius_cart	aquarius_cass
+aquarius_ar	aquarius_cart	aquarius_cass
 aquarius2	aquarius_cart	aquarius_cass
 aquariusp	aquarius_cart	aquarius_cass
 ar140	archimedes	archimedes_hdd	archimedes_rom
@@ -242,7 +244,7 @@ ax230	msx1_cass	msx1_cart
 ax350	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 ax350ii	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 ax350iif	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
-ax370	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+ax370	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 ax500	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 b128	cbm2_cart	cbm2_flop
 b128hp	cbm2_cart	cbm2_flop
@@ -277,7 +279,7 @@ beena	sega_beena_cart
 bestzx	spectrum_cass
 bi025c	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 bigboard	xerox820
-bit90	coleco
+bit90	coleco	coleco_homebrew
 bk0010	bk0010
 bk001001	bk0010
 bk0010fd	bk0010
@@ -347,6 +349,7 @@ canonv20s	msx1_cass	msx1_cart
 canonv25	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 canonv30f	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 canonv8	msx1_cass	msx1_cart
+carbeena	carbeena_cart
 carmarty	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
 casiorom	casio_rompack
 casloopy	casloopy
@@ -409,10 +412,12 @@ cgenienz	cgenie_cass
 ch48633c	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ch491e	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ch4slez1	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+chalgear	challenge_gear_cart
 channelf	channelf
 channlf2	channelf
 chesskng	chessking_cart
 chessmstdm	chessmstdm
+chloe	spectrum_cass	timex_cass
 chn333sc	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 cip01	spectrum_cass
 cip03	spectrum_cass
@@ -431,8 +436,8 @@ coco3	coco_cart	coco_flop
 coco3h	coco_cart	coco_flop
 coco3p	coco_cart	coco_flop
 cocoh	coco_cart	coco_flop	dragon_cart
-coleco	coleco
-colecop	coleco
+coleco	coleco	coleco_homebrew
+colecop	coleco	coleco_homebrew
 compani1	spectrum_cass
 compc1	ibm5150
 compc10	ibm5150
@@ -488,11 +493,14 @@ crisscrs	guab
 crvisio2	crvision
 crvisioj	crvision
 crvision	crvision
+cs113	mpf1_rom
 cs8230	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 csl286	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ct386sx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ct486	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ctcc386mx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+ctvboy	ctvboy
+cubieboard4	cubieboard4
 cx3000tc	cx3000tc
 cx5f	msx1_cass	msx1_cart
 cx5f1	msx1_cass	msx1_cart
@@ -502,7 +510,8 @@ cx5mu	msx1_cass	msx1_cart
 cx7128	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx_yamaha_minicart
 cx7m128	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx_yamaha_minicart
 cxsxd	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-czz50	coleco
+cz1	cz1_cart
+czz50	coleco	coleco_homebrew
 d64plus	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
 d6800	chip8_quik
 dai	dai_cass
@@ -514,7 +523,7 @@ dcdev	dc
 dceu	dc
 dcjp	dc
 dctream	dc
-ddrfammt	ekara_japan_p
+ddrfammt	ekara_cart
 ddrsn2a	kpython2
 ddrsn2aa	kpython2
 ddrsn2j	kpython2
@@ -544,9 +553,10 @@ didj	leapfrog_didj_cart
 digiblst	digiblast_cart
 digilog320	digilog320
 dim68k	dim68k
-dina	coleco
+dina	coleco	coleco_homebrew
 discmate	bbcm_cart	bbc_rom	bbc_hdd
 discmon	bbcm_cart	bbc_rom	bbc_hdd
+dks7000c	easy_karaoke_cart
 dmv	dmv
 dn3000	apollo_ctape
 dn3000_19i	apollo_ctape
@@ -618,13 +628,13 @@ ehx20	hx20_rom	epson_cpm
 ehx20e	hx20_rom	epson_cpm
 einst256	einstein	einstein_rom
 einstein	einstein	einstein_rom
-ekara	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekaraa	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekarag	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekaraj	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekaramix	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekaraphs	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
-ekaras	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
+ekara	ekara_cart
+ekaraa	ekara_cart
+ekarag	ekara_cart
+ekaraj	ekara_cart
+ekaramix	ekara_cart
+ekaraphs	ekara_cart
+ekaras	ekara_cart
 ekusera	arcadia
 elanht286	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 electron	electron_cass	bbc_cass	electron_cart	electron_flop	electron_rom
@@ -639,7 +649,7 @@ eltp9	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 elwro800	spectrum_cass
 ep128	ep64_cart	ep64_cass	ep64_flop
 ep64	ep64_cart	ep64_cass	ep64_flop
-epitch	ekara_us	ekara_pal	ekara_japan	ekara_japan_g	ekara_japan_p	ekara_japan_s	ekara_japan_m	ekara_japan_d	ekara_japan_en	ekara_japan_sp	ekara_japan_web	ekara_japan_a	ekara_japan_gk	ekara_japan_bh	ekara_japan_ac
+epitch	ekara_cart
 eppc	ibm5150
 epsax	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 epsax2e	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -660,11 +670,11 @@ expert10	msx1_cass	msx1_cart
 expert11	msx1_cass	msx1_cart
 expert13	msx1_cass	msx1_cart
 expert20	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
-expert3i	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-expert3t	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-expertac	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+expert3i	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+expert3t	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+expertac	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
 expertdp	msx1_cass	msx1_cart	msx1_flop
-expertdx	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+expertdx	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
 expertpl	msx1_cass	msx1_cart
 f1392	vc4000
 f4dxluc4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -688,13 +698,18 @@ feagv5	fidel_scc
 feagv7	fidel_scc
 feagv7a	fidel_scc
 feagv7b	fidel_scc
+feagv7c	fidel_scc
 feagv9	fidel_scc
+feagv9a	fidel_scc
+feagv9b	fidel_scc
+feagv9c	fidel_scc
 feas	fidel_scc
 feasbu	fidel_scc
 feasbua	fidel_scc
 feasgla	fidel_scc
 feasglaa	fidel_scc
 feasglab	fidel_scc
+feasx	fidel_scc
 feleg	fidel_scc
 felega	fidel_scc
 felega1	fidel_scc
@@ -729,10 +744,17 @@ fmtownsux	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
 fmtownsv03	fmtowns_flop_orig	fmtowns_flop_cracked	fmtowns_flop_misc	fmtowns_cd
 fmx	msx1_cass	msx1_cart
 fnvision	crvision
+fp1000	fp1100_cass
+fp1100	fp1100_cass
 fpc500	msx1_cass	msx1_cart
 fpc900	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 fpres	fidel_scc
+fpresa	fidel_scc
+fpresb	fidel_scc
 fpresbu	fidel_scc
+fpresc	fidel_scc
+fpresd	fidel_scc
+fprese	fidel_scc
 fpresgla	fidel_scc
 fraking	ibm5150
 frx386c	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -750,13 +772,13 @@ fsa1	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 fsa1a	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 fsa1f	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 fsa1fm	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
-fsa1fx	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-fsa1gt	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msxr_flop	msx2p_flop	msx2_flop	msx1_flop
+fsa1fx	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+fsa1gt	msxr_cart	msx2p_cart	msx2_cart	msx1_cart	msxr_flop	msx2p_flop	msx2_flop	msx1_flop
 fsa1mk2	msx2_cass	msx1_cass	msx2_cart	msx1_cart
-fsa1st	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msxr_flop	msx2p_flop	msx2_flop	msx1_flop
-fsa1wsx	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-fsa1wx	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-fsa1wxa	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+fsa1st	msxr_cart	msx2p_cart	msx2_cart	msx1_cart	msxr_flop	msx2p_flop	msx2_flop	msx1_flop
+fsa1wsx	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+fsa1wx	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+fsa1wxa	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
 fscc12	fidel_scc
 fscc12a	fidel_scc
 fscc6	fidel_sc6
@@ -849,6 +871,7 @@ guab	guab
 gwnf	gl6000sl	misterx	gl2000
 gx4000	gx4000
 h21	h21
+h88	h88_cass
 hanihac	arcadia
 hb10	msx1_cass	msx1_cart
 hb101	msx1_cass	msx1_cart
@@ -869,8 +892,8 @@ hb8000	msx1_cass	msx1_cart
 hbf1	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 hbf1ii	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 hbf1xd	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
-hbf1xdj	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-hbf1xv	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+hbf1xdj	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+hbf1xv	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
 hbf5	msx2_cass	msx1_cass	msx2_cart	msx1_cart
 hbf500	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 hbf500_2	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
@@ -904,6 +927,7 @@ hec2mdhrx	interact
 hec2mx40	interact
 hec2mx80	interact
 hector1	interact
+hikara	hikara
 hisaturn	saturn	sat_cart
 hkc8800a	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc	apple2_cass
 hmg1292	vc4000
@@ -1068,18 +1092,20 @@ jak_sith	jakks_gamekey_sw
 jak_sithp	jakks_gamekey_sw
 jak_spdm	jakks_gamekey_mv
 jak_swot	jakks_gamekey_sw
+jaminator	jaminator
 jb3000	jb3000_flop
 jet	spectrum_cass
 jopac	videopac
-jpopira	jpopira_jp	ekara_japan_sp
+jpopira	ekara_cart
 juicebox	juicebox
 juko8	ibm5150
 juku	juku
 jupace	jupace_cass	jupace_snap
 jvchc7gb	msx1_cass	msx1_cart
 jwj403tg	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+k28	k28
 k286i	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-k28m2	k28m2
+karams	easy_karaoke_cart
 kay1024	spectrum_cass
 kaypro1	kaypro
 kaypro10	kaypro
@@ -1102,7 +1128,10 @@ kc85_4	kc_cart	kc_flop	kc_cass
 kc85_5	kc_cart	kc_flop	kc_cass
 kccomp	cpc_cass	cpc_flop
 kharkovsky	special_cass
+kidizmb	leapfrog_zippity_cart
+kidizmp	leapfrog_zippity_cart
 kim1	kim1_cass
+kisssite	kisssite_cd
 kma202f	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 kma300g	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 kmc5000	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
@@ -1196,7 +1225,7 @@ macct650	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
 macii	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop
 maciici	mac_hdflop	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop
 maciicx	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
-maciifx	mac_hdflop	mac_cdrom	mac_hdd	mac_flop_orig	mac_flop_clcracked	mac_flop
+maciifx	mac_hdd	mac_cdrom	mac_hdflop	mac_flop_orig	mac_flop_clcracked	mac_flop
 maciihmu	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop
 maciisi	mac_hdflop	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop
 maciivi	mac_hdd	mac_cdrom	mac_hdflop
@@ -1228,9 +1257,12 @@ macqd630	mac_hdd	mac_cdrom
 macqd650	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
 macqd700	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
 macqd800	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
+macqd900	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
+macqd950	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
 macse	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdd	mac_cdrom
 macse30	mac_hdd	mac_cdrom	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdflop
 macsefd	mac_flop_orig	mac_flop_clcracked	mac_flop	mac_hdd	mac_cdrom	mac_hdflop
+mactv	mac_hdd	mac_cdrom	mac_hdflop
 macxl	lisa
 magb233	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 magb236	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -1344,15 +1376,20 @@ mlg3	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 mlg30	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 mlg30_2	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 mm1	mephisto_mm1
-mm1b	mephisto_mm1
+mm1a	mephisto_mm1
+mm1m4	mm1_flop
+mm1m4g	mm1_flop
 mm1m6	mm1_flop
+mm1m6g	mm1_flop
 mm1m7	mm1_flop
+mm1m7g	mm1_flop
 mm2	mephisto_mm2
 mm2a	mephisto_mm2
 mm2b	mephisto_mm2
 mm2c	mephisto_mm2
 mm2d	mephisto_mm2
 mm2e	mephisto_mm2
+mm2m35d	mm2_flop
 mm4	mephisto_mm4
 mm4a	mephisto_mm4
 mm4b	mephisto_mm4
@@ -1371,9 +1408,11 @@ mo6	mo6_cass	mo6_flop	mo5_cart	mo5_cass	mo5_flop	mo5_qd
 mobigo	mobigo_cart
 mobigo2	mobigo_cart
 mobigos	mobigo_cart
+mojmikro	xerox820
 mokp386	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 mokp386sx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 mom3v3	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+monkeyjmp	cubieboard4
 monkmonk	bingobear
 mononcol	monon_color
 mpc10	msx1_cass	msx1_cart
@@ -1390,7 +1429,10 @@ mpc64	msx1_cass	msx1_cart
 mpc800	bbc_flop_6502	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
 mpc900	bbc_flop_6502	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
 mpc900gx	bbc_flop_6502	bbc_cass	bbcm_flop	bbcm_cart	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd
+mpf1	mpf1_rom
 mpf1_88	mpf1_rom
+mpf1b	mpf1_rom
+mpf1p	mpf1_rom
 mprof3	apple2_flop_clcracked	apple2_flop_orig	apple2_flop_misc
 mpt02	studio2
 mpt02h	studio2
@@ -1409,6 +1451,7 @@ ms4138	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 ms4145	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 msm3	coco_cart	coco_flop
 mt65	mt65_rom	mt65_cass	mt65_snap
+mt80z	mpf1_rom
 mtc9016	studio2
 mtu130	mtu130_flop
 mtx500	mtx_cass	mtx_flop	mtx_cart	mtx_hdd	mtx_rom
@@ -1421,6 +1464,7 @@ mx1600	coco_cart	coco_flop	dragon_cart
 mx64	msx1_cass	msx1_cart
 mx83c305	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 myvision	myvision
+mz1	cz1_cart
 mz1500	mz800_cass
 mz2000	mz2000_flop	mz2000_cass	mz2200_cass
 mz2200	mz2000_flop	mz2000_cass	mz2200_cass
@@ -1493,6 +1537,11 @@ nms9100	ibm5150
 npc8300	pc8201
 nshrz	horizon
 nshrz2mhz	horizon
+nws1580	sony_news
+nws3260	sony_news
+nws3410	sony_news
+nws3860	sony_news
+nws5000x	sony_news
 o286foxii	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 oc2000	vc4000
 ocfoxm	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -1520,7 +1569,7 @@ omv1000	sg1000
 omv2000	sg1000
 ondrat	ondra
 ondrav	ondra
-onyx	coleco
+onyx	coleco	coleco_homebrew
 op386wb	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 op82c283	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 op82c291	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -1557,6 +1606,7 @@ pasogo	pasogo
 pasopia	pasopia_cass
 pb2000c	pb2000c
 pc	ibm5150	ibm5150_hdd
+pc_h98s	pc98	pc98_cd
 pc1000	misterx	pc1000
 pc10iii	ibm5150
 pc1512	pc1512_flop	pc1512_hdd
@@ -1665,8 +1715,13 @@ pcfx	pcfx
 pcfxga	pcfx
 pcherc	ibm5150	ibm5150_hdd
 pci48af	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pciagp	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pcipc	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pcipcs7	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+pcipctx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pck486dx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pcmda	ibm5150	ibm5150_hdd
+pcompelr	gjrstar
 pcscolor	glcolor	snotec
 pcunlim	iq128
 pcv20	ibm5150	ibm5150_hdd
@@ -1716,11 +1771,11 @@ phc25j	phc25_cass
 phc28	msx1_cass	msx1_cart
 phc28l	msx1_cass	msx1_cart
 phc28s	msx1_cass	msx1_cart
-phc35j	msx2_cass	msx1_cass	msx2_cart	msx1_cart
+phc35j	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart
 phc55fd2	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 phc64	ep64_cart	ep64_cass	ep64_flop
-phc70fd	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
-phc70fd2	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+phc70fd	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
+phc70fd2	msx2_cass	msx1_cass	msx2p_cart	msx2_cart	msx1_cart	msx2p_flop	msx2_flop	msx1_flop
 phc77	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 php3239	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 pi_stry	pi_storyreader_cart
@@ -1739,6 +1794,7 @@ piopxv60	msx1_cass	msx1_cart
 pippin	pippin
 pitagjr	gjmovie
 pitagor	gln
+pixtermu	pixter_cart
 pk6128c	vector06_flop	vector06_cart
 pk88	mc1502_flop
 pkm0038s	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
@@ -1753,7 +1809,9 @@ pmd852	pmd85_cass
 pmd852a	pmd85_cass
 pmd852b	pmd85_cass
 pmd853	pmd85_cass
+pn8800	brother_pn
 pockchal	pockchalw
+pockchv2	pockchalv2
 pocketbk	psion_ssd
 pocketbk2	psion_ssd
 pofo	pofo
@@ -1764,8 +1822,8 @@ poly1e	poly_flop
 poly2	poly_flop
 polydev	poly_flop
 polyvcg	arcadia
-popira	ekara_japan_g	ekara_japan_p	ekara_japan_d	ekara_japan_sp
-popira2	ekara_japan_g	ekara_japan_p	ekara_japan_d	ekara_japan_sp
+popira	ekara_cart
+popira2	ekara_cart
 poppympt	arcadia
 pow3000	zx81_cass
 pp1292	vc4000
@@ -1783,6 +1841,7 @@ prestmpt	arcadia
 primusex	pc1000
 princ	princ
 princnt	princ
+princnt3	princ
 pro128	pro128_cart	pro128_cass	pro128_flop
 pro128s	bbcm_flop	bbcb_flop	bbcb_flop_orig	bbc_rom	bbc_hdd	bbcmc_flop	pro128s_flop
 prof180x	prof180
@@ -1793,7 +1852,7 @@ profpc33	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 profweis	socrates
 prolite286	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 proteus	poly_flop
-prsarcde	coleco
+prsarcde	coleco	coleco_homebrew
 psa	psx
 pse	psx
 psi98	psi98
@@ -1802,9 +1861,12 @@ psion3	psion_ssd
 psion3a	psion_ssd
 psion3a2	psion_ssd
 psion3a2_de	psion_ssd
+psion3a2_it	psion_ssd
 psion3a2_ru	psion_ssd
+psion3a2_us	psion_ssd
 psion3c	psion_ssd
 psion3mx	psion_ssd
+psion3mx_fr	psion_ssd
 psion3s	psion_ssd
 psioncm	psion2
 psionhc100	psion_ssd
@@ -1876,6 +1938,7 @@ rainbow	rainbow
 rainbow100a	rainbow
 rainbow190	rainbow
 rameses	crvision
+ramstar	ramstar
 reutapm	bbc_rom	bbc_hdd
 ringo470	zx81_cass
 rk7007	radio86_cass
@@ -1896,6 +1959,7 @@ sagafoxf80	sagafox
 sage2	sage2
 samcoupe	samcoupe_cass	samcoupe_flop
 samdm286	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+santaka2	spectrum_cass
 sarcpc	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 saturn	saturn	sat_cart
 saturneu	saturn	sat_cart
@@ -1916,6 +1980,7 @@ scsxaio	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 scv	scv
 scv_pal	scv
 sdk85	sdk85
+segaai	segaai
 segacd	segacd
 segacd2	segacd
 sf7000	sg1000	sc3000_cart	sc3000_cass	sf7000
@@ -2020,7 +2085,6 @@ squale	squale_cart
 ssam88s	ibm5150
 ssem	ssem_quik
 ssensor4	novag_ssensor4
-sstar36k	saitek_kso
 sstarkar	singingstarkaraoke_cart
 st	st_flop	st_cart
 st_de	st_flop	st_cart
@@ -2062,6 +2126,8 @@ supergb	gameboy	gbcolor
 supergb2	gameboy	gbcolor
 superpet	pet_cass	pet_flop	pet_hdd	pet_quik	pet_rom	superpet_flop
 supracan	supracan
+suprtvpc	super_tv_pc_cart
+suprtvpchk	super_tv_pc_cart
 sv8000	sv8000
 svi318	svi318_cass	svi318_cart
 svi318n	svi318_cass	svi318_cart
@@ -2094,16 +2160,18 @@ t1000hx	t1000	ibm5150
 t1000rl	t1000	ibm5150
 t1000sl2	t1000	ibm5150
 t1000sx	t1000	ibm5150
+t1000tl	t1000	ibm5150
 t1000tl2	t1000	ibm5150
 t1000tx	t1000	ibm5150
 t2000sx	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
+t4000	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 t4426	coco_cart	coco_flop	dragon_cart
 t9000	to7_cart	to7_cass	to_flop	to7_qd
 ta1700pc	ibm5150
 tadpc200	msx1_cass	msx1_cart
 tadpc200a	msx1_cass	msx1_cart
 tadpc200b	msx1_cass	msx1_cart
-taikodp	ekara_japan_d	ekara_japan_sp
+taikodp	ekara_cart
 tam25p2	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tam3340ma0	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tandy102	trsm100
@@ -2112,6 +2180,7 @@ tandy2k	tandy2k
 tandy2khd	tandy2k
 tanodr64	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
 tanodr64h	dragon_cart	dragon_cass	dragon_flop	coco_cart	dragon_flex	dragon_os9
+tbblue	spectrum_cass
 tbbympt3	arcadia
 tc2048	spectrum_cass	timex_cass
 tc4	tc4
@@ -2128,6 +2197,7 @@ telngtcs	rwtrntcs
 telstrat	oric1_cass
 tempestm	arcadia
 tenup	guab
+teradrive	ibm5150	ibm5170	ibm5170_hdd	midi_flop
 tesa6240	vic10	c64_cart	c64_cass	c64_flop_orig	c64_flop_misc
 tg16	pcecd	tg16
 thrild3j	kpython2
@@ -2152,6 +2222,7 @@ tking	saitek_egr
 tkinga	saitek_egr
 tkingb	saitek_egr
 tkn80	abc80_cass	abc80_flop	abc80_rom
+tmc600s2	tmc600_quik
 tmpat48av	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tmpat48pg4	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tntell	tntell
@@ -2201,6 +2272,7 @@ ts34t25	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tsconf	spectrum_cass	spectrum_betadisc_flop	tsconf_betadisc_flop
 tstar432	saitek_kso
 tstar432a	saitek_kso
+tstar432b	saitek_kso
 tt030	st_flop	st_cart
 tt030_de	st_flop	st_cart
 tt030_fr	st_flop	st_cart
@@ -2221,6 +2293,7 @@ tvc64pru	tvc_cart	tvc_cass	tvc_flop
 tvg2000	arcadia
 tvgogo	tvgogo
 tvlinkp	svision
+tvochken	tvochken
 twinnet	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 tx0_64kw	tx0_ptp
 tx0_8kw	tx0_ptp
@@ -2288,6 +2361,7 @@ victhc95a	msx2_cass	msx1_cass	msx2_cart	msx1_cart	msx2_flop	msx1_flop
 victor	interact
 victor9k	victor9k_flop
 vidbrain	vidbrain
+videoart	videoart
 videopac	videopac
 videopacf	videopac
 videopacp	videopac
@@ -2329,8 +2403,8 @@ wmbulletf	wmbullet
 wmega	megacdj
 wmegam2	megacdj
 wpc250	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
-wscolor	wscolor	pockchalv2	wswan
-wswan	wswan	wscolor	pockchalv2
+wscolor	wscolor	wswan
+wswan	wswan	wscolor
 wy220001	ibm5150	ibm5170	ibm5170_cdrom	ibm5170_hdd	midi_flop
 x07	x07_card	x07_cass
 x1	x1_flop	x1_cass

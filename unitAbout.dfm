@@ -12,20 +12,18 @@ object Form5: TForm5
   Font.Height = -12
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDefault
   Scaled = False
   OnCreate = FormCreate
   OnMouseUp = FormMouseUp
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 14
   object Label4: TLabel
     Left = 46
     Top = 299
     Width = 95
     Height = 15
-    Caption = '2004-2023 '#169' Fujix'
+    Caption = '2004-2024 '#169' Fujix'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack

@@ -40,6 +40,7 @@ type
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure Image1Click(Sender: TObject);
     procedure chkZentoHanClick(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
   private
     { Private 宣言 }
     var
@@ -177,6 +178,7 @@ implementation
     fromText:= StringReplace( fromText,'@BALL',    '_5', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@start',   '_S', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@select',  '^S', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@menu',    '^M', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@punch',   '_P', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@kick',    '_K', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@guard',   '_G', [ rfReplaceAll ] );
@@ -215,15 +217,67 @@ implementation
     fromText:= StringReplace( fromText,'@dsf', '_Q', [ rfReplaceAll ] );
     fromText:= StringReplace( fromText,'@dsb', '_R', [ rfReplaceAll ] );
 
-    fromText:= StringReplace( fromText,'@decrease', '^-', [ rfReplaceAll ] );
-    fromText:= StringReplace( fromText,'@increase', '^+', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@increase', '_ﾌ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@decrease', '_ﾏ', [ rfReplaceAll ] );
+
+    fromText:= StringReplace( fromText,'@lever', '^ｲ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@nplayer', '^ﾛ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@1player', '^ﾊ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@2player', '^ﾆ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@3player', '^ﾎ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@4player', '^ﾍ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@5player', '^ﾄ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@6player', '^ﾁ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@7player', '^ﾘ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@8player', '^ﾇ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@up', '^ﾙ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@down', '^ｦ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@left', '^ﾜ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@right', '^ｶ', [ rfReplaceAll ] );
+
+    fromText:= StringReplace( fromText,'@custom1', '^ﾖ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom2', '^ﾀ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom3', '^ﾚ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom4', '^ｿ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom5', '^ﾂ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom6', '^ﾈ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom7', '^ﾅ', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@custom8', '^ﾗ', [ rfReplaceAll ] );
+
+    fromText:= StringReplace( fromText,'@jump', '_|', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@hold', '_O', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@air', '_-', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@sit', '_=', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@close', '^-', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@away', '^=', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@charge', '_~', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@tap', '^*', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@button', '^?', [ rfReplaceAll ] );
+
+    fromText:= StringReplace( fromText,'@-->', '_!', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@==>', '^!', [ rfReplaceAll ] );
+
+    fromText:= StringReplace( fromText,'__^^', '_^', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@@AIR', '_^', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'__?', '_?', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@@DIR', '_?', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'^^M', '^[', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@@MAX', '^[', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'__X', '_X', [ rfReplaceAll ] );
+    fromText:= StringReplace( fromText,'@@TAP', '_X', [ rfReplaceAll ] );
+
 
     Result := fromText;
   end;
 
 
 
-  //---------------------------------------------------
+  procedure TfrmCommand.Panel1Click(Sender: TObject);
+begin
+
+end;
+
+//---------------------------------------------------
   // ボタン文字を描画する
   function TfrmCommand.DrawButton( dest: TCanvas; iconBitmap: TBitmap; destRect: TRect; st: string;  P2: boolean ): boolean;
   // 置き換えされたら true
@@ -310,6 +364,9 @@ implementation
     else if st='_B' then n:=41
     else if st='_C' then n:=42
     else if st='_D' then n:=43
+    else if st='_E' then n:=44
+
+    else if st='_H' then n:=47
 
     else if st='_P' then n:=66
     else if st='_K' then n:=67
@@ -370,6 +427,8 @@ implementation
     else if st='_L' then n:=12
     else if st='_M' then n:=13
     else if st='_S' then n:=90
+    else if st='_Q' then n:=102
+    else if st='_R' then n:=103
 
     else if st='_`' then n:=75
     else if st='_@' then n:=76
@@ -385,7 +444,22 @@ implementation
     else if st='_{' then n:=86
     else if st='_}' then n:=87
     else if st='_<' then n:=88
-    else if st='_>' then n:=89;
+    else if st='_>' then n:=89
+
+    else if st='_|' then n:=131
+    else if st='_O' then n:=137
+    else if st='_-' then n:=132
+    else if st='_=' then n:=133
+    else if st='_~' then n:=136
+
+    else if st='_!' then n:=140
+    else if st='_^' then n:=142
+    else if st='_?' then n:=143
+    else if st='_X' then n:=145
+
+    else if st='_ﾌ' then n:=92
+    else if st='_ﾏ' then n:=93
+    ;
 
 
       {
@@ -482,6 +556,7 @@ implementation
 
     n:=-1;
 
+
     if st='^e' then n:=44
     else if st='^f' then n:=45
     else if st='^g' then n:=46
@@ -505,6 +580,15 @@ implementation
     else if st='^y' then n:=64
     else if st='^z' then n:=65
 
+    else if st='^1' then n:=94
+    else if st='^2' then n:=95
+    else if st='^3' then n:=96
+    else if st='^4' then n:=97
+    else if st='^6' then n:=98
+    else if st='^7' then n:=99
+    else if st='^8' then n:=100
+    else if st='^9' then n:=101
+
     else if st='^E' then n:=69
     else if st='^F' then n:=70
     else if st='^G' then n:=71
@@ -512,8 +596,46 @@ implementation
     else if st='^I' then n:=73
     else if st='^J' then n:=74
     else if st='^S' then n:=91
-    else if st='^+' then n:=92
-    else if st='^-' then n:=93;
+    else if st='^M' then n:=108
+    else if st='^T' then n:=105
+    else if st='^U' then n:=104
+    else if st='^V' then n:=107
+    else if st='^W' then n:=106
+
+
+    else if st='^ｲ' then n:=109
+    else if st='^ﾛ' then n:=110
+    else if st='^ﾊ' then n:=111
+    else if st='^ﾆ' then n:=112
+    else if st='^ﾎ' then n:=113
+    else if st='^ﾍ' then n:=114
+    else if st='^ﾄ' then n:=115
+    else if st='^ﾁ' then n:=116
+    else if st='^ﾘ' then n:=117
+    else if st='^ﾇ' then n:=118
+    else if st='^ﾙ' then n:=119
+    else if st='^ｦ' then n:=120
+    else if st='^ﾜ' then n:=121
+    else if st='^ｶ' then n:=122
+
+    else if st='^ﾖ' then n:=123
+    else if st='^ﾀ' then n:=124
+    else if st='^ﾚ' then n:=125
+    else if st='^ｿ' then n:=126
+    else if st='^ﾂ' then n:=127
+    else if st='^ﾈ' then n:=128
+    else if st='^ﾅ' then n:=129
+    else if st='^ﾗ' then n:=130
+
+
+    else if st='^-' then n:=134
+    else if st='^=' then n:=135
+    else if st='^*' then n:=138
+    else if st='^?' then n:=139
+
+    else if st='^!' then n:=141
+    else if st='^[' then n:=143
+    ;
 
     if n<>-1 then
     begin
@@ -779,7 +901,7 @@ begin
   commandDatFile.Free;
 
   datLoaded:=true;
-  //Label3.Caption:= inttostr(GetTickCount-ms)+' ms';
+
 
 
 end;
@@ -844,10 +966,6 @@ begin
   end;
 
 
-  //Label1.Caption:=zipName;
-  //Label4.Caption:=zipMaster;
-
-  //Label2.Caption:= inttostr(GetTickCount-ms)+' ms';
 
 end;
 

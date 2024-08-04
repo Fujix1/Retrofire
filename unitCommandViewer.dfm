@@ -49,14 +49,12 @@ object frmCommand: TfrmCommand
     03B300000012FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00F801
     0000F0010000E0010000E0000000C00000008000000000000000000000000000
     0000000000000000000080000000E0000000E0010000E0070000E03F0000}
-  OldCreateOrder = False
   Position = poDefault
   Scaled = False
   ScreenSnap = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnMouseWheel = FormMouseWheel
-  PixelsPerInch = 96
   TextHeight = 17
   object Panel1: TPanel
     Left = 0
@@ -69,6 +67,9 @@ object frmCommand: TfrmCommand
     Ctl3D = False
     ParentCtl3D = False
     TabOrder = 0
+    OnClick = Panel1Click
+    ExplicitWidth = 326
+    ExplicitHeight = 718
     object ScrollBox1: TScrollBox
       Left = 0
       Top = 42
@@ -85,6 +86,8 @@ object frmCommand: TfrmCommand
       Color = 5057025
       ParentColor = False
       TabOrder = 0
+      ExplicitWidth = 326
+      ExplicitHeight = 676
       object Image1: TImage
         Left = 0
         Top = 3
@@ -100,6 +103,7 @@ object frmCommand: TfrmCommand
       Height = 42
       Align = alTop
       TabOrder = 1
+      ExplicitWidth = 326
       DesignSize = (
         330
         42)
@@ -120,6 +124,7 @@ object frmCommand: TfrmCommand
         ParentFont = False
         TabOrder = 0
         OnChange = cmbCommandTypeChange
+        ExplicitWidth = 315
       end
     end
   end
@@ -131,6 +136,8 @@ object frmCommand: TfrmCommand
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 718
+    ExplicitWidth = 326
     object chkP2: TCheckBox
       Left = 19
       Top = 11

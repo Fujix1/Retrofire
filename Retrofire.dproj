@@ -101,11 +101,11 @@
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <VerInfo_Keys>CompanyName=Chimmi-do;FileVersion=0.0.0.270;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
-        <VerInfo_Build>270</VerInfo_Build>
-        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_Keys>CompanyName=Chimmi-do;FileVersion=0.0.0.271;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Build>271</VerInfo_Build>
         <BT_BuildType>Debug</BT_BuildType>
         <Icon_MainIcon>Retrofire_Icon.ico</Icon_MainIcon>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_MajorVer>0</VerInfo_MajorVer>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
@@ -220,8 +220,8 @@
                     <VersionInfoKeys Name="SpecialBuild"/>
                 </VersionInfoKeys>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <ModelSupport>False</ModelSupport>
