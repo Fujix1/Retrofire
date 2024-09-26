@@ -2,7 +2,7 @@
 #                                        #
 #     Mameinfo.dat 日本語版              #
 #                                        #
-#     August 2, 2024                     #
+#     August 4, 2024                     #
 #                                        #
 #                                        #
 #     MAME Bug Database J                #
@@ -132,6 +132,11 @@ $mame
 【FAQ】
 
 - ゲームを動作させるには、3本の銃を全てキャリブレートしなければいけない。マニュアルにあるように1本だけでは、EEPROMの銃データが不良となり起動しなくなる。 (FAQ #008)
+
+
+【バグ】
+
+- [バグかもね] 他のバージョンにはある音声チャンネルがない。(#08895, v0.267, JimCarlTay)
 $end
 
 $info=bermudat
@@ -3237,6 +3242,13 @@ $mame
 
 
 - デモ動作検証結果。(#06763, v0.191, demotester, 担当: Pernod)
+$end
+
+$info=bbustersua
+$mame
+【バグ】
+
+- [バグかもね] 他のバージョンにはある音声チャンネルがない。(#08895, v0.267, JimCarlTay)
 $end
 
 $info=bchopper
@@ -14140,6 +14152,13 @@ $mame
 【既知の項目】
 
 - cps2.cゲーム共通の入力系既知事項。(#02302, ソース内の記述)
+$end
+
+$info=dynashot
+$mame
+【既知の項目】
+
+- 起動するとすぐにコインが入る。(#08897, v0.268, JimCarlTay)
 $end
 
 $info=fa
