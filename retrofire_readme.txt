@@ -1,339 +1,342 @@
+﻿
+  高速MAMEランチャー「Retrofire」
+  ビルド No.272
 
-  ����MAME�����`���[�uRetrofire�v
-  �r���h No.271
-
-  Fujix (C) 2004 - 2024
+  Fujix (C) 2004 - 2025
   https://e2j.net/
 
   -------------------------------------------------
 
-  �����N���ƌ�����ڎw�����y��MAME�����`���[�ł��B
-  �ȉ��̂悤�ȋ@�\������܂�:
+  高速起動と検索を目指した軽量MAMEランチャーです。
+  以下のような機能があります:
 
 
-  �� MAME�{�̂���Q�[��������荞��Ŏg�p���܂��B
+  ◆ MAME本体からゲーム情報を取り込んで使用します。
 
-  �� Backspace�Ō����{�b�N�X�ֈړ��ADEL�L�[�őI�𒆂̃Q�[���̐ݒ���폜�B
+  ◆ Backspaceで検索ボックスへ移動、DELキーで選択中のゲームの設定を削除。
 
-  �� �e��t�B���^�A�N��A�������ACPU�A�����`�b�v�A�o�[�W�����ł̍i�荞�݁B
+  ◆ 各種フィルタ、年代、製造元、CPU、音源チップ、バージョンでの絞り込み。
 
-  �� F12�L�[�œ��{��E�p��̐؂�ւ��B
+  ◆ F12キーで日本語・英語の切り替え。
 
-�@�� ��ʂ̎ז��ȃM�����u���Q�[���⓮���Ȃ��s���{�[���Q�[���Ȃǂ̔�\���B
+　◆ 大量の邪魔なギャンブルゲームや動かないピンボールゲームなどの非表示。
 
-  �� �X�N���[���V���b�g�̃t�B���^�t���\���B�A�X�y�N�g��̌Œ�B
-�@�@  �X�N���[���V���b�g�摜�̌����́usnap\�Q�[����.png�v���usnap\�Q�[����\0000.png�v�̏��ł��B
+  ◆ スクリーンショットのフィルタ付き表示。アスペクト比の固定。
+　　  スクリーンショット画像の検索は「snap\ゲーム名.png」→「snap\ゲーム名\0000.png」の順です。
 
-  �� mameinfo.dat�Ahistory.dat�Acomman.dat�t�@�C���̕\���B
-      �f�t�H���g�ł́udats�v�t�H���_�ɔz�u���܂��i�ύX�j�B
-      F8�L�[�ŃR�}���h�r���[�A�̕\���؂�ւ������܂��B
+  ◆ mameinfo.dat、history.dat、comman.datファイルの表示。
+      デフォルトでは「dats」フォルダに配置します（変更可）。
+      F8キーでコマンドビューアの表示切り替えをします。
 
-  �� �Ȉ�ROM�����@�\�Bzip�A7z�Achd�t�@�C���̑��݃`�F�b�N�݂̂Œ��g�͊m�F���܂���B
+  ◆ 簡易ROM検索機能。zip、7z、chdファイルの存在チェックのみで中身は確認しません。
 
-  �� ���C�ɓ���@�\�B
+  ◆ お気に入り機能。
 
-  �� �X�N���[���V���b�g�N���[�i�[�Bzip�����ύX����Ǘ������摜�̍폜�A�T�u�f�B���N�g�����̉摜��
-      zip��.png�ɉ����A�s�v�t�@�C���̐������\�ł��B
+  ◆ スクリーンショットクリーナー。zip名が変更され孤立した画像の削除、サブディレクトリ内の画像を
+      zip名.pngに改名、不要ファイルの整理が可能です。
 
-  �� �o�[�W�������̃T�|�[�g�Q�[�����܂Ƃ߂� version.ini�t�@�C���̎g�p�B
-      �f�t�H���g�ł́ufolders�v�f�B���N�g���ɔz�u���܂��i�ύX�\�j�B
+  ◆ バージョン毎のサポートゲームをまとめた version.iniファイルの使用。
+      デフォルトでは「folders」ディレクトリに配置します（変更可能）。
 
-  �� �h���C�o�t�@�C����github�y�[�W�ꔭ�\����ATesters�ł̍i�荞�݁B
+  ◆ ドライバファイルのgithubページ一発表示や、Testersでの絞り込み。
 
-  �� ������MAME�{�̂�o�^�A�؂�ւ��N���B
+  ◆ 複数のMAME本体を登録、切り替え起動。
 
-  �� �W���C�X�e�B�b�N�őI���E�N���B
+  ◆ ジョイスティックで選択・起動。
 
-  �� ���{��Q�[�����Ƃ�݂��Ȃ̕ҏW�E�ۑ��@�\�B
+  ◆ 日本語ゲーム名とよみがなの編集・保存機能。
 
-  - �r���hNo.237����C�O��history.dat�̉��s�`���ɍ��킹�܂����B���s1���\�����ɂ����s
-    1�ɂȂ�܂��B�ȑO�͉��s2���\�����ɉ��s1�Ə�������Ă܂����B
+  - ビルドNo.237から海外版history.datの改行形式に合わせました。改行1つが表示時にも改行
+    1つになります。以前は改行2つが表示時に改行1つと処理されてました。
 
-  - �r���hNo.238����f�[�^�t�@�C������retrofire.res����retrofire.data�ɕύX����܂����B
-    �N�����Ɏ����ŉ������܂��i�t�@�C��������΁j�B
+  - ビルドNo.238からデータファイル名がretrofire.resからretrofire.dataに変更されました。
+    起動時に自動で改名します（ファイルがあれば）。
     
-  - �r���hNo.260����l�b�g�o�R�ł̊e��t�@�C��(���{��Q�[�����Ahistory.dat�Amameinfo.dat)��
-    �X�V�ɑΉ����܂����B�܂��A�V�����{�̂��o�Ă��邩�̃`�F�b�N���s���܂��B
+  - ビルドNo.260からネット経由での各種ファイル(日本語ゲーム名、history.dat、mameinfo.dat)の
+    更新に対応しました。また、新しい本体が出ているかのチェックも行えます。
   
-  - �r���hNo.265�Ń\�t�g�E�F�A���X�g���e�X�g�T�|�[�g���܂����B�\�t�g���X�g�@�\���s�v�̂Ƃ��́A
-    softlists�t�H���_���폜���Ă���N�����Ă��������B
+  - ビルドNo.265でソフトウェアリストをテストサポートしました。ソフトリスト機能が不要のときは、
+    softlistsフォルダを削除してから起動してください。
 
 
-���g����
+■使い方
 --------
-  1) ����N�����ɃQ�[���f�[�^��MAME�{�̂���擾���܂��B�Ώۂ�MAME�{�̂��w�肵���΂炭�҂�
-     ���C����ʂ��N�����܂��i�I�t�B�V����MAME�ȊO�͕s����N���邱�Ƃ�����܂��j
+  1) 初回起動時にゲームデータをMAME本体から取得します。対象のMAME本体を指定ししばらく待つと
+     メイン画面が起動します（オフィシャルMAME以外は不具合が起こることがあります）
 
-  2) �u�I�v�V�����v���uMAME���s�t�@�C���ݒ�v���J���A�N������MAME�{�̂��w�肵�܂��B
-     (�N���t�@�C���ƃI�v�V�����̑g�ݍ��킹�͖��O�����ĕ����o�^�ł��܂�)
+  2) 「オプション」→「MAME実行ファイル設定」を開き、起動するMAME本体を指定します。
+     (起動ファイルとオプションの組み合わせは名前をつけて複数登録できます)
 
-  3) MAME �{�̂� Retrofire �{�̂��Ⴄ�ꏊ�ɂ���Ƃ��́A�u�ݒ�v���u�f�B���N�g���v��
-     �e�f�B���N�g����ʓr�w�肵�Ă��������B
+  3) MAME 本体と Retrofire 本体が違う場所にあるときは、「設定」→「ディレクトリ」で
+     各ディレクトリを別途指定してください。
 
-  4) �u�t�@�C���v���uROM���Č����v�ŁAROM�������܂��B
+  4) 「ファイル」→「ROMを再検索」で、ROM検索します。
 
-  5) �Q�[�������_�u���N���b�N���邩�AEnter�L�[��F9�L�[�������ƃQ�[�����N�����܂��B
+  5) ゲーム名をダブルクリックするか、EnterキーかF9キーを押すとゲームが起動します。
 
 
-���֗��ȋ@�\
+■便利な機能
 ------------
- - �ҏW�p�l����mame32j.lst�𒼐ڕҏW���ۑ����邱�Ƃ��ł��܂��B
- - �����ōi��ꍇ�͉E��̃{�^�����N���b�N�������p�l����\�����܂��B
- - [�\��]���j���[��胁�J�j�J���Q�[�����B�����Ƃ��ł��܂�(�s���{�[���Ȃǂ��B���ꍇ)�B
- - [�\��]���j���[��蓮�삵�Ȃ��M�����u���Q�[���̑唼���B�����Ƃ��ł��܂��B
- - [�ݒ�]���j���[���MAME�̏I�����ɃR�}���h�v�����v�g���c�����ǂ����̎w�肪�ł��܂��B
+ - 編集パネルでmame32j.lstを直接編集し保存することができます。
+ - 条件で絞る場合は右上のボタンをクリックし検索パネルを表示します。
+ - [表示]メニューよりメカニカルゲームを隠すことができます(ピンボールなどを隠す場合)。
+ - [表示]メニューより動作しないギャンブルゲームの大半を隠すことができます。
+ - [設定]メニューよりMAMEの終了時にコマンドプロンプトを残すかどうかの指定ができます。
 
 
-������ȂƂ���
+■こんなときは
 --------------
-  Q. MAME�̖{�̂��A�b�v�f�[�g������Q�[����񂪐������擾�ł��Ȃ��Ȃ���
-  A. MAME���o�͂���f�[�^�t�@�C���̌`�����ύX���ꂽ�\��������܂��B�Ȃ�ׂ������Ή�����̂�
-     �҂��Ă��Ă��������B�܂��́A�T�C�g�̕��ŋ����Ă��炦��Ə�����܂��B
+  Q. MAMEの本体をアップデートしたらゲーム情報が正しく取得できなくなった
+  A. MAMEが出力するデータファイルの形式が変更された可能性があります。なるべく早く対応するので
+     待っていてください。または、サイトの方で教えてもらえると助かります。
      
-  Q. ***MAME����f�[�^���擾�����炤�܂������܂���
-  A. �o�͂���f�[�^�t�@�C�����Â����A���܂��ܓ����Ȃ��\��������܂��B
-     retrofire.data ����U�폜���āA�ݒ�����Ȃ����Ɠ�����������܂���B
+  Q. ***MAMEからデータを取得したらうまく動きません
+  A. 出力するデータファイルが古いか、たまたま動かない可能性があります。
+     retrofire.data を一旦削除して、設定をやりなおすと動くかもしれません。
 
 
-��MAME�̃o�[�W�������オ�����Ƃ��́H
+■MAMEのバージョンが上がったときは？
 ------------------------------------
-  [�I�v�V����]��[�Q�[�����X�g���X�V]�ŃQ�[�������Ď擾���܂��B
-  �y���z�o�[�W�����A�b�v�ɔ����A�{�̂̃Q�[�����o�͂��ύX���ꐳ��Ɏ擾�ł��Ȃ�����
-        ������̂ŁAretrofire.data�t�@�C���͎��O�Ƀo�b�N�A�b�v����̂��������߂��܂��B
+  [オプション]→[ゲームリストを更新]でゲーム情報を再取得します。
+  【注】バージョンアップに伴い、本体のゲーム情報出力が変更され正常に取得できないこと
+        があるので、retrofire.dataファイルは事前にバックアップするのをおすすめします。
 
 
-�����{��Q�[�����t�@�C���ɂ���
+■日本語ゲーム名ファイルについて
 --------------------------------
-  ������mame32j.lst��mame32jp.lst�̂ǂ��炩��{�̂Ɠ����ꏊ�ɐݒu����΃Q�[��������{
-  ��\�����܂��B
+  同梱のmame32j.lstかmame32jp.lstのどちらかを本体と同じ場所に設置すればゲーム名を日本
+  語表示します。
 
 
-��command.dat�t�@�C���ɂ���
+■command.datファイルについて
 -----------------------------
-  �R�}���h�ꗗ�t�@�C��command.dat�̕\���ɑΉ����Ă��܂��Bcommand.dat�t�@�C����{�̂Ɠ���
-  �ꏊ�ɔz�u���ċN������Ǝ����œǂݍ��܂�܂��BF8�L�[�ŕ\���؂�ւ��\�B
-  �y���z�����command.dat���Ŏg���Ă��Ȃ������̈ꕔ���T�|�[�g���Ă��܂���B
+  コマンド一覧ファイルcommand.datの表示に対応しています。command.datファイルを本体と同じ
+  場所に配置して起動すると自動で読み込まれます。F8キーで表示切り替え可能。
+  【注】現状のcommand.dat内で使われていない文字の一部をサポートしていません。
 
 
-���V���[�g�J�b�g�L�[�ꗗ
+■ショートカットキー一覧
 ------------------------
-  BackSpace, Ctrl+F �c �����{�b�N�X�Ƀt�H�[�J�X�ړ�
-  ESC    �c ���������Z�b�g
-  Ctrl+E �c �ҏW�p�l����\��/�B��
-  Ctrl+H �c �����o�[���B��/�\������
-  Ctrl+Q �c �I��
-  Ctrl+W �c �ŏ���
-  F4     �c �I�𒆃Q�[���̃h���C�o�t�@�C����GitHub�ŊJ��
-  F6     �c Command.dat�r���[�A�̕\���E��\���؂�ւ�
-  F5,F9  �c �N��
-  F12    �c �Q�[�����̓�/�p�\���ؑ�
-  F7     �c �I�𒆂̃Q�[���̃h���C�o����MAMETesters������
-  F8     �c �I�𒆂̃Q�[����EMMA�ŕ\��
-  Ctrl+D �c �I�𒆂̃Q�[�������C�ɓ���ɒǉ�
+  BackSpace, Ctrl+F … 検索ボックスにフォーカス移動
+  ESC    … 検索をリセット
+  Ctrl+E … 編集パネルを表示/隠す
+  Ctrl+H … 検索バーを隠す/表示する
+  Ctrl+Q … 終了
+  Ctrl+W … 最小化
+  F4     … 選択中ゲームのドライバファイルをGitHubで開く
+  F6     … Command.datビューアの表示・非表示切り替え
+  F5,F9  … 起動
+  F12    … ゲーム名の日/英表示切替
+  F7     … 選択中のゲームのドライバ名でMAMETestersを検索
+  F8     … 選択中のゲームをEMMAで表示
+  Ctrl+D … 選択中のゲームをお気に入りに追加
   DEL
-         �c �I�𒆂̃Q�[���̊e��ݒ�t�@�C��(cfg�Anv�A�I�[�g�Z�[�u)���폜���ď������
-            �ɖ߂�
-  Shift+ Enter�i��݂��Ȃ̏ꏊ�Łj
-         �c ���̃Q�[����I�ԁB��ʂ̃Q�[���ɂ�݂��Ȃ�t�����Ƃ����������邽��
+         … 選択中のゲームの各種設定ファイル(cfg、nv、オートセーブ)を削除して初期状態
+            に戻す
+  Shift+ Enter（よみがなの場所で）
+         … 次のゲームを選ぶ。大量のゲームによみがなを付ける作業を効率化するため
 
 
-��inp�Đ�
+■inp再生
 ---------
-  �Đ���������inp�t�@�C����I�����邾���ōĐ����n�܂�܂��B�Ώۂ̃Q�[����I������K�v
-  �͂���܂���B
-  inp�t�@�C�������u******@�v���t�@�C����.inp�v�̏ꍇ�A���̃v���t�@�C���ōĐ����܂��B
-  �v���t�@�C����������Ȃ��A�܂��͎w�肳��Ă��Ȃ��ꍇ�͌��ݑI�𒆂̃v���t�@�C����
-  �Đ����܂��B
+  再生させたいinpファイルを選択するだけで再生が始まります。対象のゲームを選択する必要
+  はありません。
+  inpファイル名が「******@プロファイル名.inp」の場合、そのプロファイルで再生します。
+  プロファイルが見つからない、または指定されていない場合は現在選択中のプロファイルで
+  再生します。
 
 
-���X�N���[���V���b�g�̃t�B���^
+■スクリーンショットのフィルタ
 ------------------------------
-  �Ȃ�(Nearest Neighbor)    �c �������E�Œ�i��
-  �o�C���j�A(Bilinear)      �c �����E���i��
-  �o�C�L���[�r�b�N(Bicubic) �c �����E���i��
-  �����`���X(Lanczos3)      �c �ᑬ�E�ō��i��
+  なし(Nearest Neighbor)    … 超高速・最低品質
+  バイリニア(Bilinear)      … 高速・中品質
+  バイキュービック(Bicubic) … 中速・高品質
+  ランチョス(Lanczos3)      … 低速・最高品質
 
 
-���X�N���[���V���b�g�̃t�H���_����̎��o��
+■スクリーンショットのフォルダからの取り出し
 --------------------------------------------
-  �X�N���[���V���b�g�摜���̉E�N���b�N����Ɨ��p�ł��܂��B
-  �uzip��\0000.png�v�Ƃ��ĕۑ�����Ă���X�N���[���V���b�g���uzip��.png�v�ɉ������āA
-  ���̃t�H���_�ֈړ����܂��B�c����zip���t�H���_�͋�̏ꍇ�폜����܂��B
+  スクリーンショット画像をの右クリックすると利用できます。
+  「zip名\0000.png」として保存されているスクリーンショットを「zip名.png」に改名して、
+  一つ上のフォルダへ移動します。残ったzip名フォルダは空の場合削除されます。
 
 
-���X�N���[���V���b�g�N���[�i�[�@�\
+■スクリーンショットクリーナー機能
 ----------------------------------
-  ZIP�����ύX����Ė����ȃV���b�g��A�t�H���_���Ɏc���Ă�����́A�s�v�ȃt�@�C�����ꊇ
-  ���č폜���������c�[���ł��B�t�@�C�����j���[���ɂ���܂��B�폜��̓S�~���Ȃ̂ł�
-  ���Ƃ����Ƃ��͌��ɖ߂����Ƃ��\�ł��B
+  ZIP名が変更されて無効なショットや、フォルダ内に残っているもの、不要なファイルを一括
+  して削除や改名するツールです。ファイルメニュー内にあります。削除先はゴミ箱なのでい
+  ざというときは元に戻すことが可能です。
 
 
-���Ή��\��̂Ȃ��@�\
+■対応予定のない機能
 --------------------
-  - snap�ȊO�̉摜�\���iFlyer, Marquee�C���j
-  - �J�X�^���A�C�R��
-  - ROM�Ǘ��i���@�\��ROM�}�l�[�W������������̂Łj
-  - mame.ini�̐ݒ�@�\�i�p�ɂɍX�V�����̂Łj
+  - snap以外の画像表示（Flyer, Marquee，他）
+  - カスタムアイコン
+  - ROM管理（高機能なROMマネージャがもうあるので）
+  - mame.iniの設定機能（頻繁に更新されるので）
 
 
-���g�p��̒��ӂƖƐӎ���
+■使用上の注意と免責事項
 ------------------------
-  ���̃\�t�g�E�F�A�̓t���[�E�F�A�ł��B���p�ړI�̔̔��A�z�z�A�Y�t�͂ł��܂���B
-  ���p���p�𔭌������i�K�ň�ʌ��J���I�����܂��B
-�@���̃\�t�g�E�F�A�͎g�p�҂̑S�ӔC�ɂ����Ďg�p����A����ɂ�萶�������ړI�܂���
-  �ԐړI�ȑS�Ă̌��ʂɂ��āA��҂͐ӔC�𕉂킸�A�܂��ۏ؂����܂���B
+  このソフトウェアはフリーウェアです。商用目的の販売、配布、添付はできません。
+  商用利用を発見した段階で一般公開を終了します。
+　このソフトウェアは使用者の全責任において使用され、それにより生じた直接的または
+  間接的な全ての結果について、作者は責任を負わず、また保証もしません。
 
   Graphics32 (C) 2000-2022 Alex A. Denisov and contributers
 
 
-���ӎ�
+■謝辞
 ------
-  �e�X�g�y�т��낢��ȃA�C�f�B�A�𒸂���S��
-  ������������l��S��
-  �o�O�o�����Ē�����Y��
-  �`�F�b�N�Ȃǂ̋��͂𒸂���F��
-  ����̂��������ƂȂ���MANE32�����`���[�̍�҂���
+  テスト及びいろいろなアイディアを頂いたS氏
+  同じくもう一人のS氏
+  バグ出しして頂いたY氏
+  チェックなどの協力を頂いたF氏
+  制作のきっかけとなったMANE32ランチャーの作者さん
 
 
-���ŋ߂̃q�X�g��
+■最近のヒストリ
 ----------------
+build 272:
+ - ソフトリストのキー入力による検索のインデックス範囲修正。
+ 
 build 271:
- - command.dat �r���[�A�̕s���A�C�R����ǉ��B
+ - command.dat ビューアの不足アイコンを追加。
 
 build 270:
- - �e���X�g�� CTRL+C �������ƑI�𒆍��ڂ�ZIP�����R�s�[����@�\�ǉ��B
+ - 各リストで CTRL+C を押すと選択中項目のZIP名をコピーする機能追加。
 
 build 269:
- - �\�t�g�E�F�A���X�g�œ��{�ꖼ���ƃZ�b�g��ʂ��킩��Ȃ��̂ŁA�p�ꖼ����擾����悤�ɉ��ǁB
- - ���X�g�w�i�F�̐ݒ��p�~�B
- - Windows 11 22H2 �ł̃N���b�V���΍�B
+ - ソフトウェアリストで日本語名だとセット種別がわからないので、英語名から取得するように改良。
+ - リスト背景色の設定を廃止。
+ - Windows 11 22H2 でのクラッシュ対策。
 
 build 268:
- - github �̃����N�C���B
- - nvram �t�H���_�uzip��_9�v�̍폜�ɑΉ��B
+ - github のリンク修正。
+ - nvram フォルダ「zip名_9」の削除に対応。
 
 build 267:
- - �����\�[�X�� mess.flt ���擾���� MESS �h���C�o���\���ɂ���@�\�ǉ��i�e�X�g�Łj�B
- - �Q�[���̃t�B���^�����O���������Ȃ菑�������B
+ - 公式ソースの mess.flt を取得して MESS ドライバを非表示にする機能追加（テスト版）。
+ - ゲームのフィルタリング部分をかなり書き直し。
 
 build 266: 
- - �\�t�g�E�F�A���X�g�̃E�B���h�E�����C���E�C���h�E�ɃX�i�b�v����@�\�ǉ��B
+ - ソフトウェアリストのウィンドウをメインウインドウにスナップする機能追加。
 
 build 265: 
- - �\�t�g�E�F�A���X�g�̃e�X�g�T�|�[�g�B���삪�s����ȉ\��������܂��B�@�\���I�t�ɂ���ɂ�
-   softlists �t�H���_���폜���Ă���N�����Ă��������B
+ - ソフトウェアリストのテストサポート。動作が不安定な可能性があります。機能をオフにするには
+   softlists フォルダを削除してから起動してください。
 
 build 264: 20210404
- - �I�v�V������p�X�̍ő啶���������B
+ - オプションやパスの最大文字数増加。
 
 build 263: 20210320
- - EMMA�T�C�g��404�Ȃ̂ŃT�|�[�g���폜�B
+ - EMMAサイトが404なのでサポートを削除。
 
 build 262: 20201013
- - �C���f�b�N�X�̃G���[���N����̂��C���B
+ - インデックスのエラーが起こるのを修正。
 
 build 261: 20200517
- - �{�̂̍X�V�����邩�ǂ������m�F���ă_�E�����[�h�y�[�W�ɔ�ԋ@�\�ǉ��B
+ - 本体の更新があるかどうかを確認してダウンロードページに飛ぶ機能追加。
 
 build 260: 20200317
- - �N���E�h���� mameinfo.dat ���擾�A�𓀁A�ۑ�����@�\�̃e�X�g�Œǉ��B
- - �ۑ���̎w��f�B���N�g�������݂��Ȃ��Ƃ��́A�f�B���N�g��������Ă���ۑ�����悤�C���B
+ - クラウドから mameinfo.dat を取得、解凍、保存する機能のテスト版追加。
+ - 保存先の指定ディレクトリが存在しないときは、ディレクトリを作ってから保存するよう修正。
 
 build 259: 20200305
- - �N���E�h���� mame32j.lst �� version.ini ���X�V����@�\�̃e�X�g�Œǉ��B
+ - クラウドから mame32j.lst と version.ini を更新する機能のテスト版追加。
 
 build 258: 20191220
- - 257�ł̋N���s����C���B
+ - 257での起動不具合を修正。
 
 build 257: 20191219
- - �R�}���h�v�����v�g���c���ċN������ꍇ�ɑ��΃p�X�ł����삷��悤���ǁB
+ - コマンドプロンプトを残して起動する場合に相対パスでも動作するよう改良。
 
 build 256: 20191204
- - �Q�[�����X�g�X�V���ɍi�荞�݂����Z�b�g����Ȃ��̂��C���B
+ - ゲームリスト更新時に絞り込みがリセットされないのを修正。
 
 build 255: 20191031
- - ����ؑ֎��ɃT�u���X�g���X�V����Ȃ��̂��C���B
+ - 言語切替時にサブリストが更新されないのを修正。
 
 build 254: 20190929
- - �N���[���Z�b�g����ʂɂ���ꍇ�A�T�u���X�g�̍X�V���x���Ȃ�̂ŁA�T�u���X�g�����z���X�g�r���[���B
+ - クローンセットが大量にある場合、サブリストの更新が遅くなるので、サブリストを仮想リストビュー化。
 
 build 253:
- - �o�O�C���B
+ - バグ修正。
 
 build 252: 20190305
- - �R���p�C�����X�V�B
- - �ׂ����C���B
+ - コンパイラを更新。
+ - 細かい修正。
 
 build 251: 20180831
- - �N�������̍������i0.3�b���炢�j�B
- - EMMA�����ŊJ���y�[�W��ύX�B
+ - 起動処理の高速化（0.3秒くらい）。
+ - EMMA検索で開くページを変更。
 
 build 250: 20180725
- - EMMA�Ō�������@�\�ǉ��B
+ - EMMAで検索する機能追加。
 
 build 249: 20180708
- - �f�B���N�g���ݒ肪���f����Ȃ��s��C���B
+ - ディレクトリ設定が反映されない不具合修正。
 
 build 248: 20180608
- - �W���C�p�b�h�œ�d�N�����邱�Ƃ�����i�炵���j�̂ŁA���N����0.5�b�̓{�^�����͂𖳌�������悤�ɕύX�B
-   ���܂��������͕s���B
+ - ジョイパッドで二重起動することがある（らしい）ので、一回起動後0.5秒はボタン入力を無効化するように変更。
+   うまくいくかは不明。
 
 build 247: 20180606
- - �V�^���C�ɓ���@�\�̃e�X�g�����B
-   - ���C�ɓ���� favorites.ini �t�@�C���ɕۑ��i���� retrofire.ini �ɓ������邩���j�B
-   - �t�H���_��1�K�w�̂݁B�t�H���_���̕ύX�̓t�H���_���V���O���N���b�N����B
-   - ���בւ��̓h���b�O�ōs���B�����ɂ���Ă̓t�H���_����Q�[�����o���Ȃ��Ȃ�ꍇ������̂ŁA�t�H���_����o���{�^�����N���b�N�B
-   - ��ʂ̍��ڂ���������悤�ɂ͂ł��Ă��Ȃ��̂ŁA���������̂��ق����Ȃ玩���ō��B
- - history.dat�Amameinfo.dat�̓ǂݍ��ݎ��A�G���R�[�h�� UTF-8 �Ɍ��ߑł��B
+ - 新型お気に入り機能のテスト実装。
+   - お気に入りは favorites.ini ファイルに保存（今後 retrofire.ini に統合するかも）。
+   - フォルダは1階層のみ。フォルダ名の変更はフォルダをシングルクリックする。
+   - 並べ替えはドラッグで行う。条件によってはフォルダからゲームを出せなくなる場合があるので、フォルダから出すボタンをクリック。
+   - 大量の項目を処理するようにはできていないので、そういうのがほしいなら自分で作れ。
+ - history.dat、mameinfo.datの読み込み時、エンコードを UTF-8 に決め打ち。
 
 build 246: 20180317
- - list.xml�̐V��������X�e�[�^�X�o�͂ɑΉ��i�O���t�B�b�N�\���A�p���b�g�A�v���e�N�g�A��ʔ��]�̑Ή��󋵕\���j�B
- - CPU�ƃT�E���h�`�b�v�̕������HTML�G�X�P�[�v�����𐳂��������B
+ - list.xmlの新しい動作ステータス出力に対応（グラフィック表示、パレット、プロテクト、画面反転の対応状況表示）。
+ - CPUとサウンドチップの文字列のHTMLエスケープ文字を正しく処理。
   
 build 245: 20180129
- - �N�x�����㏑������year.dat�̃T�|�[�g�I���B
- - 0.194�̏��ɍX�V�B
+ - 年度情報を上書きするyear.datのサポート終了。
+ - 0.194の情報に更新。
 
 build 244: 20170902
- - �R���p�C�������ŐV�łɓ���ւ��B����ɔ����������낢��B
- - ��2��ʃQ�[���ƃs���{�[���̃X�N���[���V���b�g���������䗦�ŕ\�������悤�ɐݒ�B
- - 0.189�̏��ɍX�V�B
+ - コンパイル環境を最新版に入れ替え。それに伴う調整いろいろ。
+ - 横2画面ゲームとピンボールのスクリーンショットが正しい比率で表示されるように設定。
+ - 0.189の情報に更新。
 
 build 243: 20170630
- - �N���[���Z�b�g��I�������Ƃ��A�e�Z�b�g��mameinfo��񂪕\������Ȃ������̂��C���B
+ - クローンセットを選択したとき、親セットのmameinfo情報が表示されなかったのを修正。
 
 build 242: 20170518
- - �q�X�g���[���̏c�X�N���[���o�[�\���؂�ւ������܂��s���ĂȂ������̂��C���B
- - �X�N���[���V���b�g�̏c�T�C�Y�����R�ɕύX�ł���悤�ɉ���(�摜���̉��������X���C�h����)�B
+ - ヒストリー欄の縦スクロールバー表示切り替えがうまく行ってなかったのを修正。
+ - スクリーンショットの縦サイズを自由に変更できるように改良(画像欄の下部分をスライドする)。
 
 build 241: 20170210
- - �W���C�X�e�B�b�N�I����POV(�n�b�g�X�C�b�`)�̓��͂��g�p���邩�̑I���I�v�V������ǉ��B
-   POV�Ȃ��̃W���C�p�b�h�Ȃǂŏ펞POV���������ςȂ��ɂȂ���̂����邽�߁B
+ - ジョイスティック選択でPOV(ハットスイッチ)の入力も使用するかの選択オプションを追加。
+   POVなしのジョイパッドなどで常時POVが押しっぱなしになるものがあるため。
 
 build 240: 20161105
- - listxml���o�͂��ď����擾����Ƃ��A�{�̂̃p�X�ɋ󔒕���������ƃG���[�ɂȂ�̂��C���B
+ - listxmlを出力して情報を取得するとき、本体のパスに空白文字があるとエラーになるのを修正。
 
 build 239: 20161104
- - dat�t�H���_�ݒ��command.dat�Ayear.dat�ɂ��K�p�B�f�t�H���g���udats�v�t�H���_�ɕύX�B
-   (�ݒ�̕ύX���@: [�ݒ�]��[�f�B���N�g���ݒ�...]���udat�t�@�C���v)
-   ����܂ł�history.dat��mameinfo.dat�݂̂̐ݒ�ŁAcommand.dat��year.dat�͖{�̂Ɠ����ꏊ�݂̂������B
+ - datフォルダ設定をcommand.dat、year.datにも適用。デフォルトを「dats」フォルダに変更。
+   (設定の変更方法: [設定]→[ディレクトリ設定...]→「datファイル」)
+   これまではhistory.datとmameinfo.datのみの設定で、command.datとyear.datは本体と同じ場所のみだった。
 
 build 238: 20161017
- - �N����30%�������i2.4�b����1.6�b�j�B
- - �Q�[���I�����̏��\�����������i�X�N���[������Ƃ킩��j�B
- - �Q�[�����Ȃǂ�ێ�����t�@�C������retrofire.res����retorfire.data�ɕύX�B
-   �N������retrofire.res������Ύ����ŉ������܂��B
- - ROM���ݏ��̕ۑ��`����ύX�����̂ōăX�L�������Ă��������B
- - version.ini��v0.1�`v0.37b16�̃o�[�W��������ǉ��B
+ - 起動を30%高速化（2.4秒から1.6秒）。
+ - ゲーム選択時の情報表示を高速化（スクロールするとわかる）。
+ - ゲーム情報などを保持するファイル名をretrofire.resからretorfire.dataに変更。
+   起動時にretrofire.resがあれば自動で改名します。
+ - ROM存在情報の保存形式を変更したので再スキャンしてください。
+ - version.iniにv0.1～v0.37b16のバージョン情報を追加。
 
 build 237: 
- - �W���C�X�e�B�b�N�I����POV�X�C�b�`�㉺���Ή��B
- - ���p�l���̕\���E��\���@�\�ǉ��B
+ - ジョイスティック選択にPOVスイッチ上下も対応。
+ - 情報パネルの表示・非表示機能追加。
 
-Build 236: 0.177�ł̕s��ɑΉ��B0.177�̏��ɍX�V�B
-Build 235: 0.176�Ή��B�{�̃o�[�W�����ԍ��̎擾�����ǁB
-Build 234: MAME�I�����ɃR�}���h�v�����v�g�����Ȃ��悤�ȋN���I�v�V�����ǉ��B
-Build 233: �R�}���h�r���[�A�̃T�C�Y���Œ�B0.174�̃f�[�^�ɑΉ��B
-Build 232: command.dat�̕\�����T�|�[�g�i�x�[�^�Łj�B
-Build 231: F4�L�[�Ń\�[�X��Github�y�[�W�\���B7z�g���q�Ή��B�s��΍􏭂��B0.173�̃Q�[������version.ini�ɑΉ��B�M�����u���Q�[���t�B���^�����B
-Build 230: 0.162�̐V�t�H�[�}�b�g�ɂƂ肠�����Ή��i���t�H�[�}�b�g�ł�����j�B
+Build 236: 0.177での不具合に対応。0.177の情報に更新。
+Build 235: 0.176対応。本体バージョン番号の取得を改良。
+Build 234: MAME終了時にコマンドプロンプトが閉じないような起動オプション追加。
+Build 233: コマンドビューアのサイズを固定。0.174のデータに対応。
+Build 232: command.datの表示をサポート（ベータ版）。
+Build 231: F4キーでソースのGithubページ表示。7z拡張子対応。不具合対策少し。0.173のゲーム名とversion.iniに対応。ギャンブルゲームフィルタ強化。
+Build 230: 0.162の新フォーマットにとりあえず対応（旧フォーマットでも動作可）。

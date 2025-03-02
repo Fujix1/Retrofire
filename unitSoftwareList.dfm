@@ -15,13 +15,11 @@ object frmSoftwareList: TfrmSoftwareList
   Font.Name = #12513#12452#12522#12458
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 17
   object Panel1: TPanel
     Left = 0

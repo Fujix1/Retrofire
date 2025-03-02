@@ -817,10 +817,10 @@ begin
 
   if (Find = ifExactString) or (Find = ifPartialString) then
   begin
-    repeat
 
+    repeat
       // 一番下まで行ったら先頭から検索を続ける
-      if (i = SubList.Count-1) then
+      if (i = SubList.Count) then
         if Wrap then i := 0 else Exit;
 
       if lang='ja' then
@@ -835,7 +835,6 @@ begin
     if Found then Index := i;
 
   end;
-
 
 end;
 
