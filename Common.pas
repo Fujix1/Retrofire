@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '272';
+  BUILDNO = '273';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -91,6 +91,7 @@ type
     Desc : string;
 end;
 
+
 // ROMステータス用temp
 type
   TROMTemp = record
@@ -133,6 +134,7 @@ type
     RomOf     : string;     // RomOf
 
     ID        : Word;       // 自分のindex (サブリストセットからの参照用)
+    IDString  : string;     // indexの文字列
     MasterID  : Word;       // マスタのindex
 
     Vector    : boolean;    // ベクター
@@ -1087,7 +1089,9 @@ end;
 
 // history+mameinfo検索
 procedure FindDat(const idx: integer);
-var St,S: String;
+var
+  St,S: String;
+  rec: PRecordSet;
 begin
 
   if idx = -1 then Exit;
@@ -1095,24 +1099,26 @@ begin
   St:='';
   S:='';
 
-  if PRecordSet(TLMaster[idx]).Master then
+  rec := PRecordSet(TLMaster[idx]);
+
+  if rec.Master then
   begin
     // マスタセットのときは
-    St:=GetHistory(PRecordSet(TLMaster[idx]).ZipName);
-    St:=trim(St)+#13#10#13#10#13#10+FindMameInfo(PRecordSet(TLMaster[idx]).ZipName);
+    St:=GetHistory(rec.ZipName);
+    St:=trim(St)+#13#10#13#10#13#10+FindMameInfo(rec.ZipName);
   end
   else
   begin
 
     // クローンセットのときは
-    St:=GetHistory(PRecordSet(TLMaster[idx]).ZipName);
+    St:=GetHistory(rec.ZipName);
     if St='' then
-      St:=GetHistory(PRecordSet(TLMaster[idx]).CloneOf);
+      St:=GetHistory(rec.CloneOf);
 
-    S:=FindMameInfo(PRecordSet(TLMaster[idx]).ZipName);
+    S:=FindMameInfo(rec.ZipName);
     if S='' then
     begin
-      S:=FindMameInfo(PRecordSet(TLMaster[idx]).CloneOf);
+      S:=FindMameInfo(rec.CloneOf);
     end;
     St:=trim(St)+#13#10#13#10#13#10+S;
 
@@ -3041,32 +3047,10 @@ function CsvSeparate(const Str: string; StrList: TStrings): Integer;
   begin
      ListOfStrings.Clear;
      ListOfStrings.Delimiter       := Delimiter;
-     ListOfStrings.StrictDelimiter := True; // Requires D2006 or newer.
+     ListOfStrings.StrictDelimiter := True;
      ListOfStrings.DelimitedText   := Str;
   end;
-//var
-//  Head, Tail: PChar;
-//  Len: Integer;
 begin
-  {StrList.Clear;
-  Head := PChar(Str);
-  while True do
-    if Head^ = '"' then begin
-      StrList.Append(AnsiExtractQuotedStr(Head, '"'));
-      if Head^ <> #0 then Inc(Head)
-    end else begin
-      Tail := AnsiStrPos(Head, ',');
-      if Tail = nil then begin
-        StrList.Append(Head);
-        Break
-      end else begin
-        Len := Tail - Head;
-        StrList.Append(Copy(Head, 1, Len));
-        Inc(Head, Len + 1)
-      end
-    end;
-  Result := StrList.Count
-  }
   StrList.Clear;
   Split(',', Str, StrList) ;
   Result := StrList.Count;

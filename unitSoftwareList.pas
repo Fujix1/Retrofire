@@ -781,23 +781,25 @@ end;
 procedure TfrmSoftwareList.ListView1Data(Sender: TObject; Item: TListItem);
 var
   i:integer;
+  rec: PSoftware;
 begin
 
   i:=Item.Index;
+  rec := PSoftware(SubList[i]);
 
   if lang='ja' then
   begin
 
-    Item.Caption := PSoftware(SubList[i]).alt;
+    Item.Caption := rec.alt;
 
   end
   else
-    Item.Caption := PSoftware(SubList[i]).desc;
+    Item.Caption := rec.desc;
 
-  Item.SubItems.Add(PSoftware(SubList[i]).name);
-  Item.SubItems.Add(PSoftware(SubList[i]).publisher);
-  Item.SubItems.Add(PSoftware(SubList[i]).year);
-  Item.SubItems.Add(PSoftware(SubList[i]).cloneof);
+  Item.SubItems.Add(rec.name);
+  Item.SubItems.Add(rec.publisher);
+  Item.SubItems.Add(rec.year);
+  Item.SubItems.Add(rec.cloneof);
 
 end;
 

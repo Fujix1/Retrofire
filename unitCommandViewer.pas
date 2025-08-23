@@ -282,11 +282,13 @@ end;
   function TfrmCommand.DrawButton( dest: TCanvas; iconBitmap: TBitmap; destRect: TRect; st: string;  P2: boolean ): boolean;
   // 置き換えされたら true
 
-  var n: integer;
+  var
+      n: integer;
+      srcRect: TRect;
+      scale: Double;
   begin
 
     n:=-1;
-
 
       {
       # 特殊キャラクタテキスト
@@ -534,9 +536,27 @@ end;
 
     }
 
+    scale := GetDeviceCaps(canvas.Handle, LOGPIXELSX) / 96.0;
+
     if n<>-1 then
     begin
-      dest.CopyRect( destRect, iconBitmap.Canvas, rect(n*14,0,n*14+14,14));
+      // バックグラウンドを確実に塗りつぶす（透け防止）
+      dest.Brush.Color := dest.Pixels[destRect.Left, destRect.Top];  // 周辺色で塗り、またはclBtnFaceなど固定色に
+      dest.FillRect(destRect);
+
+      // ソースrectは固定サイズ
+      srcRect := Rect(n * 14, 0, n * 14 + 14, 14);
+
+      // StretchBltでdestRectのサイズに拡大コピー（HALFTONEでぼやけ軽減）
+      SetStretchBltMode(dest.Handle, COLORONCOLOR);
+      StretchBlt(
+        dest.Handle, destRect.Left, destRect.Top, round(destRect.Width * scale), round(destRect.Height * scale),
+        iconBitmap.Canvas.Handle, srcRect.Left, srcRect.Top, srcRect.Width, srcRect.Height,
+        SRCCOPY
+      );
+
+
+      //dest.CopyRect(destRect, iconBitmap.Canvas, rect(n*14,0,n*14+14,14));
       result := true;
     end
     else
@@ -551,7 +571,11 @@ end;
   function TfrmCommand.DrawButton2( dest: TCanvas; iconBitmap: TBitmap; destRect: TRect; st: string;  P2: boolean ): boolean;
   // 置き換えされたら true
 
-    var n: integer;
+  var
+      n: integer;
+      srcRect: TRect;
+      scale: Double;
+
   begin
 
     n:=-1;
@@ -637,9 +661,27 @@ end;
     else if st='^[' then n:=143
     ;
 
+    scale := GetDeviceCaps(canvas.Handle, LOGPIXELSX) / 96.0;
+
     if n<>-1 then
     begin
-      dest.CopyRect( destRect, iconBitmap.Canvas, rect(n*14,0,n*14+14,14));
+      // バックグラウンドを確実に塗りつぶす（透け防止）
+      dest.Brush.Color := dest.Pixels[destRect.Left, destRect.Top];  // 周辺色で塗り、またはclBtnFaceなど固定色に
+      dest.FillRect(destRect);
+
+      // ソースrectは固定サイズ
+      srcRect := Rect(n * 14, 0, n * 14 + 14, 14);
+
+      // StretchBltでdestRectのサイズに拡大コピー（HALFTONEでぼやけ軽減）
+      SetStretchBltMode(dest.Handle, COLORONCOLOR);
+      StretchBlt(
+        dest.Handle, destRect.Left, destRect.Top, round(destRect.Width * scale), round(destRect.Height * scale),
+        iconBitmap.Canvas.Handle, srcRect.Left, srcRect.Top, srcRect.Width, srcRect.Height,
+        SRCCOPY
+      );
+
+
+      //dest.CopyRect(destRect, iconBitmap.Canvas, rect(n*14,0,n*14+14,14));
       result := true;
     end
     else

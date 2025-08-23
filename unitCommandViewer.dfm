@@ -68,8 +68,8 @@ object frmCommand: TfrmCommand
     ParentCtl3D = False
     TabOrder = 0
     OnClick = Panel1Click
-    ExplicitWidth = 326
-    ExplicitHeight = 718
+    ExplicitWidth = 328
+    ExplicitHeight = 711
     object ScrollBox1: TScrollBox
       Left = 0
       Top = 42
@@ -86,8 +86,8 @@ object frmCommand: TfrmCommand
       Color = 5057025
       ParentColor = False
       TabOrder = 0
-      ExplicitWidth = 326
-      ExplicitHeight = 676
+      ExplicitWidth = 328
+      ExplicitHeight = 669
       object Image1: TImage
         Left = 0
         Top = 3
@@ -103,7 +103,7 @@ object frmCommand: TfrmCommand
       Height = 42
       Align = alTop
       TabOrder = 1
-      ExplicitWidth = 326
+      ExplicitWidth = 328
       DesignSize = (
         330
         42)
@@ -124,7 +124,7 @@ object frmCommand: TfrmCommand
         ParentFont = False
         TabOrder = 0
         OnChange = cmbCommandTypeChange
-        ExplicitWidth = 315
+        ExplicitWidth = 317
       end
     end
   end
@@ -136,8 +136,8 @@ object frmCommand: TfrmCommand
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 718
-    ExplicitWidth = 326
+    ExplicitTop = 711
+    ExplicitWidth = 328
     object chkP2: TCheckBox
       Left = 19
       Top = 11

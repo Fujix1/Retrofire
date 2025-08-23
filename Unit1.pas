@@ -931,7 +931,7 @@ procedure TForm1.ListView1AdvancedCustomDrawItem(Sender: TCustomListView;
   Item: TListItem; State: TCustomDrawState; Stage: TCustomDrawStage;
   var DefaultDraw: Boolean);
 begin
-  if Item.Index mod 2 = 1 then
+  if Item.Index and 1 = 1 then
     ListView1.Canvas.Brush.Color:=$f5f5f5;
 end;
 
@@ -1051,7 +1051,9 @@ var i,idx: integer;
     SW: String;
     j: integer;
     hideflag: boolean;
-
+    col: Integer;
+    itm: TListItem;
+    rec: PRecordSet;
 begin
 
   if DoNotUpdateLV then exit;
@@ -1102,23 +1104,24 @@ begin
         begin
 
           hideflag := false;
+          rec := PRecordset(TLMaster[idx]);
 
           // ギャンブル隠すかチェック
-          if HideGambling and isGamblingDriver(PRecordset(TLMaster[idx]).Source) then
+          if HideGambling and isGamblingDriver(rec.Source) then
             hideFlag := true;
 
 
           // メカニカル隠すかチェック
           if hideFlag=False then
           begin
-            if HideMechanical and PRecordset(TLMaster[idx]).isMechanical then
+            if HideMechanical and rec.isMechanical then
               hideFlag := true;
           end;
 
           // MESS隠すかチェック
           if hideFlag=False then
           begin
-            if HideMESS and (MESSDrivers.indexOf(PRecordSet(TLMaster[idx]).Source) <> -1) then
+            if HideMESS and (MESSDrivers.indexOf(rec.Source) <> -1) then
               hideFlag := true;
           end;
 
@@ -1396,24 +1399,26 @@ begin
         else
         begin
 
+          rec := PRecordset(TLVersion[i]);
+
           Case SearchMode of
           srcZip:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).ZipName))<>0) then
+            if (Pos(SW, LowerCase(rec.ZipName))<>0) then
               TLSub.Add(TLVersion[i]);
           srcDesc:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).DescE))<>0) then
+            if (Pos(SW, LowerCase(rec.DescE))<>0) then
               TLSub.Add(TLVersion[i]);
           srcSource:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Source))<>0) then
+            if (Pos(SW, LowerCase(rec.Source))<>0) then
               TLSub.Add(TLVersion[i]);
           srcMaker:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Maker))<>0) then
+            if (Pos(SW, LowerCase(rec.Maker))<>0) then
               TLSub.Add(TLVersion[i]);
           else
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).ZipName))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).DescE))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Source))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Maker))<>0) then
+            if (Pos(SW, LowerCase(rec.ZipName))<>0) or
+               (Pos(SW, LowerCase(rec.DescE))<>0) or
+               (Pos(SW, LowerCase(rec.Source))<>0) or
+               (Pos(SW, LowerCase(rec.Maker))<>0) then
             TLSub.Add(TLVersion[i]);
           end;
 
@@ -1433,33 +1438,32 @@ begin
 
         for i:=0 to TLVersion.Count-1 do
         begin
+          rec := PRecordset(TLVersion[i]);
 
           Case SearchMode of
           srcZip:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).ZipName))<>0) then
+            if (Pos(SW, LowerCase(rec.ZipName))<>0) then
               TLSub.Add(TLVersion[i]);
           srcDesc:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).DescJ))<>0) then
+            if (Pos(SW, LowerCase(rec.DescJ))<>0) then
               TLSub.Add(TLVersion[i]);
           srcSource:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Source))<>0) then
+            if (Pos(SW, LowerCase(rec.Source))<>0) then
               TLSub.Add(TLVersion[i]);
           srcMaker:
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Maker))<>0) then
+            if (Pos(SW, LowerCase(rec.Maker))<>0) then
               TLSub.Add(TLVersion[i]);
           else
-            if (Pos(SW, LowerCase(PRecordset(TLVersion[i]).ZipName))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).DescJ))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Source))<>0) or
-               (Pos(SW, LowerCase(PRecordset(TLVersion[i]).Maker))<>0) then
+            if (Pos(SW, LowerCase(rec.ZipName))<>0) or
+               (Pos(SW, LowerCase(rec.DescJ))<>0) or
+               (Pos(SW, LowerCase(rec.Source))<>0) or
+               (Pos(SW, LowerCase(rec.Maker))<>0) then
             TLSub.Add(TLVersion[i]);
           end;
         end;
       end;
 
     end;
-
-
 
   end;
 
@@ -1502,7 +1506,7 @@ begin
     end;
 
     // ソフトリスト更新
-     frmSoftwareList.setSoftlist(ListView1.Selected.SubItems[0]);
+    frmSoftwareList.setSoftlist(ListView1.Selected.SubItems[0]);
 
   end
   else   // リスト項目が無いとき
@@ -1687,6 +1691,7 @@ begin
           RomOf       := StrList[5];              // RomOf
           SampleOf    := StrList[6];              // サンプル名
           ID          := i;                       // インデックス (サブリストから参照)
+          IDString    := InttoStr(i);             // インデックスの文字列
           MasterID    := StrtoInt(StrList[7]);    // マスタのID
           Master      := StrtoBool(StrList[8]);   // マスタ
           Vector      := StrtoBool(StrList[9]);   // ベクター
@@ -2422,34 +2427,37 @@ end;
 //------------------------------------------------------------------------------
 procedure TForm1.ListView1Data(Sender: TObject; Item: TListItem);
 var i : integer;
+rec: PRecordSet;
 begin
 
   i:=Item.Index;
+  rec := PRecordSet(TLSub[i]);
 
   if En then
-    Item.Caption:=PRecordSet(TLSub[i]).DescE
+    Item.Caption:=rec.DescE
   else
-    Item.Caption:=PRecordSet(TLSub[i]).DescJ;
-  Item.SubItems.Add(PRecordSet(TLSub[i]).ZipName);
-  Item.Subitems.Add(PRecordSet(TLSub[i]).Maker);
-  Item.Subitems.Add(PRecordSet(TLSub[i]).Year);
-  Item.Subitems.Add(PRecordSet(TLSub[i]).CloneOf);
-  Item.Subitems.Add(PRecordSet(TLSub[i]).Source);
-  Item.Subitems.Add(InttoStr(PRecordSet(TLSub[i]).ID));
+    Item.Caption:=rec.DescJ;
+
+  Item.SubItems.Add(rec.ZipName);
+  Item.Subitems.Add(rec.Maker);
+  Item.Subitems.Add(rec.Year);
+  Item.Subitems.Add(rec.CloneOf);
+  Item.Subitems.Add(rec.Source);
+  Item.Subitems.Add(rec.IDString);
 
   // アイコン
-  if PRecordSet(TLSub[i]).Status then
-    if PRecordSet(TLSub[i]).Master then
+  if rec.Status then
+    if rec.Master then
       Item.ImageIndex:=0
     else
       Item.ImageIndex:=1
   else
-    if PRecordSet(TLSub[i]).Master then
+    if rec.Master then
       Item.ImageIndex:=2
     else
       Item.ImageIndex:=3;
 
-  if PRecordset(TLSub[i]).ROM=False then
+  if rec.ROM=False then
     Item.ImageIndex:=Item.ImageIndex+4;
 
 end;
@@ -5323,46 +5331,49 @@ procedure TForm1.ListView2AdvancedCustomDrawItem(Sender: TCustomListView;
   Item: TListItem; State: TCustomDrawState; Stage: TCustomDrawStage;
   var DefaultDraw: Boolean);
 begin
-  if Item.Index mod 2 = 1 then
+  if Item.Index and 1 = 1 then
     ListView2.Canvas.Brush.Color:=$f5f5f5;
 end;
 
 procedure TForm1.ListView2Data(Sender: TObject; Item: TListItem);
   var i: integer;
+  rec: PRecordSet;
 begin
   i:=Item.Index;
+  rec := PRecordSet(TLFamily[i]);
 
   if En then
-    Item.Caption:=PRecordSet(TLFamily[i]).DescE
+    Item.Caption:=rec.DescE
   else
-    Item.Caption:=PRecordSet(TLFamily[i]).DescJ;
-  Item.SubItems.Add(PRecordSet(TLFamily[i]).ZipName);
-  Item.Subitems.Add(PRecordSet(TLFamily[i]).Maker);
-  Item.Subitems.Add(PRecordSet(TLFamily[i]).Year);
-  Item.Subitems.Add(PRecordSet(TLFamily[i]).CloneOf);
-  Item.Subitems.Add(PRecordSet(TLFamily[i]).Source);
+    Item.Caption:=rec.DescJ;
 
-  if (PRecordSet(TLFamily[i]).DescJ=PRecordSet(TLFamily[i]).DescE) and
-    (PRecordSet(TLFamily[i]).Kana=PRecordSet(TLFamily[i]).DescE) then
+  Item.SubItems.Add(rec.ZipName);
+  Item.Subitems.Add(rec.Maker);
+  Item.Subitems.Add(rec.Year);
+  Item.Subitems.Add(rec.CloneOf);
+  Item.Subitems.Add(rec.Source);
+
+  if (rec.DescJ = rec.DescE) and
+    (rec.Kana = rec.DescE) then
     Item.Subitems.Add('×')
   else
     Item.Subitems.Add('○');
 
-  Item.Subitems.Add(InttoStr(PRecordSet(TLFamily[i]).ID));
+  Item.Subitems.Add(rec.IDString);
 
   // アイコン
-  if PRecordSet(TLFamily[i]).Status then
-    if PRecordSet(TLFamily[i]).Master then
+  if rec.Status then
+    if rec.Master then
       Item.ImageIndex:=0
     else
       Item.ImageIndex:=1
   else
-    if PRecordSet(TLFamily[i]).Master then
+    if rec.Master then
       Item.ImageIndex:=2
     else
       Item.ImageIndex:=3;
 
-  if PRecordset(TLFamily[i]).ROM=False then
+  if rec.ROM=False then
     Item.ImageIndex:=Item.ImageIndex+4;
 
 end;
