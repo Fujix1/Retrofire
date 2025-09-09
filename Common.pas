@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '273';
+  BUILDNO = '274';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -273,6 +273,8 @@ var
   HideMechanical: boolean; // メカニカルを隠す
   HideGambling  : boolean; // ギャンブルを隠す
   HideMess      : boolean; // MESSを隠す
+
+  ListTree      : boolean; // リストツリー表示
 
   UseAltExe     : boolean; // ShellExec
 
@@ -1542,6 +1544,9 @@ begin
   // MESSDriverリスト
   MESSDrivers:=TStringList.Create;
 
+  // ツリーリスト表示
+  ListTree := false;
+
   // 検索履歴
   SearchHistory := TStringList.Create;
 
@@ -1824,6 +1829,10 @@ begin
   // MESS隠す
   St:=BooltoStr(HideMess);
   sltIni.Add('hide_mess '+St);
+
+  // リストツリーモード
+  St := BooltoStr(ListTree);
+  sltIni.Add('list_tree '+St);
 
   // ジョイスティック
   if UseJoyStick then St:='1' else St:='0';
@@ -2514,7 +2523,15 @@ begin
     begin
       St:=Copy(St,pos(' ',St)+1,Length(St));
       HideMess:=StrtoBool(St);
-    end    else
+    end
+    else
+    // ListTree表示
+    if AnsiStartsStr( 'list_tree ', St ) then
+    begin
+      St:=Copy(St,pos(' ',St)+1,Length(St));
+      ListTree:=StrtoBool(St);
+    end
+    else
     // ソート履歴
     if AnsiStartsStr( 'sort_history ', St ) then
     begin
@@ -2561,16 +2578,6 @@ begin
       UsePOV:=StrtoBool(St);
     end
     else
-    // リストフォント
-    {if AnsiStartsStr( 'list_color ', St ) then
-    begin
-      St:=Copy(St,pos(' ',St)+1,Length(St));
-      ListColor:=StrtoInt(St);
-      Form1.ListView1.Color:=ListColor;
-      Form1.ListView2.Color:=ListColor;
-    end
-    else
-    }
     // リストフォント
     if AnsiStartsStr( 'list_font ', St ) then
     begin

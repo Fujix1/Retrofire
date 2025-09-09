@@ -656,7 +656,7 @@ begin
 
   SubList:=TList.Create;
 
-  searchWord:= Trim(searchWord);
+  searchWord:= LowerCase(Trim(searchWord));
 
   // SLName で検索
   for j := 0 to softlistData2.Count-1 do

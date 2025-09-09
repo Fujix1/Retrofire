@@ -253,6 +253,7 @@ type
     N15: TMenuItem;
     actVHideMESS: TAction;
     actCopyZipName: TAction;
+    actTreeList: TAction;
 
 
 
@@ -455,6 +456,8 @@ type
     procedure actCopyZipNameExecute(Sender: TObject);
     procedure ListView1Enter(Sender: TObject);
     procedure ListView2Enter(Sender: TObject);
+    procedure actTreeListUpdate(Sender: TObject);
+    procedure actTreeListExecute(Sender: TObject);
 
   private
     { Private 宣言 }
@@ -5771,6 +5774,17 @@ end;
 procedure TForm1.Action4Execute(Sender: TObject);
 begin
   Button2.Click;
+end;
+
+procedure TForm1.actTreeListExecute(Sender: TObject);
+begin
+  ListTree := not ListTree;
+end;
+
+procedure TForm1.actTreeListUpdate(Sender: TObject);
+begin
+  actTreeList.Checked := ListTree;
+
 end;
 
 procedure TForm1.actFAVManageExecute(Sender: TObject);
