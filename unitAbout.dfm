@@ -23,7 +23,7 @@ object Form5: TForm5
     Top = 299
     Width = 94
     Height = 15
-    Caption = '2004-2025 '#169' Fujix'
+    Caption = '2004-2026 '#169' Fujix'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack

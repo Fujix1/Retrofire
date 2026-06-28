@@ -372,6 +372,7 @@ type
     procedure SpeedButton3Click(Sender: TObject);
     procedure ApplicationEvents1SettingChange(Sender: TObject;
       Flag: Integer; const Section: String; var Result: Integer);
+    procedure ApplicationEvents1Exception(Sender: TObject; E: Exception);
     procedure FormResize(Sender: TObject);
 
     procedure Memo1Change(Sender: TObject);
@@ -2118,6 +2119,8 @@ begin
   Application.HintPause := 250;
   Application.HintHidePause := 5000;
 
+  ApplicationEvents1.OnException := ApplicationEvents1Exception;
+
   // コントロールのウィンドウ関数を入れ替え
   // 元のウィンドウ関数は保存しておく
   OriginProc :=ListView1.WindowProc;
@@ -2731,6 +2734,7 @@ begin
 
   // 起動
   Booting:=False;
+  IniSaveEnabled := True;
 
 end;
 
@@ -3714,6 +3718,12 @@ end;
 
 
 
+procedure TForm1.ApplicationEvents1Exception(Sender: TObject; E: Exception);
+begin
+  IniSaveEnabled := False;
+  Application.ShowException(E);
+end;
+
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 var Re:Integer;
 
@@ -3752,9 +3762,11 @@ begin
     end;
   end;
 
-  SaveIni;
-
-  frmSoftwareList.saveIni();
+  if IniSaveEnabled and Assigned(TLMaster) and (TLMaster.Count > 0) then
+  begin
+    SaveIni;
+    frmSoftwareList.saveIni();
+  end;
 
 end;
 

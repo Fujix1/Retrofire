@@ -12,7 +12,7 @@ const
   APPNAME = 'Retrofire';
   RESNAME = 'retrofire.data';
   ININAME = 'retrofire.ini';
-  BUILDNO = '274';
+  BUILDNO = '275';
   LATESTRESVER = 264;
 
   MAXFAVORITES2 = 128;
@@ -357,6 +357,8 @@ var
   // お気に入り
   Favorites     : TStringList;
   Favorites2    : TStringList;
+
+  IniSaveEnabled: boolean;
 
   // debug用
   Tick          : Cardinal;
@@ -1532,6 +1534,8 @@ begin
   favorites:=TStringList.Create;
   Favorites2 := TStringList.Create;
 
+  IniSaveEnabled := False;
+
   // メカニカル隠す
   HideMechanical:=False;
 
@@ -1653,7 +1657,10 @@ var
 
 begin
 
-  // FAV2 保存
+  if (not IniSaveEnabled) or (not Assigned(TLMaster)) or (TLMaster.Count = 0) then
+    Exit;
+
+  // FAV2 save
   try
     Favorites2.SaveToFile( 'favorites.ini', TEncoding.UTF8 );
   finally
