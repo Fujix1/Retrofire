@@ -136,6 +136,7 @@ begin
       SetLength(parameter, Length(parameter));
 
       // コンソールを隠した状態で起動する
+      SI.dwFlags := SI.dwFlags or STARTF_USESHOWWINDOW;
       SI.wShowWindow := SW_HIDE;
 
       UniqueString(parameter);  // 指定された文字列が 1 つの参照カウントを持つことを保証します
@@ -146,7 +147,7 @@ begin
                           nil,
                           nil,
                           False,
-                          CREATE_DEFAULT_ERROR_MODE,
+                          CREATE_DEFAULT_ERROR_MODE or CREATE_NO_WINDOW,
                           nil,
                           PWideChar(ExtractFilePath(Edit2.Text)),  // カレントディレクトリはmame本体じゃないと動かない
                           SI,
@@ -209,6 +210,7 @@ begin
     SetLength(parameter, Length(parameter));
 
     // コンソールを隠した状態で起動する
+    SI.dwFlags := SI.dwFlags or STARTF_USESHOWWINDOW;
     SI.wShowWindow := SW_HIDE;
 
     UniqueString(parameter);  // 指定された文字列が 1 つの参照カウントを持つことを保証します
@@ -219,7 +221,7 @@ begin
                         nil,
                         nil,
                         False,
-                        CREATE_DEFAULT_ERROR_MODE,
+                        CREATE_DEFAULT_ERROR_MODE or CREATE_NO_WINDOW,
                         nil,
                         PWideChar(ExeDir),
                         SI,
